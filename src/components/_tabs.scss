@@ -1,0 +1,84 @@
+$sgbp-tab-header-distance: $sgbp-default-margin-big !default;
+$sgbp-tab-header-padding-top: 10px !default;
+$sgbp-tab-header-sides: 0 !default;
+$sgbp-tab-header-padding-bottom: $sgbp-default-margin-small !default;
+$sgbp-tab-header-font-weight: normal !default;
+$sgbp-tab-header-font-weight-hover: $sgbp-tab-header-font-weight !default;
+$sgbp-tab-header-font-weight-active: $sgbp-tab-header-font-weight-hover !default;
+$sgbp-tab-header-color: $sgbp-color-gray !default;
+$sgbp-tab-header-color-hover: $sgbp-color-black !default;
+$sgbp-tab-header-color-active: $sgbp-color-black !default;
+$sgbp-tab-header-underline-color: $sgbp-color-brand-primary !default;
+$sgbp-tab-header-underline-color-hover: $sgbp-color-transparent !default;
+$sgbp-tab-header-underline-color-active: $sgbp-tab-header-underline-color !default;
+$sgbp-tab-underline-height: 1px !default;
+$sgbp-tab-underline-height-active: $sgbp-accent-line-height !default;
+
+.sgbp-tabs {
+  &__headers {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: $sgbp-tab-underline-height solid $sgbp-tab-header-underline-color;
+  }
+
+  &__tab {
+    @include sgbp-hover($sgbp-tab-header-color-hover);
+
+    transition: color 200ms, border 200ms;
+    padding-top: $sgbp-tab-header-padding-top;
+    padding-bottom: $sgbp-tab-header-padding-bottom;
+    padding-left: $sgbp-tab-header-sides;
+    padding-right: $sgbp-tab-header-sides;
+
+    border-bottom: $sgbp-tab-underline-height solid transparent;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-weight: $sgbp-tab-header-font-weight;
+    color: $sgbp-tab-header-color;
+
+    & + & {
+      margin-left: $sgbp-tab-header-distance;
+    }
+
+    &:visited {
+      color: $sgbp-tab-header-color;
+    }
+
+    &:hover {
+      font-weight: $sgbp-tab-header-font-weight-hover;
+      border-bottom-color: $sgbp-tab-header-underline-color-hover;
+    }
+
+    &.is-active {
+      font-weight: $sgbp-tab-header-font-weight-active;
+      color: $sgbp-tab-header-color-active;
+      border-color: $sgbp-tab-header-underline-color-active;
+      border-bottom-width: $sgbp-tab-underline-height-active;
+    }
+
+    &:first-child,
+    &--first {
+      margin-left: 0;
+    }
+
+    &:last-child,
+    &--last {
+      margin-right: 0;
+
+      // scss-lint:disable NestingDepth
+      &::after {
+        display: none;
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}

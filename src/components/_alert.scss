@@ -1,0 +1,71 @@
+$sgbp-alert-border-color: $sgbp-color-gray-light !default;
+$sgbp-alert-border-width: 1px !default;
+$sgbp-alert-border-style: solid !default;
+$sgbp-alert-border-radius: 0 !default;
+$sgbp-alert-padding: $sgbp-default-margin !default;
+$sgbp-alert-padding-screen-large: $sgbp-default-margin-screen-large !default;
+$sgbp-alert-success-color: $sgbp-color-success-inverted !default;
+$sgbp-alert-success-color-background: $sgbp-color-success !default;
+$sgbp-alert-success-color-border: darken($sgbp-color-success, 10%) !default;
+$sgbp-alert-info-color: $sgbp-color-black !default;
+$sgbp-alert-info-color-background: $sgbp-color-gray-light !default;
+$sgbp-alert-info-color-border: $sgbp-color-gray-medium !default;
+$sgbp-alert-warning-color: $sgbp-color-warning-inverted !default;
+$sgbp-alert-warning-color-background: $sgbp-color-warning !default;
+$sgbp-alert-warning-color-border: hsl(37, 48, 85) !default;
+$sgbp-alert-error-color: $sgbp-color-error-inverted !default;
+$sgbp-alert-error-color-background: $sgbp-color-error !default;
+$sgbp-alert-error-color-border: darken($sgbp-color-error, 20%) !default;
+
+.sgbp-alert {
+  padding: $sgbp-alert-padding;
+  border-width: $sgbp-alert-border-width;
+  border-style: $sgbp-alert-border-style;
+  border-radius: $sgbp-alert-border-radius;
+
+  border-color: $sgbp-alert-border-color;
+
+  @media #{$sgbp-medium-up} {
+    padding: $sgbp-alert-padding-screen-large;
+  }
+
+  &--success {
+    color: $sgbp-alert-success-color;
+    background-color: $sgbp-alert-success-color-background;
+    border-color: $sgbp-alert-success-color-border;
+
+    .sgbp-link {
+      color: $sgbp-alert-success-color;
+    }
+  }
+
+  &--info {
+    color: $sgbp-alert-info-color;
+    background-color: $sgbp-alert-info-color-background;
+    border-color: $sgbp-alert-info-color-border;
+
+    .sgbp-link {
+      color: $sgbp-alert-info-color;
+    }
+  }
+
+  &--warning {
+    color: $sgbp-alert-warning-color;
+    background-color: $sgbp-alert-warning-color-background;
+    border-color: $sgbp-alert-warning-color-border;
+
+    .sgbp-link {
+      color: $sgbp-alert-warning-color;
+    }
+  }
+
+  &--error {
+    color: $sgbp-alert-error-color;
+    background-color: $sgbp-alert-error-color-background;
+    border-color: $sgbp-alert-error-color-border;
+
+    .sgbp-link {
+      color: $sgbp-alert-error-color;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+$sgbp-offCanvas-width: 284px;
+$sgbp-offCanvas-width-screen-medium: 325px;
+$sgbp-offCanvas-width-screen-large: 345px;
+$sgbp-offCanvas-height: 260px;
+$sgbp-offCanvas-height-screen-medium: 250px;
+$sgbp-offCanvas-height-screen-large: 300px;
+$sgbp-offCanvas-header-border-color: #303e47;
+
+.sgbp-offCanvas {
+  overflow: hidden;
+
+  &__inner {
+    will-change: transform;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateX(0);
+    transition: 300ms ease transform;
+  }
+
+  &.is-open-left > &__inner {
+    transform: translateX($sgbp-offCanvas-width);
+  }
+
+  &.is-open-right > &__inner {
+    transform: translateX(-$sgbp-offCanvas-width);
+  }
+
+  &.is-open-bottom > &__inner {
+    transform: translateY(-$sgbp-offCanvas-height);
+  }
+
+  &__on {
+    height: 100%;
+  }
+
+  &__off {
+    position: absolute;
+    z-index: $sgbp-offCanvas-z-index;
+
+    &--left {
+      left: -$sgbp-offCanvas-width;
+      top: 0;
+      width: $sgbp-offCanvas-width;
+      height: 100%;
+    }
+
+    &--right {
+      right: -$sgbp-offCanvas-width;
+      top: 0;
+      width: $sgbp-offCanvas-width;
+      height: 100%;
+    }
+
+    &--bottom {
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: $sgbp-offCanvas-height;
+      bottom: -$sgbp-offCanvas-height;
+    }
+  }
+
+  @media #{$sgbp-medium-up} {
+    &.is-open-left > &__inner {
+      transform: translateX($sgbp-offCanvas-width-screen-medium);
+    }
+
+    &.is-open-right > &__inner {
+      transform: translateX(-$sgbp-offCanvas-width-screen-medium);
+    }
+
+    &.is-open-bottom > &__inner {
+      transform: translateY(-$sgbp-offCanvas-height-screen-medium);
+    }
+
+    &__off {
+      &--left {
+        left: -$sgbp-offCanvas-width-screen-medium;
+        width: $sgbp-offCanvas-width-screen-medium;
+      }
+
+      &--right {
+        right: -$sgbp-offCanvas-width-screen-medium;
+        width: $sgbp-offCanvas-width-screen-medium;
+      }
+
+      &--bottom {
+        bottom: -$sgbp-offCanvas-height-screen-medium;
+        height: $sgbp-offCanvas-height-screen-medium;
+      }
+    }
+  }
+
+  @media #{$sgbp-large-up} {
+    &.is-open-left > &__inner {
+      transform: translateX($sgbp-offCanvas-width-screen-large);
+    }
+
+    &.is-open-right > &__inner {
+      transform: translateX(-$sgbp-offCanvas-width-screen-large);
+    }
+
+    &.is-open-bottom > &__inner {
+      transform: translateY(-$sgbp-offCanvas-height-screen-large);
+    }
+
+    &__off {
+      &--left {
+        left: -$sgbp-offCanvas-width-screen-large;
+        width: $sgbp-offCanvas-width-screen-large;
+      }
+
+      &--right {
+        right: -$sgbp-offCanvas-width-screen-large;
+        width: $sgbp-offCanvas-width-screen-large;
+      }
+
+      &--bottom {
+        bottom: -$sgbp-offCanvas-height-screen-large;
+        height: $sgbp-offCanvas-height-screen-large;
+      }
+    }
+  }
+}

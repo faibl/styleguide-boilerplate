@@ -1,0 +1,19 @@
+$sgbp-readingBlock-maxWidth: 30rem !default;
+
+.sgbp-readingBlock {
+  @media #{$sgbp-large-up} {
+    max-width: $sgbp-readingBlock-maxWidth;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--columns {
+      max-width: 100%;
+      column-count: 2;
+      column-gap: 2em;
+
+      li {
+        page-break-inside: avoid;
+      }
+    }
+  }
+}

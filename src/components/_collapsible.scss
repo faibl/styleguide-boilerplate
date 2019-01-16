@@ -1,0 +1,29 @@
+.sgbp-collapsible {
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    height: 50px;
+    transition: height 0.3s linear, max-height 0s 0.3s linear;
+    max-height: 0px;
+  }
+
+  &__content {
+    transition: margin-bottom 0.3s cubic-bezier(0, 0, 0, 1);
+    margin-bottom: 0;
+    max-height: 1000000px;
+  }
+
+  &:not(.is-open)::after {
+    height: 0;
+    transition: height 0.3s linear;
+    max-height: 50px;
+  }
+
+  &:not(.is-open) > &__content {
+    margin-bottom: -2000px;
+    transition: margin-bottom 0.3s cubic-bezier(1, 0, 1, 1), visibility 0s 0.3s, max-height 0s 0.3s;
+    visibility: hidden;
+    max-height: 0;
+  }
+}

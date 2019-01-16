@@ -1,0 +1,89 @@
+.sgbp-slider {
+  width: 100%;
+  overflow: hidden;
+
+  &__slides {
+    will-change: transform;
+    display: flex;
+    transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1); /* easeOutCirc */
+  }
+
+  &__slide {
+    display: block;
+
+    &--card {
+      position: relative;
+      padding: 20px 30px;
+
+      &::before {
+        @include sgbp-roundedEdges;
+        will-change: transform;
+        content: '';
+        transform: scale3d(1, 0.9, 1);
+        transition: transform 300ms;
+        position: absolute;
+        z-index: 0;
+        backface-visibility: hidden;
+
+        top: 10px;
+        bottom: 10px;
+        right: 20px;
+        left: 20px;
+
+        background-color: $sgbp-color-white;
+        box-shadow: 0 1px 2px 2px $sgbp-color-darken-light;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+  }
+
+  @mixin sgbp-slides($slideCount) {
+    &[data-slides-count='#{$slideCount}'] {
+      .sgbp-slider__slides {
+        width: (100 * $slideCount) * 1%;
+      }
+
+      .sgbp-slider__slide {
+        flex-basis: (100 / $slideCount) * 1%;
+      }
+
+      @for $_idx from 1 through $slideCount {
+        @include sgbp-active-slide($_idx, $slideCount);
+      }
+    }
+  }
+
+  @mixin sgbp-active-slide($slideNumber, $slideCount) {
+    &[data-active-slide='#{$slideNumber}'] {
+      .sgbp-slider__slides {
+        transform: translate3d(($slideNumber - 1) * (-100% / $slideCount), 0, 0);
+      }
+
+      .sgbp-slider__slide--card {
+        &:nth-child(#{$slideNumber - 1})::before {
+          transform: translate3d(27px, 0, 0) scale3d(1, 0.9, 1);
+        }
+
+        &:nth-child(#{$slideNumber})::before {
+          transform: scaleY(1);
+        }
+
+        &:nth-child(#{$slideNumber + 1})::before {
+          transform: translate3d(-27px, 0, 0) scale3d(1, 0.9, 1);
+        }
+      }
+    }
+  }
+
+  @include sgbp-slides(1);
+  @include sgbp-slides(2);
+  @include sgbp-slides(3);
+  @include sgbp-slides(4);
+  @include sgbp-slides(5);
+  @include sgbp-slides(6);
+}

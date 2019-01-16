@@ -1,0 +1,78 @@
+$sgbp-pagination-color: $sgbp-color-gray-medium !default;
+$sgbp-pagination-background-color: $sgbp-color-white !default;
+$sgbp-pagination-border-color: $sgbp-color-transparent !default;
+$sgbp-pagination-font-weight: normal !default;
+
+$sgbp-pagination-hover-color: $sgbp-pagination-color !default;
+$sgbp-pagination-hover-background-color: $sgbp-pagination-background-color !default;
+$sgbp-pagination-hover-border-color: $sgbp-pagination-border-color !default;
+$sgbp-pagination-hover-font-weight: bold !default;
+
+$sgbp-pagination-active-color: $sgbp-pagination-color !default;
+$sgbp-pagination-active-background-color: $sgbp-pagination-background-color !default;
+$sgbp-pagination-active-border-color: $sgbp-color-gray-light !default;
+$sgbp-pagination-active-font-weight: bold !default;
+
+$sgbp-pagination-focus-color: $sgbp-pagination-color !default;
+$sgbp-pagination-focus-background-color: $sgbp-pagination-background-color !default;
+$sgbp-pagination-focus-border-color: $sgbp-color-black !default;
+$sgbp-pagination-focus-font-weight: normal !default;
+
+$sgbp-pagination-distance: $sgbp-default-margin !default;
+$sgbp-pagination-border-radius: 0 !default;
+$sgbp-pagination-border-style: solid !default;
+$sgbp-pagination-border-width: 1px !default;
+
+.sgbp-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item,
+  &__separator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2em;
+    height: 2.2em;
+    border-style: $sgbp-pagination-border-style;
+    border-width: $sgbp-pagination-border-width;
+    border-color: $sgbp-pagination-border-color;
+    border-radius: $sgbp-pagination-border-radius;
+
+    font-size: $sgbp-font-size-base * 0.9;
+    color: $sgbp-pagination-color;
+    background-color: $sgbp-pagination-background-color;
+
+    font-weight: $sgbp-pagination-font-weight;
+
+    & + & {
+      margin-left: $sgbp-pagination-distance;
+    }
+  }
+
+  &__item {
+    @include sgbp-hover($sgbp-pagination-hover-color, $sgbp-pagination-hover-background-color, $sgbp-pagination-hover-border-color);
+
+    &.is-active {
+      color: $sgbp-pagination-active-color;
+      background-color: $sgbp-pagination-active-background-color;
+      border-color: $sgbp-pagination-active-border-color;
+
+      font-weight: $sgbp-pagination-active-font-weight;
+    }
+
+    &:focus-within,
+    &:focus {
+      color: $sgbp-pagination-focus-color;
+      background-color: $sgbp-pagination-focus-background-color;
+      border-color: $sgbp-pagination-focus-border-color;
+      font-weight: $sgbp-pagination-focus-font-weight;
+      outline: none;
+    }
+
+    &:hover {
+      font-weight: $sgbp-pagination-hover-font-weight;
+    }
+  }
+}

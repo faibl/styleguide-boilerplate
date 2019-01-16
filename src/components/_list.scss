@@ -1,0 +1,33 @@
+$sgbp-list-default-bullet-icon: '■';
+
+.sgbp-list {
+  &--bulleted {
+    > li,
+    .sgbp-list__item {
+      position: relative;
+      padding-left: 1.2em;
+      line-height: 1em;
+      margin-bottom: 1em;
+
+      &::before {
+        content: $sgbp-list-default-bullet-icon;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 0.7em;
+        color: $sgbp-color-brand-primary;
+      }
+    }
+  }
+
+  &--numbered {
+    list-style-type: decimal;
+    list-style-position: inside;
+
+    > li,
+    .sgbp-list__item {
+      line-height: 1em;
+      margin-bottom: 0.8em;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+$sgbp-checkboxAndRadio-background-color-checked: $sgbp-color-brand-primary !default;
+$sgbp-checkboxAndRadio-checkmarkIcon-variant: 'light' !default;
+$sgbp-checkboxAndRadio-inline-margin: $sgbp-default-margin-big !default;
+$sgbp-checkboxAndRadio-size: 1.75em !default;
+$sgbp-checkboxAndRadio-label-color: $sgbp-color-black !default;
+$sgbp-checkboxAndRadio-label-color-checked: $sgbp-checkboxAndRadio-background-color-checked !default;
+
+.sgbp-radio,
+.sgbp-checkbox {
+  display: block;
+
+  margin-top: 0.5em;
+
+  &--inline {
+    display: inline-block;
+    margin-right: $sgbp-checkboxAndRadio-inline-margin;
+  }
+
+  &__label {
+    color: $sgbp-checkboxAndRadio-label-color;
+
+    display: inline-block;
+    position: relative;
+
+    padding-left: 2em;
+
+    vertical-align: middle;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      transition: background-color 300ms;
+      position: absolute;
+      margin-top: -0.17em;
+      left: 0;
+      width: $sgbp-checkboxAndRadio-size;
+      height: $sgbp-checkboxAndRadio-size;
+      border: 1px solid $sgbp-color-gray-dark;
+      padding: 0.2em;
+      color: $sgbp-color-white;
+      line-height: 0.4em;
+      text-indent: -0.1em;
+    }
+  }
+
+  &__control {
+    // do not use display: none because that would prevent the control from being tab-activatable (it would lose its tabindex so to say)
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__control:focus + &__label::before {
+    border-width: 2px;
+  }
+
+  &.is-checked &__label,
+  &__control:checked + &__label {
+    color: $sgbp-checkboxAndRadio-label-color-checked;
+  }
+
+  &.is-checked &__label::before,
+  &__control:checked + &__label::before {
+    background-image: url('#{$sgbp-image-path}/check_#{$sgbp-checkboxAndRadio-checkmarkIcon-variant}.svg');
+    background-color: $sgbp-checkboxAndRadio-background-color-checked;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--big &__label {
+    font-size: 1.1em;
+    padding-left: 2.3em;
+
+    &::before {
+      margin-top: -0.24em;
+      border-width: 2px;
+      line-height: 0.4em;
+      text-indent: -0.2em;
+      font-size: 1.2em;
+    }
+  }
+
+  &--big {
+    margin-right: $sgbp-default-margin-big;
+
+    & + & {
+      margin-top: 1em;
+    }
+  }
+
+  &--big.sgbp-checkbox--inline,
+  &--big.sgbp-radio--inline {
+    & + & {
+      margin-top: 0;
+    }
+  }
+
+  &--small &--inline {
+    margin-right: $sgbp-default-margin-small;
+  }
+
+  &--small &__label {
+    font-size: 0.8em;
+  }
+
+  &.is-disabled &__label {
+    color: $sgbp-color-gray-medium;
+    cursor: not-allowed;
+
+    &::before {
+      opacity: 0.7;
+    }
+  }
+}
+
+.sgbp-radio__label::before {
+  border-radius: 50%;
+}

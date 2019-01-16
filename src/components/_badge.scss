@@ -1,0 +1,48 @@
+$sgbp-badge-background-color-default: $sgbp-color-gray-lighter;
+$sgbp-badge-color-default: $sgbp-color-black;
+$sgbp-badge-background-color-info: $sgbp-color-gray-light;
+$sgbp-badge-color-info: $sgbp-color-black;
+$sgbp-badge-background-color-warning: $sgbp-color-warning;
+$sgbp-badge-color-warning: $sgbp-color-warning-inverted;
+$sgbp-badge-background-color-success: $sgbp-color-success;
+$sgbp-badge-color-success: $sgbp-color-success-inverted;
+$sgbp-badge-background-color-error: $sgbp-color-error;
+$sgbp-badge-color-error: $sgbp-color-error-inverted;
+
+.sgbp-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.3em;
+  min-width: 1.6em;
+  height: 1.6em;
+
+  border-radius: 0.8em;
+  font-size: 12px;
+  font-weight: bold;
+
+  color: $sgbp-badge-color-default;
+  background: $sgbp-badge-background-color-default;
+
+  transition: color 300ms, background-color 300ms;
+
+  &--info {
+    color: $sgbp-badge-color-info;
+    background: $sgbp-badge-background-color-info;
+  }
+
+  &--warning {
+    color: $sgbp-badge-color-warning;
+    background: $sgbp-badge-background-color-warning;
+  }
+
+  &--error {
+    color: $sgbp-badge-color-error;
+    background: $sgbp-badge-background-color-error;
+  }
+
+  &--success {
+    color: $sgbp-badge-color-success;
+    background: $sgbp-badge-background-color-success;
+  }
+}

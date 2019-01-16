@@ -1,0 +1,71 @@
+$sgbp-region-padding: $sgbp-default-margin !default;
+$sgbp-region-padding-screen-large: $sgbp-default-margin-screen-large !default;
+
+$sgbp-region-small-padding: $sgbp-default-margin-small !default;
+$sgbp-region-small-padding-screen-large: $sgbp-default-margin-small-screen-large !default;
+
+$sgbp-region-big-padding: $sgbp-default-margin-big !default;
+$sgbp-region-big-padding-screen-large: $sgbp-default-margin-big-screen-large !default;
+
+$sgbp-region-primary-color: $sgbp-color-brand-primary-inverted !default;
+$sgbp-region-primary-color-background: $sgbp-color-brand-primary !default;
+
+$sgbp-region-secondary-color: $sgbp-color-black !default;
+$sgbp-region-secondary-color-background: $sgbp-color-gray-light !default;
+
+.sgbp-region {
+  padding: $sgbp-region-padding;
+
+  @media #{$sgbp-large-up} {
+    padding: $sgbp-region-padding-screen-large;
+  }
+
+  &--small {
+    padding: $sgbp-region-small-padding;
+
+    @media #{$sgbp-large-up} {
+      padding: $sgbp-region-small-padding-screen-large;
+    }
+  }
+
+  &--focusable:focus-within {
+    box-shadow: $sgbp-color-gray 0 0 3px;
+  }
+
+  &--big {
+    padding: $sgbp-region-big-padding;
+
+    @media #{$sgbp-large-up} {
+      padding: $sgbp-region-big-padding-screen-large;
+    }
+  }
+
+  &--primary {
+    background: $sgbp-region-primary-color-background;
+    color: $sgbp-region-primary-color;
+  }
+
+  &--secondary {
+    background: $sgbp-region-secondary-color-background;
+    color: $sgbp-region-secondary-color;
+  }
+
+  &--default {
+    background: $sgbp-body-bg;
+    color: $sgbp-text-color;
+  }
+
+  &--rounded {
+    @include sgbp-roundedEdges;
+  }
+
+  &--verticalOnly {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--horizontalOnly {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

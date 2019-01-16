@@ -1,0 +1,69 @@
+$sgbp-loading-container-dialog-background: $sgbp-color-darken-heavy !default;
+$sgbp-loading-container-blocking-background: $sgbp-color-darken !default;
+
+.sgbp-loadingContainer {
+  position: relative;
+
+  &__loader {
+    transition: background-color 500ms;
+    transform: translate3d(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    background-color: $sgbp-color-transparent;
+  }
+
+  &__dialog {
+    @include sgbp-roundedEdges;
+    transition: transform 300ms;
+    transform: scale(0);
+    padding: $sgbp-default-margin $sgbp-default-margin $sgbp-default-margin * 0.8 $sgbp-default-margin;
+    pointer-events: none;
+    background-color: $sgbp-loading-container-dialog-background;
+  }
+
+  &__loadingIndicator {
+    display: none;
+    width: 25px;
+    height: 25px;
+    float: left;
+  }
+
+  &__loadingMessage {
+    float: left;
+    color: $sgbp-color-white;
+    line-height: 1.5rem;
+    margin-right: $sgbp-default-margin;
+  }
+
+  &.is-loading {
+    .sgbp-loadingContainer__loader {
+      z-index: $sgbp-loading-container-z-index;
+      opacity: 1;
+    }
+
+    .sgbp-loadingContainer__dialog {
+      transform: scale(1);
+    }
+
+    .sgbp-loadingContainer__loadingIndicator {
+      display: block;
+      pointer-events: all;
+    }
+  }
+
+  &.is-blocking {
+    > .sgbp-loadingContainer__loader {
+      pointer-events: all;
+      background-color: $sgbp-loading-container-blocking-background;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.sgbp-pageWrapper {
+  max-width: $sgbp-page-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: $sgbp-font-size-text;
+
+  &--fullWidth {
+    max-width: 100%;
+  }
+}

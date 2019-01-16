@@ -1,0 +1,34 @@
+.sgbp-separator {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 1px;
+
+  background-color: $sgbp-color-gray-medium;
+
+  &--fade {
+    background: linear-gradient(to right, transparent, $sgbp-color-gray-medium, transparent);
+  }
+
+  &--primary {
+    height: 2px;
+    background-color: $sgbp-color-brand-primary;
+
+    &.sgbp-separator--fade {
+      background: linear-gradient(to right, transparent, $sgbp-color-brand-primary, transparent);
+    }
+  }
+
+  &--secondary {
+    height: 2px;
+    background-color: $sgbp-color-brand-secondary;
+
+    &.sgbp-separator--fade {
+      background: linear-gradient(to right, transparent, $sgbp-color-brand-secondary, transparent);
+    }
+  }
+
+  &--big {
+    height: 0.5rem;
+  }
+}

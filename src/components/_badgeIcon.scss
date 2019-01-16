@@ -1,0 +1,26 @@
+.sgbp-badgeIcon {
+  display: inline-flex;
+  position: relative;
+
+  &__badge {
+    position: absolute;
+    left: 56%;
+    top: 50%;
+  }
+
+  &--info &__icon {
+    color: $sgbp-badge-color-info;
+  }
+
+  &--success &__icon {
+    color: $sgbp-color-success;
+  }
+
+  &--warning &__icon {
+    color: $sgbp-color-warning;
+  }
+
+  &--error &__icon {
+    color: $sgbp-color-error;
+  }
+}

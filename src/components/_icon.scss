@@ -1,0 +1,85 @@
+$sgbp-icon-font-size: 1.6em !default;
+$sgbp-icon-font-size-tiny: 1.2em !default;
+$sgbp-icon-font-size-small: 1.4em !default;
+$sgbp-icon-font-size-big: 2.15em !default;
+$sgbp-icon-font-size-extraBig: 3.15em !default;
+$sgbp-icon-font-size-screen-tiny: $sgbp-icon-font-size-small !default;
+$sgbp-icon-font-size-small-screen-tiny: $sgbp-icon-font-size-small !default;
+$sgbp-icon-font-size-big-screen-tiny: $sgbp-icon-font-size-big !default;
+$sgbp-icon-font-size-extraBig-screen-tiny: $sgbp-icon-font-size-extraBig !default;
+
+$sgbp-icon-circle-color: $sgbp-color-white !default;
+$sgbp-icon-circle-backgroundColor: $sgbp-color-black !default;
+
+.sgbp-icon {
+  display: inline-block;
+
+  font-size: $sgbp-icon-font-size-screen-tiny;
+  width: 1em;
+  height: 1em;
+
+  &--tiny {
+    font-size: $sgbp-icon-font-size-tiny;
+  }
+
+  &--small {
+    font-size: $sgbp-icon-font-size-small-screen-tiny;
+  }
+
+  &--big {
+    font-size: $sgbp-icon-font-size-big-screen-tiny;
+  }
+
+  &--extraBig {
+    font-size: $sgbp-icon-font-size-extraBig-screen-tiny;
+  }
+
+  &--primary {
+    color: $sgbp-color-brand-primary;
+  }
+
+  &--light {
+    color: $sgbp-color-gray;
+  }
+
+  &--inverted {
+    color: $sgbp-color-white;
+  }
+
+  &--circle {
+    border-radius: 50%;
+    padding: 2px;
+    color: $sgbp-icon-circle-color;
+    background: $sgbp-icon-circle-backgroundColor;
+
+    &.sgbp-icon--inverted {
+      border-radius: 50%;
+      color: $sgbp-icon-circle-backgroundColor;
+      background: $sgbp-icon-circle-color;
+    }
+  }
+
+  &--hoverPrimary {
+    @include sgbp-hover($sgbp-color-brand-primary);
+  }
+
+  @media #{$sgbp-small-up} {
+    font-size: $sgbp-icon-font-size;
+
+    &--tiny {
+      font-size: $sgbp-icon-font-size-tiny;
+    }
+
+    &--small {
+      font-size: $sgbp-icon-font-size-small;
+    }
+
+    &--big {
+      font-size: $sgbp-icon-font-size-big;
+    }
+
+    &--extraBig {
+      font-size: $sgbp-icon-font-size-extraBig;
+    }
+  }
+}

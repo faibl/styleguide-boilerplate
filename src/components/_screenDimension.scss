@@ -1,0 +1,17 @@
+.sgbp-screenDimension {
+  &--minWidth {
+    min-width: 100vw;
+  }
+
+  &--minHeight {
+    min-height: 100vh;
+  }
+
+  &--width {
+    width: 100vw;
+  }
+
+  &--height {
+    height: 100vh;
+  }
+}

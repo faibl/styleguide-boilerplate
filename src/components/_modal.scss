@@ -1,0 +1,138 @@
+$sgbp-modal-backdrop-backgroundColor: $sgbp-color-darken !default;
+$sgbp-modal-dialog-backgroundColor: $sgbp-color-white !default;
+$sgbp-modal-dialog-color: $sgbp-color-black !default;
+$sgbp-modal-dialog-border-style: solid !default;
+$sgbp-modal-dialog-border-width: 2px !default;
+$sgbp-modal-dialog-border-color: $sgbp-color-transparent !default;
+$sgbp-modal-dialog-box-shadow: 0 2px 8px 0 #{$sgbp-color-black} !default;
+
+$sgbp-modal-margin: 8px !default;
+$sgbp-modal-marginXlargeUp: 16px !default;
+
+// sass-lint:disable no-qualifying-elements
+html.is-sgbp-modal-open {
+  overflow: hidden;
+}
+
+.sgbp-modal {
+  will-change: opacity;
+  transition: opacity 250ms;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+  z-index: $sgbp-modal-z-index;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  background-color: $sgbp-modal-backdrop-backgroundColor;
+  font-size: $sgbp-font-size-text;
+
+  &--fullWidth &__dialog {
+    width: 100%;
+  }
+
+  &--fullHeight &__dialog {
+    // sass-lint:disable no-duplicate-properties
+    height: 100%;
+    height: calc(100% - #{$sgbp-modal-margin} * 2);
+    // sass-lint:enable no-duplicate-properties
+
+    @media #{$sgbp-xlarge-up} {
+      height: calc(100% - #{$sgbp-modal-marginXlargeUp} * 2);
+    }
+  }
+
+  &__dialog {
+    animation-duration: 750ms;
+    animation-fill-mode: both;
+    animation-name: none;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    // sass-lint:disable no-duplicate-properties
+    max-height: 100%;
+    max-height: 100vh;
+    max-width: 100%;
+    max-width: 100vw;
+    // sass-lint:enable no-duplicate-properties
+    margin: $sgbp-modal-margin;
+    color: $sgbp-modal-dialog-color;
+    background-color: $sgbp-modal-dialog-backgroundColor;
+    border-style: $sgbp-modal-dialog-border-style;
+    border-width: $sgbp-modal-dialog-border-width;
+    border-color: $sgbp-modal-dialog-border-color;
+    box-shadow: $sgbp-modal-dialog-box-shadow;
+
+    @media #{$sgbp-xlarge-up} {
+      margin: $sgbp-modal-marginXlargeUp;
+    }
+  }
+
+  &__header {
+    flex: 0 0 auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &Content {
+      padding-right: 10px;
+    }
+
+    &Close {
+      color: $sgbp-color-gray;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    max-width: 97vw;
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+  }
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: all;
+
+    .sgbp-modal__dialog {
+      animation-name: sgbp-zoomIn;
+    }
+  }
+
+  &--bounceInDown.is-open &__dialog {
+    animation-name: sgbp-bounceInDown;
+  }
+
+  &--fadeIn.is-open &__dialog {
+    animation-name: sgbp-fadeIn;
+  }
+
+  &--zoomIn.is-open &__dialog {
+    animation-name: sgbp-zoomIn;
+  }
+
+  &--slideInUp.is-open &__dialog {
+    animation-name: sgbp-slideInUp;
+  }
+
+  html:not(.csspointerevents) & {
+    /*
+    needed for browsers that do not support pointer-events: none (IE <= 10)
+    until pointer-events polyfill has been initialized
+    */
+    z-index: -999;
+
+    &.is-open {
+      z-index: $sgbp-modal-z-index;
+    }
+  }
+}

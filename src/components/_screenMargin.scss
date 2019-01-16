@@ -1,0 +1,24 @@
+$sgbp-screenMargin: $sgbp-default-margin;
+$sgbp-screenMargin-screen-large: $sgbp-default-margin-screen-large;
+
+.sgbp-screenMargin {
+  margin-left: $sgbp-screenMargin;
+  margin-right: $sgbp-screenMargin;
+
+  @media #{$sgbp-large-up} {
+    margin-left: $sgbp-screenMargin-screen-large;
+    margin-right: $sgbp-screenMargin-screen-large;
+  }
+
+  .sgbp-screenMargin {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &--smallNone {
+    @media #{$sgbp-small-down} {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

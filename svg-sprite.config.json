@@ -1,0 +1,17 @@
+{
+  "shape": {
+    "transform": ["svgo"]
+  },
+  "svg": {
+    "xmlDeclaration": false,
+    "doctypeDeclaration": false,
+    "namespaceIDs": true
+  },
+  "mode": {
+    "symbol": {
+      "dest": "./assets",
+      "sprite": "icons.svg",
+      "inline": true
+    }
+  }
+}

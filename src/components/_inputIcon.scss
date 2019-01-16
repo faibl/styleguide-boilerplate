@@ -1,0 +1,79 @@
+.sgbp-inputIcon {
+  display: flex;
+  position: relative;
+
+  &__input {
+    padding-right: 1.5rem;
+
+    // sass-lint:disable no-vendor-prefixes
+    &::-ms-clear {
+      display: none;
+    }
+    // sass-lint:enable no-vendor-prefixes
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    right: 0;
+    top: 50%;
+    margin-top: -0.45em;
+    margin-right: 0.4em;
+
+    &:hover {
+      color: $sgbp-color-brand-primary;
+    }
+  }
+
+  &__tooltip {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    bottom: 100%;
+    right: 0;
+    background-color: $sgbp-color-brand-primary;
+    color: $sgbp-color-brand-primary-inverted;
+    padding: 0.55rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  &__icon:hover + &__tooltip {
+    display: block;
+  }
+
+  &--extraMargin &__input {
+    padding-right: 2.2em;
+  }
+
+  &--extraMargin &__icon {
+    margin-right: 1.2em;
+  }
+
+  &--textarea &__input {
+    padding-right: 0.2em;
+  }
+
+  &--textarea &__icon {
+    top: 0.9em;
+    margin-right: 0.7em;
+    background: $sgbp-color-white;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--select &__icon {
+    top: 0.9em;
+    margin-right: 2.2em;
+    background: $sgbp-color-white;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

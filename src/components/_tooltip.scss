@@ -1,0 +1,89 @@
+$sgbp-tooltip-z-index: 9999 !default;
+$sgbp-tooltip-background-color: $sgbp-color-gray-lighter !default;
+$sgbp-tooltip-color: $sgbp-color-black !default;
+$sgbp-tooltip-box-shadow-color: $sgbp-color-darken !default;
+$sgbp-tooltip-padding: $sgbp-default-margin !default;
+
+.sgbp-tooltip {
+  display: inline-block;
+  position: relative;
+  //font-size: 0;
+}
+
+.sgbp-tooltip--block {
+  display: block;
+}
+
+.sgbp-tooltip__content {
+  position: absolute;
+  z-index: $sgbp-tooltip-z-index;
+  display: none;
+  top: 0;
+  left: 50%;
+  max-width: 100vw;
+}
+
+.sgbp-tooltip--styled .sgbp-tooltip__content {
+  box-shadow: 2px 2px 15px -2px $sgbp-tooltip-box-shadow-color;
+  padding: $sgbp-tooltip-padding;
+  background-color: $sgbp-tooltip-background-color;
+  color: $sgbp-tooltip-color;
+  font-weight: normal;
+  white-space: normal;
+}
+
+.sgbp-tooltip__trigger--help {
+  cursor: help;
+}
+
+.sgbp-tooltip__trigger--icon {
+  font-size: 1.45rem;
+  margin-bottom: -3px;
+}
+
+.sgbp-tooltip--styled.sgbp-tooltip--left .sgbp-tooltip__content {
+  text-align: right;
+}
+
+.sgbp-tooltip--styled.sgbp-tooltip--right .sgbp-tooltip__content {
+  text-align: left;
+}
+
+.sgbp-tooltip--top .sgbp-tooltip__content {
+  bottom: 100%;
+  top: auto;
+}
+
+.sgbp-tooltip--right .sgbp-tooltip__content {
+  right: auto;
+  left: 100%;
+}
+
+.sgbp-tooltip--bottom .sgbp-tooltip__content {
+  bottom: auto;
+  top: 100%;
+}
+
+.sgbp-tooltip--left .sgbp-tooltip__content {
+  right: 100%;
+  left: auto;
+}
+
+.sgbp-tooltip.is-open .sgbp-tooltip__content {
+  z-index: $sgbp-tooltip-z-index - 1; // hover-opened tooltips should win over force-opened (.is-open) tooltips
+}
+
+// sass-lint:disable no-important
+.sgbp-tooltip.is-open .sgbp-tooltip__content,
+.sgbp-tooltip:not(.sgbp-tooltip--noHover) .sgbp-tooltip__content:hover,
+.sgbp-tooltip:not(.sgbp-tooltip--noHover) .sgbp-tooltip__trigger:hover + .sgbp-tooltip__content {
+  display: block !important;
+}
+
+@media (hover: none) {
+  .sgbp-tooltip--onlyIfHover:not(.sgbp-tooltip--noHover) .sgbp-tooltip__content:hover,
+  .sgbp-tooltip--onlyIfHover:not(.sgbp-tooltip--noHover) .sgbp-tooltip__trigger:hover + .sgbp-tooltip__content {
+    display: none !important;
+  }
+}
+// sass-lint:enable no-important

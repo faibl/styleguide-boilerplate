@@ -1,0 +1,12 @@
+$sgbp-paragraph-margin: $sgbp-default-margin !default;
+$sgbp-paragraph-lineHeight: 1.75em !default;
+
+.sgbp-paragraph {
+  margin-bottom: $sgbp-paragraph-margin;
+  line-height: $sgbp-paragraph-lineHeight;
+  font-variant-numeric: oldstyle-nums;
+
+  &--noMargin {
+    margin-bottom: 0;
+  }
+}

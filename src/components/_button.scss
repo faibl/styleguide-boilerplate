@@ -1,0 +1,131 @@
+$sgbp-button-primary-color-background: $sgbp-color-brand-primary !default;
+$sgbp-button-primary-color: $sgbp-color-brand-primary-inverted !default;
+$sgbp-button-primary-border-color: $sgbp-button-primary-color-background !default;
+$sgbp-button-primary-hover-color-background: $sgbp-color-brand-primary-light !default;
+$sgbp-button-primary-hover-color: $sgbp-button-primary-color !default;
+$sgbp-button-primary-hover-border-color: $sgbp-button-primary-hover-color-background !default;
+
+$sgbp-button-secondary-color-background: $sgbp-color-gray-dark !default;
+$sgbp-button-secondary-color: $sgbp-color-white !default;
+$sgbp-button-secondary-border-color: $sgbp-color-gray-dark !default;
+$sgbp-button-secondary-hover-color-background: $sgbp-color-gray-darker !default;
+$sgbp-button-secondary-hover-color: $sgbp-color-white !default;
+$sgbp-button-secondary-hover-border-color: $sgbp-button-secondary-hover-color-background !default;
+
+$sgbp-button-danger-color-background: $sgbp-color-error !default;
+$sgbp-button-danger-color: $sgbp-color-white !default;
+$sgbp-button-danger-border-color: $sgbp-button-danger-color-background !default;
+$sgbp-button-danger-hover-color-background: darken($sgbp-color-error, 10%) !default;
+$sgbp-button-danger-hover-color: $sgbp-button-danger-color !default;
+$sgbp-button-danger-hover-border-color: $sgbp-button-danger-hover-color-background !default;
+
+$sgbp-button-padding: 0.85em 0.75em 0.55em 0.75em !default;
+$sgbp-button-padding-big: 1.12em 1em 0.7em 1em !default;
+
+$sgbp-button-font-weight: bold !default;
+$sgbp-button-text-transform: uppercase !default;
+
+$sgbp-button-font-size: 0.9em !default;
+$sgbp-button-font-size-big: 1.2em !default;
+$sgbp-button-border-radius: $sgbp-roundedEdge-border-radius !default;
+$sgbp-button-icon-margin-top: -0.1em;
+$sgbp-button-icon-margin-bottom: 0;
+
+@mixin sgbp-button-colors($_color, $_backgroundColor, $_borderColor, $_hoverColor, $_hoverBackgroundColor, $_hoverBorderColor) {
+  background-color: $_backgroundColor;
+  color: $_color;
+  border-color: $_borderColor;
+
+  &:visited {
+    color: $_color;
+  }
+
+  &:not([disabled]) {
+    @include sgbp-hover($_hoverColor, $_hoverBackgroundColor);
+  }
+
+  &:not([disabled]):not(:hover):active,
+  &:not([disabled]):not(:hover):focus {
+    color: $_color;
+  }
+
+  &.is-active {
+    background-color: $_hoverBackgroundColor;
+    color: $_hoverColor;
+  }
+
+  &.sgbp-button--outline {
+    background-color: transparent;
+    color: $_backgroundColor;
+    border-color: $_backgroundColor;
+
+    &:hover,
+    &.is-active {
+      background-color: $_backgroundColor;
+      color: $_color;
+    }
+  }
+}
+
+.sgbp-button {
+  transition: background-color 200ms, border-color 200ms, color 200ms;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $sgbp-button-padding;
+  border: 1px solid transparent;
+  border-radius: $sgbp-button-border-radius;
+
+  text-transform: $sgbp-button-text-transform;
+  font-size: $sgbp-button-font-size;
+  font-weight: $sgbp-button-font-weight;
+  line-height: 1em;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[disabled],
+  &.is-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.sgbp-button--block {
+  width: 100%;
+  justify-content: center;
+}
+
+.sgbp-button--primary {
+  @include sgbp-button-colors($sgbp-button-primary-color, $sgbp-button-primary-color-background, $sgbp-button-primary-border-color, $sgbp-button-primary-hover-color, $sgbp-button-primary-hover-color-background, $sgbp-button-primary-hover-border-color);
+}
+
+.sgbp-button--secondary {
+  @include sgbp-button-colors($sgbp-button-secondary-color, $sgbp-button-secondary-color-background, $sgbp-button-secondary-border-color, $sgbp-button-secondary-hover-color, $sgbp-button-secondary-hover-color-background, $sgbp-button-secondary-hover-border-color);
+}
+
+.sgbp-button--danger {
+  @include sgbp-button-colors($sgbp-button-danger-color, $sgbp-button-danger-color-background, $sgbp-button-danger-border-color, $sgbp-button-danger-hover-color, $sgbp-button-danger-hover-color-background, $sgbp-button-danger-hover-border-color);
+}
+
+.sgbp-button__icon {
+  margin-top: $sgbp-button-icon-margin-top;
+  margin-bottom: $sgbp-button-icon-margin-bottom;
+
+  &--left {
+    margin-right: 0.3em;
+    margin-left: -0.2em;
+  }
+
+  &--right {
+    margin-left: 0.3em;
+    margin-right: -0.2em;
+  }
+}
+
+.sgbp-button--big {
+  padding: $sgbp-button-padding-big;
+  font-size: $sgbp-button-font-size-big;
+}
