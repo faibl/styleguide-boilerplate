@@ -18,7 +18,7 @@
               <span class="sgbp-headline__addendum">Styleguide</span>
             </h1>
             <p class="sgbp-paragraph">
-                Visit <a href="/layout.html" class="sgbp-link">/layout.html</a>
+                Visit <a href="./layout.html" class="sgbp-link">/layout.html</a>
                 to see a demo layout built with these components.
             </p>
         </header>
