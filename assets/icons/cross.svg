@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>2FDD60A3-4458-494D-B562-9D6812D82A41</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="illu_feedback_negative" transform="translate(-33.000000, -33.000000)" stroke="currentColor"
+           stroke-width="2">
+            <g id="icon_error">
+                <g transform="translate(34.000000, 34.000000)">
+                    <path d="M0.5,31.5 L31.5161247,0.483875155" id="Line"></path>
+                    <path d="M0.5,31.5 L31.5161247,0.483875155" id="Line-Copy"
+                          transform="translate(16.000000, 16.000000) scale(-1, 1) translate(-16.000000, -16.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
