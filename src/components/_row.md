@@ -130,12 +130,12 @@ Inverse rows have a top margin instead of a bottom margin
     <div class="sgbp-row sgbp-row--inverse">
         Row 3
     </div>
-    <div class="sgbp-row sgbp-row--inverse sgbp-row--extraBigMargin sgbp-row--withSeparator">
+    <div class="sgbp-row sgbp-row--inverse sgbp-row--withSeparator">
         Row 4 (with separator)
     </div>
-    <div class="sgbp-row sgbp-row--inverse sgbp-row--extraBigMargin sgbp-row--withSeparator">
+    <div class="sgbp-row sgbp-row--inverse sgbp-row--withSeparator">
         Row 5 (with separator)
     </div>
-    <div class="sgbp-row sgbp-row--inverse sgbp-row--extraBigMargin sgbp-row--withSeparator">
+    <div class="sgbp-row sgbp-row--inverse sgbp-row--withSeparator">
         Row 6 (with separator)
     </div>

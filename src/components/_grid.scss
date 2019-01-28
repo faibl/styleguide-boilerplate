@@ -595,6 +595,10 @@ $sgbp-grid-gutter-height-halve: $sgbp-grid-gutter-height / 2;
     align-items: center;
   }
 
+  &--baseline {
+    align-items: baseline;
+  }
+
   &--fit {
     > .sgbp-grid__cell {
       flex: 1 1 0%;

@@ -152,7 +152,7 @@ The two cells swap ordering when switching from small to medium
     @example
     <div class="sgbp-grid sgbp-grid--gutters">
         <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 2</div>
+        <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
     </div>
 
@@ -161,7 +161,7 @@ The two cells swap ordering when switching from small to medium
     @example
     <div class="sgbp-grid sgbp-grid--top sgbp-grid--gutters">
         <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 2</div>
+        <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
     </div>
 
@@ -170,7 +170,7 @@ The two cells swap ordering when switching from small to medium
     @example
     <div class="sgbp-grid sgbp-grid--center sgbp-grid--gutters">
         <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 2</div>
+        <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
     </div>
 
@@ -179,7 +179,16 @@ The two cells swap ordering when switching from small to medium
     @example
     <div class="sgbp-grid sgbp-grid--bottom sgbp-grid--gutters">
         <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 2</div>
+        <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
+    </div>
+
+### Grid (baseline alignment)
+  
+    @example
+    <div class="sgbp-grid sgbp-grid--baseline sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+        <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
     </div>
 

@@ -55,6 +55,10 @@ $sgbp-row-separator-color: $sgbp-color-gray-medium;
     &.sgbp-row--smallMargin {
       padding-bottom: $sgbp-row-margin-small;
     }
+
+    &.sgbp-row--extraSmallMargin {
+      padding-bottom: $sgbp-row-margin-extra-small;
+    }
   }
 
   &--inverse {
@@ -72,8 +76,16 @@ $sgbp-row-separator-color: $sgbp-color-gray-medium;
         padding-top: $sgbp-row-margin-small;
       }
 
+      &.sgbp-row--extraSmallMargin {
+        padding-top: $sgbp-row-margin-extra-small;
+      }
+
       &.sgbp-row--bigMargin {
         padding-top: $sgbp-row-margin-big;
+      }
+
+      &.sgbp-row--extraBigMargin {
+        padding-top: $sgbp-row-margin-extra-big;
       }
       // scss-lint:enable NestingDepth
     }

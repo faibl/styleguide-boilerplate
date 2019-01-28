@@ -71,6 +71,18 @@ Vertically bottom aligned contents
         </svg>
     </div>
 
+### Postfix (baseline)
+  
+Vertically baseline aligned contents
+  
+    @example
+    <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--baseline">
+        <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--primary sgbp-icon--big">
+          <use xlink:href="./assets/icons.svg#more-horizontal"></use>
+        </svg>
+    </div>
+
 ### Postfix (between)
   
 Use maximum spacing between the elements 

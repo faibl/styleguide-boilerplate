@@ -20,11 +20,23 @@
 ### Input Group (aligned button)
   
     @example
+    <div class="sgbp-grid sgbp-grid--gutters shp-row">
+      <div class="sgbp-grid__cell">
+        <label class="sgbp-inputGroup">
+            <span class="sgbp-inputGroup__label">Suchwort</span>
+            <input type="text" class="sgbp-input">
+        </label>
+      </div>
+      <div class="sgbp-grid__cell">
+        <button type="button" class="sgbp-inputGroup__alignedButton sgbp-button sgbp-button--primary">Suchen</button>
+      </div>
+    </div>
     <div class="sgbp-grid sgbp-grid--gutters">
       <div class="sgbp-grid__cell">
         <label class="sgbp-inputGroup">
             <span class="sgbp-inputGroup__label">Suchwort</span>
             <input type="text" class="sgbp-input">
+            <div class="sgbp-inputGroup__subtext">Works with content below input as well</div>
         </label>
       </div>
       <div class="sgbp-grid__cell">

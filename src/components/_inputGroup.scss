@@ -1,8 +1,9 @@
 $sgbp-inputGroup-label-color: $sgbp-color-gray !default;
 $sgbp-inputGroup-error-color: $sgbp-color-white !default;
 $sgbp-inputGroup-error-background-color: $sgbp-color-error !default;
-$sgbp-inputGroup--constrained-max-width: 600px;
-$sgbp-inputGroup-label-font-weight: normal;
+$sgbp-inputGroup--constrained-max-width: 600px !default;
+$sgbp-inputGroup-label-font-weight: normal !default;
+$sgbp-inputGroup-alignedButton-margin-top: 25px !default;
 
 .sgbp-inputGroup {
   position: relative;
@@ -44,6 +45,6 @@ $sgbp-inputGroup-label-font-weight: normal;
   }
 
   &__alignedButton {
-    margin-top: 20px;
+    margin-top: $sgbp-inputGroup-alignedButton-margin-top;
   }
 }

@@ -28,6 +28,10 @@
     align-items: flex-end;
   }
 
+  &--baseline {
+    align-items: baseline;
+  }
+
   &--between {
     justify-content: space-between;
   }
