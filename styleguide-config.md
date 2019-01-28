@@ -25,6 +25,6 @@
         <div class="sg-container sgbp-row" sg-content></div>
       </div>
       <div class="sgbp-region sgbp-region--secondary">
-          Built with <a href="https://github.com/faibl/sgbp" class="sgbp-link">SGBP</a>.
+          Built upon <a href="https://github.com/faibl/styleguide-boilerplate" class="sgbp-link">Styleguide Boilerplate</a>.
       </div>
     </div>

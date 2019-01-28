@@ -12,6 +12,16 @@
         <span class="sgbp-checkbox__label">Checkbox 2</span>
     </label>
 
+### Checkbox (standalone)
+
+You need to provide an empty `sgbp-checkbox__label` element in order to display standalone checkboxes without labels
+
+    @example
+    <label class="sgbp-checkbox">
+        <input type="checkbox" class="sgbp-checkbox__control">
+        <span class="sgbp-checkbox__label"></span>
+    </label>
+
 ### Checkbox (inline)
   
     @example

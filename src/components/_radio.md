@@ -11,6 +11,20 @@
         <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-default">
         <span class="sgbp-radio__label">Radio Button 2</span>
     </label>
+    
+### Radio (standalone)
+
+You need to provide an empty `sgbp-radio__label` element in order to display standalone radios without labels
+
+    @example
+    <label class="sgbp-radio">
+        <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-standalone">
+        <span class="sgbp-radio__label"></span>
+    </label>
+    <label class="sgbp-radio">
+        <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-standalone">
+        <span class="sgbp-radio__label"></span>
+    </label>
 
 ### Radio Button (inline)
   
@@ -27,13 +41,13 @@
 ### Radio (disabled)
 
     @example
-    <label class="sgbp-checkbox is-disabled">
-        <input type="checkbox" class="sgbp-checkbox__control" disabled>
-        <span class="sgbp-checkbox__label">Radio 1</span>
+    <label class="sgbp-radio is-disabled">
+        <input type="radio" class="sgbp-radio__control" disabled>
+        <span class="sgbp-radio__label">Radio 1</span>
     </label>
-    <label class="sgbp-checkbox is-disabled">
-        <input type="checkbox" class="sgbp-checkbox__control" disabled checked>
-        <span class="sgbp-checkbox__label">Radio 2</span>
+    <label class="sgbp-radio is-disabled">
+        <input type="radio" class="sgbp-radio__control" disabled checked>
+        <span class="sgbp-radio__label">Radio 2</span>
     </label>
 
 ### Radio Button (small)

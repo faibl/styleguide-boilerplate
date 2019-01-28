@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Lato';
-  src: url('#{$sgbp-font-path}/Lato-Regular.woff') format('woff');
+  src: url('#{$sgbp-public-asset-path}/fonts/Lato-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('#{$sgbp-font-path}/Lato-Bold.woff') format('woff');
+  src: url('#{$sgbp-public-asset-path}/fonts/Lato-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }

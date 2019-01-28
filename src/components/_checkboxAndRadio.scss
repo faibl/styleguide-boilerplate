@@ -17,14 +17,13 @@ $sgbp-checkboxAndRadio-label-color-checked: $sgbp-checkboxAndRadio-background-co
   }
 
   &__label {
-    color: $sgbp-checkboxAndRadio-label-color;
-
-    display: inline-block;
     position: relative;
-
+    display: inline-block;
+    min-height: 1em;
     padding-left: 2em;
-
     vertical-align: middle;
+
+    color: $sgbp-checkboxAndRadio-label-color;
     cursor: pointer;
 
     &::before {
@@ -65,7 +64,7 @@ $sgbp-checkboxAndRadio-label-color-checked: $sgbp-checkboxAndRadio-background-co
 
   &.is-checked &__label::before,
   &__control:checked + &__label::before {
-    background-image: url('#{$sgbp-image-path}/check_#{$sgbp-checkboxAndRadio-checkmarkIcon-variant}.svg');
+    background-image: url('#{$sgbp-public-asset-path}/images/check_#{$sgbp-checkboxAndRadio-checkmarkIcon-variant}.svg');
     background-color: $sgbp-checkboxAndRadio-background-color-checked;
     background-size: 70%;
     background-repeat: no-repeat;
@@ -74,7 +73,7 @@ $sgbp-checkboxAndRadio-label-color-checked: $sgbp-checkboxAndRadio-background-co
 
   &--big &__label {
     font-size: 1.1em;
-    padding-left: 2.3em;
+    padding-left: 2.6em;
 
     &::before {
       margin-top: -0.24em;

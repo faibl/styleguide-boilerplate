@@ -1,7 +1,5 @@
 $sgbp-asset-path: './assets' !default;
-$sgbp-font-path: '#{$sgbp-asset-path}/fonts' !default;
-$sgbp-icon-path: '#{$sgbp-asset-path}/icons' !default;
-$sgbp-image-path: '#{$sgbp-asset-path}/images' !default;
+$sgbp-public-asset-path: '/assets' !default;
 
 /**
  * Media Query Breakpoints:
