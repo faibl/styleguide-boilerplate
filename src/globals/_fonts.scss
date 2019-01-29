@@ -3,6 +3,7 @@
   src: url('#{$sgbp-public-asset-path}/fonts/Lato-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap
 }
 
 @font-face {
@@ -10,4 +11,5 @@
   src: url('#{$sgbp-public-asset-path}/fonts/Lato-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
+  font-display: swap
 }
