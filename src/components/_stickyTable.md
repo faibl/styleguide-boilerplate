@@ -385,8 +385,6 @@ Make sure that the cells in the header have the same width as the cells in the b
                    <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell sgbp-table__cell--150 sgbp-table__cell--headline">Headline</th>
                    <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120 sgbp-table__cell--headline">A Text</th>
                    <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--headline sgbp-table__cell--numeric">B Numeric</th>
-                   <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--headline sgbp-table__cell--numeric">C</th>
-                   <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--headline sgbp-table__cell--numeric">D</th>
                </tr>
            </thead>
            <tbody>
@@ -394,70 +392,50 @@ Make sure that the cells in the header have the same width as the cells in the b
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--150 sgbp-text sgbp-text--bold">Headline 1</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell--120 sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">4323.46</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">192.565</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">4323.46</td>
                </tr>
                <tr class="sgbp-table__row">
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 2</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">10107.43</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">667.01</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">10107.43</td>
                </tr>
                <tr class="sgbp-table__row">
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-               </tr>
-               <tr class="sgbp-table__row">
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                </tr>
                <tr class="sgbp-table__row">
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
+               </tr>
+               <tr class="sgbp-table__row">
+                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
+                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                </tr>
                <tr class="sgbp-table__row">
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
+               </tr>
+               <tr class="sgbp-table__row">
+                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
+                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                </tr>
                <tr class="sgbp-table__row">
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                </tr>
                <tr class="sgbp-table__row">
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                </tr>
                <tr class="sgbp-table__row">
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-               </tr>
-               <tr class="sgbp-table__row">
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                   <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                </tr>
            </tbody>
