@@ -1,37 +1,37 @@
 @mixin sgbp-link($is-unobtrusive: false) {
   transition: color 0.2s ease-in-out;
   display: inline-block;
-  color: $sgbp-link-color;
+  color: var(--sgbp-link-color);
   text-decoration: underline;
 
   &:visited,
   &:active {
-    color: $sgbp-link-color;
+    color: var(--sgbp-link-color);
     text-decoration: underline;
   }
 
   &:focus {
-    color: $sgbp-link-hover-color;
+    color: var(--sgbp-link-hover-color);
     text-decoration: underline;
   }
 
-  @include sgbp-hover($sgbp-link-hover-color); // scss-lint:disable DeclarationOrder
+  @include sgbp-hover(var(--sgbp-link-hover-color)); // scss-lint:disable DeclarationOrder
 
   @if ($is-unobtrusive == 'modifier') {
     &--unobtrusive {
-      @include sgbp-hover($sgbp-color-brand-primary);
+      @include sgbp-hover(var(--sgbp-color-brand-primary));
 
       &,
       &:visited {
-        color: $sgbp-text-color;
+        color: var(--sgbp-text-color);
       }
     }
   } @else if ($is-unobtrusive == true) {
-    @include sgbp-hover($sgbp-color-brand-primary);
+    @include sgbp-hover(var(--sgbp-color-brand-primary));
 
     &,
     &:visited {
-      color: $sgbp-text-color;
+      color: var(--sgbp-text-color);
     }
   }
 }

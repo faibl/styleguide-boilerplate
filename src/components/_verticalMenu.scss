@@ -1,28 +1,30 @@
-$sgbp-verticalMenu-color: $sgbp-color-gray !default;
-$sgbp-verticalMenu-color-active: $sgbp-color-black !default;
-$sgbp-verticalMenu-border-color-active: $sgbp-color-gray !default;
+:root {
+  --sgbp-verticalMenu-color: var(--sgbp-color-gray);
+  --sgbp-verticalMenu-color-active: var(--sgbp-color-black);
+  --sgbp-verticalMenu-border-color-active: var(--sgbp-color-gray);
+}
 
 @mixin sgbpVerticalMenuInline() {
   .sgbp-verticalMenu__item {
     border-top: none;
     border-bottom: none;
-    border-left: $sgbp-accent-line-height solid $sgbp-color-transparent;
-    border-right: $sgbp-accent-line-height solid $sgbp-color-transparent;
+    border-left: var(--sgbp-accent-line-height) solid var(--sgbp-color-transparent);
+    border-right: var(--sgbp-accent-line-height) solid var(--sgbp-color-transparent);
   }
 
   &.sgbp-verticalMenu--right .sgbp-verticalMenu__item {
-    padding-left: $sgbp-default-margin-small;
+    padding-left: var(--sgbp-default-margin-small);
 
     &.is-active {
-      border-left-color: $sgbp-verticalMenu-border-color-active;
+      border-left-color: var(--sgbp-verticalMenu-border-color-active);
     }
   }
 
   &.sgbp-verticalMenu--left .sgbp-verticalMenu__item {
-    padding-right: $sgbp-default-margin-small;
+    padding-right: var(--sgbp-default-margin-small);
 
     &.is-active {
-      border-right-color: $sgbp-verticalMenu-border-color-active;
+      border-right-color: var(--sgbp-verticalMenu-border-color-active);
     }
   }
 }
@@ -49,18 +51,18 @@ $sgbp-verticalMenu-border-color-active: $sgbp-color-gray !default;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-bottom: 5px;
-    border-bottom: 1px solid $sgbp-color-gray-light;
+    border-bottom: 1px solid var(--sgbp-color-gray-light);
 
-    color: $sgbp-verticalMenu-color;
+    color: var(--sgbp-verticalMenu-color);
 
     &:hover,
     &.is-active {
-      color: $sgbp-verticalMenu-color-active;
+      color: var(--sgbp-verticalMenu-color-active);
     }
 
     &.is-active {
-      border-bottom-color: $sgbp-verticalMenu-border-color-active;
-      border-bottom-width: $sgbp-accent-line-height;
+      border-bottom-color: var(--sgbp-verticalMenu-border-color-active);
+      border-bottom-width: var(--sgbp-accent-line-height);
     }
   }
 }

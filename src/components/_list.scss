@@ -1,4 +1,6 @@
-$sgbp-list-default-bullet-icon: '■';
+:root {
+  --sgbp-list-default-bullet-icon: '■';
+}
 
 .sgbp-list {
   &--bulleted {
@@ -10,12 +12,12 @@ $sgbp-list-default-bullet-icon: '■';
       margin-bottom: 1em;
 
       &::before {
-        content: $sgbp-list-default-bullet-icon;
+        content: var(--sgbp-list-default-bullet-icon);
         position: absolute;
         left: 0;
         top: 0;
         line-height: 0.7em;
-        color: $sgbp-color-brand-primary;
+        color: var(--sgbp-color-brand-primary);
       }
     }
   }

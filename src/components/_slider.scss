@@ -30,8 +30,8 @@
         right: 20px;
         left: 20px;
 
-        background-color: $sgbp-color-white;
-        box-shadow: 0 1px 2px 2px $sgbp-color-darken-light;
+        background-color: var(--sgbp-color-white);
+        box-shadow: 0 1px 2px 2px var(--sgbp-color-darken-light);
       }
     }
   }

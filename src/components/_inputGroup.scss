@@ -1,25 +1,27 @@
-$sgbp-inputGroup-label-color: $sgbp-color-gray !default;
-$sgbp-inputGroup-error-color: $sgbp-color-white !default;
-$sgbp-inputGroup-error-background-color: $sgbp-color-error !default;
-$sgbp-inputGroup--constrained-max-width: 600px !default;
-$sgbp-inputGroup-label-font-weight: normal !default;
-$sgbp-inputGroup-alignedButton-margin-top: 25px !default;
+:root {
+  --sgbp-inputGroup-label-color: var(--sgbp-color-gray);
+  --sgbp-inputGroup-error-color: var(--sgbp-color-white);
+  --sgbp-inputGroup-error-background-color: var(--sgbp-color-error);
+  --sgbp-inputGroup--constrained-max-width:  600px;
+  --sgbp-inputGroup-label-font-weight:  normal;
+  --sgbp-inputGroup-alignedButton-margin-top:  25px;
+}
 
 .sgbp-inputGroup {
   position: relative;
   display: block;
 
   &.has-errors {
-    border: 1px solid $sgbp-color-error;
+    border: 1px solid var(--sgbp-color-error);
   }
 
   & + & {
-    margin-top: $sgbp-default-margin-big;
+    margin-top: var(--sgbp-default-margin-big);
   }
 
   &--constrainedWidth {
     @media #{$sgbp-large-up} {
-      max-width: $sgbp-inputGroup--constrained-max-width;
+      max-width: var(--sgbp-inputGroup--constrained-max-width);
     }
   }
 
@@ -28,8 +30,8 @@ $sgbp-inputGroup-alignedButton-margin-top: 25px !default;
     margin-left: 0.1em;
     margin-bottom: 0.3em;
     font-size: 1em;
-    font-weight: $sgbp-inputGroup-label-font-weight;
-    color: $sgbp-inputGroup-label-color;
+    font-weight: var(--sgbp-inputGroup-label-font-weight);
+    color: var(--sgbp-inputGroup-label-color);
   }
 
   &__subtext {
@@ -39,12 +41,12 @@ $sgbp-inputGroup-alignedButton-margin-top: 25px !default;
     font-size: 0.8rem;
 
     &--error {
-      background-color: $sgbp-inputGroup-error-background-color;
-      color: $sgbp-inputGroup-error-color;
+      background-color: var(--sgbp-inputGroup-error-background-color);
+      color: var(--sgbp-inputGroup-error-color);
     }
   }
 
   &__alignedButton {
-    margin-top: $sgbp-inputGroup-alignedButton-margin-top;
+    margin-top: var(--sgbp-inputGroup-alignedButton-margin-top);
   }
 }

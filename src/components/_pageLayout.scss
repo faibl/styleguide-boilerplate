@@ -1,29 +1,31 @@
-$sgbp-pageLayout-background-color: $sgbp-color-gray-lighter;
-$sgbp-pageLayout-content-background-color: $sgbp-color-white;
-$sgbp-pageLayout-content-border-color: $sgbp-color-gray-medium;
+:root {
+  --sgbp-pageLayout-background-color: var(--sgbp-color-gray-lighter);
+  --sgbp-pageLayout-content-background-color: var(--sgbp-color-white);
+  --sgbp-pageLayout-content-border-color: var(--sgbp-color-gray-medium);
+}
 
 .sgbp-pageLayout {
   display: flex;
   flex-direction: column;
-  background-color: $sgbp-pageLayout-background-color;
+  background-color: var(--sgbp-pageLayout-background-color);
   min-height: 100vh;
 
   &__header {
     flex: 0 0 auto;
-    margin-bottom: $sgbp-default-margin-big;
+    margin-bottom: var(--sgbp-default-margin-big);
   }
 
   &__main {
     flex: 1 1 auto;
     display: flex;
-    width: $sgbp-page-max-width;
+    width: var(--sgbp-page-max-width);
 
     // sass-lint:disable no-duplicate-properties
     max-width: 100%;
-    max-width: calc(100% - #{$sgbp-default-margin} * 2);
+    max-width: calc(100% - #{var(--sgbp-default-margin)} * 2);
     // sass-lint:enable no-duplicate-properties
-    margin-left: $sgbp-default-margin;
-    margin-right: $sgbp-default-margin;
+    margin-left: var(--sgbp-default-margin);
+    margin-right: var(--sgbp-default-margin);
 
     @media #{$sgbp-large-up} {
       margin-left: auto;
@@ -34,11 +36,11 @@ $sgbp-pageLayout-content-border-color: $sgbp-color-gray-medium;
       flex: 0 1 160px;
 
       &:first-child {
-        margin-right: $sgbp-default-margin-big;
+        margin-right: var(--sgbp-default-margin-big);
       }
 
       &:last-child {
-        margin-left: $sgbp-default-margin-big;
+        margin-left: var(--sgbp-default-margin-big);
       }
     }
 

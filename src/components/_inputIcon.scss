@@ -22,7 +22,7 @@
     margin-right: 0.4em;
 
     &:hover {
-      color: $sgbp-color-brand-primary;
+      color: var(--sgbp-color-brand-primary);
     }
   }
 
@@ -32,8 +32,8 @@
     z-index: 1000;
     bottom: 100%;
     right: 0;
-    background-color: $sgbp-color-brand-primary;
-    color: $sgbp-color-brand-primary-inverted;
+    background-color: var(--sgbp-color-brand-primary);
+    color: var(--sgbp-color-brand-primary-inverted);
     padding: 0.55rem;
     font-weight: bold;
     font-size: 0.8rem;
@@ -58,7 +58,7 @@
   &--textarea &__icon {
     top: 0.9em;
     margin-right: 0.7em;
-    background: $sgbp-color-white;
+    background: var(--sgbp-color-white);
     opacity: 0.7;
 
     &:hover {
@@ -69,7 +69,7 @@
   &--select &__icon {
     top: 0.9em;
     margin-right: 2.2em;
-    background: $sgbp-color-white;
+    background: var(--sgbp-color-white);
     opacity: 0.7;
 
     &:hover {

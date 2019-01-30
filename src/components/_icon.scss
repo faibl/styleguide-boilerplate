@@ -1,85 +1,87 @@
-$sgbp-icon-font-size: 1.6em !default;
-$sgbp-icon-font-size-tiny: 1.2em !default;
-$sgbp-icon-font-size-small: 1.4em !default;
-$sgbp-icon-font-size-big: 2.15em !default;
-$sgbp-icon-font-size-extraBig: 3.15em !default;
-$sgbp-icon-font-size-screen-tiny: $sgbp-icon-font-size-small !default;
-$sgbp-icon-font-size-small-screen-tiny: $sgbp-icon-font-size-small !default;
-$sgbp-icon-font-size-big-screen-tiny: $sgbp-icon-font-size-big !default;
-$sgbp-icon-font-size-extraBig-screen-tiny: $sgbp-icon-font-size-extraBig !default;
+:root {
+  --sgbp-icon-font-size:  1.6em;
+  --sgbp-icon-font-size-tiny:  1.2em;
+  --sgbp-icon-font-size-small:  1.4em;
+  --sgbp-icon-font-size-big:  2.15em;
+  --sgbp-icon-font-size-extraBig:  3.15em;
+  --sgbp-icon-font-size-screen-tiny: var(--sgbp-icon-font-size-small);
+  --sgbp-icon-font-size-small-screen-tiny: var(--sgbp-icon-font-size-small);
+  --sgbp-icon-font-size-big-screen-tiny: var(--sgbp-icon-font-size-big);
+  --sgbp-icon-font-size-extraBig-screen-tiny: var(--sgbp-icon-font-size-extraBig);
 
-$sgbp-icon-circle-color: $sgbp-color-white !default;
-$sgbp-icon-circle-backgroundColor: $sgbp-color-black !default;
+  --sgbp-icon-circle-color: var(--sgbp-color-white);
+  --sgbp-icon-circle-backgroundColor: var(--sgbp-color-black);
+}
 
 .sgbp-icon {
   display: inline-block;
 
-  font-size: $sgbp-icon-font-size-screen-tiny;
+  font-size: var(--sgbp-icon-font-size-screen-tiny);
   width: 1em;
   height: 1em;
 
   &--tiny {
-    font-size: $sgbp-icon-font-size-tiny;
+    font-size: var(--sgbp-icon-font-size-tiny);
   }
 
   &--small {
-    font-size: $sgbp-icon-font-size-small-screen-tiny;
+    font-size: var(--sgbp-icon-font-size-small-screen-tiny);
   }
 
   &--big {
-    font-size: $sgbp-icon-font-size-big-screen-tiny;
+    font-size: var(--sgbp-icon-font-size-big-screen-tiny);
   }
 
   &--extraBig {
-    font-size: $sgbp-icon-font-size-extraBig-screen-tiny;
+    font-size: var(--sgbp-icon-font-size-extraBig-screen-tiny);
   }
 
   &--primary {
-    color: $sgbp-color-brand-primary;
+    color: var(--sgbp-color-brand-primary);
   }
 
   &--light {
-    color: $sgbp-color-gray;
+    color: var(--sgbp-color-gray);
   }
 
   &--inverted {
-    color: $sgbp-color-white;
+    color: var(--sgbp-color-white);
   }
 
   &--circle {
     border-radius: 50%;
     padding: 2px;
-    color: $sgbp-icon-circle-color;
-    background: $sgbp-icon-circle-backgroundColor;
+    color: var(--sgbp-icon-circle-color);
+    background: var(--sgbp-icon-circle-backgroundColor);
 
     &.sgbp-icon--inverted {
       border-radius: 50%;
-      color: $sgbp-icon-circle-backgroundColor;
-      background: $sgbp-icon-circle-color;
+      color: var(--sgbp-icon-circle-backgroundColor);
+      background: var(--sgbp-icon-circle-color);
     }
   }
 
   &--hoverPrimary {
-    @include sgbp-hover($sgbp-color-brand-primary);
+    @include sgbp-hover(var(--sgbp-color-brand-primary));
   }
 
   @media #{$sgbp-small-up} {
-    font-size: $sgbp-icon-font-size;
+    font-size: var(--sgbp-icon-font-size);
 
     &--tiny {
-      font-size: $sgbp-icon-font-size-tiny;
+      font-size: var(--sgbp-icon-font-size-tiny);
     }
 
     &--small {
-      font-size: $sgbp-icon-font-size-small;
+      font-size: var(--sgbp-icon-font-size-small);
     }
 
     &--big {
-      font-size: $sgbp-icon-font-size-big;
+      font-size: var(--sgbp-icon-font-size-big);
     }
 
     &--extraBig {
-      font-size: $sgbp-icon-font-size-extraBig;
+      font-size: var(--sgbp-icon-font-size-extraBig);
     }
   }
 }

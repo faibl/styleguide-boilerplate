@@ -1,56 +1,58 @@
-$sgbp-col-margin: 14px !default;
-$sgbp-col-margin-small: 8px !default;
-$sgbp-col-margin-big: 28px !default;
+:root {
+  --sgbp-col-margin:  14px;
+  --sgbp-col-margin-small:  8px;
+  --sgbp-col-margin-big:  28px;
+}
 
 .sgbp-col {
   display: inline-flex;
 
-  margin-right: $sgbp-col-margin;
+  margin-right: var(--sgbp-col-margin);
 
   &--smallMargin {
-    margin-right: $sgbp-col-margin-small;
+    margin-right: var(--sgbp-col-margin-small);
   }
 
   &--bigMargin {
-    margin-right: $sgbp-col-margin-big;
+    margin-right: var(--sgbp-col-margin-big);
   }
 
   &--withSeparator {
-    border-right: 1px solid $sgbp-color-gray-medium;
-    padding-right: calc(#{$sgbp-col-margin} / 1.65);
-    margin-right: calc(#{$sgbp-col-margin} / 2.5);
+    border-right: 1px solid var(--sgbp-color-gray-medium);
+    padding-right: calc(#{var(--sgbp-col-margin)} / 1.65);
+    margin-right: calc(#{var(--sgbp-col-margin)} / 2.5);
 
     &.sgbp-col--smallMargin {
-      padding-right: calc(#{$sgbp-col-margin-small} / 1.4);
-      margin-right: calc(#{$sgbp-col-margin-small} / 2.8);
+      padding-right: calc(#{var(--sgbp-col-margin-small)} / 1.4);
+      margin-right: calc(#{var(--sgbp-col-margin-small)} / 2.8);
     }
 
     &.sgbp-col--bigMargin {
-      padding-right: calc(#{$sgbp-col-margin-big} / 1.75);
-      margin-right: calc(#{$sgbp-col-margin-big} / 2.5);
+      padding-right: calc(#{var(--sgbp-col-margin-big)} / 1.75);
+      margin-right: calc(#{var(--sgbp-col-margin-big)} / 2.5);
     }
   }
 
   &--inverse {
     margin-right: 0;
-    margin-left: $sgbp-col-margin;
+    margin-left: var(--sgbp-col-margin);
 
     &.sgbp-col--withSeparator {
       padding-right: 0;
       border-right: none;
 
-      border-left: 1px solid $sgbp-color-gray-medium;
-      padding-left: calc(#{$sgbp-col-margin} / 1.65);
-      margin-left: calc(#{$sgbp-col-margin} / 2.5);
+      border-left: 1px solid var(--sgbp-color-gray-medium);
+      padding-left: calc(#{var(--sgbp-col-margin)} / 1.65);
+      margin-left: calc(#{var(--sgbp-col-margin)} / 2.5);
 
       &.sgbp-col--smallMargin {
-        padding-left: calc(#{$sgbp-col-margin-small} / 1.4);
-        margin-left: calc(#{$sgbp-col-margin-small} / 2.8);
+        padding-left: calc(#{var(--sgbp-col-margin-small)} / 1.4);
+        margin-left: calc(#{var(--sgbp-col-margin-small)} / 2.8);
       }
 
       &.sgbp-col--bigMargin {
-        padding-left: calc(#{$sgbp-col-margin-big} / 1.75);
-        margin-left: calc(#{$sgbp-col-margin-big} / 2.5);
+        padding-left: calc(#{var(--sgbp-col-margin-big)} / 1.75);
+        margin-left: calc(#{var(--sgbp-col-margin-big)} / 2.5);
       }
     }
   }

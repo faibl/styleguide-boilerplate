@@ -1,15 +1,17 @@
-$sgbp-loading-indicator-color: $sgbp-color-brand-primary !default;
-$sgbp-loading-indicator-border-color: rgba(0, 0, 0, 0.08) !default;
-$sgbp-loading-indicator-border-width: 3px;
+:root {
+  --sgbp-loading-indicator-color: var(--sgbp-color-brand-primary);
+  --sgbp-loading-indicator-border-color:  rgba(0, 0, 0, 0.08);
+  --sgbp-loading-indicator-border-width: 3px;
+}
 
 .sgbp-loadingIndicator {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  border-width: $sgbp-loading-indicator-border-width;
+  border-width: var(--sgbp-loading-indicator-border-width);
   border-style: solid;
-  border-color: $sgbp-loading-indicator-border-color;
-  border-top-color: $sgbp-loading-indicator-color;
+  border-color: var(--sgbp-loading-indicator-border-color);
+  border-top-color: var(--sgbp-loading-indicator-color);
   animation: sgbp-loading-rotate 1s infinite cubic-bezier(0.185, 0.335, 0.25, 0.96);
 
   @keyframes sgbp-loading-rotate {

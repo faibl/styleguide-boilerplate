@@ -22,14 +22,14 @@ p.sg {
 }
 
 h2.sg {
-  font-family: $sgbp-headings-font-family;
-  font-size: $sgbp-font-size-h2;
+  font-family: var(--sgbp-headings-font-family);
+  font-size: var(--sgbp-font-size-h2);
   font-weight: 100;
   margin-top: 3em;
 }
 
 h3.sg {
-  font-family: $sgbp-headings-font-family;
+  font-family: var(--sgbp-headings-font-family);
   font-size: 1.1em;
   font-weight: bold;
 }
@@ -41,20 +41,20 @@ h3.sg + .sg {
 /* Colors */
 p.sg,
 ul.sg {
-  color: $sgbp-color-gray-dark;
+  color: var(--sgbp-color-gray-dark);
 }
 
 h2.sg {
-  color: $sgbp-color-brand-primary;
+  color: var(--sgbp-color-brand-primary);
 }
 
 h3.sg {
-  color: $sgbp-color-black;
+  color: var(--sgbp-color-black);
 }
 
 code.sg {
-  background: $sgbp-color-gray-light;
-  color: $sgbp-color-black;
+  background: var(--sgbp-color-gray-light);
+  color: var(--sgbp-color-black);
 
   padding: 2px 5px;
   margin: 0 1px;
@@ -163,8 +163,8 @@ code.sg:first-child {
   font-size: 0.85em;
   font-family: menlo, monospace;
   line-height: 1.5;
-  background: $sgbp-color-gray-light;
-  color: $sgbp-color-black;
+  background: var(--sgbp-color-gray-light);
+  color: var(--sgbp-color-black);
 }
 
 /*
@@ -234,20 +234,20 @@ code.sg:first-child {
   text-align: center;
 
   font-size: 10px;
-  background: $sgbp-color-gray-light;
+  background: var(--sgbp-color-gray-light);
   border-radius: 3px;
-  color: $sgbp-color-gray;
+  color: var(--sgbp-color-gray);
 }
 
 .sg-expando:hover:before,
 .sg-expando:focus:before {
-  color: $sgbp-color-black;
-  background: $sgbp-color-gray-light;
+  color: var(--sgbp-color-black);
+  background: var(--sgbp-color-gray-light);
 }
 
 .sg-expando:active:before {
-  color: $sgbp-color-white;
-  background: $sgbp-color-black;
+  color: var(--sgbp-color-white);
+  background: var(--sgbp-color-black);
 }
 
 .sg-expando-contract:before {

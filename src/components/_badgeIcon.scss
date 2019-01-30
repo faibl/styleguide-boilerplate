@@ -9,18 +9,18 @@
   }
 
   &--info &__icon {
-    color: $sgbp-badge-color-info;
+    color: var(--sgbp-badge-color-info);
   }
 
   &--success &__icon {
-    color: $sgbp-color-success;
+    color: var(--sgbp-color-success);
   }
 
   &--warning &__icon {
-    color: $sgbp-color-warning;
+    color: var(--sgbp-color-warning);
   }
 
   &--error &__icon {
-    color: $sgbp-color-error;
+    color: var(--sgbp-color-error);
   }
 }

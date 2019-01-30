@@ -1,6 +1,6 @@
 .sgbp-accordion {
   &__item {
-    border-bottom: 1px solid $sgbp-color-gray-medium;
+    border-bottom: 1px solid var(--sgbp-color-gray-medium);
 
     &--last,
     &:last-child {
@@ -8,7 +8,7 @@
     }
 
     &Header {
-      @include sgbp-hover($sgbp-color-brand-primary);
+      @include sgbp-hover(var(--sgbp-color-brand-primary));
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,7 +32,7 @@
 
     &.is-open {
       > .sgbp-accordion__itemHeader {
-        color: $sgbp-color-brand-primary;
+        color: var(--sgbp-color-brand-primary);
         font-weight: bold;
 
         > .sgbp-accordion__itemIcon {

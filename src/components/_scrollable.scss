@@ -20,11 +20,11 @@
     }
 
     &::-webkit-scrollbar-track-piece {
-      background-color: $sgbp-color-gray-medium;
+      background-color: var(--sgbp-color-gray-medium);
     }
 
     &::-webkit-scrollbar-thumb:vertical {
-      background-color: $sgbp-color-brand-secondary;
+      background-color: var(--sgbp-color-brand-secondary);
     }
   }
 

@@ -1,22 +1,22 @@
 .sgbp-headline {
-  font-family: $sgbp-headings-font-family;
-  font-weight: $sgbp-headings-font-weight;
-  letter-spacing: $sgbp-headings-letter-spacing;
+  font-family: var(--sgbp-headings-font-family);
+  font-weight: var(--sgbp-headings-font-weight);
+  letter-spacing: var(--sgbp-headings-letter-spacing);
   margin-top: 0;
   margin-bottom: 0;
 
-  line-height: $sgbp-headings-line-height-screen-tiny;
+  line-height: var(--sgbp-headings-line-height-screen-tiny);
 
   @media #{$sgbp-medium-up} {
-    line-height: $sgbp-headings-line-height;
+    line-height: var(--sgbp-headings-line-height);
   }
 
   &--primary {
-    color: $sgbp-color-brand-primary;
+    color: var(--sgbp-color-brand-primary);
   }
 
   &--secondary {
-    color: $sgbp-color-brand-secondary;
+    color: var(--sgbp-color-brand-secondary);
   }
 
   &__addendum {
@@ -26,15 +26,15 @@
   }
 
   &--h0 {
-    font-size: $sgbp-font-size-h0-screen-tiny;
-    text-transform: $sgbp-text-transform-h0;
+    font-size: var(--sgbp-font-size-h0-screen-tiny);
+    text-transform: var(--sgbp-text-transform-h0);
 
     @media #{$sgbp-medium-up} {
-      font-size: $sgbp-font-size-h0-screen-small;
+      font-size: var(--sgbp-font-size-h0-screen-small);
     }
 
     @media #{$sgbp-large-up} {
-      font-size: $sgbp-font-size-h0;
+      font-size: var(--sgbp-font-size-h0);
     }
 
     .sgbp-headline__addendum {
@@ -43,15 +43,15 @@
   }
 
   &--h1 {
-    font-size: $sgbp-font-size-h1-screen-tiny;
-    text-transform: $sgbp-text-transform-h1;
+    font-size: var(--sgbp-font-size-h1-screen-tiny);
+    text-transform: var(--sgbp-text-transform-h1);
 
     @media #{$sgbp-medium-up} {
-      font-size: $sgbp-font-size-h1-screen-small;
+      font-size: var(--sgbp-font-size-h1-screen-small);
     }
 
     @media #{$sgbp-large-up} {
-      font-size: $sgbp-font-size-h1;
+      font-size: var(--sgbp-font-size-h1);
     }
 
     .sgbp-headline__addendum {
@@ -60,15 +60,15 @@
   }
 
   &--h2 {
-    font-size: $sgbp-font-size-h2-screen-tiny;
-    text-transform: $sgbp-text-transform-h2;
+    font-size: var(--sgbp-font-size-h2-screen-tiny);
+    text-transform: var(--sgbp-text-transform-h2);
 
     @media #{$sgbp-medium-up} {
-      font-size: $sgbp-font-size-h2-screen-small;
+      font-size: var(--sgbp-font-size-h2-screen-small);
     }
 
     @media #{$sgbp-large-up} {
-      font-size: $sgbp-font-size-h2;
+      font-size: var(--sgbp-font-size-h2);
     }
 
     .sgbp-headline__addendum {
@@ -77,15 +77,15 @@
   }
 
   &--h3 {
-    font-size: $sgbp-font-size-h3-screen-tiny;
-    text-transform: $sgbp-text-transform-h3;
+    font-size: var(--sgbp-font-size-h3-screen-tiny);
+    text-transform: var(--sgbp-text-transform-h3);
 
     @media #{$sgbp-medium-up} {
-      font-size: $sgbp-font-size-h3-screen-small;
+      font-size: var(--sgbp-font-size-h3-screen-small);
     }
 
     @media #{$sgbp-large-up} {
-      font-size: $sgbp-font-size-h3;
+      font-size: var(--sgbp-font-size-h3);
     }
 
     .sgbp-headline__addendum {
@@ -94,15 +94,15 @@
   }
 
   &--h4 {
-    font-size: $sgbp-font-size-h4-screen-tiny;
-    text-transform: $sgbp-text-transform-h4;
+    font-size: var(--sgbp-font-size-h4-screen-tiny);
+    text-transform: var(--sgbp-text-transform-h4);
 
     @media #{$sgbp-medium-up} {
-      font-size: $sgbp-font-size-h4-screen-small;
+      font-size: var(--sgbp-font-size-h4-screen-small);
     }
 
     @media #{$sgbp-large-up} {
-      font-size: $sgbp-font-size-h4;
+      font-size: var(--sgbp-font-size-h4);
     }
 
     .sgbp-headline__addendum {
@@ -111,15 +111,15 @@
   }
 
   &--h5 {
-    font-size: $sgbp-font-size-h5-screen-tiny;
-    text-transform: $sgbp-text-transform-h5;
+    font-size: var(--sgbp-font-size-h5-screen-tiny);
+    text-transform: var(--sgbp-text-transform-h5);
 
     @media #{$sgbp-medium-up} {
-      font-size: $sgbp-font-size-h5-screen-small;
+      font-size: var(--sgbp-font-size-h5-screen-small);
     }
 
     @media #{$sgbp-large-up} {
-      font-size: $sgbp-font-size-h5;
+      font-size: var(--sgbp-font-size-h5);
     }
 
     .sgbp-headline__addendum {
@@ -128,15 +128,15 @@
   }
 
   &--h6 {
-    font-size: $sgbp-font-size-h6-screen-tiny;
-    text-transform: $sgbp-text-transform-h6;
+    font-size: var(--sgbp-font-size-h6-screen-tiny);
+    text-transform: var(--sgbp-text-transform-h6);
 
     @media #{$sgbp-medium-up} {
-      font-size: $sgbp-font-size-h6-screen-small;
+      font-size: var(--sgbp-font-size-h6-screen-small);
     }
 
     @media #{$sgbp-large-up} {
-      font-size: $sgbp-font-size-h6;
+      font-size: var(--sgbp-font-size-h6);
     }
 
     .sgbp-headline__addendum {
@@ -147,8 +147,8 @@
   &--label {
     display: inline-block;
     padding: 0.3em 0.3em 0.2em 0.3em;
-    background: $sgbp-color-black;
-    color: $sgbp-color-white;
+    background: var(--sgbp-color-black);
+    color: var(--sgbp-color-white);
     text-transform: uppercase;
   }
 }
@@ -160,8 +160,8 @@
   &.sgbp-headline--h4,
   &.sgbp-headline--h5,
   &.sgbp-headline--h6 {
-    margin-top: ($sgbp-line-height-computed * 1.3);
-    margin-bottom: ($sgbp-line-height-computed * 0.75);
+    margin-top: calc(var(--sgbp-line-height-computed) * 1.3);
+    margin-bottom: calc(var(--sgbp-line-height-computed) * 0.75);
 
     & + & {
       margin-top: 0;

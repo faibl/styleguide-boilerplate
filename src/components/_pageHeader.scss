@@ -1,18 +1,20 @@
-$sgbp-pageHeader-background-color: $sgbp-color-brand-primary !default;
-$sgbp-pageHeader-input-background-color: $sgbp-color-brand-primary-light !default;
-$sgbp-pageHeader-color: $sgbp-color-brand-primary-inverted !default;
-$sgbp-pageHeader-color-active: $sgbp-color-white !default;
-$sgbp-pageHeader-border-color: $sgbp-color-transparent !default;
+:root {
+  --sgbp-pageHeader-background-color: var(--sgbp-color-brand-primary);
+  --sgbp-pageHeader-input-background-color: var(--sgbp-color-brand-primary-light);
+  --sgbp-pageHeader-color: var(--sgbp-color-brand-primary-inverted);
+  --sgbp-pageHeader-color-active: var(--sgbp-color-white);
+  --sgbp-pageHeader-border-color: var(--sgbp-color-transparent);
+}
 
 .sgbp-pageHeader {
-  border-bottom: 1px solid $sgbp-pageHeader-border-color;
-  background-color: $sgbp-pageHeader-background-color;
-  color: $sgbp-pageHeader-color;
+  border-bottom: 1px solid var(--sgbp-pageHeader-border-color);
+  background-color: var(--sgbp-pageHeader-background-color);
+  color: var(--sgbp-pageHeader-color);
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    max-width: $sgbp-page-max-width;
+    max-width: var(--sgbp-page-max-width);
     margin-left: auto;
     margin-right: auto;
   }
@@ -25,15 +27,15 @@ $sgbp-pageHeader-border-color: $sgbp-color-transparent !default;
   &__item {
     display: flex;
     align-items: center;
-    padding: $sgbp-default-margin-small;
+    padding: var(--sgbp-default-margin-small);
 
     &--icon {
-      padding: $sgbp-default-margin-small;
+      padding: var(--sgbp-default-margin-small);
     }
 
     &:hover,
     &.is-active {
-      color: $sgbp-pageHeader-color-active;
+      color: var(--sgbp-pageHeader-color-active);
     }
   }
 }

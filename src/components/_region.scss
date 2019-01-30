@@ -1,58 +1,60 @@
-$sgbp-region-padding: $sgbp-default-margin !default;
-$sgbp-region-padding-screen-large: $sgbp-default-margin-screen-large !default;
+:root {
+  --sgbp-region-padding: var(--sgbp-default-margin);
+  --sgbp-region-padding-screen-large: var(--sgbp-default-margin-screen-large);
 
-$sgbp-region-small-padding: $sgbp-default-margin-small !default;
-$sgbp-region-small-padding-screen-large: $sgbp-default-margin-small-screen-large !default;
+  --sgbp-region-small-padding: var(--sgbp-default-margin-small);
+  --sgbp-region-small-padding-screen-large: var(--sgbp-default-margin-small-screen-large);
 
-$sgbp-region-big-padding: $sgbp-default-margin-big !default;
-$sgbp-region-big-padding-screen-large: $sgbp-default-margin-big-screen-large !default;
+  --sgbp-region-big-padding: var(--sgbp-default-margin-big);
+  --sgbp-region-big-padding-screen-large: var(--sgbp-default-margin-big-screen-large);
 
-$sgbp-region-primary-color: $sgbp-color-brand-primary-inverted !default;
-$sgbp-region-primary-color-background: $sgbp-color-brand-primary !default;
+  --sgbp-region-primary-color: var(--sgbp-color-brand-primary-inverted);
+  --sgbp-region-primary-color-background: var(--sgbp-color-brand-primary);
 
-$sgbp-region-secondary-color: $sgbp-color-black !default;
-$sgbp-region-secondary-color-background: $sgbp-color-gray-light !default;
+  --sgbp-region-secondary-color: var(--sgbp-color-black);
+  --sgbp-region-secondary-color-background: var(--sgbp-color-gray-light);
+}
 
 .sgbp-region {
-  padding: $sgbp-region-padding;
+  padding: var(--sgbp-region-padding);
 
   @media #{$sgbp-large-up} {
-    padding: $sgbp-region-padding-screen-large;
+    padding: var(--sgbp-region-padding-screen-large);
   }
 
   &--small {
-    padding: $sgbp-region-small-padding;
+    padding: var(--sgbp-region-small-padding);
 
     @media #{$sgbp-large-up} {
-      padding: $sgbp-region-small-padding-screen-large;
+      padding: var(--sgbp-region-small-padding-screen-large);
     }
   }
 
   &--focusable:focus-within {
-    box-shadow: $sgbp-color-gray 0 0 3px;
+    box-shadow: var(--sgbp-color-gray) 0 0 3px;
   }
 
   &--big {
-    padding: $sgbp-region-big-padding;
+    padding: var(--sgbp-region-big-padding);
 
     @media #{$sgbp-large-up} {
-      padding: $sgbp-region-big-padding-screen-large;
+      padding: var(--sgbp-region-big-padding-screen-large);
     }
   }
 
   &--primary {
-    background: $sgbp-region-primary-color-background;
-    color: $sgbp-region-primary-color;
+    background: var(--sgbp-region-primary-color-background);
+    color: var(--sgbp-region-primary-color);
   }
 
   &--secondary {
-    background: $sgbp-region-secondary-color-background;
-    color: $sgbp-region-secondary-color;
+    background: var(--sgbp-region-secondary-color-background);
+    color: var(--sgbp-region-secondary-color);
   }
 
   &--default {
-    background: $sgbp-body-bg;
-    color: $sgbp-text-color;
+    background: var(--sgbp-body-bg);
+    color: var(--sgbp-text-color);
   }
 
   &--rounded {

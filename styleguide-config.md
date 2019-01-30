@@ -17,10 +17,24 @@
               My Project's
               <span class="sgbp-headline__addendum">Styleguide</span>
             </h1>
-            <p class="sgbp-paragraph">
-                Visit <a href="./layout.html" class="sgbp-link">/layout.html</a>
-                to see a demo layout built with these components.
-            </p>
+            
+            <div class="sgbp-readingBlock">
+                <p class="sgbp-paragraph">
+                    Use this Styleguide boilerplate template as a starting point for your design implementation. Think of something like Twitter Bootstrap but tailored specifically to the requirements of your own project/company.
+                </p>
+                <div class="sgbp-float sgbp-float--right sgbp-float--inText">
+                    <label class="sgbp-inputGroup">
+                        <span class="sgbp-inputGroup__label">Primary color:</span>
+                        <input type="color" value="#035287" class="sgbp-input"  oninput="document.documentElement.style.setProperty('--sgbp-color-brand-primary', this.value);">
+                    </label>
+                </div>
+                <p class="sgbp-paragraph">
+                    These UI components can be configured using css custom properties. This - amongst others - allows for easy runtime theming. For example, you can dynamically set the brand primary color using the color input on the right:
+                </p>
+                <p class="sgbp-paragraph">
+                    Visit <a href="./layout.html" class="sgbp-link">/layout.html</a>
+                    to see a demo layout built with these components.
+                </p>
         </header>
         <div class="sg-container sgbp-row" sg-content></div>
       </div>

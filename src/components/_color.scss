@@ -1,56 +1,56 @@
 // sass-lint:disable no-important
 .sgbp-color {
   &--primary {
-    color: $sgbp-color-brand-primary;
+    color: var(--sgbp-color-brand-primary);
 
     &.sgbp-color--force,
     &.sgbp-color--force * {
-      color: $sgbp-color-brand-primary !important;
+      color: var(--sgbp-color-brand-primary) !important;
     }
   }
 
   &--secondary {
-    color: $sgbp-color-brand-secondary;
+    color: var(--sgbp-color-brand-secondary);
 
     &.sgbp-color--force,
     &.sgbp-color--force * {
-      color: $sgbp-color-brand-secondary !important;
+      color: var(--sgbp-color-brand-secondary) !important;
     }
   }
 
   &--gray {
-    color: $sgbp-color-gray;
+    color: var(--sgbp-color-gray);
 
     &.sgbp-color--force,
     &.sgbp-color--force * {
-      color: $sgbp-color-gray !important;
+      color: var(--sgbp-color-gray) !important;
     }
   }
 
   &--mediumGray {
-    color: $sgbp-color-gray-medium;
+    color: var(--sgbp-color-gray-medium);
 
     &.sgbp-color--force,
     &.sgbp-color--force * {
-      color: $sgbp-color-gray-medium !important;
+      color: var(--sgbp-color-gray-medium) !important;
     }
   }
 
   &--white {
-    color: $sgbp-color-white;
+    color: var(--sgbp-color-white);
 
     &.sgbp-color--force,
     &.sgbp-color--force * {
-      color: $sgbp-color-white !important;
+      color: var(--sgbp-color-white) !important;
     }
   }
 
   &--error {
-    color: $sgbp-color-error;
+    color: var(--sgbp-color-error);
 
     &.sgbp-color--force,
     &.sgbp-color--force * {
-      color: $sgbp-color-error !important;
+      color: var(--sgbp-color-error) !important;
     }
   }
 }

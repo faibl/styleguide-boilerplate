@@ -1,11 +1,11 @@
 .sgbp-pageFooter {
   min-height: 200px;
-  padding-top: $sgbp-default-margin-big;
-  background-color: $sgbp-color-brand-primary;
-  color: $sgbp-color-brand-primary-inverted;
+  padding-top: var(--sgbp-default-margin-big);
+  background-color: var(--sgbp-color-brand-primary);
+  color: var(--sgbp-color-brand-primary-inverted);
 
   &__inner {
-    max-width: $sgbp-page-max-width;
+    max-width: var(--sgbp-page-max-width);
     margin-left: auto;
     margin-right: auto;
   }

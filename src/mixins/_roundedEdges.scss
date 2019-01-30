@@ -1,5 +1,7 @@
-$sgbp-roundedEdge-border-radius: 2px !default;
+:root {
+  --sgbp-roundedEdge-border-radius: 2px;
+}
 
-@mixin sgbp-roundedEdges($_radius: $sgbp-roundedEdge-border-radius) {
+@mixin sgbp-roundedEdges($_radius: var(--sgbp-roundedEdge-border-radius)) {
   border-radius: $_radius;
 }

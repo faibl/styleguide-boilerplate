@@ -1,27 +1,29 @@
-$sgbp-input-error-color: $sgbp-color-error !default;
-$sgbp-input-valid-color: $sgbp-color-success !default;
-$sgbp-input-border-color: $sgbp-color-gray-medium !default;
+:root {
+  --sgbp-input-error-color: var(--sgbp-color-error);
+  --sgbp-input-valid-color: var(--sgbp-color-success);
+  --sgbp-input-border-color: var(--sgbp-color-gray-medium);
 
-$sgbp-input-type-range-thumb-color: $sgbp-color-black !default;
-$sgbp-input-type-range-thumb-margin: -7px !default;
-$sgbp-input-type-range-thumb-diameter: 16px;
-$sgbp-input-type-range-track-color: $sgbp-color-gray-medium !default;
-$sgbp-input-type-range-track-height: 2px !default;
+  --sgbp-input-type-range-thumb-color: var(--sgbp-color-black);
+  --sgbp-input-type-range-thumb-margin:  -7px;
+  --sgbp-input-type-range-thumb-diameter: 16px;
+  --sgbp-input-type-range-track-color: var(--sgbp-color-gray-medium);
+  --sgbp-input-type-range-track-height:  2px;
+}
 
 .sgbp-input {
   flex: 1 1 auto;
   width: 100%;
 
   outline: 0;
-  padding: $sgbp-input-padding;
+  padding: var(--sgbp-input-padding);
 
-  background-color: $sgbp-color-white;
-  color: $sgbp-color-gray-dark;
+  background-color: var(--sgbp-color-white);
+  color: var(--sgbp-color-gray-dark);
 
-  border: 1px solid $sgbp-input-border-color;
+  border: 1px solid var(--sgbp-input-border-color);
 
   &:focus {
-    border: 1px solid $sgbp-color-brand-primary;
+    border: 1px solid var(--sgbp-color-brand-primary);
   }
 
   // sass-lint:disable no-vendor-prefixes
@@ -35,15 +37,15 @@ $sgbp-input-type-range-track-height: 2px !default;
 
   &.is-disabled,
   &--stateful[disabled] {
-    border-color: $sgbp-color-gray-medium;
-    color: $sgbp-color-gray-medium;
+    border-color: var(--sgbp-color-gray-medium);
+    color: var(--sgbp-color-gray-medium);
     cursor: not-allowed;
   }
 
   &.is-readonly,
   &--stateful[readonly] {
-    border-color: $sgbp-color-gray-medium;
-    color: $sgbp-color-gray;
+    border-color: var(--sgbp-color-gray-medium);
+    color: var(--sgbp-color-gray);
   }
 
   &.is-hidden {
@@ -64,7 +66,7 @@ $sgbp-input-type-range-track-height: 2px !default;
   &--stateful {
     &.is-invalid,
     &.ng-touched.ng-invalid {
-      border-color: $sgbp-color-error;
+      border-color: var(--sgbp-color-error);
     }
   }
 
@@ -88,19 +90,19 @@ textarea.sgbp-input {
 
 @mixin sgbp-input-range-thumb {
   appearance: none;
-  height: $sgbp-input-type-range-thumb-diameter;
-  width: $sgbp-input-type-range-thumb-diameter;
+  height: var(--sgbp-input-type-range-thumb-diameter);
+  width: var(--sgbp-input-type-range-thumb-diameter);
   border: none;
   border-radius: 50%;
-  background: $sgbp-input-type-range-thumb-color;
+  background: var(--sgbp-input-type-range-thumb-color);
   cursor: pointer;
 }
 
 @mixin sgbp-input-range-track {
   width: 100%;
-  height: $sgbp-input-type-range-track-height;
+  height: var(--sgbp-input-type-range-track-height);
   cursor: pointer;
-  background: $sgbp-input-type-range-track-color;
+  background: var(--sgbp-input-type-range-track-color);
   border: none;
 }
 
@@ -114,7 +116,7 @@ input[type='range'].sgbp-input {
 
   &::-webkit-slider-thumb {
     @include sgbp-input-range-thumb;
-    margin-top: $sgbp-input-type-range-thumb-margin;
+    margin-top: var(--sgbp-input-type-range-thumb-margin);
   }
 
   &::-webkit-slider-runnable-track {
@@ -127,25 +129,25 @@ input[type='range'].sgbp-input {
 
     @supports (-ms-accelerator: true) or (-ms-ime-align: auto) {
       // Edge only
-      margin-bottom: $sgbp-input-type-range-thumb-margin;
+      margin-bottom: var(--sgbp-input-type-range-thumb-margin);
     }
   }
 
   &::-ms-track {
     @include sgbp-input-range-track;
     // IE won't let the thumb overflow the track thus we have to hack
-    border-top: $sgbp-input-type-range-thumb-diameter solid transparent;
-    border-bottom: $sgbp-input-type-range-thumb-diameter solid transparent;
-    margin-top: ($sgbp-input-type-range-thumb-diameter - $sgbp-input-type-range-track-height) * -1;
-    margin-bottom: ($sgbp-input-type-range-thumb-diameter - $sgbp-input-type-range-track-height) * -1;
+    border-top: var(--sgbp-input-type-range-thumb-diameter) solid transparent;
+    border-bottom: var(--sgbp-input-type-range-thumb-diameter) solid transparent;
+    margin-top: calc((var(--sgbp-input-type-range-thumb-diameter) - var(--sgbp-input-type-range-track-height)) * -1);
+    margin-bottom: calc((var(--sgbp-input-type-range-thumb-diameter) - var(--sgbp-input-type-range-track-height)) * -1);
     background-color: transparent;
     color: transparent; // remove default tick marks
   }
 
   &::-ms-fill-lower,
   &::-ms-fill-upper {
-    height: $sgbp-input-type-range-track-height;
-    background-color: $sgbp-input-type-range-track-color;
+    height: var(--sgbp-input-type-range-track-height);
+    background-color: var(--sgbp-input-type-range-track-color);
   }
 
   &::-ms-tooltip {
@@ -154,7 +156,7 @@ input[type='range'].sgbp-input {
 
   &::-moz-range-thumb {
     @include sgbp-input-range-thumb;
-    margin-top: $sgbp-input-type-range-thumb-margin; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    margin-top: var(--sgbp-input-type-range-thumb-margin); /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
   }
 
   &::-moz-focus-outer {
@@ -166,8 +168,8 @@ input[type='range'].sgbp-input {
   }
 
   &::-moz-range-progress {
-    height: $sgbp-input-type-range-track-height;
-    background-color: $sgbp-input-type-range-track-color;
+    height: var(--sgbp-input-type-range-track-height);
+    background-color: var(--sgbp-input-type-range-track-color);
   }
 
   &:focus {

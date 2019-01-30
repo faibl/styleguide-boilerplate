@@ -5,14 +5,14 @@
   &.sgbp-postfix--gutters {
     > * + * {
       margin-left: 0;
-      margin-top: $sgbp-default-margin;
+      margin-top: var(--sgbp-default-margin);
     }
   }
 
   &.sgbp-postfix--bigGutters {
     > * + * {
       margin-left: 0;
-      margin-top: $sgbp-default-margin-big;
+      margin-top: var(--sgbp-default-margin-big);
     }
   }
 }
@@ -38,13 +38,13 @@
 
   &--gutters {
     > * + * {
-      margin-left: $sgbp-default-margin;
+      margin-left: var(--sgbp-default-margin);
     }
   }
 
   &--bigGutters {
     > * + * {
-      margin-left: $sgbp-default-margin-big;
+      margin-left: var(--sgbp-default-margin-big);
     }
   }
 

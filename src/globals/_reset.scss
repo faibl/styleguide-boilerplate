@@ -8,17 +8,17 @@
 // Body reset
 
 html {
-  -webkit-tap-highlight-color: $sgbp-color-transparent;
+  -webkit-tap-highlight-color: var(--sgbp-color-transparent);
 }
 
 html,
 body {
   margin: 0;
-  font-family: $sgbp-font-family-base;
-  font-size: $sgbp-font-size-base;
-  line-height: $sgbp-line-height-base;
-  color: $sgbp-text-color;
-  background-color: $sgbp-body-bg;
+  font-family: var(--sgbp-font-family-base);
+  font-size: var(--sgbp-font-size-base);
+  line-height: var(--sgbp-line-height-base);
+  color: var(--sgbp-text-color);
+  background-color: var(--sgbp-body-bg);
 }
 
 // Reset fonts for relevant elements
@@ -104,8 +104,8 @@ img {
 
 hr {
   border: none;
-  border-top: 1px solid $sgbp-color-gray-medium;
-  margin: $sgbp-default-margin 0;
+  border-top: 1px solid var(--sgbp-color-gray-medium);
+  margin: var(--sgbp-default-margin) 0;
 }
 
 small {

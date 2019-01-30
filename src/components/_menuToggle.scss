@@ -1,14 +1,16 @@
-$sgbp-menuToggle-size: 1.25em;
+:root {
+  --sgbp-menuToggle-size: 1.25em;
+}
 
 .sgbp-menuToggle {
   display: block;
-  width: $sgbp-menuToggle-size;
-  height: $sgbp-menuToggle-size;
+  width: var(--sgbp-menuToggle-size);
+  height: var(--sgbp-menuToggle-size);
   position: relative;
   cursor: pointer;
 
   &__line {
-    height: calc(#{$sgbp-menuToggle-size} / 12);
+    height: calc(#{var(--sgbp-menuToggle-size)} / 12);
     background: currentColor;
     position: absolute;
     left: 0;
@@ -17,16 +19,16 @@ $sgbp-menuToggle-size: 1.25em;
     transition-duration: 0.5s, 0.25s;
 
     &:nth-child(2) {
-      top: calc(#{$sgbp-menuToggle-size} / 5 * 2);
+      top: calc(#{var(--sgbp-menuToggle-size)} / 5 * 2);
     }
 
     &:nth-child(3) {
-      top: calc(#{$sgbp-menuToggle-size} / 5 * 4);
+      top: calc(#{var(--sgbp-menuToggle-size)} / 5 * 4);
     }
   }
 
   &.is-open &__line:nth-child(1) {
-    transform: translateY(calc(#{$sgbp-menuToggle-size} / 5 * 2)) rotate(45deg);
+    transform: translateY(calc(#{var(--sgbp-menuToggle-size)} / 5 * 2)) rotate(45deg);
   }
 
   &.is-open &__line:nth-child(2) {
@@ -34,6 +36,6 @@ $sgbp-menuToggle-size: 1.25em;
   }
 
   &.is-open &__line:nth-child(3) {
-    transform: translateY(calc(#{$sgbp-menuToggle-size} / 5 * -2)) rotate(-45deg);
+    transform: translateY(calc(#{var(--sgbp-menuToggle-size)} / 5 * -2)) rotate(-45deg);
   }
 }

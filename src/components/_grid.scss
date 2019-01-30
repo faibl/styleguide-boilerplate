@@ -1,11 +1,13 @@
-$sgbp-grid-gutter-width: 0.7rem !default;
-$sgbp-grid-gutter-height: 0.5rem !default;
-$sgbp-grid-gutter-width-halve: $sgbp-grid-gutter-width / 2;
-$sgbp-grid-gutter-height-halve: $sgbp-grid-gutter-height / 2;
+:root {
+  --sgbp-grid-gutter-width:  0.7rem;
+  --sgbp-grid-gutter-height:  0.5rem;
+  --sgbp-grid-gutter-width-halve: calc(var(--sgbp-grid-gutter-width) / 2);
+  --sgbp-grid-gutter-height-halve: calc(var(--sgbp-grid-gutter-height) / 2);
+}
 
 .sgbp-grid__example {
-  color: $sgbp-color-brand-primary-inverted;
-  background-color: $sgbp-color-brand-primary;
+  color: var(--sgbp-color-brand-primary-inverted);
+  background-color: var(--sgbp-color-brand-primary);
 }
 
 .sgbp-grid {
@@ -20,30 +22,30 @@ $sgbp-grid-gutter-height-halve: $sgbp-grid-gutter-height / 2;
   }
 
   &--gutters {
-    margin-left: -$sgbp-grid-gutter-width-halve;
-    margin-right: -$sgbp-grid-gutter-width-halve;
+    margin-left: calc(-1 * var(--sgbp-grid-gutter-width-halve));
+    margin-right: calc(-1 * var(--sgbp-grid-gutter-width-halve));
 
     > .sgbp-grid__cell {
-      padding: $sgbp-grid-gutter-height-halve $sgbp-grid-gutter-width-halve $sgbp-grid-gutter-height-halve $sgbp-grid-gutter-width-halve;
+      padding: var(--sgbp-grid-gutter-height-halve) var(--sgbp-grid-gutter-width-halve) var(--sgbp-grid-gutter-height-halve) var(--sgbp-grid-gutter-width-halve);
       background-clip: content-box;
     }
   }
 
   &--columnGutters {
-    margin-left: -$sgbp-grid-gutter-width-halve;
-    margin-right: -$sgbp-grid-gutter-width-halve;
+    margin-left: calc(-1 * var(--sgbp-grid-gutter-width-halve));
+    margin-right: calc(-1 * var(--sgbp-grid-gutter-width-halve));
 
     > .sgbp-grid__cell {
-      padding-left: $sgbp-grid-gutter-width-halve;
-      padding-right: $sgbp-grid-gutter-width-halve;
+      padding-left: var(--sgbp-grid-gutter-width-halve);
+      padding-right: var(--sgbp-grid-gutter-width-halve);
       background-clip: content-box;
     }
   }
 
   &--rowGutters {
     > .sgbp-grid__cell {
-      padding-top: $sgbp-grid-gutter-height-halve;
-      padding-bottom: $sgbp-grid-gutter-height-halve;
+      padding-top: var(--sgbp-grid-gutter-height-halve);
+      padding-bottom: var(--sgbp-grid-gutter-height-halve);
       background-clip: content-box;
     }
   }
@@ -51,28 +53,28 @@ $sgbp-grid-gutter-height-halve: $sgbp-grid-gutter-height / 2;
   // scss-lint:disable NestingDepth
   &--bigGutters {
     &.sgbp-grid--gutters {
-      margin-left: -$sgbp-grid-gutter-width;
-      margin-right: -$sgbp-grid-gutter-width;
+      margin-left: calc(-1 * var(--sgbp-grid-gutter-width));
+      margin-right: calc(-1 * var(--sgbp-grid-gutter-width));
 
       > .sgbp-grid__cell {
-        padding: $sgbp-grid-gutter-height $sgbp-grid-gutter-width $sgbp-grid-gutter-height $sgbp-grid-gutter-width;
+        padding: var(--sgbp-grid-gutter-height) var(--sgbp-grid-gutter-width) var(--sgbp-grid-gutter-height) var(--sgbp-grid-gutter-width);
       }
     }
 
     &.sgbp-grid--columnGutters {
-      margin-left: -$sgbp-grid-gutter-width;
-      margin-right: -$sgbp-grid-gutter-width;
+      margin-left: calc(-1 * var(--sgbp-grid-gutter-width));
+      margin-right: calc(-1 * var(--sgbp-grid-gutter-width));
 
       > .sgbp-grid__cell {
-        padding-left: $sgbp-grid-gutter-width;
-        padding-right: $sgbp-grid-gutter-width;
+        padding-left: var(--sgbp-grid-gutter-width);
+        padding-right: var(--sgbp-grid-gutter-width);
       }
     }
 
     &.sgbp-grid--rowGutters {
       > .sgbp-grid__cell {
-        padding-top: $sgbp-grid-gutter-height;
-        padding-bottom: $sgbp-grid-gutter-height;
+        padding-top: var(--sgbp-grid-gutter-height);
+        padding-bottom: var(--sgbp-grid-gutter-height);
       }
     }
   }

@@ -1,5 +1,7 @@
-$sgbp-loading-container-dialog-background: $sgbp-color-darken-heavy !default;
-$sgbp-loading-container-blocking-background: $sgbp-color-darken !default;
+:root {
+  --sgbp-loading-container-dialog-background: var(--sgbp-color-darken-heavy);
+  --sgbp-loading-container-blocking-background: var(--sgbp-color-darken);
+}
 
 .sgbp-loadingContainer {
   position: relative;
@@ -18,16 +20,16 @@ $sgbp-loading-container-blocking-background: $sgbp-color-darken !default;
     left: 0;
     opacity: 0;
     pointer-events: none;
-    background-color: $sgbp-color-transparent;
+    background-color: var(--sgbp-color-transparent);
   }
 
   &__dialog {
     @include sgbp-roundedEdges;
     transition: transform 300ms;
     transform: scale(0);
-    padding: $sgbp-default-margin $sgbp-default-margin $sgbp-default-margin * 0.8 $sgbp-default-margin;
+    padding: var(--sgbp-default-margin) var(--sgbp-default-margin) calc(var(--sgbp-default-margin) * 0.8) var(--sgbp-default-margin);
     pointer-events: none;
-    background-color: $sgbp-loading-container-dialog-background;
+    background-color: var(--sgbp-loading-container-dialog-background);
   }
 
   &__loadingIndicator {
@@ -39,14 +41,14 @@ $sgbp-loading-container-blocking-background: $sgbp-color-darken !default;
 
   &__loadingMessage {
     float: left;
-    color: $sgbp-color-white;
+    color: var(--sgbp-color-white);
     line-height: 1.5rem;
-    margin-right: $sgbp-default-margin;
+    margin-right: var(--sgbp-default-margin);
   }
 
   &.is-loading {
     .sgbp-loadingContainer__loader {
-      z-index: $sgbp-loading-container-z-index;
+      z-index: var(--sgbp-loading-container-z-index);
       opacity: 1;
     }
 
@@ -63,7 +65,7 @@ $sgbp-loading-container-blocking-background: $sgbp-color-darken !default;
   &.is-blocking {
     > .sgbp-loadingContainer__loader {
       pointer-events: all;
-      background-color: $sgbp-loading-container-blocking-background;
+      background-color: var(--sgbp-loading-container-blocking-background);
     }
   }
 }

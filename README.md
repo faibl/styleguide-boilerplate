@@ -78,7 +78,6 @@ Example: http://faibl.github.com/styleguide-boilerplate
 You can also import the styleguide scss files directly into your project scss files:
 
 ```sass
-$sgbp-asset-path: '../styleguide/assets'; // adjust setting according to your environment
 $sgbp-public-asset-path: '/assets'; // adjust setting according to your environment
 @import '../styleguide/src/styleguide'; // adjust according to your environment
 ```

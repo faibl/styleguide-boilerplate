@@ -1,10 +1,12 @@
-$sgbp-offCanvas-width: 284px;
-$sgbp-offCanvas-width-screen-medium: 325px;
-$sgbp-offCanvas-width-screen-large: 345px;
-$sgbp-offCanvas-height: 260px;
-$sgbp-offCanvas-height-screen-medium: 250px;
-$sgbp-offCanvas-height-screen-large: 300px;
-$sgbp-offCanvas-header-border-color: #303e47;
+:root {
+  --sgbp-offCanvas-width: 284px;
+  --sgbp-offCanvas-width-screen-medium: 325px;
+  --sgbp-offCanvas-width-screen-large: 345px;
+  --sgbp-offCanvas-height: 260px;
+  --sgbp-offCanvas-height-screen-medium: 250px;
+  --sgbp-offCanvas-height-screen-large: 300px;
+  --sgbp-offCanvas-header-border-color: #303e47;
+}
 
 .sgbp-offCanvas {
   overflow: hidden;
@@ -19,15 +21,15 @@ $sgbp-offCanvas-header-border-color: #303e47;
   }
 
   &.is-open-left > &__inner {
-    transform: translateX($sgbp-offCanvas-width);
+    transform: translateX(var(--sgbp-offCanvas-width));
   }
 
   &.is-open-right > &__inner {
-    transform: translateX(-$sgbp-offCanvas-width);
+    transform: translateX(-var(--sgbp-offCanvas-width));
   }
 
   &.is-open-bottom > &__inner {
-    transform: translateY(-$sgbp-offCanvas-height);
+    transform: translateY(-var(--sgbp-offCanvas-height));
   }
 
   &__on {
@@ -36,19 +38,19 @@ $sgbp-offCanvas-header-border-color: #303e47;
 
   &__off {
     position: absolute;
-    z-index: $sgbp-offCanvas-z-index;
+    z-index: var(--sgbp-offCanvas-z-index);
 
     &--left {
-      left: -$sgbp-offCanvas-width;
+      left: -var(--sgbp-offCanvas-width);
       top: 0;
-      width: $sgbp-offCanvas-width;
+      width: var(--sgbp-offCanvas-width);
       height: 100%;
     }
 
     &--right {
-      right: -$sgbp-offCanvas-width;
+      right: -var(--sgbp-offCanvas-width);
       top: 0;
-      width: $sgbp-offCanvas-width;
+      width: var(--sgbp-offCanvas-width);
       height: 100%;
     }
 
@@ -56,69 +58,69 @@ $sgbp-offCanvas-header-border-color: #303e47;
       left: 0;
       right: 0;
       width: 100%;
-      height: $sgbp-offCanvas-height;
-      bottom: -$sgbp-offCanvas-height;
+      height: var(--sgbp-offCanvas-height);
+      bottom: -var(--sgbp-offCanvas-height);
     }
   }
 
   @media #{$sgbp-medium-up} {
     &.is-open-left > &__inner {
-      transform: translateX($sgbp-offCanvas-width-screen-medium);
+      transform: translateX(var(--sgbp-offCanvas-width-screen-medium));
     }
 
     &.is-open-right > &__inner {
-      transform: translateX(-$sgbp-offCanvas-width-screen-medium);
+      transform: translateX(-var(--sgbp-offCanvas-width-screen-medium));
     }
 
     &.is-open-bottom > &__inner {
-      transform: translateY(-$sgbp-offCanvas-height-screen-medium);
+      transform: translateY(-var(--sgbp-offCanvas-height-screen-medium));
     }
 
     &__off {
       &--left {
-        left: -$sgbp-offCanvas-width-screen-medium;
-        width: $sgbp-offCanvas-width-screen-medium;
+        left: -var(--sgbp-offCanvas-width-screen-medium);
+        width: var(--sgbp-offCanvas-width-screen-medium);
       }
 
       &--right {
-        right: -$sgbp-offCanvas-width-screen-medium;
-        width: $sgbp-offCanvas-width-screen-medium;
+        right: -var(--sgbp-offCanvas-width-screen-medium);
+        width: var(--sgbp-offCanvas-width-screen-medium);
       }
 
       &--bottom {
-        bottom: -$sgbp-offCanvas-height-screen-medium;
-        height: $sgbp-offCanvas-height-screen-medium;
+        bottom: -var(--sgbp-offCanvas-height-screen-medium);
+        height: var(--sgbp-offCanvas-height-screen-medium);
       }
     }
   }
 
   @media #{$sgbp-large-up} {
     &.is-open-left > &__inner {
-      transform: translateX($sgbp-offCanvas-width-screen-large);
+      transform: translateX(var(--sgbp-offCanvas-width-screen-large));
     }
 
     &.is-open-right > &__inner {
-      transform: translateX(-$sgbp-offCanvas-width-screen-large);
+      transform: translateX(-var(--sgbp-offCanvas-width-screen-large));
     }
 
     &.is-open-bottom > &__inner {
-      transform: translateY(-$sgbp-offCanvas-height-screen-large);
+      transform: translateY(-var(--sgbp-offCanvas-height-screen-large));
     }
 
     &__off {
       &--left {
-        left: -$sgbp-offCanvas-width-screen-large;
-        width: $sgbp-offCanvas-width-screen-large;
+        left: -var(--sgbp-offCanvas-width-screen-large);
+        width: var(--sgbp-offCanvas-width-screen-large);
       }
 
       &--right {
-        right: -$sgbp-offCanvas-width-screen-large;
-        width: $sgbp-offCanvas-width-screen-large;
+        right: -var(--sgbp-offCanvas-width-screen-large);
+        width: var(--sgbp-offCanvas-width-screen-large);
       }
 
       &--bottom {
-        bottom: -$sgbp-offCanvas-height-screen-large;
-        height: $sgbp-offCanvas-height-screen-large;
+        bottom: -var(--sgbp-offCanvas-height-screen-large);
+        height: var(--sgbp-offCanvas-height-screen-large);
       }
     }
   }

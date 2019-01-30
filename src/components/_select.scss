@@ -9,13 +9,13 @@
 
   &[size] &__option {
     appearance: none;
-    padding: $sgbp-input-padding;
+    padding: var(--sgbp-input-padding);
   }
 
   &:not([size]),
   &[size='1'] {
     appearance: none;
-    padding: $sgbp-input-padding;
+    padding: var(--sgbp-input-padding);
     padding-right: 2.3rem;
     background-image: url('#{$sgbp-public-asset-path}/images/bg_select.svg');
     background-position: right -55px top -13px;
@@ -34,7 +34,7 @@
     // displays a single-line select list and provides the options in a native overlay control when clicked
     // thus we need to undo some custom styling for expanded select lists
     &[size]:not([size='1']) {
-      padding: $sgbp-input-padding;
+      padding: var(--sgbp-input-padding);
     }
   }
 }
