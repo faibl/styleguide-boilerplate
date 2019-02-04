@@ -21,11 +21,26 @@
           My Project&apos;s
           <span class="sgbp-headline__addendum">Styleguide</span>
         </h1>
-        <p class="sgbp-paragraph">
-          Visit
-          <a href="./layout.html" class="sgbp-link">/layout.html</a>
-          to see a demo layout built with these components.
-        </p>
+
+        <div class="sgbp-readingBlock">
+          <p class="sgbp-paragraph">
+            Use this Styleguide boilerplate template as a starting point for your design implementation. Think of something like Twitter Bootstrap but tailored specifically to the requirements of your own project/company.
+          </p>
+          <div class="sgbp-float sgbp-float--right sgbp-float--inText">
+            <label class="sgbp-inputGroup">
+              <span class="sgbp-inputGroup__label">Primary color:</span>
+              <input type="color" value="#035287" class="sgbp-input" oninput="document.documentElement.style.setProperty(&apos;--sgbp-color-brand-primary&apos;, this.value);">
+            </label>
+          </div>
+          <p class="sgbp-paragraph">
+            These UI components can be configured using css custom properties. This - amongst others - allows for easy runtime theming. For example, you can dynamically set the brand primary color using the color input on the right:
+          </p>
+          <p class="sgbp-paragraph">
+            Visit
+            <a href="./layout.html" class="sgbp-link">/layout.html</a>
+            to see a demo layout built with these components.
+          </p>
+        </div>
       </header>
       <div class="sg-container sgbp-row">
         <section class="sg-section sg-section-accordion">
@@ -5602,8 +5617,6 @@
                           <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell sgbp-table__cell--150 sgbp-table__cell--headline">Headline</th>
                           <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120 sgbp-table__cell--headline">A Text</th>
                           <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--headline sgbp-table__cell--numeric">B Numeric</th>
-                          <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--headline sgbp-table__cell--numeric">C</th>
-                          <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--headline sgbp-table__cell--numeric">D</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -5611,70 +5624,50 @@
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--150 sgbp-text sgbp-text--bold">Headline 1</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell--120 sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">4323.46</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">192.565</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">4323.46</td>
                         </tr>
                         <tr class="sgbp-table__row">
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 2</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">10107.43</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">667.01</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">10107.43</td>
                         </tr>
                         <tr class="sgbp-table__row">
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                        </tr>
-                        <tr class="sgbp-table__row">
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                         </tr>
                         <tr class="sgbp-table__row">
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
+                        </tr>
+                        <tr class="sgbp-table__row">
+                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
+                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                         </tr>
                         <tr class="sgbp-table__row">
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
+                        </tr>
+                        <tr class="sgbp-table__row">
+                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
+                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                         </tr>
                         <tr class="sgbp-table__row">
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                         </tr>
                         <tr class="sgbp-table__row">
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                         </tr>
                         <tr class="sgbp-table__row">
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                        </tr>
-                        <tr class="sgbp-table__row">
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold">Headline 3</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
-                          <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">1001.24</td>
                           <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric">980.20</td>
                         </tr>
                       </tbody>
@@ -5689,8 +5682,6 @@
           <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell sgbp-table__cell--150 sgbp-table__cell--headline&quot;</span>&gt;</span>Headline<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120 sgbp-table__cell--headline&quot;</span>&gt;</span>A Text<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--headline sgbp-table__cell--numeric&quot;</span>&gt;</span>B Numeric<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--headline sgbp-table__cell--numeric&quot;</span>&gt;</span>C<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--headline sgbp-table__cell--numeric&quot;</span>&gt;</span>D<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
@@ -5698,70 +5689,50 @@
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--150 sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 1<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell--120 sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>4323.46<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>192.565<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>4323.46<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 2<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>10107.43<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>667.01<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>10107.43<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>1001.24<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>1001.24<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>1001.24<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>1001.24<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>1001.24<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>1001.24<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>1001.24<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-text sgbp-text--bold&quot;</span>&gt;</span>Headline 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--120&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>1001.24<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--80 sgbp-table__cell--numeric&quot;</span>&gt;</span>980.20<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
