@@ -1,14 +1,14 @@
 ## Vertical Menu
 
 
-### Vertical Menu (left, inline)
+### Vertical Menu (indicatorRight, inline)
 
 
     @example
     <div class="sgbp-region" style="min-height: 350px; background-color: lightyellow;">
       <div class="sgbp-postfix sgbp-postfix--bigGutters">
         <div class="sgbp-postfix__fixed">
-          <div class="sgbp-verticalMenu sgbp-verticalMenu--inline sgbp-verticalMenu--left" style="width: 180ox">
+          <div class="sgbp-verticalMenu sgbp-verticalMenu--inline sgbp-verticalMenu--indicatorRight" style="width: 180ox">
             <a href="javascript:;" class="sgbp-verticalMenu__item">
               Account
             </a>
@@ -29,14 +29,14 @@
       </div>
     </div>
 
-### Vertical Menu (left, inlineMediumUp)
+### Vertical Menu (indicatorRight, inlineMediumUp)
 
 
     @example
     <div class="sgbp-region" style="min-height: 350px; background-color: lightyellow;">
       <div class="sgbp-postfix sgbp-postfix--bigGutters sgbp-postfix--small-stacked">
         <div class="sgbp-postfix__fixed">
-          <div class="sgbp-verticalMenu sgbp-verticalMenu--inlineMediumUp sgbp-verticalMenu--left">
+          <div class="sgbp-verticalMenu sgbp-verticalMenu--inlineMediumUp sgbp-verticalMenu--indicatorRight">
             <a href="javascript:;" class="sgbp-verticalMenu__item">
               Account
             </a>
@@ -57,7 +57,7 @@
       </div>
     </div>
 
-### Vertical Menu (right, inlineLargeUp)
+### Vertical Menu (indicatorLeft, inlineLargeUp)
 
     @example
     <div class="sgbp-region" style="min-height: 350px; background-color: lightyellow;">
@@ -66,7 +66,7 @@
           [Content]
         </div>
         <div class="sgbp-postfix__fixed">
-          <div class="sgbp-verticalMenu sgbp-verticalMenu--inlineLargeUp sgbp-verticalMenu--right">
+          <div class="sgbp-verticalMenu sgbp-verticalMenu--inlineLargeUp sgbp-verticalMenu--indicatorLeft">
               <a href="javascript:;" class="sgbp-verticalMenu__item">
                 Account
               </a>

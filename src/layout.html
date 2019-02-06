@@ -14,7 +14,7 @@
             <div class="sgbp-pageHeader__inner">
               <div class="sgbp-pageHeader__section">
                 <div class="sgbp-region sgbp-hidden-large-up">
-                  <div class="sgbp-menuToggle sgbp-col">
+                  <div class="sgbp-menuToggle sgbp-col" onclick="this.classList.toggle('is-open');document.querySelector('.sgbp-offCanvas').classList.toggle('is-open-left')">
                     <span class="sgbp-menuToggle__line"></span>
                     <span class="sgbp-menuToggle__line"></span>
                     <span class="sgbp-menuToggle__line"></span>
@@ -42,154 +42,177 @@
           </div>
         </div>
 
-
-        <div class="sgbp-pageLayout__main sgbp-row sgbp-row--extraBigMargin">
-          <div class="sgbp-pageLayout__mainSidebar sgbp-hidden-medium-down">
-            <nav class="sgbp-verticalMenu sgbp-verticalMenu--inline sgbp-verticalMenu--left">
-              <a href="javascript:;" class="sgbp-verticalMenu__item">
-                Dashboard
-              </a>
-              <a href="javascript:;" class="sgbp-verticalMenu__item is-active">
-                Project
-              </a>
-              <a href="javascript:;" class="sgbp-verticalMenu__item">
-                Members
-              </a>
-              <a href="javascript:;" class="sgbp-verticalMenu__item">
-                Security
-              </a>
-            </nav>
-          </div>
-          <div class="sgbp-pageLayout__mainContent">
-            <div class="sgbp-region sgbp-region--default">
-              <div class="sgbp-tabs">
-                <nav class="sgbp-tabs__headers sgbp-row sgbp-row--extraBigMargin">
-                  <a class="sgbp-tabs__tab is-active" href="javascript:;">Public info</a>
-                  <a class="sgbp-tabs__tab" href="javascript:;">Members</a>
-                  <a class="sgbp-tabs__tab" href="javascript:;">Billing</a>
-                  <a class="sgbp-tabs__tab" href="javascript:;">Settings</a>
-                </nav>
-                <div class="sgbp-tabs__content is-active">
-                  <div class="sgbp-postfix sgbp-postfix--bigGutters sgbp-postfix--small-stacked">
-                    <div class="sgbp-postfix__fluid">
-                      <form>
-                        <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--bigGutters sgbp-grid--baseline sgbp-row sgbp-row--extraBigMargin">
-                          <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-1of4">
-                            <h2 class="sgbp-headline sgbp-headline--h3">Name & Contact</h2>
-                          </div>
-                          <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-3of4">
-                            <label class="sgbp-inputGroup">
-                              <span class="sgbp-inputGroup__label">ID</span>
-                              <input type="text" class="sgbp-input" value="1">
-                            </label>
-                            <label class="sgbp-inputGroup">
-                              <span class="sgbp-inputGroup__label">Name</span>
-                              <input type="text" class="sgbp-input" value="Example Showcase">
-                            </label>
-                            <label class="sgbp-inputGroup">
-                              <span class="sgbp-inputGroup__label">Code</span>
-                              <input type="text" class="sgbp-input" value="esh">
-                            </label>
-                            <label class="sgbp-inputGroup">
-                              <span class="sgbp-inputGroup__label">Contact</span>
-                              <input type="text" class="sgbp-input" value="Faibl GmbH">
-                            </label>
-                          </div>
-                        </div>
-
-                        <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--bigGutters sgbp-grid--baseline sgbp-row sgbp-row--extraBigMargin">
-                          <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-1of4">
-                            <h2 class="sgbp-headline sgbp-headline--h3">Type</h2>
-                          </div>
-                          <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-3of4">
-                            <label class="sgbp-inputGroup">
-                              <span class="sgbp-inputGroup__label">Project type</span>
-                              <select class="sgbp-select">
-                                <option class="sgbp-select__option">Option 1</option>
-                                <option class="sgbp-select__option">Option 2</option>
-                                <option class="sgbp-select__option">Option 3</option>
-                                <option class="sgbp-select__option">Option 4</option>
-                                <option class="sgbp-select__option">Option 5</option>
-                                <option class="sgbp-select__option">Option 6</option>
-                                <option class="sgbp-select__option">Option 7</option>
-                              </select>
-                            </label>
-                            <label class="sgbp-inputGroup">
-                              <span class="sgbp-inputGroup__label">Importance</span>
-                              <select class="sgbp-select">
-                                <option class="sgbp-select__option">Option 1</option>
-                                <option class="sgbp-select__option">Option 2</option>
-                                <option class="sgbp-select__option">Option 3</option>
-                                <option class="sgbp-select__option">Option 4</option>
-                                <option class="sgbp-select__option">Option 5</option>
-                                <option class="sgbp-select__option">Option 6</option>
-                                <option class="sgbp-select__option">Option 7</option>
-                              </select>
-                            </label>
-                          </div>
-                        </div>
-
-                        <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--bigGutters sgbp-grid--baseline sgbp-row">
-                          <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-1of4">
-                            <h2 class="sgbp-headline sgbp-headline--h3">Appearance</h2>
-                          </div>
-                          <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-3of4">
-                            <label class="sgbp-inputGroup">
-                              <span class="sgbp-inputGroup__label">Theme</span>
-                              <select class="sgbp-select">
-                                <option class="sgbp-select__option">Option 1</option>
-                                <option class="sgbp-select__option">Option 2</option>
-                                <option class="sgbp-select__option">Option 3</option>
-                                <option class="sgbp-select__option">Option 4</option>
-                                <option class="sgbp-select__option">Option 5</option>
-                                <option class="sgbp-select__option">Option 6</option>
-                                <option class="sgbp-select__option">Option 7</option>
-                              </select>
-                            </label>
-                            <label class="sgbp-inputGroup">
-                              <span class="sgbp-inputGroup__label">Logo</span>
-                              <input type="file" class="sgbp-input">
-                            </label>
-                            <div class="sgbp-inputGroup">
-                              <label class="sgbp-checkbox">
-                                <input type="checkbox" class="sgbp-checkbox__control">
-                                <span class="sgbp-checkbox__label">Display logo</span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="sgbp-inputGroup sgbp-postfix">
-                          <div class="sgbp-postfix__fluid"></div>
-                          <div class="sgbp-postfix__fixed">
-                            <button type="reset" class="sgbp-button sgbp-button--outline sgbp-button--secondary sgbp-col">Cancel</button>
-                            <button type="submit" class="sgbp-button sgbp-button--primary">Save</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="sgbp-postfix__fixed">
-                      <nav class="sgbp-verticalMenu sgbp-verticalMenu--inlineMediumUp sgbp-verticalMenu--right">
-                        <a href="javascript:;" class="sgbp-verticalMenu__item is-active">
-                          Optional
-                        </a>
-                        <a href="javascript:;" class="sgbp-verticalMenu__item">
-                          Third level
-                        </a>
-                        <a href="javascript:;" class="sgbp-verticalMenu__item">
-                          Navigation
-                        </a>
+        <div class="sgbp-pageLayout__mainCanvas sgbp-offCanvas">
+          <div class="sgbp-offCanvas__inner">
+            <div class="sgbp-offCanvas__on">
+      
+              <div class="sgbp-pageLayout__main sgbp-row sgbp-row--extraBigMargin">
+                <div class="sgbp-pageLayout__mainSidebar sgbp-hidden-medium-down">
+                  <nav class="sgbp-verticalMenu sgbp-verticalMenu--inline sgbp-verticalMenu--indicatorLeft">
+                    <a href="javascript:;" class="sgbp-verticalMenu__item">
+                      Dashboard
+                    </a>
+                    <a href="javascript:;" class="sgbp-verticalMenu__item is-active">
+                      Project
+                    </a>
+                    <a href="javascript:;" class="sgbp-verticalMenu__item">
+                      Members
+                    </a>
+                    <a href="javascript:;" class="sgbp-verticalMenu__item">
+                      Security
+                    </a>
+                  </nav>
+                </div>
+                <div class="sgbp-pageLayout__mainContent">
+                  <div class="sgbp-region sgbp-region--default">
+                    <div class="sgbp-tabs">
+                      <nav class="sgbp-tabs__headers sgbp-row sgbp-row--extraBigMargin">
+                        <a class="sgbp-tabs__tab is-active" href="javascript:;">Public info</a>
+                        <a class="sgbp-tabs__tab" href="javascript:;">Members</a>
+                        <a class="sgbp-tabs__tab" href="javascript:;">Billing</a>
+                        <a class="sgbp-tabs__tab" href="javascript:;">Settings</a>
                       </nav>
+                      <div class="sgbp-tabs__content is-active">
+                        <div class="sgbp-postfix sgbp-postfix--bigGutters sgbp-postfix--small-stacked">
+                          <div class="sgbp-postfix__fluid">
+                            <form>
+                              <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--bigGutters sgbp-grid--baseline sgbp-row sgbp-row--extraBigMargin">
+                                <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-1of4">
+                                  <h2 class="sgbp-headline sgbp-headline--h3">Name & Contact</h2>
+                                </div>
+                                <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-3of4">
+                                  <label class="sgbp-inputGroup">
+                                    <span class="sgbp-inputGroup__label">ID</span>
+                                    <input type="text" class="sgbp-input" value="1">
+                                  </label>
+                                  <label class="sgbp-inputGroup">
+                                    <span class="sgbp-inputGroup__label">Name</span>
+                                    <input type="text" class="sgbp-input" value="Example Showcase">
+                                  </label>
+                                  <label class="sgbp-inputGroup">
+                                    <span class="sgbp-inputGroup__label">Code</span>
+                                    <input type="text" class="sgbp-input" value="esh">
+                                  </label>
+                                  <label class="sgbp-inputGroup">
+                                    <span class="sgbp-inputGroup__label">Contact</span>
+                                    <input type="text" class="sgbp-input" value="Faibl GmbH">
+                                  </label>
+                                </div>
+                              </div>
+      
+                              <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--bigGutters sgbp-grid--baseline sgbp-row sgbp-row--extraBigMargin">
+                                <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-1of4">
+                                  <h2 class="sgbp-headline sgbp-headline--h3">Type</h2>
+                                </div>
+                                <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-3of4">
+                                  <label class="sgbp-inputGroup">
+                                    <span class="sgbp-inputGroup__label">Project type</span>
+                                    <select class="sgbp-select">
+                                      <option class="sgbp-select__option">Option 1</option>
+                                      <option class="sgbp-select__option">Option 2</option>
+                                      <option class="sgbp-select__option">Option 3</option>
+                                      <option class="sgbp-select__option">Option 4</option>
+                                      <option class="sgbp-select__option">Option 5</option>
+                                      <option class="sgbp-select__option">Option 6</option>
+                                      <option class="sgbp-select__option">Option 7</option>
+                                    </select>
+                                  </label>
+                                  <label class="sgbp-inputGroup">
+                                    <span class="sgbp-inputGroup__label">Importance</span>
+                                    <select class="sgbp-select">
+                                      <option class="sgbp-select__option">Option 1</option>
+                                      <option class="sgbp-select__option">Option 2</option>
+                                      <option class="sgbp-select__option">Option 3</option>
+                                      <option class="sgbp-select__option">Option 4</option>
+                                      <option class="sgbp-select__option">Option 5</option>
+                                      <option class="sgbp-select__option">Option 6</option>
+                                      <option class="sgbp-select__option">Option 7</option>
+                                    </select>
+                                  </label>
+                                </div>
+                              </div>
+      
+                              <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--bigGutters sgbp-grid--baseline sgbp-row">
+                                <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-1of4">
+                                  <h2 class="sgbp-headline sgbp-headline--h3">Appearance</h2>
+                                </div>
+                                <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__cell--large-3of4">
+                                  <label class="sgbp-inputGroup">
+                                    <span class="sgbp-inputGroup__label">Theme</span>
+                                    <select class="sgbp-select">
+                                      <option class="sgbp-select__option">Option 1</option>
+                                      <option class="sgbp-select__option">Option 2</option>
+                                      <option class="sgbp-select__option">Option 3</option>
+                                      <option class="sgbp-select__option">Option 4</option>
+                                      <option class="sgbp-select__option">Option 5</option>
+                                      <option class="sgbp-select__option">Option 6</option>
+                                      <option class="sgbp-select__option">Option 7</option>
+                                    </select>
+                                  </label>
+                                  <label class="sgbp-inputGroup">
+                                    <span class="sgbp-inputGroup__label">Logo</span>
+                                    <input type="file" class="sgbp-input">
+                                  </label>
+                                  <div class="sgbp-inputGroup">
+                                    <label class="sgbp-checkbox">
+                                      <input type="checkbox" class="sgbp-checkbox__control">
+                                      <span class="sgbp-checkbox__label">Display logo</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="sgbp-inputGroup sgbp-postfix">
+                                <div class="sgbp-postfix__fluid"></div>
+                                <div class="sgbp-postfix__fixed">
+                                  <button type="reset" class="sgbp-button sgbp-button--outline sgbp-button--secondary sgbp-col">Cancel</button>
+                                  <button type="submit" class="sgbp-button sgbp-button--primary">Save</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="sgbp-postfix__fixed">
+                            <nav class="sgbp-verticalMenu sgbp-verticalMenu--inlineMediumUp sgbp-verticalMenu--indicatorRight">
+                              <a href="javascript:;" class="sgbp-verticalMenu__item is-active">
+                                Optional
+                              </a>
+                              <a href="javascript:;" class="sgbp-verticalMenu__item">
+                                Third level
+                              </a>
+                              <a href="javascript:;" class="sgbp-verticalMenu__item">
+                                Navigation
+                              </a>
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+      
+                <div class="sgbp-pageLayout__mainSidebar sgbp-hidden-medium-down">
+                  <div class="sgbp-region sgbp-region--default">
+                    [Extra Sidebar]
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="sgbp-pageLayout__mainSidebar sgbp-hidden-medium-down">
-            <div class="sgbp-region sgbp-region--default">
-              [Extra Sidebar]
+              <div class="sgbp-offCanvas__off sgbp-offCanvas__off--left sgbp-region sgbp-region--primary sgbp-region--verticalOnly">
+                <nav class="sgbp-verticalMenu sgbp-verticalMenu--inverted sgbp-verticalMenu--inline sgbp-verticalMenu--indicatorLeft">
+                  <a href="javascript:;" class="sgbp-verticalMenu__item">
+                    Dashboard
+                  </a>
+                  <a href="javascript:;" class="sgbp-verticalMenu__item is-active">
+                    Einrichtung
+                  </a>
+                  <a href="javascript:;" class="sgbp-verticalMenu__item">
+                    Mitarbeiter
+                  </a>
+                  <a href="javascript:;" class="sgbp-verticalMenu__item">
+                    Mitglieder
+                  </a>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -201,6 +224,7 @@
             </div>
           </div>
         </footer>
+
       </div>
     </div>
   </body>

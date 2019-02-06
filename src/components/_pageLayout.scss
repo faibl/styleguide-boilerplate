@@ -12,20 +12,21 @@
 
   &__header {
     flex: 0 0 auto;
-    margin-bottom: var(--sgbp-default-margin-big);
+
+    @media #{$sgbp-large-up} {
+      margin-bottom: var(--sgbp-default-margin-big);
+    }
+  }
+
+  &__mainCanvas {
+    flex: 1 1 auto;
   }
 
   &__main {
-    flex: 1 1 auto;
     display: flex;
     width: var(--sgbp-page-max-width);
 
-    // sass-lint:disable no-duplicate-properties
     max-width: 100%;
-    max-width: calc(100% - #{var(--sgbp-default-margin)} * 2);
-    // sass-lint:enable no-duplicate-properties
-    margin-left: var(--sgbp-default-margin);
-    margin-right: var(--sgbp-default-margin);
 
     @media #{$sgbp-large-up} {
       margin-left: auto;

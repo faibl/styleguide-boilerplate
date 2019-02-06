@@ -1,7 +1,10 @@
 :root {
   --sgbp-verticalMenu-color: var(--sgbp-color-gray);
   --sgbp-verticalMenu-color-active: var(--sgbp-color-black);
-  --sgbp-verticalMenu-border-color-active: var(--sgbp-color-gray);
+  --sgbp-verticalMenu-border-color-active: var(--sgbp-color-brand-primary);
+  --sgbp-verticalMenu-inverted-color: var(--sgbp-color-gray-light);
+  --sgbp-verticalMenu-inverted-color-active: var(--sgbp-color-white);
+  --sgbp-verticalMenu-inverted-border-color-active: var(--sgbp-color-white);
 }
 
 @mixin sgbpVerticalMenuInline() {
@@ -12,19 +15,31 @@
     border-right: var(--sgbp-accent-line-height) solid var(--sgbp-color-transparent);
   }
 
-  &.sgbp-verticalMenu--right .sgbp-verticalMenu__item {
-    padding-left: var(--sgbp-default-margin-small);
+  &.sgbp-verticalMenu--indicatorLeft .sgbp-verticalMenu__item {
+    padding-left: var(--sgbp-default-margin);
 
     &.is-active {
       border-left-color: var(--sgbp-verticalMenu-border-color-active);
     }
   }
 
-  &.sgbp-verticalMenu--left .sgbp-verticalMenu__item {
-    padding-right: var(--sgbp-default-margin-small);
+  &.sgbp-verticalMenu--indicatorRight .sgbp-verticalMenu__item {
+    padding-right: var(--sgbp-default-margin);
 
     &.is-active {
       border-right-color: var(--sgbp-verticalMenu-border-color-active);
+    }
+  }
+
+  &.sgbp-verticalMenu--inverted.sgbp-verticalMenu--indicatorLeft .sgbp-verticalMenu__item {
+    &.is-active {
+      border-left-color: var(--sgbp-verticalMenu-inverted-border-color-active);
+    }
+  }
+
+  &.sgbp-verticalMenu--inverted.sgbp-verticalMenu--indicatorRight .sgbp-verticalMenu__item {
+    &.is-active {
+      border-right-color: var(--sgbp-verticalMenu-inverted-border-color-active);
     }
   }
 }
@@ -63,6 +78,19 @@
     &.is-active {
       border-bottom-color: var(--sgbp-verticalMenu-border-color-active);
       border-bottom-width: var(--sgbp-accent-line-height);
+    }
+  }
+
+  &--inverted &__item {
+    color: var(--sgbp-verticalMenu-inverted-color);
+
+    &:hover,
+    &.is-active {
+      color: var(--sgbp-verticalMenu-inverted-color-active);
+    }
+
+    &.is-active {
+      border-bottom-color: var(--sgbp-verticalMenu-inverted-border-color-active);
     }
   }
 }
