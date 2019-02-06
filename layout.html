@@ -8,47 +8,47 @@
   </head>
   <body>
     <div class="sgbp-pageWrapper sgbp-pageWrapper--fullWidth">
-      <div class="sgbp-offCanvas">
-        <div class="sgbp-offCanvas__inner">
-          <div class="sgbp-pageLayout sgbp-offCanvas__on">
-            <div class="sgbp-pageLayout">
-              <div class="sgbp-pageLayout__header">
-                <div class="sgbp-pageHeader">
-                  <div class="sgbp-pageHeader__inner">
-                    <div class="sgbp-pageHeader__section">
-                      <div class="sgbp-region sgbp-hidden-large-up">
-                        <div class="sgbp-menuToggle sgbp-col" onclick="this.classList.toggle('is-open');document.querySelector('.sgbp-offCanvas').classList.toggle('is-open-left')">
-                          <span class="sgbp-menuToggle__line"></span>
-                          <span class="sgbp-menuToggle__line"></span>
-                          <span class="sgbp-menuToggle__line"></span>
-                        </div>
-                      </div>
-                      <div class="sgbp-region">
-                        [LOGO]
-                      </div>
-                    </div>
-                    <div class="sgbp-pageHeader__section">
-                      <a href="javascript:;" class="sgbp-pageHeader__item sgbp-pageHeader__item--icon">
-                        <svg class="sgbp-icon"><use xlink:href="./assets/icons.svg#flag"></use></svg>
-                      </a>
-                      <a href="javascript:;" class="sgbp-pageHeader__item sgbp-pageHeader__item--icon">
-                        <div class="sgbp-badgeIcon">
-                          <svg class="sgbp-badgeIcon__icon sgbp-icon"><use xlink:href="./assets/icons.svg#notifications"></use></svg>
-                          <div class="sgbp-badgeIcon__badge sgbp-badge sgbp-badge--info">1</div>
-                        </div>
-                      </a>
-                      <a href="javascript:;" class="sgbp-pageHeader__item sgbp-pageHeader__item--icon">
-                        <svg class="sgbp-icon"><use xlink:href="./assets/icons.svg#account"></use></svg>
-                      </a>
-                    </div>
+      <div class="sgbp-pageLayout">
+        <div class="sgbp-pageLayout__header">
+          <div class="sgbp-pageHeader">
+            <div class="sgbp-pageHeader__inner">
+              <div class="sgbp-pageHeader__section">
+                <div class="sgbp-region sgbp-hidden-large-up">
+                  <div class="sgbp-menuToggle sgbp-col" onclick="this.classList.toggle('is-open');document.querySelector('.sgbp-offCanvas').classList.toggle('is-open-left')">
+                    <span class="sgbp-menuToggle__line"></span>
+                    <span class="sgbp-menuToggle__line"></span>
+                    <span class="sgbp-menuToggle__line"></span>
                   </div>
                 </div>
+                <div class="sgbp-region">
+                  [LOGO]
+                </div>
               </div>
-      
+              <div class="sgbp-pageHeader__section">
+                <a href="javascript:;" class="sgbp-pageHeader__item sgbp-pageHeader__item--icon">
+                  <svg class="sgbp-icon"><use xlink:href="./assets/icons.svg#flag"></use></svg>
+                </a>
+                <a href="javascript:;" class="sgbp-pageHeader__item sgbp-pageHeader__item--icon">
+                  <div class="sgbp-badgeIcon">
+                    <svg class="sgbp-badgeIcon__icon sgbp-icon"><use xlink:href="./assets/icons.svg#notifications"></use></svg>
+                    <div class="sgbp-badgeIcon__badge sgbp-badge sgbp-badge--info">1</div>
+                  </div>
+                </a>
+                <a href="javascript:;" class="sgbp-pageHeader__item sgbp-pageHeader__item--icon">
+                  <svg class="sgbp-icon"><use xlink:href="./assets/icons.svg#account"></use></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sgbp-pageLayout__mainCanvas sgbp-offCanvas">
+          <div class="sgbp-offCanvas__inner">
+            <div class="sgbp-offCanvas__on">
       
               <div class="sgbp-pageLayout__main sgbp-row sgbp-row--extraBigMargin">
                 <div class="sgbp-pageLayout__mainSidebar sgbp-hidden-medium-down">
-                  <nav class="sgbp-verticalMenu sgbp-verticalMenu--inline sgbp-verticalMenu--left">
+                  <nav class="sgbp-verticalMenu sgbp-verticalMenu--inline sgbp-verticalMenu--indicatorLeft">
                     <a href="javascript:;" class="sgbp-verticalMenu__item">
                       Dashboard
                     </a>
@@ -172,7 +172,7 @@
                             </form>
                           </div>
                           <div class="sgbp-postfix__fixed">
-                            <nav class="sgbp-verticalMenu sgbp-verticalMenu--inlineMediumUp sgbp-verticalMenu--right">
+                            <nav class="sgbp-verticalMenu sgbp-verticalMenu--inlineMediumUp sgbp-verticalMenu--indicatorRight">
                               <a href="javascript:;" class="sgbp-verticalMenu__item is-active">
                                 Optional
                               </a>
@@ -196,33 +196,35 @@
                   </div>
                 </div>
               </div>
-      
-              <footer class="sgbp-pageLayout__footer">
-                <div class="sgbp-pageFooter">
-                  <div class="sgbp-pageFooter__inner sgbp-centered sgbp-centered--horizontally">
-                    [FOOTER]
-                  </div>
-                </div>
-              </footer>
+
+              <div class="sgbp-offCanvas__off sgbp-offCanvas__off--left sgbp-region sgbp-region--primary sgbp-region--verticalOnly">
+                <nav class="sgbp-verticalMenu sgbp-verticalMenu--inverted sgbp-verticalMenu--inline sgbp-verticalMenu--indicatorLeft">
+                  <a href="javascript:;" class="sgbp-verticalMenu__item">
+                    Dashboard
+                  </a>
+                  <a href="javascript:;" class="sgbp-verticalMenu__item is-active">
+                    Einrichtung
+                  </a>
+                  <a href="javascript:;" class="sgbp-verticalMenu__item">
+                    Mitarbeiter
+                  </a>
+                  <a href="javascript:;" class="sgbp-verticalMenu__item">
+                    Mitglieder
+                  </a>
+                </nav>
+              </div>
             </div>
           </div>
-          <div class="sgbp-offCanvas__off sgbp-offCanvas__off--left sgbp-region sgbp-region--primary">
-            <nav class="sgbp-verticalMenu sgbp-verticalMenu--inverted sgbp-verticalMenu--inline sgbp-verticalMenu--left" style="margin-top: 30px">
-              <a href="javascript:;" class="sgbp-verticalMenu__item">
-                Dashboard
-              </a>
-              <a href="javascript:;" class="sgbp-verticalMenu__item is-active">
-                Einrichtung
-              </a>
-              <a href="javascript:;" class="sgbp-verticalMenu__item">
-                Mitarbeiter
-              </a>
-              <a href="javascript:;" class="sgbp-verticalMenu__item">
-                Mitglieder
-              </a>
-            </nav>
-          </div>
         </div>
+
+        <footer class="sgbp-pageLayout__footer">
+          <div class="sgbp-pageFooter">
+            <div class="sgbp-pageFooter__inner sgbp-centered sgbp-centered--horizontally">
+              [FOOTER]
+            </div>
+          </div>
+        </footer>
+
       </div>
     </div>
   </body>
