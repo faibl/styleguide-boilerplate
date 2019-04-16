@@ -74,6 +74,23 @@
   }
 }
 
+@keyframes sgbp-ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+
+  20% {
+    transform: scale(15, 15);
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
 .sgbp-animated {
   animation-fill-mode: both;
   animation-duration: 400ms;
@@ -96,5 +113,33 @@
 
   &--bounceInDown {
     animation-name: sgbp-bounceInDown;
+  }
+
+  &--rippleError,
+  &--rippleSuccess {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      animation: sgbp-ripple 800ms ease-out;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5%;
+      height: 5%;
+      opacity: 0;
+      //border-radius: 50%;
+      transform: scale(1, 1) translate(-50%);
+      transform-origin: 50% 50%;
+    }
+  }
+
+  &--rippleError::after {
+    background: var(--sgbp-color-error);
+  }
+
+  &--rippleSuccess::after {
+    background: var(--sgbp-color-success);
   }
 }

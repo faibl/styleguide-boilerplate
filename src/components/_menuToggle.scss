@@ -1,5 +1,11 @@
 :root {
-  --sgbp-menuToggle-size: 1.25em;
+  --sgbp-menuToggle-size: 1.75em;
+}
+
+.sgbp-menuTogglePlaceholder {
+  display: block;
+  width: var(--sgbp-menuToggle-size);
+  height: var(--sgbp-menuToggle-size);
 }
 
 .sgbp-menuToggle {

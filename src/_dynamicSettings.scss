@@ -18,9 +18,9 @@
   --sgbp-color-darken-heavy: rgba(0, 0, 0, 0.8);
   --sgbp-color-transparent: rgba(0, 0, 0, 0);
 
-  --sgbp-color-brand-primary: hsl(204, 96%, 27%);
-  --sgbp-color-brand-primary-light: hsl(202, 83%, 41%);
-  --sgbp-color-brand-primary-inverted: hsl(216, 33%, 97%);
+  --sgbp-color-accent: hsl(204, 96%, 27%);
+  --sgbp-color-accent-alternate: hsl(202, 83%, 41%);
+  --sgbp-color-accent-inverted: hsl(216, 33%, 97%);
 
   --sgbp-color-brand-secondary: var(--sgbp-color-gray-darker);
   --sgbp-color-brand-secondary-inverted: var(--sgbp-color-white);
@@ -42,9 +42,9 @@
   --sgbp-text-color: var(--sgbp-color-gray-darker);
 
   //** Global textual link color.
-  --sgbp-link-color: var(--sgbp-color-brand-primary);
+  --sgbp-link-color: var(--sgbp-color-accent);
   //** Link hover color set via `darken` function.
-  --sgbp-link-hover-color: lighten(var(--sgbp-color-brand-primary), 20);
+  --sgbp-link-hover-color: lighten(var(--sgbp-color-accent), 20);
 
   --sgbp-page-max-width: 1400px;
 
@@ -52,7 +52,7 @@
   //
   //## Font, line-height, and color for body text, headings, and more.
 
-  --sgbp-font-family-base: 'Lato', sans-serif;
+  --sgbp-font-family-base: Verdana, sans-serif;
 
   --sgbp-font-size-base: 16px;
   --sgbp-font-size-text: 0.95rem;

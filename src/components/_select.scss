@@ -16,11 +16,11 @@
   &[size='1'] {
     appearance: none;
     padding: var(--sgbp-input-padding);
-    padding-right: 2.3rem;
-    background-image: url('#{$sgbp-public-asset-path}/images/bg_select.svg');
-    background-position: right -55px top -13px;
+    padding-right: 3.1rem;
+    background-position: right -55px top -9px;
     background-repeat: no-repeat;
-    background-size: 6.5rem 3.4rem;
+    background-size: 6.3rem 3.3rem;
+    background-image: url('#{$sgbp-public-asset-path}/images/bg_select.svg');
 
     // sass-lint:disable no-vendor-prefixes
     &::-ms-expand {

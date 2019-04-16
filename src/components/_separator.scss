@@ -10,21 +10,39 @@
     background: linear-gradient(to right, transparent, var(--sgbp-color-gray-medium), transparent);
   }
 
-  &--primary {
-    height: 2px;
-    background-color: var(--sgbp-color-brand-primary);
+  &--accent {
+    height: 1px;
+    background-color: var(--sgbp-color-accent);
 
     &.sgbp-separator--fade {
-      background: linear-gradient(to right, transparent, var(--sgbp-color-brand-primary), transparent);
+      background: linear-gradient(to right, transparent, var(--sgbp-color-accent), transparent);
     }
   }
 
-  &--secondary {
-    height: 2px;
-    background-color: var(--sgbp-color-brand-secondary);
+  &--highlight {
+    height: 1px;
+    background-color: var(--sgbp-color-highlight);
 
     &.sgbp-separator--fade {
-      background: linear-gradient(to right, transparent, var(--sgbp-color-brand-secondary), transparent);
+      background: linear-gradient(to right, transparent, var(--sgbp-color-highlight), transparent);
+    }
+  }
+
+  &--light {
+    height: 1px;
+    background-color: var(--sgbp-color-gray-light);
+
+    &.sgbp-separator--fade {
+      background: linear-gradient(to right, transparent, var(--sgbp-color-accent), transparent);
+    }
+  }
+
+  &--white {
+    height: 1px;
+    background-color: var(--sgbp-color-white);
+
+    &.sgbp-separator--fade {
+      background: linear-gradient(to right, transparent, var(--sgbp-color-white), transparent);
     }
   }
 

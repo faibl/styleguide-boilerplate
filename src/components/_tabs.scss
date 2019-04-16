@@ -1,18 +1,18 @@
 :root {
   --sgbp-tab-header-distance: var(--sgbp-default-margin-big);
-  --sgbp-tab-header-padding-top:  10px;
-  --sgbp-tab-header-sides:  0;
+  --sgbp-tab-header-padding-top: 10px;
+  --sgbp-tab-header-sides: 0;
   --sgbp-tab-header-padding-bottom: var(--sgbp-default-margin-small);
-  --sgbp-tab-header-font-weight:  normal;
+  --sgbp-tab-header-font-weight: bold;
   --sgbp-tab-header-font-weight-hover: var(--sgbp-tab-header-font-weight);
   --sgbp-tab-header-font-weight-active: var(--sgbp-tab-header-font-weight-hover);
   --sgbp-tab-header-color: var(--sgbp-color-gray);
   --sgbp-tab-header-color-hover: var(--sgbp-color-black);
   --sgbp-tab-header-color-active: var(--sgbp-color-black);
-  --sgbp-tab-header-underline-color: var(--sgbp-color-brand-primary);
+  --sgbp-tab-header-underline-color: var(--sgbp-color-accent);
   --sgbp-tab-header-underline-color-hover: var(--sgbp-color-transparent);
   --sgbp-tab-header-underline-color-active: var(--sgbp-tab-header-underline-color);
-  --sgbp-tab-underline-height:  1px;
+  --sgbp-tab-underline-height: 1px;
   --sgbp-tab-underline-height-active: var(--sgbp-accent-line-height);
 }
 
@@ -24,8 +24,6 @@
   }
 
   &__tab {
-    @include sgbp-hover(var(--sgbp-tab-header-color-hover));
-
     transition: color 200ms, border 200ms;
     padding-top: var(--sgbp-tab-header-padding-top);
     padding-bottom: var(--sgbp-tab-header-padding-bottom);
@@ -46,6 +44,8 @@
     &:visited {
       color: var(--sgbp-tab-header-color);
     }
+
+    @include sgbp-hover(var(--sgbp-tab-header-color-hover)); // should be included beneath :visited style!
 
     &:hover {
       font-weight: var(--sgbp-tab-header-font-weight-hover);

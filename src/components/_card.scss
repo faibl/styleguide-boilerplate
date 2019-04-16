@@ -1,0 +1,95 @@
+:root {
+  --sgbp-card-padding: var(--sgbp-default-margin);
+  --sgbp-card-border-color: var(--sgbp-color-gray-medium);
+  --sgbp-card-name-font-size: 28px;
+  --sgbp-card-name-font-weight: bold;
+  --sgbp-card-name-font-color: var(--sgbp-color-accent-alternate);
+  --sgbp-card-contents-font-size: var(--sgbp-font-size-text);
+  --sgbp-card-unobtrusive-name-font-size: 20px;
+}
+
+.sgbp-card {
+  @include sgbp-roundedEdges();
+  display: flex;
+  position: relative;
+  flex: 1 1 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: 1px solid var(--sgbp-card-border-color);
+  text-align: center;
+
+  &__status {
+    position: absolute;
+    top: 0;
+    left: var(--sgbp-card-padding);
+    padding: 10px 6px;
+    font-size: 22px;
+
+    color: var(--sgbp-color-white);
+
+    background-color: var(--sgbp-color-gray);
+
+    &--green {
+      background-color: #4caf50;
+    }
+
+    &--orange {
+      background-color: #ffc107;
+    }
+
+    &--red {
+      background-color: #f44336;
+    }
+  }
+
+  &__image {
+    margin-top: var(--sgbp-default-margin);
+    margin-bottom: var(--sgbp-default-margin);
+  }
+
+  &__name {
+    margin-bottom: var(--sgbp-default-margin);
+    padding-left: var(--sgbp-card-padding);
+    padding-right: var(--sgbp-card-padding);
+    font-size: var(--sgbp-card-name-font-size);
+    font-weight: var(--sgbp-card-name-font-weight);
+    color: var(--sgbp-card-name-font-color);
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 5px;
+      margin-right: auto;
+      margin-left: auto;
+      height: 1px;
+      width: 50px;
+      max-width: 40%;
+      background-color: var(--sgbp-card-name-font-color);
+    }
+  }
+
+  &__contents {
+    flex: 1 1 auto;
+    padding-left: var(--sgbp-card-padding);
+    padding-right: var(--sgbp-card-padding);
+    font-size: var(--sgbp-card-contents-font-size);
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: var(--sgbp-default-margin);
+  }
+
+  &--unobtrusive {
+    border: none;
+
+    .sgbp-card {
+      &__name {
+        font-size: var(--sgbp-card-unobtrusive-name-font-size);
+      }
+    }
+  }
+}

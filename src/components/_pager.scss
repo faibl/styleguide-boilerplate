@@ -1,0 +1,14 @@
+.sgbp-pager {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &__counter {
+    text-align: center;
+    margin-left: var(--sgbp-default-margin);
+    margin-right: var(--sgbp-default-margin);
+  }
+
+  &__button {
+  }
+}

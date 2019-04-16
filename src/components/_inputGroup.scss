@@ -1,10 +1,13 @@
 :root {
   --sgbp-inputGroup-label-color: var(--sgbp-color-gray);
-  --sgbp-inputGroup-error-color: var(--sgbp-color-white);
-  --sgbp-inputGroup-error-background-color: var(--sgbp-color-error);
-  --sgbp-inputGroup--constrained-max-width:  600px;
-  --sgbp-inputGroup-label-font-weight:  normal;
-  --sgbp-inputGroup-alignedButton-margin-top:  25px;
+  --sgbp-inputGroup-label-text-transform: uppercase;
+  --sgbp-inputGroup-text-color: var(--sgbp-inputGroup-label-color);
+  --sgbp-inputGroup-error-color: var(--sgbp-color-error);
+  --sgbp-inputGroup--constrained-max-width: 600px;
+  --sgbp-inputGroup-label-font-size: calc(var(--sgbp-font-size-text) * 0.9);
+  --sgbp-inputGroup-label-font-weight: normal;
+  --sgbp-inputGroup-text-font-weight: normal;
+  --sgbp-inputGroup-alignedButton-margin-top: 25px;
 }
 
 .sgbp-inputGroup {
@@ -16,7 +19,7 @@
   }
 
   & + & {
-    margin-top: var(--sgbp-default-margin-big);
+    margin-top: var(--sgbp-default-margin);
   }
 
   &--constrainedWidth {
@@ -29,24 +32,39 @@
     display: block;
     margin-left: 0.1em;
     margin-bottom: 0.3em;
-    font-size: 1em;
+    font-size: var(--sgbp-inputGroup-label-font-size);
     font-weight: var(--sgbp-inputGroup-label-font-weight);
+    text-transform: var(--sgbp-inputGroup-label-text-transform);
     color: var(--sgbp-inputGroup-label-color);
   }
 
-  &__subtext {
+  &__text {
     display: block;
     width: 100%;
-    padding: 5px 3px 3px 5px;
+    margin-left: 0.1em;
+    margin-bottom: 0.3em;
     font-size: 0.8rem;
+    font-weight: var(--sgbp-inputGroup-text-font-weight);
+    color: var(--sgbp-inputGroup-text-color);
 
     &--error {
-      background-color: var(--sgbp-inputGroup-error-background-color);
       color: var(--sgbp-inputGroup-error-color);
     }
   }
 
-  &__alignedButton {
-    margin-top: var(--sgbp-inputGroup-alignedButton-margin-top);
+  &--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .sgbp-inputGroup {
+      &__label {
+        margin-right: var(--sgbp-default-margin);
+      }
+
+      &__text {
+        order: 3;
+      }
+    }
   }
 }

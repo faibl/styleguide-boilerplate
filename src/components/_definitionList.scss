@@ -1,0 +1,53 @@
+.sgbp-definitionList {
+  &__term {
+    @include sgbp-uppercase;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+    color: var(--sgbp-color-gray);
+  }
+
+  .sgbp-definitionList__definition {
+    margin-bottom: 1.4em;
+
+    & + .sgbp-definitionList__definition {
+      margin-top: -0.8em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--horizontal {
+    overflow: hidden;
+
+    .sgbp-definitionList__term {
+      float: left;
+      clear: left;
+      margin-right: 4px;
+      margin-bottom: 4px;
+      line-height: 1.6em;
+    }
+
+    .sgbp-definitionList__definition {
+      float: left;
+      clear: right;
+      margin-bottom: 4px;
+
+      & + .sgbp-definitionList__definition {
+        margin-top: 0;
+
+        &::before {
+          content: '|';
+          margin-right: 0.1em;
+          padding-left: 0.1em;
+          color: var(--sgbp-color-gray-medium);
+        }
+      }
+    }
+  }
+
+  &--darkBackground &__term {
+    color: var(--sgbp-color-white);
+  }
+}

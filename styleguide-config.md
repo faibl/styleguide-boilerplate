@@ -13,7 +13,7 @@
     <div class="sgbp-pageWrapper">
       <div class="sgbp-region">
         <header class="styledown-header">
-            <h1 class="sgbp-headline sgbp-headline--h1 sgbp-headline--text sgbp-headline--primary">
+            <h1 class="sgbp-headline sgbp-headline--h1 sgbp-headline--text sgbp-headline--accent">
               My Project's
               <span class="sgbp-headline__addendum">Styleguide</span>
             </h1>
@@ -24,8 +24,8 @@
                 </p>
                 <div class="sgbp-float sgbp-float--right sgbp-float--inText">
                     <label class="sgbp-inputGroup">
-                        <span class="sgbp-inputGroup__label">Primary color:</span>
-                        <input type="color" value="#035287" class="sgbp-input"  oninput="document.documentElement.style.setProperty('--sgbp-color-brand-primary', this.value);">
+                        <span class="sgbp-inputGroup__label">Accent color:</span>
+                        <input type="color" value="#035287" class="sgbp-input"  oninput="document.documentElement.style.setProperty('--sgbp-color-accent', this.value);">
                     </label>
                 </div>
                 <p class="sgbp-paragraph">
@@ -38,7 +38,15 @@
         </header>
         <div class="sg-container sgbp-row" sg-content></div>
       </div>
-      <div class="sgbp-region sgbp-region--secondary">
+      <div class="sgbp-region sgbp-region--gray">
           Built upon <a href="https://github.com/faibl/styleguide-boilerplate" class="sgbp-link">Styleguide Boilerplate</a>.
       </div>
     </div>
+
+    <!--
+    IE SVG Icon support:
+    TODO: wrap the following two script tags in IE conditional comment in your production site.
+    We cannot do it in this example because our markdown parser throws an error if we put them in
+    -->
+    <script src="/svg4everybody.js"></script>
+    <script>svg4everybody(); // run it now or whenever you are ready</script>

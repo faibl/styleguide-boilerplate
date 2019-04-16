@@ -2,10 +2,16 @@
   display: inline-flex;
   position: relative;
 
-  &__badge {
+  &__icon {
     position: absolute;
-    left: 56%;
-    top: 50%;
+    left: -10px;
+    top: -10px;
+    z-index: 1;
+  }
+
+  &__badge {
+    position: relative;
+    z-index: 0;
   }
 
   &--info &__icon {

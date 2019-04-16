@@ -1,48 +1,27 @@
 :root {
-  --sgbp-pageLayout-background-color: var(--sgbp-color-gray-lighter);
-  --sgbp-pageLayout-content-background-color: var(--sgbp-color-white);
-  --sgbp-pageLayout-content-border-color: var(--sgbp-color-gray-medium);
+  --sgbp-pageLayout-header-height: 58px;
+  --sgbp-pageLayout-footer-height: 0px;
 }
 
 .sgbp-pageLayout {
   display: flex;
   flex-direction: column;
-  background-color: var(--sgbp-pageLayout-background-color);
-  min-height: 100vh;
 
   &__header {
+    z-index: 2;
     flex: 0 0 auto;
-
-    @media #{$sgbp-large-up} {
-      margin-bottom: var(--sgbp-default-margin-big);
-    }
-  }
-
-  &__mainCanvas {
-    flex: 1 1 auto;
+    height: var(--sgbp-pageLayout-header-height);
   }
 
   &__main {
+    z-index: 1;
     display: flex;
-    width: var(--sgbp-page-max-width);
+    width: 100%;
 
     max-width: 100%;
 
-    @media #{$sgbp-large-up} {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
     &Sidebar {
-      flex: 0 1 160px;
-
-      &:first-child {
-        margin-right: var(--sgbp-default-margin-big);
-      }
-
-      &:last-child {
-        margin-left: var(--sgbp-default-margin-big);
-      }
+      flex: 0 0 auto;
     }
 
     &Content {
@@ -52,5 +31,45 @@
 
   &__footer {
     flex: 0 0 auto;
+  }
+
+  &--sticky {
+    padding-top: var(--sgbp-pageLayout-header-height);
+    min-height: 100vh;
+
+    .sgbp-pageLayout__header {
+      position: fixed;
+      z-index: calc(var(--sgbp-offCanvas-z-index) - 1);
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+
+    .sgbp-pageLayout__main,
+    .sgbp-pageLayout__mainContent,
+    .sgbp-pageLayout__mainSidebar {
+      min-height: calc(100vh - var(--sgbp-pageLayout-header-height) - var(--sgbp-pageLayout-footer-height));
+    }
+  }
+
+  &--nonSticky-medium-up {
+    @media #{$sgbp-medium-up} {
+      padding-top: 0;
+
+      .sgbp-pageLayout__header {
+        position: static;
+      }
+    }
+  }
+
+  &--nonSticky-large-up {
+    @media #{$sgbp-large-up} {
+      padding-top: 0;
+
+      .sgbp-pageLayout__header {
+        position: static;
+      }
+    }
   }
 }

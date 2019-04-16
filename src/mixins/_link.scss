@@ -19,7 +19,7 @@
 
   @if ($is-unobtrusive == 'modifier') {
     &--unobtrusive {
-      @include sgbp-hover(var(--sgbp-color-brand-primary));
+      @include sgbp-hover(var(--sgbp-color-accent));
 
       &,
       &:visited {
@@ -27,7 +27,7 @@
       }
     }
   } @else if ($is-unobtrusive == true) {
-    @include sgbp-hover(var(--sgbp-color-brand-primary));
+    @include sgbp-hover(var(--sgbp-color-accent));
 
     &,
     &:visited {

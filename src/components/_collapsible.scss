@@ -1,4 +1,4 @@
-.sgbp-collapsible {
+.sgbp-collapsible:not(.sgbp-collapsible--overflow) {
   overflow: hidden;
 
   &::after {
@@ -8,7 +8,7 @@
     max-height: 0px;
   }
 
-  &__content {
+  .sgbp-collapsible__content {
     transition: margin-bottom 0.3s cubic-bezier(0, 0, 0, 1);
     margin-bottom: 0;
     max-height: 1000000px;
@@ -20,10 +20,20 @@
     max-height: 50px;
   }
 
-  &:not(.is-open) > &__content {
+  &:not(.is-open) > .sgbp-collapsible__content {
     margin-bottom: -2000px;
     transition: margin-bottom 0.3s cubic-bezier(1, 0, 1, 1), visibility 0s 0.3s, max-height 0s 0.3s;
     visibility: hidden;
     max-height: 0;
+  }
+}
+
+.sgbp-collapsible--overflow {
+  .sgbp-collapsible__content {
+    display: none;
+  }
+
+  &.is-open > .sgbp-collapsible__content {
+    display: block;
   }
 }

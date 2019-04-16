@@ -1,7 +1,6 @@
 @import 'pageLayout';
 @import 'pageWrapper';
 @import 'pageHeader';
-@import 'pageFooter';
 @import 'row';
 @import 'col';
 @import 'paragraph';
@@ -11,9 +10,12 @@
 @import 'link';
 @import 'centered';
 @import 'text';
+@import 'text';
 @import 'scrollable';
 @import 'button';
 @import 'list';
+@import 'definitionList';
+@import 'keyValueList';
 @import 'headline';
 @import 'clickable';
 @import 'icon';
@@ -25,7 +27,9 @@
 @import 'input';
 @import 'inputGroup';
 @import 'inputIcon';
+@import 'inputAddon';
 @import 'checkboxAndRadio';
+@import 'checkboxSwitch';
 @import 'select';
 @import 'postfix';
 @import 'tabs';
@@ -38,6 +42,7 @@
 @import 'offCanvas';
 @import 'alert';
 @import 'pagination';
+@import 'pager';
 @import 'slider';
 @import 'collapsible';
 @import 'accordion';
@@ -49,3 +54,6 @@
 @import 'badgeIcon';
 @import 'menuToggle';
 @import 'verticalMenu';
+@import 'profileImage';
+@import 'card';
+@import 'imageTeaser';

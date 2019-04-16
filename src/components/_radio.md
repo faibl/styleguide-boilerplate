@@ -3,11 +3,11 @@
 ### Radio Button (default)
 
     @example
-    <label class="sgbp-radio">
+    <label class="sgbp-radio sgbp-row">
         <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-default">
         <span class="sgbp-radio__label">Radio Button 1</span>
     </label>
-    <label class="sgbp-radio">
+    <label class="sgbp-radio sgbp-row">
         <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-default">
         <span class="sgbp-radio__label">Radio Button 2</span>
     </label>
@@ -17,11 +17,11 @@
 You need to provide an empty `sgbp-radio__label` element in order to display standalone radios without labels
 
     @example
-    <label class="sgbp-radio">
+    <label class="sgbp-radio sgbp-row">
         <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-standalone">
         <span class="sgbp-radio__label"></span>
     </label>
-    <label class="sgbp-radio">
+    <label class="sgbp-radio sgbp-row">
         <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-standalone">
         <span class="sgbp-radio__label"></span>
     </label>
@@ -41,11 +41,11 @@ You need to provide an empty `sgbp-radio__label` element in order to display sta
 ### Radio (disabled)
 
     @example
-    <label class="sgbp-radio is-disabled">
+    <label class="sgbp-radio is-disabled sgbp-row">
         <input type="radio" class="sgbp-radio__control" disabled>
         <span class="sgbp-radio__label">Radio 1</span>
     </label>
-    <label class="sgbp-radio is-disabled">
+    <label class="sgbp-radio is-disabled sgbp-row">
         <input type="radio" class="sgbp-radio__control" disabled checked>
         <span class="sgbp-radio__label">Radio 2</span>
     </label>
@@ -53,11 +53,11 @@ You need to provide an empty `sgbp-radio__label` element in order to display sta
 ### Radio Button (small)
   
     @example
-    <label class="sgbp-radio sgbp-radio--small">
+    <label class="sgbp-radio sgbp-radio--small sgbp-row sgbp-row--smallMargin">
         <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-small">
         <span class="sgbp-radio__label">Radio Button 1</span>
     </label>
-    <label class="sgbp-radio sgbp-radio--small">
+    <label class="sgbp-radio sgbp-radio--small sgbp-row sgbp-row--smallMargin">
         <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-small">
         <span class="sgbp-radio__label">Radio Button 2</span>
     </label>
@@ -65,11 +65,11 @@ You need to provide an empty `sgbp-radio__label` element in order to display sta
 ### Radio Button (big)
 
     @example
-    <label class="sgbp-radio sgbp-radio--big">
+    <label class="sgbp-radio sgbp-radio--big sgbp-row">
         <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-big">
         <span class="sgbp-radio__label">Yes, please subscribe me to your email list.</span>
     </label>
-    <label class="sgbp-radio sgbp-radio--big">
+    <label class="sgbp-radio sgbp-radio--big sgbp-row">
         <input type="radio" class="sgbp-radio__control" name="sgbp-radio-demo-big">
         <span class="sgbp-radio__label">No, please leave me alone</span>
     </label>
@@ -80,9 +80,9 @@ You can visually fake radioes without using ```<input type="radio">``` form elem
 Please make sure to toggle the class ```is-checked``` on the ```sgbp-radio``` element.
 
     @example
-    <label class="sgbp-radio">
+    <label class="sgbp-radio sgbp-row">
         <span class="sgbp-radio__label" onclick="this.parentElement.classList.toggle('is-checked')">Radio Button 1</span>
     </label>
-    <label class="sgbp-radio">
+    <label class="sgbp-radio sgbp-row">
         <span class="sgbp-radio__label" onclick="this.parentElement.classList.toggle('is-checked')">Radio Button 2</span>
     </label>

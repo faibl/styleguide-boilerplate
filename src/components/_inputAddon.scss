@@ -1,0 +1,42 @@
+:root {
+  --sgbp-inputAddon-background-color: var(--sgbp-color-gray-light);
+}
+
+.sgbp-inputAddon {
+  display: flex;
+
+  &__input {
+    flex: 1 1 auto;
+  }
+
+  &__addon {
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    padding: 0.5em 0.5em 0.3em 0.5em;
+    min-width: 2em;
+    font-size: 0.9em;
+    background-color: var(--sgbp-inputAddon-background-color);
+    color: var(--sgbp-input-color);
+    border-style: solid;
+    border-radius: var(--sgbp-input-border-radius);
+    border-width: var(--sgbp-input-border-width);
+    border-color: var(--sgbp-input-border-color);
+
+    &:first-child {
+      border-right: none;
+      margin-right: calc(var(--sgbp-input-border-width) * -1);
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child {
+      border-left: none;
+      margin-left: calc(var(--sgbp-input-border-width) * -1);
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+}

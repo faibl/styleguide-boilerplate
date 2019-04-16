@@ -1,35 +1,47 @@
 :root {
-  --sgbp-offCanvas-width: 284px;
-  --sgbp-offCanvas-width-screen-medium: 325px;
-  --sgbp-offCanvas-width-screen-large: 345px;
-  --sgbp-offCanvas-height: 260px;
-  --sgbp-offCanvas-height-screen-medium: 250px;
-  --sgbp-offCanvas-height-screen-large: 300px;
-  --sgbp-offCanvas-header-border-color: #303e47;
+  --sgbp-offCanvas-backdrop-backgroundColor: var(--sgbp-color-darken-light);
+}
+
+@mixin sgbp-offCanvas-forceOn($breakpoint) {
+  @media #{$breakpoint} {
+    display: flex;
+
+    .sgbp-offCanvas {
+      &__off {
+        z-index: 0;
+        flex: 0 1 auto;
+        flex-direction: row;
+        position: static;
+        transform: none;
+
+        &--left {
+          order: 1;
+        }
+
+        &--right {
+          order: 3;
+        }
+
+        &--bottom {
+          flex: 1 0 100%;
+          order: 4;
+        }
+      }
+
+      &__on {
+        flex: 1 1 auto;
+        order: 2;
+      }
+    }
+  }
 }
 
 .sgbp-offCanvas {
   overflow: hidden;
+  position: relative;
 
-  &__inner {
-    will-change: transform;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform: translateX(0);
-    transition: 300ms ease transform;
-  }
-
-  &.is-open-left > &__inner {
-    transform: translateX(var(--sgbp-offCanvas-width));
-  }
-
-  &.is-open-right > &__inner {
-    transform: translateX(calc(-1 * var(--sgbp-offCanvas-width)));
-  }
-
-  &.is-open-bottom > &__inner {
-    transform: translateY(calc(-1 * var(--sgbp-offCanvas-height)));
+  &__toggle {
+    position: absolute;
   }
 
   &__on {
@@ -39,89 +51,87 @@
   &__off {
     position: absolute;
     z-index: var(--sgbp-offCanvas-z-index);
+    will-change: transform;
+    transition: transform 300ms;
+
+    &--fixed {
+      position: fixed;
+    }
 
     &--left {
-      left: calc(-1 * var(--sgbp-offCanvas-width));
+      transform: translateX(-100%);
       top: 0;
-      width: var(--sgbp-offCanvas-width);
+      left: 0;
       height: 100%;
+
+      .sgbp-offCanvas__toggle {
+        left: 100%;
+        top: 0;
+      }
     }
 
     &--right {
-      right: calc(-1 * var(--sgbp-offCanvas-width));
       top: 0;
-      width: var(--sgbp-offCanvas-width);
+      right: 0;
+      transform: translateX(100%);
       height: 100%;
     }
 
     &--bottom {
       left: 0;
       right: 0;
+      top: 100%;
       width: 100%;
-      height: var(--sgbp-offCanvas-height);
-      bottom: calc(-1 * var(--sgbp-offCanvas-height));
     }
   }
 
-  @media #{$sgbp-medium-up} {
-    &.is-open-left > &__inner {
-      transform: translateX(var(--sgbp-offCanvas-width-screen-medium));
-    }
-
-    &.is-open-right > &__inner {
-      transform: translateX(calc(-1 * var(--sgbp-offCanvas-width-screen-medium)));
-    }
-
-    &.is-open-bottom > &__inner {
-      transform: translateY(calc(-1 * var(--sgbp-offCanvas-height-screen-medium)));
-    }
-
-    &__off {
-      &--left {
-        left: calc(-1 * var(--sgbp-offCanvas-width-screen-medium));
-        width: var(--sgbp-offCanvas-width-screen-medium);
-      }
-
-      &--right {
-        right: calc(-1 * var(--sgbp-offCanvas-width-screen-medium));
-        width: var(--sgbp-offCanvas-width-screen-medium);
-      }
-
-      &--bottom {
-        bottom: calc(-1 * var(--sgbp-offCanvas-height-screen-medium));
-        height: var(--sgbp-offCanvas-height-screen-medium);
-      }
-    }
+  &__backdrop {
+    pointer-events: none;
+    position: absolute;
+    z-index: calc(var(--sgbp-offCanvas-z-index) - 1);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    will-change: opactiy;
+    transition: opacity 300ms;
+    background-color: var(--sgbp-offCanvas-backdrop-backgroundColor);
   }
 
-  @media #{$sgbp-large-up} {
-    &.is-open-left > &__inner {
-      transform: translateX(var(--sgbp-offCanvas-width-screen-large));
-    }
+  &.is-open-left > &__off--left {
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+  }
 
-    &.is-open-right > &__inner {
-      transform: translateX(calc(-1 * var(--sgbp-offCanvas-width-screen-large)));
-    }
+  &.is-open-right > &__off--right {
+    box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+  }
 
-    &.is-open-bottom > &__inner {
-      transform: translateY(calc(-1 * var(--sgbp-offCanvas-height-screen-large)));
-    }
+  &.is-open-left > &__off--left,
+  &.is-open-right > &__off--right {
+    transform: translateX(0);
+  }
 
-    &__off {
-      &--left {
-        left: calc(-1 * var(--sgbp-offCanvas-width-screen-large));
-        width: var(--sgbp-offCanvas-width-screen-large);
-      }
+  &.is-open-bottom > &__off--bottom {
+    transform: translateY(-100%);
+  }
 
-      &--right {
-        right: calc(-1 * var(--sgbp-offCanvas-width-screen-large));
-        width: var(--sgbp-offCanvas-width-screen-large);
-      }
+  &.is-open-left > &__backdrop,
+  &.is-open-right > &__backdrop,
+  &.is-open-bottom > &__backdrop {
+    opacity: 1;
+    pointer-events: all;
+  }
 
-      &--bottom {
-        bottom: calc(-1 * var(--sgbp-offCanvas-height-screen-large));
-        height: var(--sgbp-offCanvas-height-screen-large);
-      }
-    }
+  &--push &__off {
+    position: relative;
+  }
+
+  &--on-medium-up {
+    @include sgbp-offCanvas-forceOn($sgbp-medium-up);
+  }
+
+  &--on-large-up {
+    @include sgbp-offCanvas-forceOn($sgbp-large-up);
   }
 }

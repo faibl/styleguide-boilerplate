@@ -1,5 +1,5 @@
 :root {
-  --sgbp-tooltip-z-index:  9999;
+  --sgbp-tooltip-z-index: 9999;
   --sgbp-tooltip-background-color: var(--sgbp-color-gray-lighter);
   --sgbp-tooltip-color: var(--sgbp-color-black);
   --sgbp-tooltip-box-shadow-color: var(--sgbp-color-darken);
@@ -21,7 +21,7 @@
   z-index: var(--sgbp-tooltip-z-index);
   display: none;
   top: 0;
-  left: 50%;
+  //left: 50%;
   max-width: 100vw;
 }
 
@@ -43,13 +43,13 @@
   margin-bottom: -3px;
 }
 
-.sgbp-tooltip--styled.sgbp-tooltip--left .sgbp-tooltip__content {
-  text-align: right;
-}
-
-.sgbp-tooltip--styled.sgbp-tooltip--right .sgbp-tooltip__content {
-  text-align: left;
-}
+//.sgbp-tooltip--styled.sgbp-tooltip--left .sgbp-tooltip__content {
+//  text-align: right;
+//}
+//
+//.sgbp-tooltip--styled.sgbp-tooltip--right .sgbp-tooltip__content {
+//  text-align: left;
+//}
 
 .sgbp-tooltip--top .sgbp-tooltip__content {
   bottom: 100%;

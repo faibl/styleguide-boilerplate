@@ -27,7 +27,7 @@
 
   border-color: var(--sgbp-alert-border-color);
 
-  @media #{var(--sgbp-medium-up)} {
+  @media #{$sgbp-medium-up} {
     padding: var(--sgbp-alert-padding-screen-large);
   }
 

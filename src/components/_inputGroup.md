@@ -1,45 +1,57 @@
 ## Input Group
 
 ### Input Group (with label and error message)
-  
+
     @example
     <label class="sgbp-inputGroup">
-        <span class="sgbp-inputGroup__label">Titel</span>
+        <span class="sgbp-inputGroup__label">Title</span>
+        <div class="sgbp-inputGroup__text sgbp-inputGroup__text--error">This is an error!</div>
         <input type="text" class="sgbp-input sgbp-input--stateful is-invalid" value="input value">
-        <div class="sgbp-inputGroup__subtext sgbp-inputGroup__subtext--error">This is an error!</div>
     </label>
 
+### Input Group (with label and text)
+
+    @example
+    <label class="sgbp-inputGroup">
+        <span class="sgbp-inputGroup__label">Title</span>
+        <div class="sgbp-inputGroup__text">This is some help text to further clarify the usage of the given form field.</div>
+        <input type="text" class="sgbp-input" value="input value">
+    </label>
 
 ### Input Group (constrained width)
-  
+
     @example
     <label class="sgbp-inputGroup sgbp-inputGroup--constrainedWidth">
-        <span class="sgbp-inputGroup__label">Titel</span>
+        <span class="sgbp-inputGroup__label">Title</span>
         <input type="text" class="sgbp-input">
     </label>
-### Input Group (aligned button)
-  
+
+### Input Group (with input addon)
+
     @example
-    <div class="sgbp-grid sgbp-grid--gutters shp-row">
-      <div class="sgbp-grid__cell">
-        <label class="sgbp-inputGroup">
-            <span class="sgbp-inputGroup__label">Suchwort</span>
-            <input type="text" class="sgbp-input">
-        </label>
-      </div>
-      <div class="sgbp-grid__cell">
-        <button type="button" class="sgbp-inputGroup__alignedButton sgbp-button sgbp-button--primary">Suchen</button>
-      </div>
-    </div>
-    <div class="sgbp-grid sgbp-grid--gutters">
-      <div class="sgbp-grid__cell">
-        <label class="sgbp-inputGroup">
-            <span class="sgbp-inputGroup__label">Suchwort</span>
-            <input type="text" class="sgbp-input">
-            <div class="sgbp-inputGroup__subtext">Works with content below input as well</div>
-        </label>
-      </div>
-      <div class="sgbp-grid__cell">
-        <button type="button" class="sgbp-inputGroup__alignedButton sgbp-button sgbp-button--primary">Suchen</button>
-      </div>
-    </div>
+    <label class="sgbp-inputGroup sgbp-inputGroup--constrainedWidth">
+        <span class="sgbp-inputGroup__label">Amount</span>
+        <div class="sgbp-inputGroup__text">This is some help text to further clarify the usage of the given form field.</div>
+        <div class="sgbp-inputAddon sgbp-row">
+            <div class="sgbp-inputAddon__addon">$</div>
+            <input type="text" class="sgbp-inputAddon__input sgbp-input">
+        </div>
+    </label>
+
+### Input Group (horizontal)
+
+    @example
+    <label class="sgbp-inputGroup sgbp-inputGroup--horizontal">
+        <span class="sgbp-inputGroup__label">Title</span>
+        <div class="sgbp-inputGroup__text">This is some help text to further clarify the usage of the given form field.</div>
+        <input type="text" class="sgbp-input">
+    </label>
+
+    <label class="sgbp-inputGroup sgbp-inputGroup--horizontal">
+        <span class="sgbp-inputGroup__label">Switch</span>
+        <div class="sgbp-inputGroup__text">This is some help text to further clarify the usage of the given form field.</div>
+        <div class="sgbp-checkboxSwitch">
+            <input type="checkbox" class="sgbp-checkboxSwitch__control">
+            <div class="sgbp-checkboxSwitch__switch"></div>
+        </div>
+    </label>

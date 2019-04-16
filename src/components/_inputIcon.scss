@@ -22,7 +22,7 @@
     margin-right: 0.4em;
 
     &:hover {
-      color: var(--sgbp-color-brand-primary);
+      color: var(--sgbp-color-accent);
     }
   }
 
@@ -32,8 +32,8 @@
     z-index: 1000;
     bottom: 100%;
     right: 0;
-    background-color: var(--sgbp-color-brand-primary);
-    color: var(--sgbp-color-brand-primary-inverted);
+    background-color: var(--sgbp-color-accent);
+    color: var(--sgbp-color-accent-inverted);
     padding: 0.55rem;
     font-weight: bold;
     font-size: 0.8rem;

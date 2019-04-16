@@ -1,13 +1,13 @@
 :root {
-  --sgbp-grid-gutter-width:  0.7rem;
-  --sgbp-grid-gutter-height:  0.5rem;
+  --sgbp-grid-gutter-width: 16px;
+  --sgbp-grid-gutter-height: 16px;
   --sgbp-grid-gutter-width-halve: calc(var(--sgbp-grid-gutter-width) / 2);
   --sgbp-grid-gutter-height-halve: calc(var(--sgbp-grid-gutter-height) / 2);
 }
 
 .sgbp-grid__example {
-  color: var(--sgbp-color-brand-primary-inverted);
-  background-color: var(--sgbp-color-brand-primary);
+  color: var(--sgbp-color-accent-inverted);
+  background-color: var(--sgbp-color-accent);
 }
 
 .sgbp-grid {
@@ -15,6 +15,15 @@
   flex-wrap: wrap;
   align-items: stretch;
   flex: 1 1 auto;
+
+  &--inline {
+    display: inline-flex;
+
+    .sgbp-grid__cell {
+      //white-space: nowrap;
+      flex: 1 1 auto;
+    }
+  }
 
   &--vertical {
     height: 100%;

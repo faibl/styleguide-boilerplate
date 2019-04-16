@@ -1,14 +1,14 @@
 :root {
-  --sgbp-modal-backdrop-backgroundColor: var(--sgbp-color-darken);
+  --sgbp-modal-backdrop-backgroundColor: var(--sgbp-color-darken-heavy);
   --sgbp-modal-dialog-backgroundColor: var(--sgbp-color-white);
   --sgbp-modal-dialog-color: var(--sgbp-color-black);
-  --sgbp-modal-dialog-border-style:  solid;
-  --sgbp-modal-dialog-border-width:  2px;
+  --sgbp-modal-dialog-border-style: solid;
+  --sgbp-modal-dialog-border-width: 2px;
   --sgbp-modal-dialog-border-color: var(--sgbp-color-transparent);
-  --sgbp-modal-dialog-box-shadow:  0 2px 8px 0 #{var(--sgbp-color-black)};
+  --sgbp-modal-dialog-box-shadow: 0 2px 8px 0 #{var(--sgbp-color-black)};
 
-  --sgbp-modal-margin:  8px;
-  --sgbp-modal-marginXlargeUp:  16px;
+  --sgbp-modal-margin: 8px;
+  --sgbp-modal-marginXlargeUp: 16px;
 }
 
 // sass-lint:disable no-qualifying-elements

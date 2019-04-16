@@ -37,3 +37,4 @@ rules:
   nesting-depth:
     - 1
     - max-depth: 3
+  no-color-keywords: 0

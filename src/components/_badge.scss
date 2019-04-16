@@ -9,17 +9,20 @@
   --sgbp-badge-color-success: var(--sgbp-color-success-inverted);
   --sgbp-badge-background-color-error: var(--sgbp-color-error);
   --sgbp-badge-color-error: var(--sgbp-color-error-inverted);
+  --sgbp-badge-border-radius: 2px;
+  --sgbp-badge-height: 1.5em;
+  --sgbp-badge-horizontal-padding: 0.9em;
 }
 
 .sgbp-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0.3em;
-  min-width: 1.6em;
-  height: 1.6em;
+  padding-left: var(--sgbp-badge-horizontal-padding);
+  padding-right: var(--sgbp-badge-horizontal-padding);
+  height: var(--sgbp-badge-height);
 
-  border-radius: 0.8em;
+  border-radius: var(--sgbp-badge-border-radius);
   font-size: 12px;
   font-weight: bold;
 
@@ -27,6 +30,11 @@
   background: var(--sgbp-badge-background-color-default);
 
   transition: color 300ms, background-color 300ms;
+
+  &:empty::before {
+    // add non breaking space to empty elements to avoid positioning issues
+    content: '\00a0';
+  }
 
   &--info {
     color: var(--sgbp-badge-color-info);

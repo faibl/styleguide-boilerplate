@@ -1,3 +1,7 @@
+:root {
+  --sgbp-headline-light-color: var(--sgbp-color-gray-medium);
+}
+
 .sgbp-headline {
   font-family: var(--sgbp-headings-font-family);
   font-weight: var(--sgbp-headings-font-weight);
@@ -11,12 +15,16 @@
     line-height: var(--sgbp-headings-line-height);
   }
 
-  &--primary {
-    color: var(--sgbp-color-brand-primary);
+  &--accent {
+    color: var(--sgbp-color-accent);
   }
 
-  &--secondary {
-    color: var(--sgbp-color-brand-secondary);
+  &--highlight {
+    color: var(--sgbp-color-highlight);
+  }
+
+  &--light {
+    color: var(--sgbp-headline-light-color);
   }
 
   &__addendum {

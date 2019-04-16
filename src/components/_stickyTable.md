@@ -5,8 +5,8 @@ The remaining columns/rows then will be scrollable if they do not fit into the a
 
 Each table cell requires the class `sgbp-stickyTable__cell`.
 
-
 ### Table (sticky column):
+
 Add the class `sgbp-stickyTable--column` to make the table horizontally scrollable while fixing the first column.
 
 Specify the width of the sticky column by applying the classes `sgbp-stickyTable--stickyColumnWidth-50`, `sgbp-stickyTable--stickyColumnWidth-60`, ... `sgbp-stickyTable--stickyColumnWidth-100`, `sgbp-stickyTable--stickyColumnWidth-150`, ... `sgbp-stickyTable--stickyColumnWidth-700`
@@ -109,13 +109,12 @@ If the height of the sticky columns differs from the height of the non-sticky co
       </div>
     </div>
 
-
 ### Table (multiple sticky columns):
 
 The sticky table only supports making the first column sticky.
-If you need to have more than one sticky columns then you can create a `sgbp-stickyTable__subTable` table within the first column. 
+If you need to have more than one sticky columns then you can create a `sgbp-stickyTable__subTable` table within the first column.
 
-You also need to specify the width of the sub table columns by applying the classes `sgbp-table__cell--20`, `sgbp-table__cell--25`, ... `sgbp-table__cell--700` to make sure that all sub tables share the same dimensions. 
+You also need to specify the width of the sub table columns by applying the classes `sgbp-table__cell--20`, `sgbp-table__cell--25`, ... `sgbp-table__cell--700` to make sure that all sub tables share the same dimensions.
 
     @example
     <div class="sgbp-stickyTable sgbp-stickyTable--column sgbp-stickyTable--stickyColumnWidth-300">
@@ -129,7 +128,7 @@ You also need to specify the width of the sub table columns by applying the clas
                             <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--150">Headline</th>
                             <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--75">Sticky 2</th>
                             <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--75">Sticky 3</th>
-                          </tr>                           
+                          </tr>
                        </table>
                    </th>
                    <th class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--headline">A Text</th>
@@ -160,7 +159,7 @@ You also need to specify the width of the sub table columns by applying the clas
                            <td class="sgbp-table__cell sgbp-table__cell--150 sgbp-text sgbp-text--bold">Headline 1</tD>
                            <td class="sgbp-table__cell sgbp-table__cell--75">live</td>
                            <td class="sgbp-table__cell sgbp-table__cell--75">120.000</td>
-                         </tr>                           
+                         </tr>
                       </table>
                    </td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell">Cell 1 - a</td>
@@ -189,7 +188,7 @@ You also need to specify the width of the sub table columns by applying the clas
                            <td class="sgbp-table__cell sgbp-table__cell--150 sgbp-text sgbp-text--bold">Headline 2</tD>
                            <td class="sgbp-table__cell sgbp-table__cell--75">live</td>
                            <td class="sgbp-table__cell sgbp-table__cell--75">95.000</td>
-                         </tr>                           
+                         </tr>
                       </table>
                    </td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell">Cell 2 - a</td>
@@ -218,7 +217,7 @@ You also need to specify the width of the sub table columns by applying the clas
                            <td class="sgbp-table__cell sgbp-table__cell--150 sgbp-text sgbp-text--bold">Headline 3</tD>
                            <td class="sgbp-table__cell sgbp-table__cell--75">pending</td>
                            <td class="sgbp-table__cell sgbp-table__cell--75">120.000</td>
-                         </tr>                           
+                         </tr>
                       </table>
                    </td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell">Cell 3 - a</td>
@@ -244,7 +243,6 @@ You also need to specify the width of the sub table columns by applying the clas
         </table>
       </div>
     </div>
-
 
 ### Table (sticky last column):
 
@@ -304,7 +302,7 @@ The sticky last column can also be combined with the sticky first column (the de
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--numeric">4323.46</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--separatorLeft">
                      <a href="javascript:;" class="sgbp-table__action" title="edit">
-                         <svg class="sgbp-icon sgbp-icon--hoverPrimary sgbp-icon--small"><use xlink:href="./assets/icons.svg#edit"></use></svg>
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent sgbp-icon--small"><use xlink:href="./assets/icons.svg#edit"></use></svg>
                      </a>
                    </td>
                </tr>
@@ -330,7 +328,7 @@ The sticky last column can also be combined with the sticky first column (the de
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--numeric">10107.43</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--separatorLeft">
                      <a href="javascript:;" class="sgbp-table__action" title="edit">
-                         <svg class="sgbp-icon sgbp-icon--hoverPrimary sgbp-icon--small"><use xlink:href="./assets/icons.svg#edit"></use></svg>
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent sgbp-icon--small"><use xlink:href="./assets/icons.svg#edit"></use></svg>
                      </a>
                    </td>
                </tr>
@@ -356,7 +354,7 @@ The sticky last column can also be combined with the sticky first column (the de
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--numeric">980.20</td>
                    <td class="sgbp-stickyTable__cell sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--separatorLeft">
                      <a href="javascript:;" class="sgbp-table__action" title="edit">
-                         <svg class="sgbp-icon sgbp-icon--hoverPrimary sgbp-icon--small"><use xlink:href="./assets/icons.svg#edit"></use></svg>
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent sgbp-icon--small"><use xlink:href="./assets/icons.svg#edit"></use></svg>
                      </a>
                    </td>
                </tr>
@@ -364,7 +362,6 @@ The sticky last column can also be combined with the sticky first column (the de
         </table>
       </div>
     </div>
-
 
 ### Table (sticky header):
 

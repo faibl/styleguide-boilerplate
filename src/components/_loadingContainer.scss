@@ -1,10 +1,12 @@
 :root {
-  --sgbp-loading-container-dialog-background: var(--sgbp-color-darken-heavy);
-  --sgbp-loading-container-blocking-background: var(--sgbp-color-darken);
+  --sgbp-loading-container-dialog-background: var(--sgbp-color-transparent);
+  --sgbp-loading-container-blocking-background: var(--sgbp-color-lighten);
 }
 
 .sgbp-loadingContainer {
   position: relative;
+  display: block;
+  min-height: 40px;
 
   &__loader {
     transition: background-color 500ms;

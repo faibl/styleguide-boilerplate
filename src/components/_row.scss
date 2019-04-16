@@ -67,6 +67,22 @@
     margin-bottom: 0;
     margin-top: var(--sgbp-row-margin);
 
+    &.sgbp-row--smallMargin {
+      margin-top: var(--sgbp-row-margin-small);
+    }
+
+    &.sgbp-row--extraSmallMargin {
+      margin-top: var(--sgbp-row-margin-extra-small);
+    }
+
+    &.sgbp-row--bigMargin {
+      margin-top: var(--sgbp-row-margin-big);
+    }
+
+    &.sgbp-row--extraBigMargin {
+      margin-top: var(--sgbp-row-margin-extra-big);
+    }
+
     &.sgbp-row--withSeparator {
       padding-bottom: 0;
       border-bottom: none;

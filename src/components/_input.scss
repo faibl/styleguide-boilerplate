@@ -1,29 +1,30 @@
 :root {
   --sgbp-input-error-color: var(--sgbp-color-error);
   --sgbp-input-valid-color: var(--sgbp-color-success);
-  --sgbp-input-border-color: var(--sgbp-color-gray-medium);
 
   --sgbp-input-type-range-thumb-color: var(--sgbp-color-black);
-  --sgbp-input-type-range-thumb-margin:  -7px;
+  --sgbp-input-type-range-thumb-margin: -7px;
   --sgbp-input-type-range-thumb-diameter: 16px;
   --sgbp-input-type-range-track-color: var(--sgbp-color-gray-medium);
-  --sgbp-input-type-range-track-height:  2px;
+  --sgbp-input-type-range-track-height: 2px;
 }
 
 .sgbp-input {
-  flex: 1 1 auto;
+  flex: 1 1 0;
   width: 100%;
 
   outline: 0;
   padding: var(--sgbp-input-padding);
 
-  background-color: var(--sgbp-color-white);
-  color: var(--sgbp-color-gray-dark);
-
-  border: 1px solid var(--sgbp-input-border-color);
+  background-color: var(--sgbp-input-background-color);
+  border-style: solid;
+  border-radius: var(--sgbp-input-border-radius);
+  border-width: var(--sgbp-input-border-width);
+  border-color: var(--sgbp-input-border-color);
+  color: var(--sgbp-input-color);
 
   &:focus {
-    border: 1px solid var(--sgbp-color-brand-primary);
+    border-color: var(--sgbp-input-border-color-focus);
   }
 
   // sass-lint:disable no-vendor-prefixes
@@ -31,19 +32,19 @@
   &:-moz-placeholder,
   &-moz-placeholder,
   &-ms-input-placeholder {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   // sass-lint:enable no-vendor-prefixes
 
   &.is-disabled,
-  &--stateful[disabled] {
+  &[disabled] {
     border-color: var(--sgbp-color-gray-medium);
-    color: var(--sgbp-color-gray-medium);
+    color: var(--sgbp-input-color-disabled);
     cursor: not-allowed;
   }
 
   &.is-readonly,
-  &--stateful[readonly] {
+  &[readonly] {
     border-color: var(--sgbp-color-gray-medium);
     color: var(--sgbp-color-gray);
   }
@@ -63,15 +64,17 @@
     z-index: -1;
   }
 
-  &--stateful {
-    &.is-invalid,
-    &.ng-touched.ng-invalid {
-      border-color: var(--sgbp-color-error);
-    }
+  &.is-invalid,
+  &.ng-touched.ng-invalid {
+    border-color: var(--sgbp-color-error);
+  }
+
+  &--small {
+    padding: var(--sgbp-input-small-padding);
   }
 
   &--big {
-    padding: 12px 5px;
+    padding: var(--sgbp-input-big-padding);
   }
 }
 

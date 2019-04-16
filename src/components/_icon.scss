@@ -1,9 +1,9 @@
 :root {
-  --sgbp-icon-font-size:  1.6em;
-  --sgbp-icon-font-size-tiny:  1.2em;
-  --sgbp-icon-font-size-small:  1.4em;
-  --sgbp-icon-font-size-big:  2.15em;
-  --sgbp-icon-font-size-extraBig:  3.15em;
+  --sgbp-icon-font-size: 1.6em;
+  --sgbp-icon-font-size-tiny: 1.2em;
+  --sgbp-icon-font-size-small: 1.4em;
+  --sgbp-icon-font-size-big: 2.15em;
+  --sgbp-icon-font-size-extraBig: 3.15em;
   --sgbp-icon-font-size-screen-tiny: var(--sgbp-icon-font-size-small);
   --sgbp-icon-font-size-small-screen-tiny: var(--sgbp-icon-font-size-small);
   --sgbp-icon-font-size-big-screen-tiny: var(--sgbp-icon-font-size-big);
@@ -36,8 +36,8 @@
     font-size: var(--sgbp-icon-font-size-extraBig-screen-tiny);
   }
 
-  &--primary {
-    color: var(--sgbp-color-brand-primary);
+  &--accent {
+    color: var(--sgbp-color-accent);
   }
 
   &--light {
@@ -61,8 +61,8 @@
     }
   }
 
-  &--hoverPrimary {
-    @include sgbp-hover(var(--sgbp-color-brand-primary));
+  &--hoverAccent {
+    @include sgbp-hover(var(--sgbp-color-accent));
   }
 
   @media #{$sgbp-small-up} {

@@ -1,6 +1,6 @@
 :root {
-  --sgbp-loading-indicator-color: var(--sgbp-color-brand-primary);
-  --sgbp-loading-indicator-border-color:  rgba(0, 0, 0, 0.08);
+  --sgbp-loading-indicator-color: white; // sass-lint:disable-line no-color-literals
+  --sgbp-loading-indicator-border-color: black; // sass-lint:disable-line no-color-literals
   --sgbp-loading-indicator-border-width: 3px;
 }
 

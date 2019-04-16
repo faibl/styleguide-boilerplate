@@ -42,38 +42,38 @@
     padding: 15px;
   }
 
-  @mixin sgbp-slides($slideCount) {
-    &[data-slides-count='#{$slideCount}'] {
+  @mixin sgbp-slides($_slideCount) {
+    &[data-slides-count='#{$_slideCount}'] {
       .sgbp-slider__slides {
-        width: (100 * $slideCount) * 1%;
+        width: (100 * $_slideCount) * 1%;
       }
 
       .sgbp-slider__slide {
-        flex-basis: (100 / $slideCount) * 1%;
+        flex-basis: (100 / $_slideCount) * 1%;
       }
 
-      @for $_idx from 1 through $slideCount {
-        @include sgbp-active-slide($_idx, $slideCount);
+      @for $_idx from 1 through $_slideCount {
+        @include sgbp-active-slide($_idx, $_slideCount);
       }
     }
   }
 
-  @mixin sgbp-active-slide($slideNumber, $slideCount) {
-    &[data-active-slide='#{$slideNumber}'] {
+  @mixin sgbp-active-slide($_slideNumber, $_slideCount) {
+    &[data-active-slide='#{$_slideNumber}'] {
       .sgbp-slider__slides {
-        transform: translate3d(($slideNumber - 1) * (-100% / $slideCount), 0, 0);
+        transform: translate3d(($_slideNumber - 1) * (-100% / $_slideCount), 0, 0);
       }
 
       .sgbp-slider__slide--card {
-        &:nth-child(#{$slideNumber - 1})::before {
+        &:nth-child(#{$_slideNumber - 1})::before {
           transform: translate3d(27px, 0, 0) scale3d(1, 0.9, 1);
         }
 
-        &:nth-child(#{$slideNumber})::before {
+        &:nth-child(#{$_slideNumber})::before {
           transform: scaleY(1);
         }
 
-        &:nth-child(#{$slideNumber + 1})::before {
+        &:nth-child(#{$_slideNumber + 1})::before {
           transform: translate3d(-27px, 0, 0) scale3d(1, 0.9, 1);
         }
       }

@@ -1,8 +1,8 @@
 ## Tabs
 
-If you do not want to update the contents of the `sgbp-tabs__content` element dynamically then 
-you can add multiple elements with the class `sgbp-tabs__content` and only the one with the class 
-`is-active` will be shown. 
+If you do not want to update the contents of the `sgbp-tabs__content` element dynamically then
+you can add multiple elements with the class `sgbp-tabs__content` and only the one with the class
+`is-active` will be shown.
 
     @example
     <div class="sgbp-tabs">
