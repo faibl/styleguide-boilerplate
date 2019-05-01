@@ -5,7 +5,7 @@ html {
   --sgbp-modal-dialog-border-style: solid;
   --sgbp-modal-dialog-border-width: 2px;
   --sgbp-modal-dialog-border-color: var(--sgbp-color-transparent);
-  --sgbp-modal-dialog-box-shadow: 0 2px 8px 0 #{var(--sgbp-color-black)};
+  --sgbp-modal-dialog-box-shadow: 0 2px 8px 0 var(--sgbp-color-black);
 
   --sgbp-modal-margin: 8px;
   --sgbp-modal-marginXlargeUp: 16px;
@@ -42,11 +42,11 @@ html.is-sgbp-modal-open {
   &--fullHeight &__dialog {
     // sass-lint:disable no-duplicate-properties
     height: 100%;
-    height: calc(100% - #{var(--sgbp-modal-margin)} * 2);
+    height: calc(100% - var(--sgbp-modal-margin) * 2);
     // sass-lint:enable no-duplicate-properties
 
     @media #{$sgbp-xlarge-up} {
-      height: calc(100% - #{var(--sgbp-modal-marginXlargeUp)} * 2);
+      height: calc(100% - var(--sgbp-modal-marginXlargeUp) * 2);
     }
   }
 

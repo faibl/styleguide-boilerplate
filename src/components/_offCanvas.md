@@ -1,9 +1,11 @@
 ## Off Canvas
 
-### Off Canvas (Overlay / default)
+You might need to add `overflow: hidden` to the outer `sgbp-offCanvas` element,
+especially if you are using the right canvas panel.
+However, we chose not to set the `overflow: hidden` by default because this would e.g. prevent tables with wide tables from scrolling horizontally
 
     @example
-    <div class="sgbp-offCanvas sgbp-row" id="off-canvas-demo" style="height: 350px;">
+    <div class="sgbp-offCanvas sgbp-row" id="off-canvas-demo" style="overflow: hidden; height: 350px;">
         <div class="sgbp-offCanvas__on sgbp-region sgbp-region--gray">
             Main Content
         </div>
