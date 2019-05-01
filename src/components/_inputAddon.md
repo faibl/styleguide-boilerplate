@@ -6,7 +6,7 @@
     <label class="sgbp-inputAddon sgbp-row">
         <div class="sgbp-inputAddon__addon">$</div>
         <input type="text" class="sgbp-inputAddon__input sgbp-input">
-        <div class="sgbp-inputAddon__addon"><button type="button" class="sgbp-button sgbp-button--secondary">OK</button></div>
+        <div class="sgbp-inputAddon__addon"><button type="button" class="sgbp-button sgbp-button--secondary sgbp-button--small">OK</button></div>
     </label>
 
 ### Input Addon (Textarea)

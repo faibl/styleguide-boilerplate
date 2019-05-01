@@ -43,7 +43,7 @@
       <div class="sgbp-row">
           <div class="sgbp-tooltip sgbp-tooltip--bottom sgbp-tooltip--right">
             <span class="sgbp-tooltip__trigger">image content</span>
-            <img class="sgbp-tooltip__content" src="https://lorempixel.com/300/200">
+            <img class="sgbp-tooltip__content" src="https://placeholdit.imgix.net/~text?txtsize=16&bg=1cdcb5&txtclr=ffffff&txt=Tooltip%20Left&w=300&h=200">
           </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
     @example
     <div class="sgbp-tooltip sgbp-tooltip--bottom sgbp-tooltip--right sgbp-tooltip--styled">
       <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--help sgbp-tooltip__trigger--icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#arrow-left"></use></svg>
-      <img class="sgbp-tooltip__content" src="https://lorempixel.com/300/200">
+      <img class="sgbp-tooltip__content" src="https://placeholdit.imgix.net/~text?txtsize=16&bg=1cdcb5&txtclr=ffffff&txt=Tooltip%20Preview&w=300&h=200">
     </div>
     <div class="sgbp-tooltip sgbp-tooltip--bottom sgbp-tooltip--right sgbp-tooltip--styled">
       <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--help sgbp-tooltip__trigger--icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
@@ -98,6 +98,6 @@ This can be used either in conjunction with `sgbp-tooltip--onlyIfHover` (see abo
     <div style="margin-bottom: 280px">
       <div class="sgbp-tooltip sgbp-tooltip--noHover sgbp-tooltip--bottom sgbp-tooltip--right sgbp-tooltip--styled is-open" id="sgbp-tooltip-demoNoHover">
         <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--icon sgbp-icon sgbp-icon--hoverAccent sgbp-clickable" onclick="document.getElementById('sgbp-tooltip-demoNoHover').classList.toggle('is-open')"><use xlink:href="./assets/icons.svg#info-circle"></use></svg>
-        <img class="sgbp-tooltip__content" src="https://lorempixel.com/300/200">
+        <img class="sgbp-tooltip__content" src="https://placeholdit.imgix.net/~text?txtsize=16&bg=1cdcb5&txtclr=ffffff&txt=Tooltip%20Preview&w=300&h=200">
       </div>
     </div>

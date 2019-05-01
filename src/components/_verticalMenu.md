@@ -37,7 +37,7 @@
           <a href="javascript:;" class="sgbp-verticalMenu__item is-active">
             <svg class="sgbp-verticalMenu__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#notifications"></use></svg>
             <span class="sgbp-verticalMenu__itemLabel">Notifications</span>
-            <div class="sgbp-verticalMenu__itemAddendum sgbp-verticalMenu__itemBadge sgbp-badge sgbp-badge--info">2</div>
+            <div class="sgbp-verticalMenu__itemAddendum sgbp-badge sgbp-badge--highlight">2</div>
           </a>
           <a href="javascript:;" class="sgbp-verticalMenu__item">
             <svg class="sgbp-verticalMenu__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#security"></use></svg>

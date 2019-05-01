@@ -1,4 +1,4 @@
-:root {
+html {
   --sgbp-pageLayout-header-height: 58px;
   --sgbp-pageLayout-footer-height: 0px;
 }
@@ -7,18 +7,22 @@
   display: flex;
   flex-direction: column;
 
+  &__main,
+  &__mainContent,
+  &__mainSidebar {
+    min-height: calc(100vh - var(--sgbp-pageLayout-header-height) - var(--sgbp-pageLayout-footer-height) - 1px);
+  }
+
   &__header {
-    z-index: 2;
+    //z-index: 2;
     flex: 0 0 auto;
     height: var(--sgbp-pageLayout-header-height);
   }
 
   &__main {
-    z-index: 1;
+    z-index: 2;
     display: flex;
     width: 100%;
-
-    max-width: 100%;
 
     &Sidebar {
       flex: 0 0 auto;
@@ -44,12 +48,6 @@
       left: 0;
       right: 0;
       width: 100%;
-    }
-
-    .sgbp-pageLayout__main,
-    .sgbp-pageLayout__mainContent,
-    .sgbp-pageLayout__mainSidebar {
-      min-height: calc(100vh - var(--sgbp-pageLayout-header-height) - var(--sgbp-pageLayout-footer-height));
     }
   }
 

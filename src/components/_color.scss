@@ -18,6 +18,24 @@
     }
   }
 
+  &--white {
+    color: var(--sgbp-color-white);
+
+    &.sgbp-color--force,
+    &.sgbp-color--force * {
+      color: var(--sgbp-color-white) !important;
+    }
+  }
+
+  &--black {
+    color: var(--sgbp-color-black);
+
+    &.sgbp-color--force,
+    &.sgbp-color--force * {
+      color: var(--sgbp-color-black) !important;
+    }
+  }
+
   &--gray {
     color: var(--sgbp-color-gray);
 
@@ -33,15 +51,6 @@
     &.sgbp-color--force,
     &.sgbp-color--force * {
       color: var(--sgbp-color-gray-medium) !important;
-    }
-  }
-
-  &--white {
-    color: var(--sgbp-color-white);
-
-    &.sgbp-color--force,
-    &.sgbp-color--force * {
-      color: var(--sgbp-color-white) !important;
     }
   }
 

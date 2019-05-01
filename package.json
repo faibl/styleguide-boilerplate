@@ -25,7 +25,7 @@
     "watch:styleguide": "chokidar styleguide-config.md src/*.md src/**/*.md -c 'npm-run-all --sequential build:styleguide lint:styleguide' --polling",
     "lint:styleguide": "htmlhint --config ./.htmlhintrc 'dist/**/*.html'",
     "dev-server": "browser-sync start --config ./browser-sync.config.json",
-    "deploy": "npm run build && node tasks/deploy.js"
+    "deploy": "npm run build && cpx CNAME dist && node tasks/deploy.js"
   },
   "dependencies": {},
   "devDependencies": {

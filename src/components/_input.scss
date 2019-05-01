@@ -1,4 +1,4 @@
-:root {
+html {
   --sgbp-input-error-color: var(--sgbp-color-error);
   --sgbp-input-valid-color: var(--sgbp-color-success);
 
@@ -14,7 +14,9 @@
   width: 100%;
 
   outline: 0;
-  padding: var(--sgbp-input-padding);
+  padding-right: var(--sgbp-input-padding-horizontal);
+  padding-left: var(--sgbp-input-padding-horizontal);
+  height: var(--sgbp-input-height);
 
   background-color: var(--sgbp-input-background-color);
   border-style: solid;
@@ -37,16 +39,12 @@
   // sass-lint:enable no-vendor-prefixes
 
   &.is-disabled,
-  &[disabled] {
-    border-color: var(--sgbp-color-gray-medium);
-    color: var(--sgbp-input-color-disabled);
-    cursor: not-allowed;
-  }
-
+  &[disabled],
   &.is-readonly,
   &[readonly] {
-    border-color: var(--sgbp-color-gray-medium);
-    color: var(--sgbp-color-gray);
+    border-color: var(--sgbp-input-border-color-disabled);
+    color: var(--sgbp-input-color-disabled);
+    cursor: not-allowed;
   }
 
   &.is-hidden {
@@ -70,11 +68,11 @@
   }
 
   &--small {
-    padding: var(--sgbp-input-small-padding);
+    height: var(--sgbp-input-small-height);
   }
 
   &--big {
-    padding: var(--sgbp-input-big-padding);
+    height: var(--sgbp-input-big-height);
   }
 }
 

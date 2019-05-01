@@ -1,4 +1,4 @@
-:root {
+html {
   --sgbp-card-padding: var(--sgbp-default-margin);
   --sgbp-card-border-color: var(--sgbp-color-gray-medium);
   --sgbp-card-name-font-size: 28px;
@@ -75,12 +75,12 @@
     padding-left: var(--sgbp-card-padding);
     padding-right: var(--sgbp-card-padding);
     font-size: var(--sgbp-card-contents-font-size);
+    margin-bottom: var(--sgbp-default-margin);
   }
 
   &__footer {
     flex: 0 0 auto;
     width: 100%;
-    margin-top: var(--sgbp-default-margin);
   }
 
   &--unobtrusive {

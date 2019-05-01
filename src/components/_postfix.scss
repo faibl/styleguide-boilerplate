@@ -9,6 +9,13 @@
     }
   }
 
+  &.sgbp-postfix--smallGutters {
+    > * + * {
+      margin-left: 0;
+      margin-top: var(--sgbp-default-margin-small);
+    }
+  }
+
   &.sgbp-postfix--bigGutters {
     > * + * {
       margin-left: 0;
@@ -45,6 +52,12 @@
   &--bigGutters {
     > * + * {
       margin-left: var(--sgbp-default-margin-big);
+    }
+  }
+
+  &--smallGutters {
+    > * + * {
+      margin-left: var(--sgbp-default-margin-small);
     }
   }
 

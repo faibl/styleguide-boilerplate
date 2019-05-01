@@ -1,4 +1,4 @@
-:root {
+html {
   --sgbp-grid-gutter-width: 16px;
   --sgbp-grid-gutter-height: 16px;
   --sgbp-grid-gutter-width-halve: calc(var(--sgbp-grid-gutter-width) / 2);
@@ -20,7 +20,14 @@
     display: inline-flex;
 
     .sgbp-grid__cell {
-      //white-space: nowrap;
+      flex: 0 1 auto;
+    }
+  }
+
+  &--inlineBlock {
+    display: inline-flex;
+
+    .sgbp-grid__cell {
       flex: 1 1 auto;
     }
   }

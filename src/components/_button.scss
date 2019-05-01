@@ -1,4 +1,4 @@
-:root {
+html {
   --sgbp-button-accent-color-background: var(--sgbp-color-accent);
   --sgbp-button-accent-color: var(--sgbp-color-accent-inverted);
   --sgbp-button-accent-border-color: var(--sgbp-button-accent-color-background);
@@ -6,10 +6,10 @@
   --sgbp-button-accent-hover-color: var(--sgbp-button-accent-color);
   --sgbp-button-accent-hover-border-color: var(--sgbp-button-accent-hover-color-background);
 
-  --sgbp-button-default-color-background: var(--sgbp-color-gray);
-  --sgbp-button-default-color: var(--sgbp-color-black);
-  --sgbp-button-default-border-color: var(--sgbp-color-gray-dark);
-  --sgbp-button-default-hover-color-background: var(--sgbp-color-gray-darker);
+  --sgbp-button-default-color-background: var(--sgbp-color-gray-medium);
+  --sgbp-button-default-color: var(--sgbp-color-white);
+  --sgbp-button-default-border-color: var(--sgbp-color-gray);
+  --sgbp-button-default-hover-color-background: var(--sgbp-color-gray);
   --sgbp-button-default-hover-color: var(--sgbp-color-white);
   --sgbp-button-default-hover-border-color: var(--sgbp-button-default-hover-color-background);
 
@@ -20,18 +20,12 @@
   --sgbp-button-danger-hover-color: var(--sgbp-button-danger-color);
   --sgbp-button-danger-hover-border-color: var(--sgbp-button-danger-hover-color-background);
 
-  --sgbp-button-padding-top: 0.7em;
-  --sgbp-button-padding-right: 0.75em;
-  --sgbp-button-padding-bottom: 0.55em;
-  --sgbp-button-padding-left: 0.75em;
-  --sgbp-button-padding-big-top: 0.8em;
-  --sgbp-button-padding-big-right: 1.25em;
-  --sgbp-button-padding-big-bottom: 0.7em;
-  --sgbp-button-padding-big-left: 1.25em;
-  --sgbp-button-padding-small-top: 0.4em;
-  --sgbp-button-padding-small-right: 0.75em;
-  --sgbp-button-padding-small-bottom: 0.3em;
-  --sgbp-button-padding-small-left: 0.75em;
+  --sgbp-button-height: var(--sgbp-input-height);
+  --sgbp-button-small-height: var(--sgbp-input-small-height);
+  --sgbp-button-big-height: var(--sgbp-input-big-height);
+  --sgbp-button-padding-horizontal: 16px;
+  --sgbp-button-padding-big-horizontal: 30px;
+  --sgbp-button-padding-small-horizontal: 12px;
 
   --sgbp-button-font-weight: bold;
   --sgbp-button-text-transform: uppercase;
@@ -100,10 +94,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-top: var(--sgbp-button-padding-top);
-  padding-right: var(--sgbp-button-padding-right);
-  padding-bottom: var(--sgbp-button-padding-bottom);
-  padding-left: var(--sgbp-button-padding-left);
+  height: var(--sgbp-button-height);
+  padding-right: var(--sgbp-button-padding-horizontal);
+  padding-left: var(--sgbp-button-padding-horizontal);
   border: 1px solid transparent;
   border-radius: var(--sgbp-button-border-radius);
 
@@ -142,48 +135,42 @@
   margin-bottom: var(--sgbp-button-icon-margin-bottom);
 
   &--left {
-    margin-right: 0.3em;
-    margin-left: -0.2em;
+    margin-right: 0.2em;
+    margin-left: -0.4em;
   }
 
   &--right {
-    margin-left: 0.3em;
-    margin-right: -0.2em;
+    margin-left: 0.2em;
+    margin-right: -0.4em;
   }
 }
 
 .sgbp-button--icon {
-  // make icon only buttons more squared
-  padding-left: var(--sgbp-button-padding-top);
-  padding-right: var(--sgbp-button-padding-top);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: var(--sgbp-button-height);
 }
 
 .sgbp-button--big {
-  padding-top: var(--sgbp-button-padding-big-top);
-  padding-right: var(--sgbp-button-padding-big-right);
-  padding-bottom: var(--sgbp-button-padding-big-bottom);
-  padding-left: var(--sgbp-button-padding-big-left);
+  height: var(--sgbp-button-big-height);
+  padding-right: var(--sgbp-button-padding-big-horizontal);
+  padding-left: var(--sgbp-button-padding-big-horizontal);
 
   font-size: var(--sgbp-button-font-size-big);
 
   &.sgbp-button--icon {
-    // make icon only buttons more squared
-    padding-left: var(--sgbp-button-padding-big-top);
-    padding-right: var(--sgbp-button-padding-big-top);
+    width: var(--sgbp-button-big-height);
   }
 }
 
 .sgbp-button--small {
-  padding-top: var(--sgbp-button-padding-small-top);
-  padding-right: var(--sgbp-button-padding-small-right);
-  padding-bottom: var(--sgbp-button-padding-small-bottom);
-  padding-left: var(--sgbp-button-padding-small-left);
+  height: var(--sgbp-button-small-height);
+  padding-right: var(--sgbp-button-padding-small-horizontal);
+  padding-left: var(--sgbp-button-padding-small-horizontal);
 
   font-size: var(--sgbp-button-font-size-small);
 
   &.sgbp-button--icon {
-    // make icon only buttons more squared
-    padding-left: var(--sgbp-button-padding-small-top);
-    padding-right: var(--sgbp-button-padding-small-top);
+    width: var(--sgbp-button-small-height);
   }
 }

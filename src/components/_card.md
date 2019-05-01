@@ -9,17 +9,17 @@
         </div>
         <div class="sgbp-card__image">
             <div class="sgbp-profileImage sgbp-profileImage--sizeM">
-              <img src="/assets/images/user.svg" alt="John Doe" class="sgbp-profileImage__image">
+              <img src="/assets/images/user.svg" alt="Bill Cunningham" class="sgbp-profileImage__image">
             </div>
         </div>
-        <h1 class="sgbp-card__name">John Doe</h1>
+        <h1 class="sgbp-card__name">Bill Cunningham</h1>
         <div class="sgbp-card__contents">
             <div class="sgbp-row">Geburtstag: 6. April 2019</div>
             01234 / 5678910<br>
-            john.doe@test.test
+            bill.cunningham@test.test
         </div>
         <div class="sgbp-card__footer">
-            <button class="sgbp-button sgbp-button--block">Bearbeiten</button>
+            <button class="sgbp-button sgbp-button--block sgbp-button--small">Bearbeiten</button>
         </div>
     </article>
 
@@ -32,15 +32,13 @@
         </div>
         <div class="sgbp-card__image">
             <div class="sgbp-profileImage sgbp-profileImage--sizeM">
-              <img src="/assets/images/user.svg" alt="John Doe" class="sgbp-profileImage__image">
+              <img src="/assets/images/user.svg" alt="Bill Cunningham" class="sgbp-profileImage__image">
             </div>
         </div>
-        <h1 class="sgbp-card__name">John Doe</h1>
+        <h1 class="sgbp-card__name">Bill Cunningham</h1>
         <div class="sgbp-card__contents">
             <div class="sgbp-row">Geburtstag: 6. April 2019</div>
             01234 / 5678910<br>
-            john.doe@test.test
-        </div>
-        <div class="sgbp-card__footer">
+            bill.cunningham@test.test
         </div>
     </article>

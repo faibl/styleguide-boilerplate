@@ -1,4 +1,4 @@
-:root {
+html {
   --sgbp-inputGroup-label-color: var(--sgbp-color-gray);
   --sgbp-inputGroup-label-text-transform: uppercase;
   --sgbp-inputGroup-text-color: var(--sgbp-inputGroup-label-color);
@@ -8,6 +8,7 @@
   --sgbp-inputGroup-label-font-weight: normal;
   --sgbp-inputGroup-text-font-weight: normal;
   --sgbp-inputGroup-alignedButton-margin-top: 25px;
+  --sgbp-inputGroup-margin: 26px;
 }
 
 .sgbp-inputGroup {
@@ -19,7 +20,11 @@
   }
 
   & + & {
-    margin-top: var(--sgbp-default-margin);
+    margin-top: var(--sgbp-inputGroup-margin);
+  }
+
+  &--inline {
+    display: inline-block;
   }
 
   &--constrainedWidth {

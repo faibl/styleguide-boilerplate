@@ -1,4 +1,4 @@
-:root {
+html {
   --sgbp-offCanvas-backdrop-backgroundColor: var(--sgbp-color-darken-light);
 }
 
@@ -8,7 +8,7 @@
 
     .sgbp-offCanvas {
       &__off {
-        z-index: 0;
+        //z-index: 0;
         flex: 0 1 auto;
         flex-direction: row;
         position: static;
@@ -37,11 +37,12 @@
 }
 
 .sgbp-offCanvas {
-  overflow: hidden;
   position: relative;
 
   &__toggle {
+    cursor: pointer;
     position: absolute;
+    z-index: calc(var(--sgbp-offCanvas-z-index) + 1);
   }
 
   &__on {
@@ -121,10 +122,6 @@
   &.is-open-bottom > &__backdrop {
     opacity: 1;
     pointer-events: all;
-  }
-
-  &--push &__off {
-    position: relative;
   }
 
   &--on-medium-up {

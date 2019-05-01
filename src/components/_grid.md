@@ -37,6 +37,18 @@ as done in most of the examples that follow.
         <div class="sgbp-grid__cell sgbp-grid__example">cell 6</div>
     </div>
 
+### Grid (list)
+
+    @example
+    <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--inlineBlock">
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 1</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 2 with more content</div>
+        <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__example">cell 4 full width</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 4 with even more content</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 5</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 6</div>
+    </div>
+
 ### Grid (2 equal, 1 double column)
 
     @example
@@ -63,8 +75,6 @@ as done in most of the examples that follow.
         <div class="sgbp-grid__cell sgbp-grid__cell--shrink sgbp-grid__example">cell 2 (shrink)</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
     </div>
-
-
 
 ### Grid (vertical - 1 shrink, 2 equal column)
 

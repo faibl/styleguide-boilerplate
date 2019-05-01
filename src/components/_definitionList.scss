@@ -1,3 +1,30 @@
+@mixin sgbpDefinitionListWidth($_width) {
+  $_minScreenWidthInPx: #{($_width + 100)}px;
+  $_widthInPx: #{$_width}px;
+
+  @media all and (min-width: #{$_minScreenWidthInPx}) {
+    .sgbp-definitionList--horizontal.sgbp-definitionList--#{$_width} {
+      .sgbp-definitionList__term {
+        flex-basis: $_widthInPx;
+      }
+
+      .sgbp-definitionList__definition {
+        flex-basis: calc(100% - #{$_widthInPx} - var(--sgbp-default-margin));
+
+        & + .sgbp-definitionList__definition {
+          margin-left: calc(#{$_widthInPx} + var(--sgbp-default-margin));
+        }
+      }
+    }
+  }
+}
+
+@include sgbpDefinitionListWidth(50);
+@include sgbpDefinitionListWidth(100);
+@include sgbpDefinitionListWidth(150);
+@include sgbpDefinitionListWidth(200);
+@include sgbpDefinitionListWidth(250);
+
 .sgbp-definitionList {
   &__term {
     @include sgbp-uppercase;
@@ -19,30 +46,22 @@
   }
 
   &--horizontal {
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
 
     .sgbp-definitionList__term {
-      float: left;
-      clear: left;
-      margin-right: 4px;
-      margin-bottom: 4px;
-      line-height: 1.6em;
+      @include sgbp-truncateLine;
+      flex: 0 0 auto;
+      margin-right: var(--sgbp-default-margin);
     }
 
     .sgbp-definitionList__definition {
-      float: left;
-      clear: right;
-      margin-bottom: 4px;
+      flex: 0 0 auto;
+      margin-bottom: 15px;
 
       & + .sgbp-definitionList__definition {
-        margin-top: 0;
-
-        &::before {
-          content: '|';
-          margin-right: 0.1em;
-          padding-left: 0.1em;
-          color: var(--sgbp-color-gray-medium);
-        }
+        margin-left: 154px;
       }
     }
   }

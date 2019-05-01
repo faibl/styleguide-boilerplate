@@ -1,4 +1,14 @@
-<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" fill="currentColor" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path d="m7.0169 17.814c0 0.91356 0.74746 1.661 1.661 1.661h6.6441c0.91356 0 1.661-0.74746 1.661-1.661v-9.9661h-9.9661zm10.797-12.458h-2.9068l-0.83051-0.83051h-4.1525l-0.83051 0.83051h-2.9068v1.661h11.627z" stroke-width=".83051"/>
+ <path d="M0 0h24v24H0z" fill="none"/>
 </svg>

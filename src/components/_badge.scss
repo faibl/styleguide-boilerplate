@@ -1,4 +1,4 @@
-:root {
+html {
   --sgbp-badge-background-color-default: var(--sgbp-color-gray-lighter);
   --sgbp-badge-color-default: var(--sgbp-color-black);
   --sgbp-badge-background-color-info: var(--sgbp-color-gray-light);
@@ -34,6 +34,16 @@
   &:empty::before {
     // add non breaking space to empty elements to avoid positioning issues
     content: '\00a0';
+  }
+
+  &--accent {
+    color: var(--sgbp-color-accent-inverted);
+    background: var(--sgbp-color-accent);
+  }
+
+  &--highlight {
+    color: var(--sgbp-color-highlight-inverted);
+    background: var(--sgbp-color-highlight);
   }
 
   &--info {

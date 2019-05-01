@@ -1,13 +1,12 @@
 // sass-lint:disable no-important
-:root {
+html {
   --sgbp-verticalMenu-color: var(--sgbp-color-black);
   --sgbp-verticalMenu-color-active: var(--sgbp-color-accent);
   --sgbp-verticalMenu-border-color-active: var(--sgbp-color-accent);
   --sgbp-verticalMenu-header-color: var(--sgbp-color-gray);
   --sgbp-verticalMenu-highlight-color: var(--sgbp-color-accent-inverted);
   --sgbp-verticalMenu-highlight-background-color: var(--sgbp-color-accent);
-  --sgbp-verticalMenu-badge-color: var(--sgbp-color-highlight-inverted);
-  --sgbp-verticalMenu-badge-background-color: var(--sgbp-color-highlight);
+  --sgbp-verticalMenu-font-weight: normal;
 }
 
 @mixin sgbpVerticalMenuInline() {
@@ -57,7 +56,7 @@
     padding-left: var(--sgbp-default-margin-small);
     margin-bottom: 5px;
     border-bottom: 1px solid var(--sgbp-color-gray-light);
-    font-weight: bold;
+    font-weight: var(--sgbp-verticalMenu-font-weight);
     align-items: center;
 
     color: var(--sgbp-verticalMenu-color);
@@ -91,11 +90,6 @@
     &Addendum {
       flex: 0 0 auto;
       margin-left: var(--sgbp-default-margin-small);
-    }
-
-    &Badge {
-      color: var(--sgbp-verticalMenu-badge-color);
-      background-color: var(--sgbp-verticalMenu-badge-background-color);
     }
   }
 
