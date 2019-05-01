@@ -4022,31 +4022,31 @@
 
         <section class="sg-section sg-section-off-canvas">
           <h2 id="off-canvas" class="sg">Off Canvas</h2>
-          <section class="sg-block sg-section-off-canvas-overlay-default-">
-            <div class="sg-text">
-              <h3 id="off-canvas-overlay-default-" class="sg">Off Canvas (Overlay / default)</h3>
-            </div>
-            <div class="sg-example">
-              <div class="sg-canvas">
-                <div class="sgbp-offCanvas sgbp-row" id="off-canvas-demo" style="height: 350px;">
-                  <div class="sgbp-offCanvas__on sgbp-region sgbp-region--gray">
-                    Main Content
-                  </div>
-                  <div class="sgbp-offCanvas__off sgbp-offCanvas__off--left sgbp-region sgbp-region--accent">
-                    Left Off Canvas Content
-                  </div>
-                  <div class="sgbp-offCanvas__off sgbp-offCanvas__off--right sgbp-region sgbp-region--accent">
-                    Right Off Canvas Content
-                  </div>
-                  <div class="sgbp-offCanvas__off sgbp-offCanvas__off--bottom sgbp-region sgbp-region--accent">
-                    Bottom Off Canvas Content
-                  </div>
-                  <div class="sgbp-offCanvas__backdrop" onclick="this.parentElement.classList.remove(&apos;is-open-right&apos;, &apos;is-open-left&apos;, &apos;is-open-bottom&apos;)"></div>
+          <p class="sg">You might need to add
+            <code class="sg">overflow: hidden</code>to the outer
+            <code class="sg">sgbp-offCanvas</code>element, especially if you are using the right canvas panel. However, we chose not to set the
+            <code class="sg">overflow: hidden</code>by default because this would e.g. prevent tables with wide tables from scrolling horizontally</p>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <div class="sgbp-offCanvas sgbp-row" id="off-canvas-demo" style="overflow: hidden; height: 350px;">
+                <div class="sgbp-offCanvas__on sgbp-region sgbp-region--gray">
+                  Main Content
                 </div>
-                <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById(&apos;off-canvas-demo&apos;).classList.remove(&apos;is-open-right&apos;, &apos;is-open-bottom&apos;);document.getElementById(&apos;off-canvas-demo&apos;).classList.toggle(&apos;is-open-left&apos;);">Toggle left pane</button>
-                <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById(&apos;off-canvas-demo&apos;).classList.remove(&apos;is-open-left&apos;, &apos;is-open-bottom&apos;);document.getElementById(&apos;off-canvas-demo&apos;).classList.toggle(&apos;is-open-right&apos;);">Toggle right pane</button>
-                <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById(&apos;off-canvas-demo&apos;).classList.remove(&apos;is-open-left&apos;, &apos;is-open-right&apos;);document.getElementById(&apos;off-canvas-demo&apos;).classList.toggle(&apos;is-open-bottom&apos;);">Toggle bottom pane</button>
-              </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-offCanvas sgbp-row&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;off-canvas-demo&quot;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;height: 350px;&quot;</span>&gt;</span>
+                <div class="sgbp-offCanvas__off sgbp-offCanvas__off--left sgbp-region sgbp-region--accent">
+                  Left Off Canvas Content
+                </div>
+                <div class="sgbp-offCanvas__off sgbp-offCanvas__off--right sgbp-region sgbp-region--accent">
+                  Right Off Canvas Content
+                </div>
+                <div class="sgbp-offCanvas__off sgbp-offCanvas__off--bottom sgbp-region sgbp-region--accent">
+                  Bottom Off Canvas Content
+                </div>
+                <div class="sgbp-offCanvas__backdrop" onclick="this.parentElement.classList.remove(&apos;is-open-right&apos;, &apos;is-open-left&apos;, &apos;is-open-bottom&apos;)"></div>
+              </div>
+              <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById(&apos;off-canvas-demo&apos;).classList.remove(&apos;is-open-right&apos;, &apos;is-open-bottom&apos;);document.getElementById(&apos;off-canvas-demo&apos;).classList.toggle(&apos;is-open-left&apos;);">Toggle left pane</button>
+              <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById(&apos;off-canvas-demo&apos;).classList.remove(&apos;is-open-left&apos;, &apos;is-open-bottom&apos;);document.getElementById(&apos;off-canvas-demo&apos;).classList.toggle(&apos;is-open-right&apos;);">Toggle right pane</button>
+              <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById(&apos;off-canvas-demo&apos;).classList.remove(&apos;is-open-left&apos;, &apos;is-open-right&apos;);document.getElementById(&apos;off-canvas-demo&apos;).classList.toggle(&apos;is-open-bottom&apos;);">Toggle bottom pane</button>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-offCanvas sgbp-row&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;off-canvas-demo&quot;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;overflow: hidden; height: 350px;&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-offCanvas__on sgbp-region sgbp-region--gray&quot;</span>&gt;</span>
     Main Content
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -4064,8 +4064,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-button sgbp-headline--accent&quot;</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;document.getElementById(&apos;off-canvas-demo&apos;).classList.remove(&apos;is-open-right&apos;, &apos;is-open-bottom&apos;);document.getElementById(&apos;off-canvas-demo&apos;).classList.toggle(&apos;is-open-left&apos;);&quot;</span>&gt;</span>Toggle left pane<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-button sgbp-headline--accent&quot;</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;document.getElementById(&apos;off-canvas-demo&apos;).classList.remove(&apos;is-open-left&apos;, &apos;is-open-bottom&apos;);document.getElementById(&apos;off-canvas-demo&apos;).classList.toggle(&apos;is-open-right&apos;);&quot;</span>&gt;</span>Toggle right pane<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sgbp-button sgbp-headline--accent&quot;</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;document.getElementById(&apos;off-canvas-demo&apos;).classList.remove(&apos;is-open-left&apos;, &apos;is-open-right&apos;);document.getElementById(&apos;off-canvas-demo&apos;).classList.toggle(&apos;is-open-bottom&apos;);&quot;</span>&gt;</span>Toggle bottom pane<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
-            </div>
-          </section>
+          </div>
         </section>
 
         <section class="sg-section sg-section-page-layout">
