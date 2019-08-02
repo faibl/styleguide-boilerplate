@@ -67,6 +67,11 @@ html {
     border-color: var(--sgbp-color-error);
   }
 
+  &--inline {
+    display: inline-flex;
+    width: auto;
+  }
+
   &--small {
     height: var(--sgbp-input-small-height);
   }
@@ -78,6 +83,7 @@ html {
 
 // sass-lint:disable no-qualifying-elements
 textarea.sgbp-input {
+  height: auto;
   min-height: 7em;
 }
 // sass-lint:enable no-qualifying-elements

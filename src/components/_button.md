@@ -3,9 +3,10 @@
 ### Button (default)
 
     @example
-    <a class="sgbp-button sgbp-button">Default</a>
-    <a class="sgbp-button sgbp-button--accent">Accent</a>
-    <a class="sgbp-button sgbp-button--danger">Danger</a>
+    <button class="sgbp-button sgbp-button">Default</button>
+    <button class="sgbp-button sgbp-button--accent">Accent</button>
+    <button class="sgbp-button sgbp-button--highlight">Highlight</button>
+    <button class="sgbp-button sgbp-button--danger">Danger</button>
 
 ### Button (outline)
 

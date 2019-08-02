@@ -1,6 +1,6 @@
 ## Row
 
-## Row (default)
+### Row (default)
 
 Rows have a defined bottom margin
 
@@ -16,7 +16,7 @@ Rows have a defined bottom margin
     </div>
 
 ### Row (with separator)
-  
+
     @example
     <div class="sgbp-row sgbp-row--withSeparator">
         Row 1
@@ -29,7 +29,7 @@ Rows have a defined bottom margin
     </div>
 
 ### Row (with small margin)
-  
+
     @example
     <div class="sgbp-row sgbp-row--smallMargin">
         Row 1
@@ -51,7 +51,7 @@ Rows have a defined bottom margin
     </div>
 
 ### Row (with extra small margin)
-  
+
     @example
     <div class="sgbp-row sgbp-row--extraSmallMargin">
         Row 1

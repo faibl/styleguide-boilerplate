@@ -25,31 +25,24 @@
     </script>
     <div class="sgbp-modal" id="test-modal-open">
        <div class="sgbp-modal__dialog">
-           <div class="sgbp-modal__header sgbp-region">
+           <div class="sgbp-modal__header sgbp-region sgbp-region--accent">
                 <div class="sgbp-modal__headerContent">
-                    <div class="sgbp-row sgbp-row--extraSmallMargin"><h1 class="sgbp-headline sgbp-headline--h4 sgbp-headline--primary">Modal Headline</h1></div>
-                    <h2 class="sgbp-headline sgbp-headline--h6 sgbp-headline--primary">Subheadline</h2>
+                    <h1 class="sgbp-headline sgbp-headline--h3">Modal Headline</h1>
                 </div>
-                <div class="sgbp-modal__headerClose sgbp-clickable sgbp-clickable--touchy" aria-hidden="true" onclick="shpModalDemoClose('test-modal-open')">
+                <button class="sgbp-modal__headerClose sgbp-clickable sgbp-clickable--touchy" aria-hidden="true" onclick="shpModalDemoClose('test-modal-open')">
                     <svg class="sgbp-icon">
-                       <use xlink:href="./assets/icons.svg#clear"></use>
+                       <use xlink:href="./assets/icons.svg#close"></use>
                     </svg>
-                </div>
+                </button>
            </div>
            <div class="sgbp-modal__content sgbp-region">
                 <div class="sgbp-readingBlock">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
                 </div>
            </div>
-           <div class="sgbp-modal__footer sgbp-region">
-                <div class="sgbp-postfix sgbp-postfix--between">
-                     <div class="sgbp-postfix__fixed">
-                         <button type="button" class="sgbp-button sgbp-button--secondary sgbp-button--wide" onclick="shpModalDemoClose('test-modal-open')">Close</button>
-                     </div>
-                     <div class="sgbp-postfix__fixed">
-                         <button type="button" class="sgbp-button sgbp-headline--accent sgbp-button--wide">Submit</button>
-                     </div>
-                </div>
+           <div class="sgbp-modal__footer sgbp-region sgbp-text sgbp-text--rightAligned">
+               <button type="button" class="sgbp-button sgbp-button--secondary sgbp-col" onclick="shpModalDemoClose('test-modal-open')">Cancel</button>
+               <button type="button" class="sgbp-button sgbp-button--accent">Submit</button>
            </div>
        </div>
     </div>
@@ -66,7 +59,7 @@
                 </div>
                 <span class="sgbp-modal__headerClose sgbp-clickable sgbp-clickable--touchy" aria-hidden="true" onclick="shpModalDemoClose('test-modal-fullWidth-open')">
                     <svg class="sgbp-icon">
-                       <use xlink:href="./assets/icons.svg#clear"></use>
+                       <use xlink:href="./assets/icons.svg#close"></use>
                     </svg>
                 </span>
            </div>
@@ -88,7 +81,7 @@
                 </div>
                 <span class="sgbp-modal__headerClose sgbp-clickable sgbp-clickable--touchy" aria-hidden="true" onclick="shpModalDemoClose('test-modal-fullHeight-open')">
                     <svg class="sgbp-icon">
-                       <use xlink:href="./assets/icons.svg#clear"></use>
+                       <use xlink:href="./assets/icons.svg#close"></use>
                     </svg>
                 </span>
            </div>

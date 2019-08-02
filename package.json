@@ -27,7 +27,9 @@
     "dev-server": "browser-sync start --config ./browser-sync.config.json",
     "deploy": "npm run build && cpx CNAME dist && node tasks/deploy.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "svg4everybody": "^2.1.9"
+  },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "browser-sync": "^2.26.5",
@@ -45,7 +47,6 @@
     "rimraf": "^2.6.3",
     "sass-lint": "^1.13.1",
     "styledown": "^1.0",
-    "svg-sprite": "^1.5.0",
-    "svg4everybody": "^2.1.9"
+    "svg-sprite": "^1.5.0"
   }
 }

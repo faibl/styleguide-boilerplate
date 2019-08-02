@@ -13,6 +13,9 @@ html {
 
   --sgbp-region-gray-color: var(--sgbp-color-black);
   --sgbp-region-gray-color-background: var(--sgbp-color-gray-light);
+
+  --sgbp-region-light-gray-color: var(--sgbp-color-black);
+  --sgbp-region-light-gray-color-background: var(--sgbp-color-gray-lighter);
 }
 
 .sgbp-region {
@@ -64,6 +67,11 @@ html {
   &--gray {
     background: var(--sgbp-region-gray-color-background);
     color: var(--sgbp-region-gray-color);
+  }
+
+  &--lightGray {
+    background: var(--sgbp-region-light-gray-color-background);
+    color: var(--sgbp-region-light-gray-color);
   }
 
   &--default {
@@ -175,7 +183,18 @@ html {
     padding-bottom: 0;
   }
 
+  &--noPadding {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
   &--rounded {
     border-radius: 5px;
+  }
+
+  &--depth {
+    box-shadow: 0 0 5px 0 var(--sgbp-color-darken);
   }
 }

@@ -1,0 +1,40 @@
+html {
+  --sgbp-tree-header-icon-width: 30px;
+}
+
+.sgbp-tree {
+  &__header {
+    display: flex;
+  }
+
+  &__headerIconWrapper {
+    flex: 0 0 var(--sgbp-tree-header-icon-width);
+  }
+
+  &__headerIcon {
+    transition: transform 200ms;
+  }
+
+  &__headerContent {
+    flex: 1 1 100%;
+  }
+
+  &__content {
+    display: none;
+    margin-left: var(--sgbp-tree-header-icon-width);
+  }
+
+  &.is-open > &__header > &__headerIconWrapper > &__headerIcon {
+    transform: rotate(90deg);
+  }
+
+  &.is-open > &__content {
+    display: block;
+  }
+
+  @for $sgbp-i from 1 through 10 {
+    &--level-#{$sgbp-i} {
+      margin-left: calc(#{$sgbp-i} * var(--sgbp-tree-header-icon-width));
+    }
+  }
+}

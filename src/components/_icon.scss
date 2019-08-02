@@ -40,12 +40,20 @@ html {
     color: var(--sgbp-color-accent);
   }
 
+  &--highlight {
+    color: var(--sgbp-color-highlight);
+  }
+
   &--light {
     color: var(--sgbp-color-gray);
   }
 
   &--inverted {
     color: var(--sgbp-color-white);
+  }
+
+  &--bottom {
+    vertical-align: bottom;
   }
 
   &--circle {
@@ -55,9 +63,18 @@ html {
     background: var(--sgbp-icon-circle-backgroundColor);
 
     &.sgbp-icon--inverted {
-      border-radius: 50%;
       color: var(--sgbp-icon-circle-backgroundColor);
       background: var(--sgbp-icon-circle-color);
+    }
+
+    &.sgbp-icon--accent {
+      color: var(--sgbp-color-accent-inverted);
+      background: var(--sgbp-color-accent);
+    }
+
+    &.sgbp-icon--highlight {
+      color: var(--sgbp-color-highlight-inverted);
+      background: var(--sgbp-color-highlight);
     }
   }
 

@@ -13,11 +13,175 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
       <table class="sgbp-table sgbp-table--data sgbp-table--responsiveSmallDown">
          <thead>
              <tr class="sgbp-table__row">
+                 <th class="sgbp-table__cell sgbp-table__cell--headline">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                        <label class="sgbp-checkbox">
+                            <input type="checkbox" class="sgbp-checkbox__control">
+                            <span class="sgbp-checkbox__label"></span>
+                        </label>
+                    </div>
+                 </th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--contentAsResponsiveHeadline">Headline</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline">A Text</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--numeric">B Num</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--numeric">C Num</th>
-                 <th class="sgbp-table__cell sgbp-table__cell--headline">Edit</th>
+                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--actions">Edit</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr class="sgbp-table__row is-deleted">
+                 <td class="sgbp-table__cell">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
+                 <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 1</td>
+                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Cell 1 - a</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">4323.46</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">192.565</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
+                     <a href="javascript:;" class="sgbp-table__action" title="edit">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
+                     </a>
+                     <a href="javascript:;" class="sgbp-table__action" title="delete">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#delete"></use></svg>
+                     </a>
+                 </td>
+             </tr>
+             <tr class="sgbp-table__row">
+                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
+                 <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 2</td>
+                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">
+                    <input type="text" class="sgbp-input" value="Cell 2 - a">
+                 </td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">10107.43</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">667.01</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
+                     <a href="javascript:;" class="sgbp-table__action" title="edit">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#clear"></use></svg>
+                     </a>
+                     <a href="javascript:;" class="sgbp-table__action" title="delete">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#delete"></use></svg>
+                     </a>
+                 </td>
+             </tr>
+             <tr class="sgbp-table__row sgbp-table__row--separatorTop sgbp-table__row--separatorBottom">
+                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
+                 <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">With Separator</td>
+                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Cell 3 - a</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">980.20</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">1001.24</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
+                     <a href="javascript:;" class="sgbp-table__action" title="edit">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
+                     </a>
+                     <a href="javascript:;" class="sgbp-table__action" title="delete">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#delete"></use></svg>
+                     </a>
+                 </td>
+             </tr>
+             <tr class="sgbp-table__row">
+                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
+                 <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Another headline</td>
+                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Cell 4 - a</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">10107.43</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">667.01</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
+                     <a href="javascript:;" class="sgbp-table__action" title="edit">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
+                     </a>
+                     <a href="javascript:;" class="sgbp-table__action" title="delete">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#delete"></use></svg>
+                     </a>
+                 </td>
+             </tr>
+             <tr class="sgbp-table__row is-inactive">
+                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
+                 <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Inactive row</td>
+                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Cell 4 - a</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">10107.43</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">667.01</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
+                     <a href="javascript:;" class="sgbp-table__action" title="edit">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
+                     </a>
+                     <a href="javascript:;" class="sgbp-table__action" title="delete">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#delete"></use></svg>
+                     </a>
+                 </td>
+             </tr>
+             <tr class="sgbp-table__row sgbp-table__row--highlight">
+                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
+                 <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Highlighted</td>
+                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Cell 5 - a</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">980.20</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">1001.24</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
+                     <a href="javascript:;" class="sgbp-table__action" title="edit">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
+                     </a>
+                     <a href="javascript:;" class="sgbp-table__action" title="delete">
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#delete"></use></svg>
+                     </a>
+                 </td>
+             </tr>
+
+         </tbody>
+      </table>
+    </figure>
+
+### Table (block):
+
+Add the modifier `sgbp-table--block` to display the table as a full-width block.
+
+    @example
+    <figure class="sgbp-tableWrapper">
+      <table class="sgbp-table sgbp-table--block sgbp-table--responsiveSmallDown">
+         <thead>
+             <tr class="sgbp-table__row">
+                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--contentAsResponsiveHeadline">Headline</th>
+                 <th class="sgbp-table__cell sgbp-table__cell--headline">A Text</th>
+                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--numeric">B Num</th>
+                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--numeric">C Num</th>
+                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--actions sgbp-table__cell--actions">Edit</th>
              </tr>
          </thead>
          <tbody>
@@ -55,20 +219,6 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">980.20</td>
                  <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">1001.24</td>
                  <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
-                     <a href="javascript:;" class="sgbp-table__action" title="edit">
-                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
-                     </a>
-                     <a href="javascript:;" class="sgbp-table__action" title="delete">
-                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#delete"></use></svg>
-                     </a>
-                 </td>
-             </tr>
-             <tr class="sgbp-table__row">
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 3</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight" data-sgbp-th="Col A (text)">Cell 3 - a</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">980.20</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">1001.24</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
                      <a href="javascript:;" class="sgbp-table__action" title="edit">
                          <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
                      </a>
@@ -92,7 +242,7 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  <th class="sgbp-table__cell sgbp-table__cell--headline">A Text</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--numeric">B Num</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--numeric">C Num</th>
-                 <th class="sgbp-table__cell sgbp-table__cell--headline">Edit</th>
+                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--actions sgbp-table__cell--actions">Edit</th>
              </tr>
          </thead>
          <tbody>
@@ -138,12 +288,12 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                      </a>
                  </td>
              </tr>
-             <tr class="sgbp-table__row">
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 3</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight" data-sgbp-th="Col A (text)">Cell 3 - a</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">980.20</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">1001.24</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
+             <tr class="sgbp-table__row sgbp-table__row--highlight">
+                 <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 3</td>
+                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Highlighted row Cell a</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">980.20</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">1001.24</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
                      <a href="javascript:;" class="sgbp-table__action" title="edit">
                          <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
                      </a>
@@ -163,15 +313,31 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
       <table class="sgbp-table sgbp-table--data sgbp-table--striped sgbp-table--responsiveSmallDown">
          <thead>
              <tr class="sgbp-table__row">
+                 <th class="sgbp-table__cell sgbp-table__cell--headline">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--contentAsResponsiveHeadline">Headline</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline">A Text</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--numeric">B Num</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--numeric">C Num</th>
-                 <th class="sgbp-table__cell sgbp-table__cell--headline">Edit</th>
+                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--actions sgbp-table__cell--actions">Edit</th>
              </tr>
          </thead>
          <tbody>
              <tr class="sgbp-table__row">
+                 <td class="sgbp-table__cell">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
                  <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 1</td>
                  <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Cell 1 - a</td>
                  <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">4323.46</td>
@@ -186,13 +352,23 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  </td>
              </tr>
              <tr class="sgbp-table__row">
+                 <td class="sgbp-table__cell">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
                  <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 2</td>
-                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Cell 2 - a</td>
+                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">
+                    <input type="text" class="sgbp-input" value="Cell 2 - a">
+                 </td>
                  <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">10107.43</td>
                  <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">667.01</td>
                  <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
                      <a href="javascript:;" class="sgbp-table__action" title="edit">
-                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
+                         <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#clear"></use></svg>
                      </a>
                      <a href="javascript:;" class="sgbp-table__action" title="delete">
                          <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#delete"></use></svg>
@@ -200,7 +376,15 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  </td>
              </tr>
              <tr class="sgbp-table__row">
-                 <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 3</td>
+                 <td class="sgbp-table__cell">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
+                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Highlighted cell</td>
                  <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Cell 3 - a</td>
                  <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">980.20</td>
                  <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">1001.24</td>
@@ -214,11 +398,19 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  </td>
              </tr>
              <tr class="sgbp-table__row">
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 3</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight" data-sgbp-th="Col A (text)">Cell 3 - a</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">980.20</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">1001.24</td>
-                 <td class="sgbp-table__cell sgbp-table__cell--highlight sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
+                 <td class="sgbp-table__cell">
+                    <div class="sgbp-centered sgbp-centered--horizontally">
+                         <label class="sgbp-checkbox">
+                             <input type="checkbox" class="sgbp-checkbox__control">
+                             <span class="sgbp-checkbox__label"></span>
+                         </label>
+                     </div>
+                 </td>
+                 <td class="sgbp-table__cell sgbp-table__cell--contentAsResponsiveHeadline" data-sgbp-th="Headline">Headline 3</td>
+                 <td class="sgbp-table__cell" data-sgbp-th="Col A (text)">Cell 3 - a</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col B (numeric)">980.20</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--numeric" data-sgbp-th="Col C (numeric)">1001.24</td>
+                 <td class="sgbp-table__cell sgbp-table__cell--actions sgbp-table__cell--noResponsiveHeadline">
                      <a href="javascript:;" class="sgbp-table__action" title="edit">
                          <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#edit"></use></svg>
                      </a>
@@ -244,7 +436,7 @@ Add `sgbp-table--hover` class to the `table` element to highlight rows on hover.
                  <th class="sgbp-table__cell sgbp-table__cell--headline">Col A</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline">Col B</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline">Col C</th>
-                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--separatorLeft">Edit</th>
+                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--actions sgbp-table__cell--separatorLeft">Edit</th>
              </tr>
          </thead>
          <tbody>
@@ -307,7 +499,7 @@ Add `sgbp-table--compact` class to render the table more compact
                  <th class="sgbp-table__cell sgbp-table__cell--headline">Col A</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline">Col B</th>
                  <th class="sgbp-table__cell sgbp-table__cell--headline">Col C</th>
-                 <th class="sgbp-table__cell sgbp-table__cell--headline">Edit</th>
+                 <th class="sgbp-table__cell sgbp-table__cell--headline sgbp-table__cell--actions">Edit</th>
              </tr>
          </thead>
          <tbody>

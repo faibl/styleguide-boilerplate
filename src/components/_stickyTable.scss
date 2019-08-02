@@ -1,4 +1,4 @@
-@mixin sgbpStickyColumn($sgbp-stickyColumn-width, $sgbp-stickyLastColumn-width) {
+@mixin kgrStickyColumn($sgbp-stickyColumn-width, $sgbp-stickyLastColumn-width) {
   &--stickyColumnWidth-#{$sgbp-stickyColumn-width} {
     .sgbp-stickyTable__scroller {
       width: calc(100% - #{$sgbp-stickyColumn-width}px);
@@ -22,7 +22,7 @@
   }
 }
 
-@mixin sgbpStickyHeader($sgbp-stickyHeader-height) {
+@mixin kgrStickyHeader($sgbp-stickyHeader-height) {
   &--stickyHeaderHeight-#{$sgbp-stickyHeader-height} {
     padding-top: #{$sgbp-stickyHeader-height}px;
 
@@ -48,6 +48,7 @@
 
   &__cell {
     @include sgbp-truncateLine;
+    white-space: nowrap;
   }
 
   &--header &__scroller {
@@ -83,7 +84,7 @@
 
   @for $sgbp-i from 20 through 200 {
     @if ($sgbp-i % 5 == 0) {
-      @include sgbpStickyHeader($sgbp-i);
+      @include kgrStickyHeader($sgbp-i);
     }
   }
 
@@ -91,7 +92,7 @@
     @if ($sgbp-firstColWidth == 0 or ($sgbp-firstColWidth >= 100 and $sgbp-firstColWidth <= 100 and $sgbp-firstColWidth % 10 == 0) or $sgbp-firstColWidth % 50 == 0) {
       @for $sgbp-lastColWidth from 50 through 100 {
         @if ($sgbp-lastColWidth % 10 == 0) {
-          @include sgbpStickyColumn($sgbp-firstColWidth, $sgbp-lastColWidth);
+          @include kgrStickyColumn($sgbp-firstColWidth, $sgbp-lastColWidth);
         }
       }
     }

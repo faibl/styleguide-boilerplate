@@ -8,7 +8,6 @@ html {
 
     .sgbp-offCanvas {
       &__off {
-        //z-index: 0;
         flex: 0 1 auto;
         flex-direction: row;
         position: static;
@@ -63,7 +62,8 @@ html {
       transform: translateX(-100%);
       top: 0;
       left: 0;
-      height: 100%;
+      min-height: 100%;
+      height: auto;
 
       .sgbp-offCanvas__toggle {
         left: 100%;
@@ -75,7 +75,8 @@ html {
       top: 0;
       right: 0;
       transform: translateX(100%);
-      height: 100%;
+      min-height: 100%;
+      height: auto;
     }
 
     &--bottom {
@@ -98,14 +99,6 @@ html {
     will-change: opactiy;
     transition: opacity 300ms;
     background-color: var(--sgbp-offCanvas-backdrop-backgroundColor);
-  }
-
-  &.is-open-left > &__off--left {
-    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
-  }
-
-  &.is-open-right > &__off--right {
-    box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.5);
   }
 
   &.is-open-left > &__off--left,

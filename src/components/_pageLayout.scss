@@ -10,7 +10,12 @@ html {
   &__main,
   &__mainContent,
   &__mainSidebar {
+    flex: 1 1 auto;
     min-height: calc(100vh - var(--sgbp-pageLayout-header-height) - var(--sgbp-pageLayout-footer-height) - 1px);
+  }
+
+  &__footer {
+    flex: 0 0 auto;
   }
 
   &__header {
@@ -25,7 +30,52 @@ html {
     width: 100%;
 
     &Sidebar {
+      transition: width 300ms;
+      position: relative;
       flex: 0 0 auto;
+      z-index: 1;
+
+      &Toggle {
+        transition: background-color 200ms;
+        transition-delay: 300ms;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        z-index: -1;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        left: -20px;
+        width: 40px;
+        height: 60px;
+        top: 40vh;
+        background-color: var(--sgbp-color-accent);
+        box-shadow: 0 0 5px 0 var(--sgbp-color-darken);
+
+        &Icon {
+          color: var(--sgbp-color-accent-inverted);
+        }
+      }
+
+      &ToggleIcon {
+        transition: transform 200ms;
+        transition-delay: 300ms;
+      }
+
+      &.is-collapsed {
+        width: 0 !important;
+
+        > * {
+          overflow: hidden;
+        }
+      }
+
+      &.is-collapsed &Toggle {
+        background-color: var(--sgbp-color-highlight);
+      }
+
+      &.is-collapsed &ToggleIcon {
+        transform: rotateZ(180deg);
+      }
     }
 
     &Content {
@@ -35,6 +85,7 @@ html {
 
   &__footer {
     flex: 0 0 auto;
+    height: var(--sgbp-pageLayout-footer-height);
   }
 
   &--sticky {

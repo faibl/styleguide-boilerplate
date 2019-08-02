@@ -5,6 +5,11 @@
     @example
     <input type="text" class="sgbp-input" placeholder="Placeholder ...">
 
+### Input (inline)
+
+    @example
+    <input type="text" class="sgbp-input sgbp-input--inline" placeholder="Placeholder ...">
+
 ### Input (small)
 
     @example
@@ -52,7 +57,12 @@ CSS properties such as display: none or visibility: hidden will not work out. Th
 ### File Input as Button
 
     @example
-    <label class="sgbp-button sgbp-headline--accent">
-        <input type="file" class="sgbp-input is-hidden">
-        Choose File
+    <label class="sgbp-buttonFocusContainer sgbp-postfix sgbp-postfix--gutters sgbp-postfix--center">
+        <div class="sgbp-postfix__fixed">
+            <div class="sgbp-button">Choose File</div>
+            <input type="file" class="sgbp-input is-hidden" onchange="document.getElementById(`sgbp-demo-selected-file-label`).innerText = this.value.split(`\\`).pop() || `No file chosen`;">
+        </div>
+        <div class="sgbp-postfix__fluid">
+            <div id="sgbp-demo-selected-file-label">No file chosen</div>
+        </div>
     </label>

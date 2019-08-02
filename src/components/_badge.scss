@@ -26,7 +26,7 @@ html {
   font-size: 12px;
   font-weight: bold;
 
-  color: var(--sgbp-badge-color-default);
+  color: var(--sgbp-badge-color-default) !important;
   background: var(--sgbp-badge-background-color-default);
 
   transition: color 300ms, background-color 300ms;
@@ -37,32 +37,32 @@ html {
   }
 
   &--accent {
-    color: var(--sgbp-color-accent-inverted);
+    color: var(--sgbp-color-accent-inverted) !important;
     background: var(--sgbp-color-accent);
   }
 
   &--highlight {
-    color: var(--sgbp-color-highlight-inverted);
+    color: var(--sgbp-color-highlight-inverted) !important;
     background: var(--sgbp-color-highlight);
   }
 
   &--info {
-    color: var(--sgbp-badge-color-info);
+    color: var(--sgbp-badge-color-info) !important;
     background: var(--sgbp-badge-background-color-info);
   }
 
   &--warning {
-    color: var(--sgbp-badge-color-warning);
+    color: var(--sgbp-badge-color-warning) !important;
     background: var(--sgbp-badge-background-color-warning);
   }
 
   &--error {
-    color: var(--sgbp-badge-color-error);
+    color: var(--sgbp-badge-color-error) !important;
     background: var(--sgbp-badge-background-color-error);
   }
 
   &--success {
-    color: var(--sgbp-badge-color-success);
+    color: var(--sgbp-badge-color-success) !important;
     background: var(--sgbp-badge-background-color-success);
   }
 }

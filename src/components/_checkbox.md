@@ -68,6 +68,18 @@ You need to provide an empty `sgbp-checkbox__label` element in order to display 
         <span class="sgbp-checkbox__label">Checkbox 2</span>
     </label>
 
+### Checkbox (label first)
+
+    @example
+    <label class="sgbp-checkbox sgbp-checkbox--labelFirst sgbp-row sgbp-row--smallMargin">
+        <input type="checkbox" class="sgbp-checkbox__control">
+        <span class="sgbp-checkbox__label">Checkbox 1</span>
+    </label>
+    <label class="sgbp-checkbox sgbp-checkbox--labelFirst">
+        <input type="checkbox" class="sgbp-checkbox__control">
+        <span class="sgbp-checkbox__label">Checkbox 2</span>
+    </label>
+
 ### Checkbox (big)
 
     @example

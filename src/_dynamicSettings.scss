@@ -36,6 +36,8 @@ html {
   //
   //## Settings for some of the most global styles.
 
+  --sgbp-default-border-radius: 0;
+
   //** Background color for `<body>`.
   --sgbp-body-bg: var(--sgbp-color-white);
   //** Global text color on `<body>`.
@@ -123,16 +125,16 @@ html {
   --sgbp-default-margin-big: 28px;
   --sgbp-default-margin-big-screen-large: 28px;
 
-  --sgbp-input-height: 40px;
-  --sgbp-input-small-height: 30px;
-  --sgbp-input-big-height: 50px;
+  --sgbp-input-height: 30px;
+  --sgbp-input-small-height: 20px;
+  --sgbp-input-big-height: 40px;
   --sgbp-input-padding-horizontal: 0.35rem;
   --sgbp-input-color: var(--sgbp-color-black);
   --sgbp-input-color-disabled: var(--sgbp-color-gray);
-  --sgbp-input-border-width: 1.5px;
-  --sgbp-input-border-radius: 2px;
-  --sgbp-input-background-color: var(--sgbp-color-gray-light);
-  --sgbp-input-border-color: var(--sgbp-input-background-color);
+  --sgbp-input-border-width: 1px;
+  --sgbp-input-border-radius: var(--sgbp-default-border-radius);
+  --sgbp-input-background-color: var(--sgbp-color-gray-lighter);
+  --sgbp-input-border-color: var(--sgbp-color-gray-light);
   --sgbp-input-border-color-focus: var(--sgbp-color-gray);
   --sgbp-input-border-color-disabled: var(--sgbp-input-border-color);
   --sgbp-accent-line-height: 2px;

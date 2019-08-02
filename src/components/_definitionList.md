@@ -20,7 +20,7 @@
 
 ### Definition List (horizontal):
 
-You can specifiy the width of the term "column" by applying the modifiers `sgbp-definitionList--50`, `sgbp-definitionList--1000`, ..., `sgbp-definitionList--250`
+You need to specifiy the width of the term "column" by applying the modifiers `sgbp-definitionList--50`, `sgbp-definitionList--1000`, ..., `sgbp-definitionList--250`
 
     @example
     <dl class="sgbp-definitionList sgbp-definitionList--horizontal sgbp-definitionList--100">

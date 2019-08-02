@@ -1,14 +1,19 @@
 html {
   --sgbp-inputGroup-label-color: var(--sgbp-color-gray);
   --sgbp-inputGroup-label-text-transform: uppercase;
-  --sgbp-inputGroup-text-color: var(--sgbp-inputGroup-label-color);
-  --sgbp-inputGroup-error-color: var(--sgbp-color-error);
-  --sgbp-inputGroup--constrained-max-width: 600px;
   --sgbp-inputGroup-label-font-size: calc(var(--sgbp-font-size-text) * 0.9);
   --sgbp-inputGroup-label-font-weight: normal;
+
+  --sgbp-inputGroup-text-color: var(--sgbp-inputGroup-label-color);
+  --sgbp-inputGroup-text-font-size: calc(var(--sgbp-inputGroup-label-font-size) * 0.9);
   --sgbp-inputGroup-text-font-weight: normal;
-  --sgbp-inputGroup-alignedButton-margin-top: 25px;
-  --sgbp-inputGroup-margin: 26px;
+
+  --sgbp-inputGroup-error-color: var(--sgbp-color-error);
+  --sgbp-inputGroup-error-font-size: var(--sgbp-font-size-text);
+
+  --sgbp-inputGroup--constrained-max-width: 400px;
+  --sgbp-inputGroup-margin: 15px;
+  --sgbp-inputGroup-label-margin: 0;
 }
 
 .sgbp-inputGroup {
@@ -25,18 +30,23 @@ html {
 
   &--inline {
     display: inline-block;
+
+    margin-right: var(--sgbp-default-margin);
+    margin-bottom: var(--sgbp-inputGroup-margin);
+
+    & + & {
+      margin-top: 0;
+    }
   }
 
   &--constrainedWidth {
-    @media #{$sgbp-large-up} {
-      max-width: var(--sgbp-inputGroup--constrained-max-width);
-    }
+    max-width: var(--sgbp-inputGroup--constrained-max-width);
   }
 
   &__label {
     display: block;
     margin-left: 0.1em;
-    margin-bottom: 0.3em;
+    margin-bottom: var(--sgbp-inputGroup-label-margin);
     font-size: var(--sgbp-inputGroup-label-font-size);
     font-weight: var(--sgbp-inputGroup-label-font-weight);
     text-transform: var(--sgbp-inputGroup-label-text-transform);
@@ -48,12 +58,13 @@ html {
     width: 100%;
     margin-left: 0.1em;
     margin-bottom: 0.3em;
-    font-size: 0.8rem;
+    font-size: var(--sgbp-inputGroup-text-font-size);
     font-weight: var(--sgbp-inputGroup-text-font-weight);
     color: var(--sgbp-inputGroup-text-color);
 
     &--error {
       color: var(--sgbp-inputGroup-error-color);
+      font-size: var(--sgbp-inputGroup-error-font-size);
     }
   }
 

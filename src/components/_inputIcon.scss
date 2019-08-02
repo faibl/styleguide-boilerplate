@@ -44,21 +44,25 @@
   }
 
   &--extraMargin &__input {
-    padding-right: 2.2em;
+    padding-right: 2.2em !important;
   }
 
   &--extraMargin &__icon {
     margin-right: 1.2em;
   }
 
+  &--select &__input {
+    padding-right: 3.3em !important;
+  }
+
   &--textarea &__input {
-    padding-right: 0.2em;
+    padding-right: 0.2em !important;
   }
 
   &--textarea &__icon {
-    top: 0.9em;
+    top: 0.8em;
     margin-right: 0.7em;
-    background: var(--sgbp-color-white);
+    background: var(--sgbp-input-background-color);
     opacity: 0.7;
 
     &:hover {
@@ -67,9 +71,9 @@
   }
 
   &--select &__icon {
-    top: 0.9em;
-    margin-right: 2.2em;
-    background: var(--sgbp-color-white);
+    top: 0.8em;
+    margin-right: 1.9em;
+    background: var(--sgbp-input-background-color);
     opacity: 0.7;
 
     &:hover {

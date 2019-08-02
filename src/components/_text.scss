@@ -15,6 +15,10 @@
     @include sgbp-bold;
   }
 
+  &--italic {
+    font-style: italic;
+  }
+
   &--uppercase {
     @include sgbp-uppercase;
   }
@@ -26,6 +30,11 @@
     &:active {
       text-decoration: underline;
     }
+  }
+
+  &--forceWrap {
+    white-space: normal;
+    word-break: break-all;
   }
 
   &--noWrap {

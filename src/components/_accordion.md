@@ -7,10 +7,17 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
     @example
     <div class="sgbp-accordion">
         <div class="sgbp-accordion__item">
-            <div class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
-               <span class="sgbp-accordion__itemHeadline">Accordion Item 1</span>
-               <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
-            </div>
+            <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
+                <div class="sgbp-accordion__itemHeaderLeft">
+                    <span class="sgbp-accordion__itemHeadline">Accordion Item 1</span>
+                </div>
+                <div class="sgbp-accordion__itemHeaderRight">
+                    <div class="sgbp-accordion__itemHeaderRight">
+                        <div class="sgbp-badge sgbp-badge--highlight sgbp-col">4/17</div>
+                        <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                    </div>
+                </div>
+            </button>
             <div class="sgbp-collapsible">
                 <div class="sgbp-accordion__itemContent sgbp-collapsible__content">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
@@ -18,10 +25,14 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
             </div>
         </div>
         <div class="sgbp-accordion__item is-open">
-            <div class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
-               <span class="sgbp-accordion__itemHeadline">Accordion Item 2</span>
-               <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
-            </div>
+            <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
+                <div class="sgbp-accordion__itemHeaderLeft">
+                    <span class="sgbp-accordion__itemHeadline">Accordion Item 2</span>
+                </div>
+                <div class="sgbp-accordion__itemHeaderRight">
+                    <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                </div>
+            </button>
             <div class="sgbp-collapsible is-open">
                 <div class="sgbp-accordion__itemContent sgbp-collapsible__content">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
@@ -29,10 +40,14 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
             </div>
         </div>
         <div class="sgbp-accordion__item">
-            <div class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
-               <span class="sgbp-accordion__itemHeadline">Accordion Item With overflowing content</span>
-               <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
-            </div>
+            <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
+                <div class="sgbp-accordion__itemHeaderLeft">
+                    <span class="sgbp-accordion__itemHeadline">Accordion Item With overflowing content</span>
+                </div>
+                <div class="sgbp-accordion__itemHeaderRight">
+                    <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                </div>
+            </button>
             <div class="sgbp-collapsible sgbp-collapsible--overflow">
                 <div class="sgbp-accordion__itemContent sgbp-collapsible__content">
                    <p class="sgbp-row">Collapsible Content with overflowing tooltip example (Using the "sgbp-collapsible--overflow" modifier). Open/Close transitions get automativally disabled in favor of overlowing content.</p>
@@ -47,10 +62,14 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
             </div>
         </div>
         <div class="sgbp-accordion__item">
-            <div class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
-               <span class="sgbp-accordion__itemHeadline">Long Content</span>
-               <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
-            </div>
+            <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
+                <div class="sgbp-accordion__itemHeaderLeft">
+                    <span class="sgbp-accordion__itemHeadline">Long Content</span>
+                </div>
+                <div class="sgbp-accordion__itemHeaderRight">
+                    <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                </div>
+            </button>
             <div class="sgbp-collapsible">
                 <div class="sgbp-accordion__itemContent sgbp-collapsible__content">
                     <p class="sgbp-row">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
@@ -64,10 +83,14 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
             </div>
         </div>
         <div class="sgbp-accordion__item">
-            <div class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
-               <span class="sgbp-accordion__itemHeadline">Long Header item name Lorem ipsum dolor sit amet</span>
-               <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
-            </div>
+            <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
+                <div class="sgbp-accordion__itemHeaderLeft">
+                    <span class="sgbp-accordion__itemHeadline">Long Header item name Lorem ipsum dolor sit amet</span>
+                </div>
+                <div class="sgbp-accordion__itemHeaderRight">
+                    <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                </div>
+            </button>
             <div class="sgbp-collapsible">
                 <div class="sgbp-accordion__itemContent sgbp-collapsible__content">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.

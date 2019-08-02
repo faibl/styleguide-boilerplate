@@ -28,6 +28,13 @@
         Lorem ipsum
     </div>
 
+### Text (italic)
+
+    @example
+    <div class="sgbp-text sgbp-text--italic">
+        Lorem ipsum
+    </div>
+
 ### Text (uppercase)
 
     @example
@@ -40,6 +47,16 @@
     @example
     <div class="sgbp-text sgbp-text--underlined">
         Lorem ipsum
+    </div>
+
+### Text (force wrap)
+
+If long words exceed the maximum horizontal space then they will be forced to wrap anyways.
+
+    @example
+    <div style="max-width: 200px; background-color: lightgrey;">
+      <div class="sgbp-text sgbp-text--forceWrap">With force wrap: verylongwordwithmanycharacterswillbewrapped.</div>
+      <div class="sgbp-text">Without force wrap: verylongwordwithmanycharacterswillnotbewrapped.</div>
     </div>
 
 ### Text (no wrap)
@@ -57,8 +74,10 @@ If the content exceeds the maximum horizontal space then the content will overfl
 If the content exceeds the maximum horizontal space then the line will get truncated
 
     @example
-    <div class="sgbp-text sgbp-text--truncated sgbp-row">A very long line with many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many words.</div>
-    <div class="sgbp-text sgbp-text--truncated sgbp-text--rtl">A very long line with many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many many words.</div>
+    <div style="max-width: 200px; background-color: lightgrey;">
+        <div class="sgbp-text sgbp-text--truncated sgbp-row">A very long line with a veryveryveryveryveryveryveryvery long word.</div>
+        <div class="sgbp-text sgbp-text--truncated sgbp-text--rtl">A very long line with a veryveryveryveryveryveryveryvery long word.</div>
+    </div>
 
 ### Text (rtl / ltr)
 

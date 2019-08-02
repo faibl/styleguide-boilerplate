@@ -11,16 +11,16 @@
         <hr class="sgbp-separator sgbp-separator--white">
     </div>
 
+### Separator (small):
+
+    @example:
+    <hr class="sgbp-separator sgbp-separator--small">
+    <hr class="sgbp-separator sgbp-separator--small sgbp-separator--primary">
+    <hr class="sgbp-separator sgbp-separator--small sgbp-separator--secondary">
+
 ### Separator (big):
 
     @example:
     <hr class="sgbp-separator sgbp-separator--big">
     <hr class="sgbp-separator sgbp-separator--big sgbp-separator--primary">
     <hr class="sgbp-separator sgbp-separator--big sgbp-separator--secondary">
-
-### Separator (fade):
-
-    @example:
-    <hr class="sgbp-separator sgbp-separator--big sgbp-separator--fade">
-    <hr class="sgbp-separator sgbp-separator--big sgbp-separator--fade sgbp-separator--primary">
-    <hr class="sgbp-separator sgbp-separator--big sgbp-separator--fade sgbp-separator--secondary">

@@ -56,6 +56,11 @@ html {
   top: auto;
 }
 
+.sgbp-tooltip--middle .sgbp-tooltip__content {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .sgbp-tooltip--right .sgbp-tooltip__content {
   right: auto;
   left: 100%;
@@ -64,6 +69,15 @@ html {
 .sgbp-tooltip--bottom .sgbp-tooltip__content {
   bottom: auto;
   top: 100%;
+}
+
+.sgbp-tooltip--centered .sgbp-tooltip__content {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sgbp-tooltip--centered.sgbp-tooltip--middle .sgbp-tooltip__content {
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .sgbp-tooltip--left .sgbp-tooltip__content {

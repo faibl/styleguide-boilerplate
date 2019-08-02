@@ -25,21 +25,25 @@ html {
     background-color: var(--sgbp-profileImage-background-color);
   }
 
+  &--sizeXS,
   &--sizeXS &__image {
     width: var(--sgbp-profileImage-size-xs);
     height: var(--sgbp-profileImage-size-xs);
   }
 
+  &--sizeS,
   &--sizeS &__image {
     width: var(--sgbp-profileImage-size-s);
     height: var(--sgbp-profileImage-size-s);
   }
 
+  &--sizeM,
   &--sizeM &__image {
     width: var(--sgbp-profileImage-size-m);
     height: var(--sgbp-profileImage-size-m);
   }
 
+  &--sizeL,
   &--sizeL &__image {
     width: var(--sgbp-profileImage-size-l);
     height: var(--sgbp-profileImage-size-l);

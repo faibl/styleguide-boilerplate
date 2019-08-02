@@ -9,6 +9,8 @@
     <div class="sgbp-color sgbp-color--black">Black <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-color sgbp-color--gray">Gray <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-color sgbp-color--mediumGray">Medium Gray <a href="javascript:;" class="sgbp-link">with link</a></div>
+    <div class="sgbp-color sgbp-color--succes">Succes <a href="javascript:;" class="sgbp-link">with link</a></div>
+    <div class="sgbp-color sgbp-color--warning">Warning <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-color sgbp-color--error">Error <a href="javascript:;" class="sgbp-link">with link</a></div>
 
 ### Color (background)
@@ -18,10 +20,12 @@ Use the class `sgbp-backgroundColor` instead of `sgbp-color` to apply the colors
     @example:
     <div class="sgbp-backgroundColor sgbp-backgroundColor--accent">Accent <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-backgroundColor sgbp-backgroundColor--highlight">Highlight <a href="javascript:;" class="sgbp-link">with link</a></div>
-    <div class="sgbp-backgroundColor sgbp-backgroundColor--white" style="background-color: pink; padding: 0.3rem;">White <a href="javascript:;" class="sgbp-link">with link</a></div>
+    <div class="sgbp-backgroundColor sgbp-backgroundColor--white">White <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-backgroundColor sgbp-backgroundColor--black">Black <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-backgroundColor sgbp-backgroundColor--gray">Gray <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-backgroundColor sgbp-backgroundColor--mediumGray">Medium Gray <a href="javascript:;" class="sgbp-link">with link</a></div>
+    <div class="sgbp-backgroundColor sgbp-backgroundColor--success">Success <a href="javascript:;" class="sgbp-link">with link</a></div>
+    <div class="sgbp-backgroundColor sgbp-backgroundColor--warning">Warning <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-backgroundColor sgbp-backgroundColor--error">Error <a href="javascript:;" class="sgbp-link">with link</a></div>
 
 ### Color (force)

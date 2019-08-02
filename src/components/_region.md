@@ -109,6 +109,20 @@ Highlight the region if an element inside that region is focused
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet <a href="javascript:;">dolore magna aliquam erat volutpat</a>.
     </div>
 
+### Region (no padding)
+
+    @example
+    <div class="sgbp-region sgbp-region--gray sgbp-region--noPadding">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet <a href="javascript:;">dolore magna aliquam erat volutpat</a>.
+    </div>
+
+### Region (depth)
+
+    @example
+    <div class="sgbp-region sgbp-region--gray sgbp-region--depth">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet <a href="javascript:;">dolore magna aliquam erat volutpat</a>.
+    </div>
+
 ### Region (example layout):
 
     @example

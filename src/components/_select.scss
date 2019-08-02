@@ -1,7 +1,10 @@
 .sgbp-select {
   @extend .sgbp-input; // sass-lint:disable-line placeholder-in-extend
 
-  border-radius: 0;
+  &--inline {
+    display: inline-flex;
+    width: auto;
+  }
 
   &[size] {
     padding: 0;
@@ -19,10 +22,10 @@
   &[size='1'] {
     appearance: none;
     height: var(--sgbp-input-height);
-    padding-right: 3.1rem;
-    background-position: right -55px top -9px;
+    padding-right: 2.1rem;
+    background-position: right -53px top -16px;
     background-repeat: no-repeat;
-    background-size: 6.3rem 3.3rem;
+    background-size: 6rem 3.7rem;
     background-image: url('#{$sgbp-public-asset-path}/images/bg_select.svg');
 
     // sass-lint:disable no-vendor-prefixes

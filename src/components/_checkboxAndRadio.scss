@@ -26,8 +26,14 @@ html {
 
   &--inline {
     display: inline-block;
+    margin-top: 0;
     margin-bottom: 0.5em;
     margin-right: var(--sgbp-checkboxAndRadio-inline-margin);
+  }
+
+  &--standalone {
+    margin-bottom: 0;
+    margin-right: 0;
   }
 
   &__label {
@@ -107,6 +113,16 @@ html {
       margin-right: calc(var(--sgbp-default-margin-small) * 0.75);
       width: var(--sgbp-checkboxAndRadio-size-small);
       height: var(--sgbp-checkboxAndRadio-size-small);
+    }
+  }
+
+  &--labelFirst &__label {
+    display: inline-flex;
+    flex-direction: row-reverse;
+
+    &::before {
+      margin-left: var(--sgbp-default-margin-small);
+      margin-right: 0;
     }
   }
 

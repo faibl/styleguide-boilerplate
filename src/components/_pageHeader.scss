@@ -12,6 +12,7 @@ html {
   color: var(--sgbp-pageHeader-color);
 
   &__inner {
+    height: var(--sgbp-pageLayout-header-height);
     display: flex;
     justify-content: space-between;
     max-width: var(--sgbp-page-max-width);
@@ -25,6 +26,7 @@ html {
   &__item {
     display: flex;
     align-items: center;
-    padding: var(--sgbp-default-margin);
+    padding-left: var(--sgbp-default-margin-small);
+    padding-right: var(--sgbp-default-margin-small);
   }
 }

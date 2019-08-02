@@ -27,6 +27,11 @@ html {
     border-width: var(--sgbp-input-border-width);
     border-color: var(--sgbp-input-border-color);
 
+    &--accent {
+      background-color: var(--sgbp-color-accent);
+      color: var(--sgbp-color-accent-inverted);
+    }
+
     &:first-child {
       border-right: none;
       margin-right: calc(var(--sgbp-input-border-width) * -1);

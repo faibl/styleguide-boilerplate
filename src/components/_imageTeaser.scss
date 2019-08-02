@@ -11,6 +11,7 @@ html {
   padding: var(--sgbp-imageTeaser-padding);
 
   background-size: cover;
+  background-position: center;
   color: var(--sgbp-color-white);
 
   &::before {

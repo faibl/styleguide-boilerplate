@@ -1,0 +1,26 @@
+html {
+  --sgbp-indicator-size: 10px;
+}
+
+.sgbp-indicator {
+  display: inline-block;
+  width: var(--sgbp-indicator-size);
+  height: var(--sgbp-indicator-size);
+  border-radius: 50%;
+
+  background-color: var(--sgbp-color-gray-medium);
+
+  &.is-success,
+  &.is-on {
+    background-color: var(--sgbp-color-success);
+  }
+
+  &.is-warning {
+    background-color: var(--sgbp-color-warning);
+  }
+
+  &.is-error,
+  &.is-off {
+    background-color: var(--sgbp-color-error);
+  }
+}

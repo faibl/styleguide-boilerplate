@@ -18,6 +18,22 @@
         <input type="text" class="sgbp-input" value="input value">
     </label>
 
+### Input Group (inline)
+
+    @example
+    <label class="sgbp-inputGroup sgbp-inputGroup--inline">
+        <span class="sgbp-inputGroup__label">Title</span>
+        <input type="text" class="sgbp-input">
+    </label>
+    <label class="sgbp-inputGroup sgbp-inputGroup--inline">
+        <span class="sgbp-inputGroup__label">Firstname</span>
+        <input type="text" class="sgbp-input">
+    </label>
+    <label class="sgbp-inputGroup sgbp-inputGroup--inline">
+        <span class="sgbp-inputGroup__label">Lastname</span>
+        <input type="text" class="sgbp-input">
+    </label>
+
 ### Input Group (constrained width)
 
     @example

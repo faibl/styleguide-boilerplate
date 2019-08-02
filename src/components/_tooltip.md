@@ -11,6 +11,12 @@
           </div>
       </div>
       <div class="sgbp-row">
+          <div class="sgbp-tooltip sgbp-tooltip--centered">
+            <span class="sgbp-tooltip__trigger">centered</span>
+            <div class="sgbp-tooltip__content sgbp-region sgbp-region--small sgbp-region--accent" style="width: 250px"><div class="sgbp-headline sgbp-headline--h4 sgbp-headline--text sgbp-headline--firstInText">Tooltip content</div>HTML allowed</div>
+          </div>
+      </div>
+      <div class="sgbp-row">
           <div class="sgbp-tooltip sgbp-tooltip--right">
             <span class="sgbp-tooltip__trigger">right</span>
             <div class="sgbp-tooltip__content sgbp-region sgbp-region--small sgbp-region--accent" style="width: 250px"><div class="sgbp-headline sgbp-headline--h4 sgbp-headline--text sgbp-headline--firstInText">Tooltip content</div>HTML allowed</div>
@@ -23,6 +29,12 @@
           </div>
       </div>
       <div class="sgbp-row">
+          <div class="sgbp-tooltip sgbp-tooltip--middle">
+            <span class="sgbp-tooltip__trigger">middle</span>
+            <div class="sgbp-tooltip__content sgbp-region sgbp-region--small sgbp-region--accent" style="width: 250px"><div class="sgbp-headline sgbp-headline--h4 sgbp-headline--text sgbp-headline--firstInText">Tooltip content</div>HTML allowed</div>
+          </div>
+      </div>
+      <div class="sgbp-row">
           <div class="sgbp-tooltip sgbp-tooltip--top">
             <span class="sgbp-tooltip__trigger">top</span>
             <div class="sgbp-tooltip__content sgbp-region sgbp-region--small sgbp-region--accent" style="width: 250px"><div class="sgbp-headline sgbp-headline--h4 sgbp-headline--text sgbp-headline--firstInText">Tooltip content</div>HTML allowed</div>
@@ -31,6 +43,18 @@
       <div class="sgbp-row">
           <div class="sgbp-tooltip sgbp-tooltip--top sgbp-tooltip--left">
             <span class="sgbp-tooltip__trigger">top left</span>
+            <div class="sgbp-tooltip__content sgbp-region sgbp-region--small sgbp-region--accent" style="width: 250px"><div class="sgbp-headline sgbp-headline--h4 sgbp-headline--text sgbp-headline--firstInText">Tooltip content</div>HTML allowed</div>
+          </div>
+      </div>
+      <div class="sgbp-row">
+        <div class="sgbp-tooltip sgbp-tooltip--left sgbp-tooltip--middle">
+          <span class="sgbp-tooltip__trigger">middle left</span>
+          <div class="sgbp-tooltip__content sgbp-region sgbp-region--small sgbp-region--accent" style="width: 250px"><div class="sgbp-headline sgbp-headline--h4 sgbp-headline--text sgbp-headline--firstInText">Tooltip content</div>HTML allowed</div>
+        </div>
+      </div>
+      <div class="sgbp-row">
+          <div class="sgbp-tooltip sgbp-tooltip--centered sgbp-tooltip--middle">
+            <span class="sgbp-tooltip__trigger">centered middle</span>
             <div class="sgbp-tooltip__content sgbp-region sgbp-region--small sgbp-region--accent" style="width: 250px"><div class="sgbp-headline sgbp-headline--h4 sgbp-headline--text sgbp-headline--firstInText">Tooltip content</div>HTML allowed</div>
           </div>
       </div>
