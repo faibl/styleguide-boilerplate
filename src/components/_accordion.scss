@@ -4,12 +4,13 @@
 
 .sgbp-accordion {
   &__item {
+    margin-bottom: 0.8rem;
+
     &Header {
       @include sgbp-hover(var(--sgbp-color-accent));
       display: flex;
       width: 100%;
       align-items: center;
-      padding-bottom: 0.8rem;
       cursor: pointer;
 
       &:focus {
@@ -43,7 +44,7 @@
     }
 
     &Content {
-      padding-top: 0.2rem;
+      padding-top: 1rem;
       padding-bottom: 1.75rem;
     }
 
@@ -61,10 +62,7 @@
 
     &--last,
     &:last-child {
-      > .sgbp-accordion__itemHeader,
-      .sgbp-accordion__itemContent {
-        padding-bottom: 0;
-      }
+      margin-bottom: 0;
     }
   }
 }

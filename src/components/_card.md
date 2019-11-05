@@ -44,7 +44,7 @@
 
     @example
     <article class="sgbp-card" style="width: 300px;">
-        <img src="http://lorempixel.com/400/300/sports" alt="Bill Cunningham" class="sgbp-card__image sgbp-card__image--full">
+        <img src="https://loremflickr.com/400/300/sports" alt="Bill Cunningham" class="sgbp-card__image sgbp-card__image--full">
         <div class="sgbp-card__subtitle">For Everyone</div>
         <h1 class="sgbp-card__name">Open House</h1>
         <div class="sgbp-card__contents">
@@ -69,7 +69,7 @@
         <div class="sgbp-grid sgbp-grid--inline sgbp-grid--gutters sgbp-grid--bigGutters">
             <div class="sgbp-grid__cell" style="width: 300px;">
                 <article class="sgbp-card sgbp-card--unobtrusive sgbp-backgroundColor sgbp-backgroundColor--white">
-                    <img src="http://lorempixel.com/400/300/sports" alt="Bill Cunningham" class="sgbp-card__image sgbp-card__image--full">
+                    <div class="sgbp-card__image sgbp-card__image--full sgbp-card__image--4to3" style="background-image:url(https://loremflickr.com/100/100/sports)"></div>
                     <div class="sgbp-card__subtitle">For Everyone</div>
                     <h1 class="sgbp-card__name">Open House</h1>
                     <div class="sgbp-card__contents">
@@ -89,7 +89,7 @@
             </div>
             <div class="sgbp-grid__cell" style="width: 300px;">
                 <article class="sgbp-card sgbp-card--unobtrusive sgbp-backgroundColor sgbp-backgroundColor--white">
-                    <img src="http://lorempixel.com/400/300/sports" alt="Bill Cunningham" class="sgbp-card__image sgbp-card__image--full">
+                    <div class="sgbp-card__image sgbp-card__image--full sgbp-card__image--4to3 sgbp-card__image--cover" style="background-image:url(https://loremflickr.com/900/400/sports)"></div>
                     <div class="sgbp-card__subtitle">For Everyone</div>
                     <h1 class="sgbp-card__name">Open House</h1>
                     <div class="sgbp-card__contents">
@@ -109,7 +109,7 @@
             </div>
             <div class="sgbp-grid__cell" style="width: 300px;">
                 <article class="sgbp-card sgbp-card--unobtrusive sgbp-backgroundColor sgbp-backgroundColor--white">
-                    <img src="http://lorempixel.com/400/300/sports" alt="Bill Cunningham" class="sgbp-card__image sgbp-card__image--full">
+                    <div class="sgbp-card__image sgbp-card__image--full sgbp-card__image--4to3 sgbp-card__image--contain" style="background-image:url(https://loremflickr.com/200/400/sports)"></div>
                     <div class="sgbp-card__subtitle">For Everyone</div>
                     <h1 class="sgbp-card__name">Open House</h1>
                     <div class="sgbp-card__contents">
@@ -129,7 +129,7 @@
             </div>
             <div class="sgbp-grid__cell" style="width: 300px;">
                 <article class="sgbp-card sgbp-card--unobtrusive sgbp-backgroundColor sgbp-backgroundColor--white">
-                    <img src="http://lorempixel.com/400/300/sports" alt="Bill Cunningham" class="sgbp-card__image sgbp-card__image--full">
+                    <div class="sgbp-card__image sgbp-card__image--full sgbp-card__image--4to3 sgbp-card__image--contain" style="background-image:url(https://loremflickr.com/1000/200/sports)"></div>
                     <div class="sgbp-card__subtitle">For Everyone</div>
                     <h1 class="sgbp-card__name">Open House</h1>
                     <div class="sgbp-card__contents">

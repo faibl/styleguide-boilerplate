@@ -88,3 +88,25 @@ The sample components adhere to our [CSS Guidelines](css_guidelines.md) based on
 
 As this is your own customized UI Pattern collection, you are free to choose whichever CSS methodology you like. However, we suggest that you document it in the css_guidelines.md file in order to produce consistent css code.
 
+
+## SVG Icons
+
+To add an svg icon file, simply store the icon under `src/assets/icons` and give it a descriptive name e.g. "search.svg".
+This name is later used to reference the icon in code, e.g.:
+```
+<svg class="kgr-icon kgr-icon--hoverAccent"><use xlink:href="./assets/icons.svg#search"></use></svg>
+```
+
+In order to make the icon inherit the css font color, make sure to use `currentColor` in your svg files insteaf of hard coding a color value.
+If your icon has two colors, you can specifiy the second color using `fillColor`.
+
+Then you might want to add the new icon to the documentation so that other developers can easily discover the new item.
+Add a new line with your icon name in `src/components/_icon.md`.
+
+In order to apply the changes, you have to restart the dev script
+
+```
+npm run dev
+```
+
+A good resource to search and download new icons is https://material.io/resources/icons/?style=baseline 

@@ -54,7 +54,7 @@ html {
   //
   //## Font, line-height, and color for body text, headings, and more.
 
-  --sgbp-font-family-base: Verdana, sans-serif;
+  --sgbp-font-family-base: Arial, sans-serif;
 
   --sgbp-font-size-base: 16px;
   --sgbp-font-size-text: 16px;
@@ -144,7 +144,7 @@ html {
    * z-index
    */
   --sgbp-modal-z-index: 1000;
-  --sgbp-tooltip-z-index: calc(var(--sgbp-modal-z-index) - 1);
-  --sgbp-offCanvas-z-index: calc(var(--sgbp-modal-z-index) - 1);
+  --sgbp-tooltip-z-index: 999; // do not use calculated values here because they break in IE when used in derived calculated z-indexes
+  --sgbp-offCanvas-z-index: 999; // do not use calculated values here because they break in IE when used in derived calculated z-indexes
   --sgbp-loading-container-z-index: 1;
 }

@@ -15,6 +15,10 @@
     height: var(--sgbp-actionButton-icon-size);
     width: var(--sgbp-actionButton-icon-size);
 
+    display: flex;
+    align-content: center;
+    align-items: center;
+
     & + & {
       margin-left: var(--sgbp-default-margin);
     }

@@ -41,6 +41,7 @@ html {
   &__toggle {
     cursor: pointer;
     position: absolute;
+    z-index: 1000; // manually set z-index to overcome ignored calculated z-index in IE
     z-index: calc(var(--sgbp-offCanvas-z-index) + 1);
   }
 

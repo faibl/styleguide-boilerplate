@@ -6,7 +6,7 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
 
     @example
     <div class="sgbp-accordion">
-        <div class="sgbp-accordion__item">
+        <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded">
             <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
                 <div class="sgbp-accordion__itemHeaderLeft">
                     <span class="sgbp-accordion__itemHeadline">Accordion Item 1</span>
@@ -24,7 +24,7 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
                 </div>
             </div>
         </div>
-        <div class="sgbp-accordion__item is-open">
+        <div class="sgbp-accordion__item  sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded is-open">
             <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
                 <div class="sgbp-accordion__itemHeaderLeft">
                     <span class="sgbp-accordion__itemHeadline">Accordion Item 2</span>
@@ -39,7 +39,7 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
                 </div>
             </div>
         </div>
-        <div class="sgbp-accordion__item">
+        <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded">
             <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
                 <div class="sgbp-accordion__itemHeaderLeft">
                     <span class="sgbp-accordion__itemHeadline">Accordion Item With overflowing content</span>
@@ -61,7 +61,7 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
                 </div>
             </div>
         </div>
-        <div class="sgbp-accordion__item">
+        <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded">
             <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
                 <div class="sgbp-accordion__itemHeaderLeft">
                     <span class="sgbp-accordion__itemHeadline">Long Content</span>
@@ -82,7 +82,7 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
                 </div>
             </div>
         </div>
-        <div class="sgbp-accordion__item">
+        <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded">
             <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
                 <div class="sgbp-accordion__itemHeaderLeft">
                     <span class="sgbp-accordion__itemHeadline">Long Header item name Lorem ipsum dolor sit amet</span>
