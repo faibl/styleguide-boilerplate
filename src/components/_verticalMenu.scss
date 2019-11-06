@@ -6,11 +6,12 @@ html {
   --sgbp-verticalMenu-header-color: var(--sgbp-color-gray);
   --sgbp-verticalMenu-highlight-color: var(--sgbp-color-black);
   --sgbp-verticalMenu-highlight-background-color: var(--sgbp-color-gray-light);
+  --sgbp-verticalMenu-font-size: var(--sgbp-font-size-text);
   --sgbp-verticalMenu-font-weight: normal;
   --sgbp-verticalMenu-icon-size: 22px;
 }
 
-@mixin kgrVerticalMenuInline() {
+@mixin sgbpVerticalMenuInline() {
   .sgbp-verticalMenu__item {
     border-top: none;
     border-bottom: none;
@@ -41,18 +42,18 @@ html {
 
 .sgbp-verticalMenu {
   &--inline {
-    @include kgrVerticalMenuInline;
+    @include sgbpVerticalMenuInline;
   }
 
   &--inlineMediumUp {
     @media #{$sgbp-medium-up} {
-      @include kgrVerticalMenuInline;
+      @include sgbpVerticalMenuInline;
     }
   }
 
   &--inlineLargeUp {
     @media #{$sgbp-large-up} {
-      @include kgrVerticalMenuInline;
+      @include sgbpVerticalMenuInline;
     }
   }
 
@@ -65,6 +66,7 @@ html {
     padding-left: var(--sgbp-default-margin-small);
     margin-bottom: 5px;
     border-bottom: 1px solid var(--sgbp-color-gray-light);
+    font-size: var(--sgbp-verticalMenu-font-size);
     font-weight: var(--sgbp-verticalMenu-font-weight);
     align-items: center;
 

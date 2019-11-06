@@ -20,6 +20,6 @@ However, we chose not to set the `overflow: hidden` by default because this woul
         </div>
         <div class="sgbp-offCanvas__backdrop" onclick="this.parentElement.classList.remove('is-open-right', 'is-open-left', 'is-open-bottom')"></div>
     </div>
-    <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById('off-canvas-demo').classList.remove('is-open-right', 'is-open-bottom');document.getElementById('off-canvas-demo').classList.toggle('is-open-left');">Toggle left pane</button>
-    <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById('off-canvas-demo').classList.remove('is-open-left', 'is-open-bottom');document.getElementById('off-canvas-demo').classList.toggle('is-open-right');">Toggle right pane</button>
-    <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById('off-canvas-demo').classList.remove('is-open-left', 'is-open-right');document.getElementById('off-canvas-demo').classList.toggle('is-open-bottom');">Toggle bottom pane</button>
+    <button class="sgbp-button" onclick="document.getElementById('off-canvas-demo').classList.remove('is-open-right', 'is-open-bottom');document.getElementById('off-canvas-demo').classList.toggle('is-open-left');">Toggle left pane</button>
+    <button class="sgbp-button" onclick="document.getElementById('off-canvas-demo').classList.remove('is-open-left', 'is-open-bottom');document.getElementById('off-canvas-demo').classList.toggle('is-open-right');">Toggle right pane</button>
+    <button class="sgbp-button" onclick="document.getElementById('off-canvas-demo').classList.remove('is-open-left', 'is-open-right');document.getElementById('off-canvas-demo').classList.toggle('is-open-bottom');">Toggle bottom pane</button>

@@ -52,7 +52,7 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  </td>
              </tr>
              <tr class="sgbp-table__row">
-                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                 <td class="sgbp-table__cell">
                     <div class="sgbp-centered sgbp-centered--horizontally">
                          <label class="sgbp-checkbox">
                              <input type="checkbox" class="sgbp-checkbox__control">
@@ -76,7 +76,7 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  </td>
              </tr>
              <tr class="sgbp-table__row sgbp-table__row--separatorTop sgbp-table__row--separatorBottom">
-                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                 <td class="sgbp-table__cell">
                     <div class="sgbp-centered sgbp-centered--horizontally">
                          <label class="sgbp-checkbox">
                              <input type="checkbox" class="sgbp-checkbox__control">
@@ -98,7 +98,7 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  </td>
              </tr>
              <tr class="sgbp-table__row">
-                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                 <td class="sgbp-table__cell">
                     <div class="sgbp-centered sgbp-centered--horizontally">
                          <label class="sgbp-checkbox">
                              <input type="checkbox" class="sgbp-checkbox__control">
@@ -120,7 +120,7 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  </td>
              </tr>
              <tr class="sgbp-table__row is-inactive">
-                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                 <td class="sgbp-table__cell">
                     <div class="sgbp-centered sgbp-centered--horizontally">
                          <label class="sgbp-checkbox">
                              <input type="checkbox" class="sgbp-checkbox__control">
@@ -142,7 +142,7 @@ Wrap tables in a (figure) element with the class `sgbp-tableWrapper` to add a ni
                  </td>
              </tr>
              <tr class="sgbp-table__row sgbp-table__row--highlight">
-                 <td class="sgbp-table__cell sgbp-table__cell--headline">
+                 <td class="sgbp-table__cell">
                     <div class="sgbp-centered sgbp-centered--horizontally">
                          <label class="sgbp-checkbox">
                              <input type="checkbox" class="sgbp-checkbox__control">

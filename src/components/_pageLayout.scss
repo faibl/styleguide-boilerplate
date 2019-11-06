@@ -121,4 +121,15 @@ html {
       }
     }
   }
+
+  @media #{$sgbp-print-only} {
+    &,
+    &__main {
+      display: block;
+    }
+
+    &__mainSidebar {
+      display: none;
+    }
+  }
 }

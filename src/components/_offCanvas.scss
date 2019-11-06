@@ -91,6 +91,7 @@ html {
   &__backdrop {
     pointer-events: none;
     position: absolute;
+    z-index: 998; // manually set z-index to overcome ignored calculated z-index in IE
     z-index: calc(var(--sgbp-offCanvas-z-index) - 1);
     top: 0;
     right: 0;

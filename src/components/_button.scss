@@ -43,6 +43,8 @@ html {
   --sgbp-button-border-radius: var(--sgbp-roundedEdge-border-radius);
   --sgbp-button-icon-margin-top: -5px;
   --sgbp-button-icon-margin-bottom: -5px;
+
+  --sgbp-button-hover-cursor: default;
 }
 
 @mixin sgbp-button-colors($_color, $_backgroundColor, $_borderColor, $_hoverColor, $_hoverBackgroundColor, $_hoverBorderColor) {
@@ -137,6 +139,10 @@ html {
   &.is-disabled {
     opacity: 0.4;
     cursor: not-allowed;
+  }
+
+  &:hover {
+    cursor: var(--sgbp-button-hover-cursor);
   }
 }
 

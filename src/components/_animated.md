@@ -2,7 +2,7 @@
 
     @example
     <script>
-    function kgrAnimatedDemo(id, effect) {
+    function sgbpAnimatedDemo(id, effect) {
       var demoElement = document.getElementById(id);
       var classNamesToRemove =  Array.prototype.slice.call(demoElement.classList, 0).filter(function(className) {
         return /^sgbp-animated--/.test(className);
@@ -21,10 +21,10 @@
         </div>
     </div>
 
-    <button class="sgbp-button" onclick="kgrAnimatedDemo('sgbp-animated-demo', 'fadeIn');">Fade in</button>
-    <button class="sgbp-button" onclick="kgrAnimatedDemo('sgbp-animated-demo', 'zoomIn');">Zoom in</button>
-    <button class="sgbp-button" onclick="kgrAnimatedDemo('sgbp-animated-demo', 'slideInUp');">slideInUp</button>
-    <button class="sgbp-button" onclick="kgrAnimatedDemo('sgbp-animated-demo', 'slideOutDown');">slideOutDown</button>
-    <button class="sgbp-button" onclick="kgrAnimatedDemo('sgbp-animated-demo', 'bounceInDown');">bounceInDown</button>
-    <button class="sgbp-button" onclick="kgrAnimatedDemo('sgbp-animated-demo', 'rippleError');">rippleError</button>
-    <button class="sgbp-button" onclick="kgrAnimatedDemo('sgbp-animated-demo', 'rippleSuccess');">rippleSuccess</button>
+    <button class="sgbp-button" onclick="sgbpAnimatedDemo('sgbp-animated-demo', 'fadeIn');">Fade in</button>
+    <button class="sgbp-button" onclick="sgbpAnimatedDemo('sgbp-animated-demo', 'zoomIn');">Zoom in</button>
+    <button class="sgbp-button" onclick="sgbpAnimatedDemo('sgbp-animated-demo', 'slideInUp');">slideInUp</button>
+    <button class="sgbp-button" onclick="sgbpAnimatedDemo('sgbp-animated-demo', 'slideOutDown');">slideOutDown</button>
+    <button class="sgbp-button" onclick="sgbpAnimatedDemo('sgbp-animated-demo', 'bounceInDown');">bounceInDown</button>
+    <button class="sgbp-button" onclick="sgbpAnimatedDemo('sgbp-animated-demo', 'rippleError');">rippleError</button>
+    <button class="sgbp-button" onclick="sgbpAnimatedDemo('sgbp-animated-demo', 'rippleSuccess');">rippleSuccess</button>

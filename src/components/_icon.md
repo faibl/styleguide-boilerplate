@@ -47,16 +47,20 @@
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#pin"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#place"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#power-switch"></use></svg>
+    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#redo"></use></svg>
+    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#refresh"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#save"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#security"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#settings"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#short-text"></use></svg>
+    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#undo"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#user"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#user-female"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#user-male"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#users"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#visibility-on"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#visibility-off"></use></svg>
+    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#search"></use></svg>
 
 ### Icon (default):
 

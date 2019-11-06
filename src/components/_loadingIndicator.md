@@ -5,4 +5,4 @@
       <div class="sgbp-loadingIndicator"></div>
     </div>
     <p class="sgbp-row">The loading indicator is hidden in the demo page to avoid unnecessary memory consumption. You can reveal the loading indicator by clicking the button below:</p>
-    <button class="sgbp-button sgbp-headline--accent" onclick="document.getElementById('loading-indicator-demo').style.display = 'block';">Show loading indicator</button>
+    <button class="sgbp-button" onclick="document.getElementById('loading-indicator-demo').style.display = 'block';">Show loading indicator</button>

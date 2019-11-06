@@ -41,12 +41,12 @@
                 </div>
            </div>
            <div class="sgbp-modal__footer sgbp-region sgbp-text sgbp-text--rightAligned">
-               <button type="button" class="sgbp-button sgbp-button--secondary sgbp-col" onclick="shpModalDemoClose('test-modal-open')">Cancel</button>
+               <button type="button" class="sgbp-button sgbp-col" onclick="shpModalDemoClose('test-modal-open')">Cancel</button>
                <button type="button" class="sgbp-button sgbp-button--accent">Submit</button>
            </div>
        </div>
     </div>
-    <button class="sgbp-button sgbp-headline--accent" onclick="shpModalDemoOpen('test-modal-open')">Open modal</button>
+    <button class="sgbp-button" onclick="shpModalDemoOpen('test-modal-open')">Open modal</button>
 
 ### Modal (fullWidth)
 
@@ -68,7 +68,7 @@
            </div>
        </div>
     </div>
-    <button class="sgbp-button sgbp-headline--accent" onclick="shpModalDemoOpen('test-modal-fullWidth-open')">Open modal</button>
+    <button class="sgbp-button" onclick="shpModalDemoOpen('test-modal-fullWidth-open')">Open modal</button>
 
 ### Modal (fullHeight)
 
@@ -90,7 +90,7 @@
            </div>
        </div>
     </div>
-    <button class="sgbp-button sgbp-headline--accent" onclick="shpModalDemoOpen('test-modal-fullHeight-open')">Open modal</button>
+    <button class="sgbp-button" onclick="shpModalDemoOpen('test-modal-fullHeight-open')">Open modal</button>
 
 ### Modal (custom animation)
 
@@ -103,11 +103,11 @@ You can control the entry animation by adding these modifiers: `sgbp-modal--zoom
                Modal Content
            </div>
            <div class="sgbp-modal__footer sgbp-region">
-                <button type="button" class="sgbp-button sgbp-button--secondary sgbp-button--wide" onclick="shpModalDemoClose('test-modal-animation')">Close</button>
+                <button type="button" class="sgbp-button sgbp-button--wide" onclick="shpModalDemoClose('test-modal-animation')">Close</button>
            </div>
        </div>
     </div>
-    <button class="sgbp-button sgbp-headline--accent" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--zoomIn')">zoomIn</button>
-    <button class="sgbp-button sgbp-headline--accent" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--fadeIn')">fadeIn</button>
-    <button class="sgbp-button sgbp-headline--accent" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--slideInUp')">slideInUp</button>
-    <button class="sgbp-button sgbp-headline--accent" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--bounceInDown')">bounceInDown</button>
+    <button class="sgbp-button" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--zoomIn')">zoomIn</button>
+    <button class="sgbp-button" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--fadeIn')">fadeIn</button>
+    <button class="sgbp-button" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--slideInUp')">slideInUp</button>
+    <button class="sgbp-button" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--bounceInDown')">bounceInDown</button>

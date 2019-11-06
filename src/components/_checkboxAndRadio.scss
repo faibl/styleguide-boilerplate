@@ -23,6 +23,7 @@ html {
 .sgbp-radio,
 .sgbp-checkbox {
   display: block;
+  pointer-events: none;
 
   &--inline {
     display: inline-block;
@@ -37,7 +38,8 @@ html {
   }
 
   &__label {
-    display: flex;
+    pointer-events: all;
+    display: inline-flex;
     align-items: center;
     min-height: 1em;
     vertical-align: middle;

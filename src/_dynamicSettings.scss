@@ -18,11 +18,11 @@ html {
   --sgbp-color-darken-heavy: rgba(0, 0, 0, 0.8);
   --sgbp-color-transparent: rgba(0, 0, 0, 0);
 
-  --sgbp-color-accent: hsl(205, 82%, 33%);
-  --sgbp-color-accent-alternate: hsl(205, 84%, 74%);
-  --sgbp-color-accent-inverted: hsl(216, 33%, 97%);
+  --sgbp-color-accent: #58cfe1;
+  --sgbp-color-accent-alternate: #00BDDE;
+  --sgbp-color-accent-inverted: var(--sgbp-color-white);
 
-  --sgbp-color-highlight: hsl(42, 87%, 55%);
+  --sgbp-color-highlight: #ffff71;
   --sgbp-color-highlight-inverted: var(--sgbp-color-black);
 
   --sgbp-color-success: hsl(164, 71%, 34%);

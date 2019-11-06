@@ -865,8 +865,12 @@ html {
     }
   }
 
-  // Disable grid-layout for MS IE and MS Edge in print view to avoid
-  // printing issues (Bug Report: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11961322/)
+  // Disable grid-layout for MS IE, MS Edge and Firefox in print view to avoid
+  // printing issues
+  // Bug Reports:
+  // - https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11961322/
+  // - https://bugzilla.mozilla.org/show_bug.cgi?id=258397
+  //
   // sass-lint:disable no-vendor-prefixes
   @media #{$sgbp-print-only} {
     // Edge:
@@ -876,6 +880,11 @@ html {
 
     // IE 10 and 11:
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      display: block;
+    }
+
+    // Firefox
+    @-moz-document url-prefix() {
       display: block;
     }
   }

@@ -6,6 +6,7 @@ html {
   --sgbp-profileImage-size-s: 40px;
   --sgbp-profileImage-size-m: 95px;
   --sgbp-profileImage-size-l: 140px;
+  --sgbp-profileImage-size-xl: 300px;
 }
 
 .sgbp-profileImage {
@@ -47,5 +48,11 @@ html {
   &--sizeL &__image {
     width: var(--sgbp-profileImage-size-l);
     height: var(--sgbp-profileImage-size-l);
+  }
+
+  &--sizeXL,
+  &--sizeXL &__image {
+    width: var(--sgbp-profileImage-size-xl);
+    height: var(--sgbp-profileImage-size-xl);
   }
 }

@@ -13,3 +13,6 @@
     <div class="sgbp-profileImage sgbp-profileImage--inline sgbp-profileImage--sizeL">
       <img src="http://lorempixel.com/500/500/people" alt="Profile image for [NAME]" class="sgbp-profileImage__image">
     </div>
+    <div class="sgbp-profileImage sgbp-profileImage--inline sgbp-profileImage--sizeXL">
+      <img src="http://lorempixel.com/500/500/people" alt="Profile image for [NAME]" class="sgbp-profileImage__image">
+    </div>

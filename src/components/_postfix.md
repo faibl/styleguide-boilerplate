@@ -9,7 +9,7 @@ The modifiers `sgbp-postfix--gutters` or `sgbp-postfix--bigGutters` add spacing 
     @example
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-row">
         <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <button class="sgbp-postfix__fixed sgbp-button sgbp-headline--accent" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
+        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
     </div>
 
 ### Postfix (as Prefix)
@@ -18,7 +18,7 @@ By changing the order of the `sgbp-postfix__fixed` and `sgbp-postfix__fluid` ele
 
     @example
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-row">
-        <button class="sgbp-postfix__fixed sgbp-button sgbp-headline--accent" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
+        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
         <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
     </div>
 
@@ -27,7 +27,7 @@ By changing the order of the `sgbp-postfix__fixed` and `sgbp-postfix__fluid` ele
     @example
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--tiny-stacked">
         <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <button class="sgbp-postfix__fixed sgbp-button sgbp-headline--accent" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
+        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
     </div>
 
 ### Postfix (Stacked on small and tiny screens)
@@ -35,7 +35,7 @@ By changing the order of the `sgbp-postfix__fixed` and `sgbp-postfix__fluid` ele
     @example
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--small-stacked">
         <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <button class="sgbp-postfix__fixed sgbp-button sgbp-headline--accent" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
+        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
     </div>
 
 ### Postfix (Stacked on medium and smaller screens)
@@ -43,7 +43,7 @@ By changing the order of the `sgbp-postfix__fixed` and `sgbp-postfix__fluid` ele
     @example
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--medium-stacked">
         <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <button class="sgbp-postfix__fixed sgbp-button sgbp-headline--accent" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
+        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
     </div>
 
 ### Postfix (center)

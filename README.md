@@ -42,7 +42,7 @@ http://faibl.github.com/styleguide-boilerplate
 ## Install
 
 ```
-git clone https://github.com/faibl/styleguide-boilerplate
+git clone https://github.com/faibl/styleguide-boilerplate styleguide
 cd styleguide
 rm -Rf .git
 npm install

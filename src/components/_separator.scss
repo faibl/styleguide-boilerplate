@@ -9,24 +9,6 @@
 
   background-color: var(--sgbp-color-gray-medium);
 
-  &--accent {
-    height: 1px;
-    background-color: var(--sgbp-color-accent);
-
-    &.sgbp-separator--fade {
-      background: linear-gradient(to right, transparent, var(--sgbp-color-accent), transparent);
-    }
-  }
-
-  &--highlight {
-    height: 1px;
-    background-color: var(--sgbp-color-highlight);
-
-    &.sgbp-separator--fade {
-      background: linear-gradient(to right, transparent, var(--sgbp-color-highlight), transparent);
-    }
-  }
-
   &--light {
     height: 1px;
     background-color: var(--sgbp-color-gray-light);
@@ -43,15 +25,5 @@
     &.sgbp-separator--fade {
       background: linear-gradient(to right, transparent, var(--sgbp-color-white), transparent);
     }
-  }
-
-  &--small {
-    margin-top: var(--sgbp-default-margin-small);
-    margin-bottom: var(--sgbp-default-margin-small);
-  }
-
-  &--big {
-    margin-top: var(--sgbp-default-margin-big);
-    margin-bottom: var(--sgbp-default-margin-big);
   }
 }
