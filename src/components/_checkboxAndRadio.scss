@@ -25,6 +25,8 @@ html {
   display: block;
   pointer-events: none;
 
+  color-adjust: exact !important; // force checkmark icon background image to be visible in print
+
   &--inline {
     display: inline-block;
     margin-top: 0;
