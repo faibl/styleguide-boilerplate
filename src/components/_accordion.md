@@ -12,10 +12,8 @@ On the `sgbp-accorion__item` element and on it's child `sgbp-collapsible` elemen
                     <span class="sgbp-accordion__itemHeadline">Accordion Item 1</span>
                 </div>
                 <div class="sgbp-accordion__itemHeaderRight">
-                    <div class="sgbp-accordion__itemHeaderRight">
-                        <div class="sgbp-badge sgbp-badge--highlight sgbp-col">4/17</div>
-                        <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
-                    </div>
+                    <div class="sgbp-badge sgbp-badge--highlight sgbp-col">4/17</div>
+                    <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
                 </div>
             </button>
             <div class="sgbp-collapsible">
