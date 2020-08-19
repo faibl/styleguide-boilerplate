@@ -1,0 +1,30 @@
+$sgbp-public-asset-path: '/assets' !default;
+
+/**
+ * Media Query Breakpoints:
+ */
+$sgbp-screen-small-min: 375px !default; // iPhone 6, Galaxy S6
+$sgbp-screen-medium-min: 768px !default; // iPad portrait
+$sgbp-screen-large-min: 1024px !default; // iPad landscape
+$sgbp-screen-xlarge-min: 1300px !default;
+
+// So media queries don't overlap when required, provide a maximum
+$sgbp-screen-small-max: ($sgbp-screen-medium-min - 1px);
+$sgbp-screen-medium-max: ($sgbp-screen-large-min - 1px);
+$sgbp-screen-large-max: ($sgbp-screen-xlarge-min - 1px);
+
+// helper classes for most common media query types
+$sgbp-tiny-only: 'only screen and (max-width: #{$sgbp-screen-small-min})';
+$sgbp-tiny-up: 'only screen'; /* tiny-up basically means 'every screen size' */
+$sgbp-small-only: 'only screen and (min-width: #{$sgbp-screen-small-min}) and (max-width: #{$sgbp-screen-small-max})';
+$sgbp-small-up: 'only screen and (min-width: #{$sgbp-screen-small-min})';
+$sgbp-small-down: 'only screen and (max-width: #{$sgbp-screen-small-max})';
+$sgbp-medium-only: 'only screen and (min-width: #{$sgbp-screen-medium-min}) and (max-width: #{$sgbp-screen-medium-max})';
+$sgbp-medium-up: 'only screen and (min-width: #{$sgbp-screen-medium-min})';
+$sgbp-medium-down: 'only screen and (max-width: #{$sgbp-screen-medium-max})';
+$sgbp-large-only: 'only screen and (min-width: #{$sgbp-screen-large-min}) and (max-width: #{$sgbp-screen-large-max})';
+$sgbp-large-up: 'only screen and (min-width: #{$sgbp-screen-large-min})';
+$sgbp-xlarge-only: 'only screen and (min-width: #{$sgbp-screen-xlarge-min})';
+$sgbp-xlarge-up: 'only screen and (min-width: #{$sgbp-screen-xlarge-min})';
+$sgbp-screen-only: 'only screen';
+$sgbp-print-only: 'only print';

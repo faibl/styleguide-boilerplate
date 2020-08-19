@@ -1,0 +1,116 @@
+:root {
+  --sgbp-icon-font-size: 1.5em;
+  --sgbp-icon-font-size-tiny: 1.1em;
+  --sgbp-icon-font-size-small: 1.3em;
+  --sgbp-icon-font-size-big: 2.0em;
+  --sgbp-icon-font-size-extraBig: 2.9em;
+  --sgbp-icon-circle-color: var(--sgbp-color-white);
+  --sgbp-icon-circle-backgroundColor: var(--sgbp-color-black);
+
+  @media #{$sgbp-medium-up} {
+    --sgbp-icon-font-size: 1.6em;
+    --sgbp-icon-font-size-tiny: 1.2em;
+    --sgbp-icon-font-size-small: 1.4em;
+    --sgbp-icon-font-size-big: 2.15em;
+    --sgbp-icon-font-size-extraBig: 3.15em;
+  }
+}
+
+.sgbp-icon {
+
+  --sgbp-icon-color-secondary: currentColor;
+
+  display: inline-block;
+
+  font-size: var(--sgbp-icon-font-size);
+  width: 1em;
+  height: 1em;
+
+  &[data-size="tiny"],
+  &--tiny {
+    font-size: var(--sgbp-icon-font-size-tiny);
+  }
+
+  &[data-size="small"],
+  &--small {
+    font-size: var(--sgbp-icon-font-size-small);
+  }
+
+  &[data-size="big"],
+  &--big {
+    font-size: var(--sgbp-icon-font-size-big);
+  }
+
+  &[data-size="extra-big"],
+  &--extraBig {
+    font-size: var(--sgbp-icon-font-size-extraBig);
+  }
+
+  &--accent {
+    color: var(--sgbp-color-accent);
+    --sgbp-icon-color-secondary: var(--sgbp-color-accent-inverted);
+  }
+
+  &--highlight {
+    color: var(--sgbp-color-highlight);
+    --sgbp-icon-color-secondary: var(--sgbp-color-highlight-inverted);
+  }
+
+  &--light {
+    color: var(--sgbp-color-gray);
+  }
+
+  &--warning {
+    color: var(--sgbp-color-warning);
+  }
+
+  &--error {
+    color: var(--sgbp-color-error);
+  }
+
+  &--inverted {
+    color: var(--sgbp-color-white);
+  }
+
+  &--bottom {
+    vertical-align: bottom;
+  }
+
+  &--circle {
+    border-radius: 50%;
+    padding: 2px;
+    color: var(--sgbp-icon-circle-color);
+    background: var(--sgbp-icon-circle-backgroundColor);
+
+    &.sgbp-icon--inverted {
+      color: var(--sgbp-icon-circle-backgroundColor);
+      background: var(--sgbp-icon-circle-color);
+    }
+
+    &.sgbp-icon--accent {
+      --sgbp-icon-color-secondary: var(--sgbp-color-accent);
+      color: var(--sgbp-color-accent-inverted);
+      background: var(--sgbp-color-accent);
+    }
+
+    &.sgbp-icon--highlight {
+      --sgbp-icon-color-secondary: var(--sgbp-color-highlight);
+      color: var(--sgbp-color-highlight-inverted);
+      background: var(--sgbp-color-highlight);
+    }
+
+    &.sgbp-icon--warning {
+      color: var(--sgbp-color-warning-inverted);
+      background: var(--sgbp-color-warning);
+    }
+
+    &.sgbp-icon--error {
+      color: var(--sgbp-color-error-inverted);
+      background: var(--sgbp-color-error);
+    }
+  }
+
+  &--hoverAccent {
+    @include sgbp-hover(var(--sgbp-color-accent));
+  }
+}

@@ -1,0 +1,36 @@
+:root {
+  --sgbp-pageHeader-background-color: var(--sgbp-color-accent);
+  --sgbp-pageHeader-color: var(--sgbp-color-accent-inverted);
+  --sgbp-pageHeader-border-color: var(--sgbp-color-transparent);
+}
+
+.sgbp-pageHeader {
+  display: block;
+  height: var(--sgbp-pageLayout-header-height);
+  border-bottom: 1px solid var(--sgbp-pageHeader-border-color);
+  background-color: var(--sgbp-pageHeader-background-color);
+  color: var(--sgbp-pageHeader-color);
+
+  &__inner {
+    height: var(--sgbp-pageLayout-header-height);
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--sgbp-page-max-width);
+  }
+
+  &__section {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-left: var(--sgbp-default-margin-small);
+    padding-right: var(--sgbp-default-margin-small);
+  }
+
+  &--fullWidth &__inner {
+    max-width: none;
+  }
+}

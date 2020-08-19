@@ -1,0 +1,32 @@
+:root {
+  --sgbp-indicator-color-highlight: var(--sgbp-color-highlight);
+  --sgbp-indicator-size: 0.7em;
+  --sgbp-indicator-radius: 50%;
+}
+
+.sgbp-indicator {
+  display: inline-block;
+  width: var(--sgbp-indicator-size);
+  height: var(--sgbp-indicator-size);
+  border-radius: var(--sgbp-indicator-radius);
+
+  background-color: var(--sgbp-color-gray-medium);
+
+  &.is-highlight {
+    background-color: var(--sgbp-indicator-color-highlight);
+  }
+
+  &.is-success,
+  &.is-on {
+    background-color: var(--sgbp-color-success);
+  }
+
+  &.is-warning {
+    background-color: var(--sgbp-color-warning);
+  }
+
+  &.is-error,
+  &.is-off {
+    background-color: var(--sgbp-color-error);
+  }
+}

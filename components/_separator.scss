@@ -1,0 +1,31 @@
+.sgbp-separator {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 1px;
+
+  margin-top: var(--sgbp-default-margin);
+  margin-bottom: var(--sgbp-default-margin);
+
+  background-color: var(--sgbp-color-gray-medium);
+
+  &--light {
+    background-color: var(--sgbp-color-gray-light);
+
+    &.sgbp-separator--fade {
+      background: linear-gradient(to right, transparent, var(--sgbp-color-accent), transparent);
+    }
+  }
+
+  &--invisible {
+    background-color: var(--sgbp-color-transparent);
+  }
+
+  &--white {
+    background-color: var(--sgbp-color-white);
+
+    &.sgbp-separator--fade {
+      background: linear-gradient(to right, transparent, var(--sgbp-color-white), transparent);
+    }
+  }
+}

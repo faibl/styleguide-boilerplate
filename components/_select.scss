@@ -1,0 +1,46 @@
+.sgbp-select {
+  @extend .sgbp-input; // sass-lint:disable-line placeholder-in-extend
+
+  &--inline {
+    display: inline-flex;
+    width: auto;
+  }
+
+  &[size] {
+    padding: 0;
+    height: auto;
+  }
+
+  &[size] &__option {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    height: var(--sgbp-input-height);
+  }
+
+  &:not([size]),
+  &[size='1'] {
+    appearance: none;
+    height: var(--sgbp-input-height);
+    padding-right: 2.1rem;
+    background-position: right -53px top -16px;
+    background-repeat: no-repeat;
+    background-size: 6rem 3.7rem;
+    background-image: url('#{$sgbp-public-asset-path}/images/bg_select.svg');
+
+    // sass-lint:disable no-vendor-prefixes
+    &::-ms-expand {
+      display: none;
+    }
+    // sass-lint:enable no-vendor-prefixes
+  }
+
+  @media only screen and (pointer: coarse) {
+    // we assume a mobile device that does not support expanded select lists but instead
+    // displays a single-line select list and provides the options in a native overlay control when clicked
+    // thus we need to undo some custom styling for expanded select lists
+    &[size]:not([size='1']) {
+      height: var(--sgbp-input-height);
+    }
+  }
+}

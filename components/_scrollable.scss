@@ -1,0 +1,25 @@
+// sass-lint:disable no-vendor-prefixes
+.sgbp-scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+
+  &--scrollbars {
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background-color: var(--sgbp-color-gray-medium);
+    }
+
+    &::-webkit-scrollbar-thumb:vertical {
+      background-color: var(--sgbp-color-highlight);
+    }
+  }
+
+  &--default {
+    max-height: 8.75rem;
+  }
+}

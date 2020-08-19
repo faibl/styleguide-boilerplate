@@ -1,0 +1,72 @@
+@mixin kgrDefinitionListWidth($_width) {
+  $_minScreenWidthInPx: #{($_width + 100)}px;
+  $_widthInPx: #{$_width}px;
+
+  @media all and (min-width: #{$_minScreenWidthInPx}) {
+    .sgbp-definitionList--horizontal.sgbp-definitionList--#{$_width} {
+      .sgbp-definitionList__term {
+        flex-basis: $_widthInPx;
+      }
+
+      .sgbp-definitionList__definition {
+        flex-basis: calc(100% - #{$_widthInPx} - var(--sgbp-default-margin));
+
+        & + .sgbp-definitionList__definition {
+          margin-left: calc(#{$_widthInPx} + var(--sgbp-default-margin));
+        }
+      }
+    }
+  }
+}
+
+@include kgrDefinitionListWidth(50);
+@include kgrDefinitionListWidth(75);
+@include kgrDefinitionListWidth(100);
+@include kgrDefinitionListWidth(125);
+@include kgrDefinitionListWidth(150);
+@include kgrDefinitionListWidth(175);
+@include kgrDefinitionListWidth(200);
+@include kgrDefinitionListWidth(250);
+
+.sgbp-definitionList {
+  &__term {
+    @include sgbp-uppercase;
+    margin-bottom: 0.6rem;
+    //font-weight: bold;
+    font-size: calc(var(--sgbp-font-size-text) * 0.9);
+    color: var(--sgbp-color-gray);
+  }
+
+  .sgbp-definitionList__definition {
+    margin-bottom: 1.4em;
+
+    & + .sgbp-definitionList__definition {
+      margin-top: -0.8em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+
+    .sgbp-definitionList__term {
+      @include sgbp-truncateLine;
+      flex: 1 0 auto;
+      margin-right: var(--sgbp-default-margin);
+    }
+
+    .sgbp-definitionList__definition {
+      flex: 1 0 auto;
+      margin-bottom: 15px;
+
+      & + .sgbp-definitionList__definition {
+        margin-left: 154px;
+      }
+    }
+  }
+
+}

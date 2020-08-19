@@ -1,0 +1,171 @@
+:root {
+  --sgbp-card-padding: var(--sgbp-default-margin);
+  --sgbp-card-border-color: var(--sgbp-color-gray-medium);
+  --sgbp-card-name-font-size: calc(1.867 * var(--sgbp-font-size-text));
+  --sgbp-card-name-font-weight: bold;
+  --sgbp-card-name-font-color: var(--sgbp-color-gray-medium);
+  --sgbp-card-subtitle-font-size: 16px;
+  --sgbp-card-subtitle-font-weight: bold;
+  --sgbp-card-subtitle-font-color: var(--sgbp-color-gray);
+  --sgbp-card-contents-font-size: var(--sgbp-font-size-text);
+  --sgbp-card-name-small-font-size: 20px;
+  --sgbp-card-status-green: #4caf50; // sass-lint:disable-line no-color-literals
+  --sgbp-card-status-yellow: #ffc107; // sass-lint:disable-line no-color-literals
+  --sgbp-card-status-red: #f44336; // sass-lint:disable-line no-color-literals
+}
+
+.sgbp-card {
+  @include sgbp-roundedEdges();
+  display: flex;
+  position: relative;
+  flex: 1 1 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  border: 1px solid var(--sgbp-card-border-color);
+  text-align: center;
+
+  &__status {
+    position: absolute;
+    top: 0;
+    left: var(--sgbp-card-padding);
+    padding: 10px 6px;
+    font-size: 22px;
+
+    color: var(--sgbp-color-white);
+
+    background-color: var(--sgbp-color-gray);
+
+    &--green {
+      background-color: var(--sgbp-card-status-green);
+    }
+
+    &--yellow {
+      background-color: var(--sgbp-card-status-yellow);
+    }
+
+    &--red {
+      background-color: var(--sgbp-card-status-red);
+    }
+  }
+
+  &__image {
+    margin-top: var(--sgbp-default-margin);
+
+    &--full {
+      margin-top: 0;
+    }
+
+    &--4to3,
+    &--16to9,
+    &--95to64 {
+      overflow: hidden;
+      height: 0;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: var(--sgbp-color-gray-lighter);
+    }
+
+    &--4to3 {
+      padding-top: 3 / 4 * 100%;
+    }
+
+    &--16to9 {
+      padding-top: 9 / 16 * 100%;
+    }
+
+    &--95to64 {
+      padding-top: 64 / 95 * 100%;
+    }
+
+    &--cover {
+      background-size: cover;
+    }
+
+    &--contain {
+      background-size: contain;
+    }
+  }
+
+  &__subtitle,
+  &__name {
+    margin-top: var(--sgbp-default-margin);
+    padding-left: var(--sgbp-card-padding);
+    padding-right: var(--sgbp-card-padding);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__subtitle {
+    font-size: var(--sgbp-card-subtitle-font-size);
+    font-weight: var(--sgbp-card-subtitle-font-weight);
+    color: var(--sgbp-card-subtitle-font-color);
+    text-transform: uppercase;
+  }
+
+  &__subtitle + &__name {
+    margin-top: var(--sgbp-default-margin-small);
+    color: var(--sgbp-color-accent);
+  }
+
+  &__name {
+    font-size: var(--sgbp-card-name-font-size);
+    font-weight: var(--sgbp-card-name-font-weight);
+    color: var(--sgbp-card-name-font-color);
+
+    &--small {
+      font-size: var(--sgbp-card-name-small-font-size);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 5px;
+      margin-right: auto;
+      margin-left: auto;
+      height: 1px;
+      width: 50px;
+      max-width: 40%;
+      background-color: var(--sgbp-card-name-font-color);
+    }
+
+    &--noSeparator::after {
+      display: none;
+    }
+  }
+
+  &__contents {
+    flex: 1 1 auto;
+    margin-top: var(--sgbp-default-margin);
+    padding-left: var(--sgbp-card-padding);
+    padding-right: var(--sgbp-card-padding);
+    font-size: var(--sgbp-card-contents-font-size);
+    margin-bottom: var(--sgbp-default-margin);
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  &__footerFullButton {
+    border-radius: 0 !important; // sass-lint:disable-line no-important
+  }
+
+  &__footerContents {
+    border-top: 1px solid var(--sgbp-color-gray-light);
+    margin-left: var(--sgbp-card-padding);
+    margin-right: var(--sgbp-card-padding);
+    padding-top: var(--sgbp-default-margin-tiny);
+    padding-bottom: var(--sgbp-default-margin-tiny);
+    font-weight: bold;
+    color: var(--sgbp-color-gray);
+    text-align: left;
+  }
+
+  &--unobtrusive {
+    border: none;
+  }
+}

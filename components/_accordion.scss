@@ -1,0 +1,70 @@
+// sass-lint:disable nesting-depth
+
+:root {
+  --sgbp-accordion-itemHeadline-font-size: calc(var(--sgbp-font-size-text) * 1.2);
+}
+
+.sgbp-accordion {
+  &__item {
+    margin-bottom: 0.8rem;
+
+    &Header {
+      @include sgbp-hover(var(--sgbp-color-accent));
+      display: flex;
+      width: 100%;
+      align-items: center;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+
+        .sgbp-accordion__itemIcon {
+          border-radius: 50%;
+          color: var(--sgbp-color-black);
+          background: var(--sgbp-color-gray-medium);
+        }
+      }
+
+      &Left {
+        flex: 1 1 auto;
+      }
+
+      &Right {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &Icon {
+      padding: 2px;
+      transition: transform 0.3s ease-out;
+    }
+
+    &Headline {
+      font-size: var(--sgbp-accordion-itemHeadline-font-size);
+    }
+
+    &Content {
+      padding-top: 1rem;
+      padding-bottom: 1.75rem;
+    }
+
+    &.is-open {
+      > .sgbp-accordion__itemHeader {
+        //.sgbp-accordion__itemHeadline {
+        //  font-weight: bold;
+        //}
+
+        .sgbp-accordion__itemIcon {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &--last,
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

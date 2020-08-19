@@ -1,0 +1,90 @@
+:root {
+  --sgbp-inputGroup-label-color: var(--sgbp-color-gray);
+  --sgbp-inputGroup-label-text-transform: uppercase;
+  --sgbp-inputGroup-label-font-size: calc(var(--sgbp-font-size-text) * 0.9);
+  --sgbp-inputGroup-label-font-weight: normal;
+
+  --sgbp-inputGroup-text-color: var(--sgbp-inputGroup-label-color);
+  --sgbp-inputGroup-text-font-size: calc(var(--sgbp-inputGroup-label-font-size) * 0.9);
+  --sgbp-inputGroup-text-font-weight: normal;
+
+  --sgbp-inputGroup-error-color: var(--sgbp-color-error);
+  --sgbp-inputGroup-error-font-size: var(--sgbp-font-size-text);
+
+  --sgbp-inputGroup--constrained-max-width: 400px;
+  --sgbp-inputGroup-margin: 15px;
+  --sgbp-inputGroup-label-margin: 0;
+}
+
+.sgbp-inputGroup {
+  position: relative;
+  display: block;
+
+  &.has-errors {
+    border: 1px solid var(--sgbp-color-error);
+  }
+
+  & + & {
+    margin-top: var(--sgbp-inputGroup-margin);
+  }
+
+  &--inline {
+    display: inline-block;
+
+    margin-right: var(--sgbp-default-margin);
+    margin-bottom: var(--sgbp-inputGroup-margin);
+
+    & + & {
+      margin-top: 0;
+    }
+  }
+
+  &--constrainedWidth {
+    max-width: var(--sgbp-inputGroup--constrained-max-width);
+  }
+
+  &__label {
+    display: block;
+    margin-left: 0.1em;
+    margin-bottom: var(--sgbp-inputGroup-label-margin);
+    font-size: var(--sgbp-inputGroup-label-font-size);
+    font-weight: var(--sgbp-inputGroup-label-font-weight);
+    text-transform: var(--sgbp-inputGroup-label-text-transform);
+    color: var(--sgbp-inputGroup-label-color);
+  }
+
+  &.is-invalid &__label {
+    color: var(--sgbp-inputGroup-error-color);
+  }
+
+  &__text {
+    display: block;
+    width: 100%;
+    margin-left: 0.1em;
+    margin-bottom: 0.3em;
+    font-size: var(--sgbp-inputGroup-text-font-size);
+    font-weight: var(--sgbp-inputGroup-text-font-weight);
+    color: var(--sgbp-inputGroup-text-color);
+
+    &--error {
+      color: var(--sgbp-inputGroup-error-color);
+      font-size: var(--sgbp-inputGroup-error-font-size);
+    }
+  }
+
+  &--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .sgbp-inputGroup {
+      &__label {
+        margin-right: var(--sgbp-default-margin);
+      }
+
+      &__text {
+        order: 3;
+      }
+    }
+  }
+}

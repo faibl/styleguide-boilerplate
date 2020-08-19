@@ -1,0 +1,99 @@
+// sass-lint:disable no-important
+
+@mixin sgbp-hidden-tiny {
+  @media #{$sgbp-tiny-only} {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-tiny-up {
+  @media #{$sgbp-tiny-up}, print {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-tiny-down {
+  @include sgbp-hidden-tiny;
+}
+
+@mixin sgbp-hidden-small {
+  @media #{$sgbp-small-only} {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-small-up {
+  @media #{$sgbp-small-up}, print {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-small-down {
+  @include sgbp-hidden-small;
+  @include sgbp-hidden-tiny-down;
+}
+
+@mixin sgbp-hidden-medium {
+  @media #{$sgbp-medium-only} {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-medium-up {
+  @media #{$sgbp-medium-up}, print {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-medium-down {
+  @include sgbp-hidden-medium;
+  @include sgbp-hidden-small-down;
+}
+
+@mixin sgbp-hidden-large {
+  @media #{$sgbp-large-only}, print {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-large-up {
+  @media #{$sgbp-large-up}, print {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-large-down {
+  @include sgbp-hidden-large;
+  @include sgbp-hidden-medium-down;
+}
+
+@mixin sgbp-hidden-xlarge {
+  @media #{$sgbp-xlarge-only} {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-xlarge-up {
+  @media #{$sgbp-xlarge-up} {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-xlarge-down {
+  @include sgbp-hidden-xlarge;
+  @include sgbp-hidden-large-down;
+}
+
+@mixin sgbp-hidden-print {
+  @media #{$sgbp-print-only} {
+    display: none !important;
+  }
+}
+
+@mixin sgbp-hidden-screen {
+  @media #{$sgbp-screen-only} {
+    display: none !important;
+  }
+}
+
+// scss-lint:enable no-important

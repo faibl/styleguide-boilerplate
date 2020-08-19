@@ -1,0 +1,82 @@
+.sgbp-text {
+  &--centered {
+    text-align: center;
+  }
+
+  &--rightAligned {
+    text-align: right;
+  }
+
+  &--leftAligned {
+    text-align: left;
+  }
+
+  &--bold {
+    @include sgbp-bold;
+  }
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--uppercase {
+    @include sgbp-uppercase;
+  }
+
+  &--underlined {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  &--forceWrap {
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  &--noWrap {
+    white-space: nowrap;
+  }
+
+  &--truncated {
+    @include sgbp-truncateLine;
+  }
+
+  &--large,
+  &--big {
+    font-size: 1.19em;
+  }
+
+  &--extraLarge,
+  &--extraBig {
+    font-size: 1.5em;
+  }
+
+  &--small {
+    font-size: 0.9em;
+  }
+
+  &--extraSmall {
+    font-size: 0.9em;
+    font-weight: 300;
+  }
+
+  &--rtl {
+    direction: rtl;
+  }
+
+  &--ltr {
+    direction: ltr;
+  }
+
+  &--preserveLineBreaks {
+    white-space: pre-line;
+  }
+}

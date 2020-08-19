@@ -1,0 +1,136 @@
+:root {
+  --sgbp-offCanvas-backdrop-backgroundColor: var(--sgbp-color-darken-light);
+}
+
+@mixin sgbp-offCanvas-forceOn($breakpoint) {
+  @media #{$breakpoint} {
+    display: flex;
+
+    .sgbp-offCanvas {
+      &__off {
+        flex: 0 1 auto;
+        flex-direction: row;
+        position: static;
+        transform: none;
+        z-index: auto;
+
+        &--left {
+          order: 1;
+        }
+
+        &--right {
+          order: 3;
+        }
+
+        &--bottom {
+          flex: 1 0 100%;
+          order: 4;
+        }
+      }
+
+      &__on {
+        flex: 1 1 auto;
+        order: 2;
+      }
+    }
+  }
+}
+
+.sgbp-offCanvas {
+  position: relative;
+
+  &__toggle {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000; // manually set z-index to overcome ignored calculated z-index in IE
+    z-index: calc(var(--sgbp-offCanvas-z-index) + 1); // sass-lint:disable-line no-duplicate-properties
+  }
+
+  &__on {
+    height: 100%;
+  }
+
+  &__off {
+    position: absolute;
+    z-index: var(--sgbp-offCanvas-z-index);
+    will-change: transform;
+    transition: transform 300ms;
+
+    &--fixed {
+      position: fixed;
+    }
+
+    &--left {
+      transform: translateX(-100%);
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      height: auto;
+
+      .sgbp-offCanvas__toggle {
+        left: 100%;
+        top: 0;
+      }
+    }
+
+    &--right {
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      min-height: 100%;
+      height: auto;
+    }
+
+    &--bottom {
+      left: 0;
+      right: 0;
+      top: 100%;
+      width: 100%;
+    }
+  }
+
+  &__backdrop {
+    pointer-events: none;
+    position: absolute;
+    z-index: 998; // manually set z-index to overcome ignored calculated z-index in IE
+    z-index: calc(var(--sgbp-offCanvas-z-index) - 1); // sass-lint:disable-line no-duplicate-properties
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    will-change: opactiy;
+    transition: opacity 300ms;
+    background-color: var(--sgbp-offCanvas-backdrop-backgroundColor);
+  }
+
+  &.is-open-left > &__off--left,
+  &.is-open-right > &__off--right {
+    transform: translateX(0);
+  }
+
+  &.is-open-bottom > &__off--bottom {
+    transform: translateY(-100%);
+  }
+
+  &.is-open-left > &__backdrop,
+  &.is-open-right > &__backdrop,
+  &.is-open-bottom > &__backdrop {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &--safeArea &__off--left,
+  &--safeArea &__off--right {
+    padding-top: constant(safe-area-inset-top); /* iOS 11.0 notch */
+    padding-top: env(safe-area-inset-top); /* iOS 11.2 notch */
+  }
+
+  &--on-medium-up {
+    @include sgbp-offCanvas-forceOn($sgbp-medium-up);
+  }
+
+  &--on-large-up {
+    @include sgbp-offCanvas-forceOn($sgbp-large-up);
+  }
+}
