@@ -44,7 +44,7 @@
   }
 
   &--extraMargin &__input {
-    padding-right: 2.2em !important;
+    padding-right: 2.2em !important; // sass-lint:disable-line no-important
   }
 
   &--extraMargin &__icon {
@@ -52,11 +52,11 @@
   }
 
   &--select &__input {
-    padding-right: 3.3em !important;
+    padding-right: 3.3em !important; // sass-lint:disable-line no-important
   }
 
   &--textarea &__input {
-    padding-right: 0.2em !important;
+    padding-right: 0.2em !important; // sass-lint:disable-line no-important
   }
 
   &--textarea &__icon {

@@ -1,11 +1,10 @@
-html {
+:root {
   --sgbp-loading-container-dialog-background: var(--sgbp-color-transparent);
   --sgbp-loading-container-blocking-background: var(--sgbp-color-lighten);
 }
 
 .sgbp-loadingContainer {
   position: relative;
-  display: block;
   min-height: 40px;
 
   &__loader {
@@ -36,8 +35,6 @@ html {
 
   &__loadingIndicator {
     display: none;
-    width: 25px;
-    height: 25px;
     float: left;
   }
 

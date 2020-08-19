@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-col-margin: 14px;
   --sgbp-col-margin-small: 8px;
   --sgbp-col-margin-big: 28px;
@@ -36,6 +36,15 @@ html {
   &--inverse {
     margin-right: 0;
     margin-left: var(--sgbp-col-margin);
+
+
+    &.sgbp-col--smallMargin {
+      margin-left: var(--sgbp-col-margin-small);
+    }
+
+    &.sgbp-col--bigMargin {
+      margin-left: var(--sgbp-col-margin-big);
+    }
 
     &.sgbp-col--withSeparator {
       padding-right: 0;

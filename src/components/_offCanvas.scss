@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-offCanvas-backdrop-backgroundColor: var(--sgbp-color-darken-light);
 }
 
@@ -12,6 +12,7 @@ html {
         flex-direction: row;
         position: static;
         transform: none;
+        z-index: auto;
 
         &--left {
           order: 1;
@@ -42,7 +43,7 @@ html {
     cursor: pointer;
     position: absolute;
     z-index: 1000; // manually set z-index to overcome ignored calculated z-index in IE
-    z-index: calc(var(--sgbp-offCanvas-z-index) + 1);
+    z-index: calc(var(--sgbp-offCanvas-z-index) + 1); // sass-lint:disable-line no-duplicate-properties
   }
 
   &__on {
@@ -92,7 +93,7 @@ html {
     pointer-events: none;
     position: absolute;
     z-index: 998; // manually set z-index to overcome ignored calculated z-index in IE
-    z-index: calc(var(--sgbp-offCanvas-z-index) - 1);
+    z-index: calc(var(--sgbp-offCanvas-z-index) - 1); // sass-lint:disable-line no-duplicate-properties
     top: 0;
     right: 0;
     bottom: 0;
@@ -117,6 +118,12 @@ html {
   &.is-open-bottom > &__backdrop {
     opacity: 1;
     pointer-events: all;
+  }
+
+  &--safeArea &__off--left,
+  &--safeArea &__off--right {
+    padding-top: constant(safe-area-inset-top); /* iOS 11.0 notch */
+    padding-top: env(safe-area-inset-top); /* iOS 11.2 notch */
   }
 
   &--on-medium-up {

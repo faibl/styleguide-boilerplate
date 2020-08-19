@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-pageHeader-background-color: var(--sgbp-color-accent);
   --sgbp-pageHeader-color: var(--sgbp-color-accent-inverted);
   --sgbp-pageHeader-border-color: var(--sgbp-color-transparent);
@@ -28,5 +28,9 @@ html {
     align-items: center;
     padding-left: var(--sgbp-default-margin-small);
     padding-right: var(--sgbp-default-margin-small);
+  }
+
+  &--fullWidth &__inner {
+    max-width: none;
   }
 }

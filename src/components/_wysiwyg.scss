@@ -42,4 +42,8 @@
   ol {
     @extend .sgbp-list--numbered;
   }
+
+  ul, ol {
+    margin-top: var(--sgbp-default-margin-small);
+  }
 }

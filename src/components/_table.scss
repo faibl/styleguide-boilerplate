@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-table-color-background: var(--sgbp-color-white);
   --sgbp-table-headline-color-background: var(--sgbp-color-gray-medium);
   --sgbp-table-headline-color: var(--sgbp-color-white);
@@ -8,7 +8,7 @@ html {
   --sgbp-table-highlight-color: var(--sgbp-color-white);
   --sgbp-table-border-color: var(--sgbp-color-white);
   --sgbp-table-bordered-border-color: var(--sgbp-color-gray);
-  --sgbp-table-striped-background-color: #e4eaee;
+  --sgbp-table-striped-background-color: #e4eaee; // sass-lint:disable-line no-color-literals
   --sgbp-table-hover-background-color: var(--sgbp-color-gray-light);
   --sgbp-table-hover-border-color: var(--sgbp-color-gray-lighter);
   --sgbp-table-separator-color: var(--sgbp-color-gray);
@@ -16,99 +16,6 @@ html {
   --sgbp-table-font-size-compact: 0.9;
   --sgbp-table-cell-vertical-align: top;
   --sgbp-table-cell-actions-alignment: left;
-}
-
-@mixin responsiveTable($_mediaQuery) {
-  @media #{$_mediaQuery} {
-    &,
-    & .sgbp-table__row,
-    & .sgbp-table__cell,
-    & tbody {
-      display: block;
-    }
-
-    & {
-      border-right: none;
-    }
-
-    /* Hide table headers (but not display: none;, for accessibility) */
-    & thead {
-      position: absolute;
-      top: -999rem;
-      left: -999rem;
-    }
-
-    & .sgbp-table__row {
-      padding-top: 0.8rem;
-      padding-bottom: 0.8rem;
-      border-bottom: 2px solid var(--sgbp-color-gray);
-
-      &:first-child {
-        border-top: 2px solid var(--sgbp-color-gray);
-      }
-    }
-
-    & .sgbp-table__cell {
-      /* Behave  like a "row" */
-      display: flex;
-      align-items: flex-start;
-      border: none;
-      border-bottom: 1px solid var(--sgbp-color-gray-light);
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      &::before {
-        content: attr(data-sgbp-th);
-        flex-basis: 35%;
-        flex-shrink: 0;
-        margin-right: 1em;
-        text-align: right;
-        font-weight: bold;
-      }
-
-      &--headline::before {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
-
-      &--contentAsResponsiveHeadline {
-        display: block;
-        font-size: 1.2em;
-        font-weight: bold;
-        padding-left: 0.3rem;
-
-        &.sgbp-table__cell--headline {
-          text-align: left;
-          border-bottom: none;
-          margin-bottom: 1rem;
-        }
-
-        &::before {
-          display: none;
-        }
-      }
-
-      &--noResponsiveHeadline {
-        display: block;
-        padding-left: 0.3rem;
-
-        &.sgbp-table__cell--headline {
-          border-bottom: none;
-          margin-bottom: 1rem;
-        }
-
-        &::before {
-          display: none;
-        }
-      }
-
-      &--centered {
-        text-align: left; /* do not center in responsive mode */
-      }
-    }
-  }
 }
 
 .sgbp-tableWrapper {
@@ -174,14 +81,11 @@ html {
   &--separatorBottom > .sgbp-table__cell {
     border-bottom: 1px solid var(--sgbp-table-separator-color);
   }
-  &--separatorBottom > .sgbp-table__cell {
-    border-bottom: 1px solid var(--sgbp-table-separator-color);
-  }
 
   &.is-highlight > .sgbp-table__cell,
   &--highlight > .sgbp-table__cell {
-    background-color: var(--sgbp-table-highlight-color-background) !important;
-    color: var(--sgbp-table-highlight-color) !important;
+    background-color: var(--sgbp-table-highlight-color-background) !important; // sass-lint:disable-line no-important
+    color: var(--sgbp-table-highlight-color) !important; // sass-lint:disable-line no-important
   }
 }
 
@@ -228,8 +132,8 @@ html {
   }
 
   &--highlight {
-    background-color: var(--sgbp-table-highlight-color-background) !important;
-    color: var(--sgbp-table-highlight-color) !important;
+    background-color: var(--sgbp-table-highlight-color-background) !important; // sass-lint:disable-line no-important
+    color: var(--sgbp-table-highlight-color) !important; // sass-lint:disable-line no-important
   }
 
   &--numeric {
@@ -306,7 +210,7 @@ html {
     &__cell--headline {
       white-space: nowrap;
       text-overflow: ellipsis;
-      overflow: hidden
+      overflow: hidden;
     }
 
     &--bordered > tr > .sgbp-table__cell,
@@ -314,12 +218,4 @@ html {
       border-color: var(--sgbp-color-black) !important; // sass-lint:disable-line no-important
     }
   }
-}
-
-.sgbp-table--responsiveMediumDown {
-  @include responsiveTable($sgbp-medium-down);
-}
-
-.sgbp-table--responsiveSmallDown {
-  @include responsiveTable($sgbp-small-down);
 }

@@ -8,11 +8,15 @@
   }
 
   &--leftAligned {
-    text-align: right;
+    text-align: left;
   }
 
   &--bold {
     @include sgbp-bold;
+  }
+
+  &--light {
+    font-weight: 300;
   }
 
   &--italic {
@@ -70,5 +74,9 @@
 
   &--ltr {
     direction: ltr;
+  }
+
+  &--preserveLineBreaks {
+    white-space: pre-line;
   }
 }

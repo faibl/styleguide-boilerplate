@@ -1,8 +1,10 @@
-html {
+:root {
   --sgbp-tab-header-distance: var(--sgbp-default-margin-big);
   --sgbp-tab-header-padding-top: 10px;
   --sgbp-tab-header-sides: 0;
   --sgbp-tab-header-padding-bottom: var(--sgbp-default-margin-small);
+  --sgbp-tab-header-font-size: var(--sgbp-font-size-base);
+  --sgbp-tab-header-text-transform: none;
   --sgbp-tab-header-font-weight: bold;
   --sgbp-tab-header-font-weight-hover: var(--sgbp-tab-header-font-weight);
   --sgbp-tab-header-font-weight-active: var(--sgbp-tab-header-font-weight-hover);
@@ -34,6 +36,8 @@ html {
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: center;
+    font-size: var(--sgbp-tab-header-font-size);
+    text-transform: var(--sgbp-tab-header-text-transform);
     font-weight: var(--sgbp-tab-header-font-weight);
     color: var(--sgbp-tab-header-color);
 
@@ -74,6 +78,12 @@ html {
       }
       // scss-lint:enable NestingDepth
     }
+  }
+
+  &__badge {
+    position: relative;
+    top: -1px;
+    margin-left: 5px;
   }
 
   &__content {

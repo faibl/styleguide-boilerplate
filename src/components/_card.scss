@@ -1,7 +1,7 @@
-html {
+:root {
   --sgbp-card-padding: var(--sgbp-default-margin);
   --sgbp-card-border-color: var(--sgbp-color-gray-medium);
-  --sgbp-card-name-font-size: 28px;
+  --sgbp-card-name-font-size: calc(1.867 * var(--sgbp-font-size-text));
   --sgbp-card-name-font-weight: bold;
   --sgbp-card-name-font-color: var(--sgbp-color-gray-medium);
   --sgbp-card-subtitle-font-size: 16px;
@@ -9,6 +9,9 @@ html {
   --sgbp-card-subtitle-font-color: var(--sgbp-color-gray);
   --sgbp-card-contents-font-size: var(--sgbp-font-size-text);
   --sgbp-card-name-small-font-size: 20px;
+  --sgbp-card-status-green: #4caf50; // sass-lint:disable-line no-color-literals
+  --sgbp-card-status-yellow: #ffc107; // sass-lint:disable-line no-color-literals
+  --sgbp-card-status-red: #f44336; // sass-lint:disable-line no-color-literals
 }
 
 .sgbp-card {
@@ -34,15 +37,15 @@ html {
     background-color: var(--sgbp-color-gray);
 
     &--green {
-      background-color: #4caf50;
+      background-color: var(--sgbp-card-status-green);
     }
 
     &--yellow {
-      background-color: #ffc107;
+      background-color: var(--sgbp-card-status-yellow);
     }
 
     &--red {
-      background-color: #f44336;
+      background-color: var(--sgbp-card-status-red);
     }
   }
 
@@ -148,7 +151,7 @@ html {
   }
 
   &__footerFullButton {
-    border-radius: 0 !important;
+    border-radius: 0 !important; // sass-lint:disable-line no-important
   }
 
   &__footerContents {

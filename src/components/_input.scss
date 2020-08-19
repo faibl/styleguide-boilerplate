@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-input-error-color: var(--sgbp-color-error);
   --sgbp-input-valid-color: var(--sgbp-color-success);
 
@@ -63,8 +63,8 @@ html {
   }
 
   &.is-invalid,
-  &.ng-touched.ng-invalid {
-    border-color: var(--sgbp-color-error) !important;
+  &:not(.is-ignore-invalid-touched).ng-touched.ng-invalid {
+    border-color: var(--sgbp-color-error) !important; // sass-lint:disable-line no-important
   }
 
   &--inline {
@@ -84,7 +84,7 @@ html {
 // sass-lint:disable no-qualifying-elements
 textarea.sgbp-input {
   height: auto;
-  min-height: 3.5em;
+  min-height: 7em;
 }
 // sass-lint:enable no-qualifying-elements
 

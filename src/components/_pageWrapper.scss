@@ -5,4 +5,9 @@
   &--fullWidth {
     max-width: unset;
   }
+
+  &--centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

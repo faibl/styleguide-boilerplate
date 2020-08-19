@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-inputGroup-label-color: var(--sgbp-color-gray);
   --sgbp-inputGroup-label-text-transform: uppercase;
   --sgbp-inputGroup-label-font-size: calc(var(--sgbp-font-size-text) * 0.9);
@@ -51,6 +51,10 @@ html {
     font-weight: var(--sgbp-inputGroup-label-font-weight);
     text-transform: var(--sgbp-inputGroup-label-text-transform);
     color: var(--sgbp-inputGroup-label-color);
+  }
+
+  &.is-invalid &__label {
+    color: var(--sgbp-inputGroup-error-color);
   }
 
   &__text {

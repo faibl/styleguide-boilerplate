@@ -1,6 +1,6 @@
-html {
-  --sgbp-badge-background-color-default: var(--sgbp-color-gray-lighter);
-  --sgbp-badge-color-default: var(--sgbp-color-black);
+:root {
+  --sgbp-badge-background-color-default: var(--sgbp-color-gray-medium);
+  --sgbp-badge-color-default: var(--sgbp-color-white);
   --sgbp-badge-background-color-info: var(--sgbp-color-gray-light);
   --sgbp-badge-color-info: var(--sgbp-color-black);
   --sgbp-badge-background-color-warning: var(--sgbp-color-warning);
@@ -12,6 +12,7 @@ html {
   --sgbp-badge-border-radius: 2px;
   --sgbp-badge-height: 1.5em;
   --sgbp-badge-horizontal-padding: 0.9em;
+  --sgbp-badge-font-size: calc(0.86 * var(--sgbp-font-size-text));
 }
 
 .sgbp-badge {
@@ -23,10 +24,10 @@ html {
   height: var(--sgbp-badge-height);
 
   border-radius: var(--sgbp-badge-border-radius);
-  font-size: 12px;
+  font-size: var(--sgbp-badge-font-size);
   font-weight: bold;
 
-  color: var(--sgbp-badge-color-default) !important;
+  color: var(--sgbp-badge-color-default) !important; // sass-lint:disable-line no-important
   background: var(--sgbp-badge-background-color-default);
 
   transition: color 300ms, background-color 300ms;
@@ -37,32 +38,36 @@ html {
   }
 
   &--accent {
-    color: var(--sgbp-color-accent-inverted) !important;
+    color: var(--sgbp-color-accent-inverted) !important; // sass-lint:disable-line no-important
     background: var(--sgbp-color-accent);
   }
 
   &--highlight {
-    color: var(--sgbp-color-highlight-inverted) !important;
+    color: var(--sgbp-color-highlight-inverted) !important; // sass-lint:disable-line no-important
     background: var(--sgbp-color-highlight);
   }
 
   &--info {
-    color: var(--sgbp-badge-color-info) !important;
+    color: var(--sgbp-badge-color-info) !important; // sass-lint:disable-line no-important
     background: var(--sgbp-badge-background-color-info);
   }
 
   &--warning {
-    color: var(--sgbp-badge-color-warning) !important;
+    color: var(--sgbp-badge-color-warning) !important; // sass-lint:disable-line no-important
     background: var(--sgbp-badge-background-color-warning);
   }
 
   &--error {
-    color: var(--sgbp-badge-color-error) !important;
+    color: var(--sgbp-badge-color-error) !important; // sass-lint:disable-line no-important
     background: var(--sgbp-badge-background-color-error);
   }
 
   &--success {
-    color: var(--sgbp-badge-color-success) !important;
+    color: var(--sgbp-badge-color-success) !important; // sass-lint:disable-line no-important
     background: var(--sgbp-badge-background-color-success);
+  }
+
+  &--big {
+    --sgbp-badge-font-size: calc(1 * var(--sgbp-font-size-text));
   }
 }

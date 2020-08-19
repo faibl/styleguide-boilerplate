@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-grid-gutter-width: 16px;
   --sgbp-grid-gutter-height: 16px;
   --sgbp-grid-gutter-width-halve: calc(var(--sgbp-grid-gutter-width) / 2);
@@ -35,6 +35,7 @@ html {
   &--vertical {
     height: 100%;
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   &--gutters {

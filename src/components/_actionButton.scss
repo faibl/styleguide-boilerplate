@@ -4,6 +4,7 @@
   --sgbp-actionButton-icon-size: 32px;
   --sgbp-actionButton-floating-z-index: 10;
 }
+
 .sgbp-actionButton {
   &__button {
     border-radius: var(--sgbp-actionButton-border-radius);
@@ -24,6 +25,12 @@
     }
   }
 
+  &--small {
+    --sgbp-actionButton-size: 40px;
+    --sgbp-actionButton-border-radius: calc(var(--sgbp-actionButton-size) / 2);
+    --sgbp-actionButton-icon-size: 20px;
+  }
+
   &--floating {
     position: fixed;
     bottom: 1rem;
@@ -35,7 +42,7 @@
     height: 100%;
     margin-right: calc(var(--sgbp-actionButton-size) * -1);
     border-radius: var(--sgbp-actionButton-border-radius);
-    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px 0 var(--sgbp-color-darken);
     padding-left: var(--sgbp-default-margin-big);
     padding-right: var(--sgbp-default-margin-big);
   }

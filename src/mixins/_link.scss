@@ -1,8 +1,8 @@
 @mixin sgbp-link($is-unobtrusive: false) {
   transition: color 0.2s ease-in-out;
-  display: inline-block;
   color: var(--sgbp-link-color);
   text-decoration: underline;
+  cursor: pointer;
 
   &:visited,
   &:active {

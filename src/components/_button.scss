@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-button-accent-color-background: var(--sgbp-color-accent);
   --sgbp-button-accent-color: var(--sgbp-color-accent-inverted);
   --sgbp-button-accent-border-color: var(--sgbp-button-accent-color-background);
@@ -44,7 +44,7 @@ html {
   --sgbp-button-icon-margin-top: -5px;
   --sgbp-button-icon-margin-bottom: -5px;
 
-  --sgbp-button-hover-cursor: default;
+  --sgbp-button-hover-cursor: pointer;
 }
 
 @mixin sgbp-button-colors($_color, $_backgroundColor, $_borderColor, $_hoverColor, $_hoverBackgroundColor, $_hoverBorderColor) {
@@ -179,8 +179,8 @@ html {
 }
 
 .sgbp-button--icon {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-left: 0 !important; // sass-lint:disable-line no-important
+  padding-right: 0 !important; // sass-lint:disable-line no-important
   width: var(--sgbp-button-height);
 }
 

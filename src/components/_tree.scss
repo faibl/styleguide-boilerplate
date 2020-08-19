@@ -1,10 +1,17 @@
-html {
-  --sgbp-tree-header-icon-width: 30px;
+:root {
+  --sgbp-tree-header-icon-width: 17px;
+  --sgbp-tree-header-icon-font-size: 13px;
+
+  @media #{$sgbp-medium-up} {
+    --sgbp-tree-header-icon-width: 24px;
+    --sgbp-tree-header-icon-font-size: 20px;
+  }
 }
 
 .sgbp-tree {
   &__header {
     display: flex;
+    align-items: flex-start;
   }
 
   &__headerIconWrapper {
@@ -13,6 +20,13 @@ html {
 
   &__headerIcon {
     transition: transform 200ms;
+    font-size: var(--sgbp-tree-header-icon-font-size);
+
+    margin-top: 2px;
+
+    @media #{$sgbp-medium-up} {
+      margin-top: -1px;
+    }
   }
 
   &__headerContent {

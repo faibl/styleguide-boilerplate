@@ -1,7 +1,11 @@
-html {
+:root {
   --sgbp-profileImage-background-color: var(--sgbp-color-gray-light);
   --sgbp-profileImage-border-color: var(--sgbp-color-gray-medium);
-  --sgbp-profileImage-border-width: 2px;
+  --sgbp-profileImage-border-width-xs: 1px;
+  --sgbp-profileImage-border-width-s: 1px;
+  --sgbp-profileImage-border-width-m: 1px;
+  --sgbp-profileImage-border-width-l: 2px;
+  --sgbp-profileImage-border-width-xl: 2px;
   --sgbp-profileImage-size-xs: 22px;
   --sgbp-profileImage-size-s: 40px;
   --sgbp-profileImage-size-m: 95px;
@@ -22,7 +26,8 @@ html {
   &__image {
     border-radius: 50%;
     object-fit: cover;
-    border: var(--sgbp-profileImage-border-width) solid var(--sgbp-profileImage-border-color);
+    border-style: solid;
+    border-color: var(--sgbp-profileImage-border-color);
     background-color: var(--sgbp-profileImage-background-color);
   }
 
@@ -30,29 +35,34 @@ html {
   &--sizeXS &__image {
     width: var(--sgbp-profileImage-size-xs);
     height: var(--sgbp-profileImage-size-xs);
+    border-width: var(--sgbp-profileImage-border-width-xs)
   }
 
   &--sizeS,
   &--sizeS &__image {
     width: var(--sgbp-profileImage-size-s);
     height: var(--sgbp-profileImage-size-s);
+    border-width: var(--sgbp-profileImage-border-width-s)
   }
 
   &--sizeM,
   &--sizeM &__image {
     width: var(--sgbp-profileImage-size-m);
     height: var(--sgbp-profileImage-size-m);
+    border-width: var(--sgbp-profileImage-border-width-m)
   }
 
   &--sizeL,
   &--sizeL &__image {
     width: var(--sgbp-profileImage-size-l);
     height: var(--sgbp-profileImage-size-l);
+    border-width: var(--sgbp-profileImage-border-width-l)
   }
 
   &--sizeXL,
   &--sizeXL &__image {
     width: var(--sgbp-profileImage-size-xl);
     height: var(--sgbp-profileImage-size-xl);
+    border-width: var(--sgbp-profileImage-border-width-xl)
   }
 }

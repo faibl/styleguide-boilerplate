@@ -1,5 +1,5 @@
 // sass-lint:disable no-important
-html {
+:root {
   --sgbp-verticalMenu-color: var(--sgbp-color-black);
   --sgbp-verticalMenu-color-active: var(--sgbp-color-accent);
   --sgbp-verticalMenu-border-color-active: var(--sgbp-color-highlight);
@@ -11,7 +11,7 @@ html {
   --sgbp-verticalMenu-icon-size: 22px;
 }
 
-@mixin sgbpVerticalMenuInline() {
+@mixin kgrVerticalMenuInline() {
   .sgbp-verticalMenu__item {
     border-top: none;
     border-bottom: none;
@@ -42,18 +42,18 @@ html {
 
 .sgbp-verticalMenu {
   &--inline {
-    @include sgbpVerticalMenuInline;
+    @include kgrVerticalMenuInline;
   }
 
   &--inlineMediumUp {
     @media #{$sgbp-medium-up} {
-      @include sgbpVerticalMenuInline;
+      @include kgrVerticalMenuInline;
     }
   }
 
   &--inlineLargeUp {
     @media #{$sgbp-large-up} {
-      @include sgbpVerticalMenuInline;
+      @include kgrVerticalMenuInline;
     }
   }
 

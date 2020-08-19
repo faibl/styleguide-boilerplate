@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-modal-backdrop-backgroundColor: var(--sgbp-color-darken);
   --sgbp-modal-dialog-backgroundColor: var(--sgbp-color-white);
   --sgbp-modal-dialog-color: var(--sgbp-color-black);
@@ -27,7 +27,7 @@ html.is-sgbp-modal-open {
   left: 0;
   right: 0;
   bottom: 0;
-  max-height: 100vh;
+  max-height: sgbp-vh(100);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -60,7 +60,7 @@ html.is-sgbp-modal-open {
     flex-direction: column;
     // sass-lint:disable no-duplicate-properties
     max-height: 100%;
-    max-height: calc(100vh - 2 * var(--sgbp-modal-margin));
+    max-height: calc(#{sgbp-vh(100)} - 2 * var(--sgbp-modal-margin));
     max-width: 100%;
     max-width: 100vw;
     // sass-lint:enable no-duplicate-properties
@@ -74,7 +74,7 @@ html.is-sgbp-modal-open {
 
     @media #{$sgbp-xlarge-up} {
       margin: var(--sgbp-modal-marginXlargeUp);
-      max-height: calc(100vh - 2 * var(--sgbp-modal-marginXlargeUp));
+      max-height: calc(#{sgbp-vh(100)} - 2 * var(--sgbp-modal-marginXlargeUp));
     }
   }
 

@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-tooltip-z-index: 9999;
   --sgbp-tooltip-background-color: var(--sgbp-color-gray-lighter);
   --sgbp-tooltip-color: var(--sgbp-color-black);
@@ -86,7 +86,7 @@ html {
 }
 
 .sgbp-tooltip.is-open .sgbp-tooltip__content {
-  z-index: var(--sgbp-tooltip-z-index) - 1; // hover-opened tooltips should win over force-opened (.is-open) tooltips
+  z-index: calc(var(--sgbp-tooltip-z-index) - 1); // hover-opened tooltips should win over force-opened (.is-open) tooltips
 }
 
 // sass-lint:disable no-important

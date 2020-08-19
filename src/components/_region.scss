@@ -1,4 +1,4 @@
-html {
+:root {
   --sgbp-region-padding: var(--sgbp-default-margin);
   --sgbp-region-padding-screen-large: var(--sgbp-default-margin-screen-large);
 
@@ -28,6 +28,25 @@ html {
     margin-left: calc(-1 * var(--sgbp-region-padding));
   }
 
+  &__unpadHorizontally {
+    margin-right: calc(-1 * var(--sgbp-region-padding));
+    margin-left: calc(-1 * var(--sgbp-region-padding));
+  }
+
+  &__unpadHorizontally-small-only {
+    @media #{$sgbp-small-only} {
+      margin-right: calc(-1 * var(--sgbp-region-padding));
+      margin-left: calc(-1 * var(--sgbp-region-padding));
+    }
+  }
+
+  &__unpadHorizontally-medium-up {
+    @media #{$sgbp-medium-up} {
+      margin-right: calc(-1 * var(--sgbp-region-padding));
+      margin-left: calc(-1 * var(--sgbp-region-padding));
+    }
+  }
+
   @media #{$sgbp-large-up} {
     padding: var(--sgbp-region-padding-screen-large);
 
@@ -35,6 +54,11 @@ html {
       margin-top: calc(-1 * var(--sgbp-region-padding-screen-large));
       margin-right: calc(-1 * var(--sgbp-region-padding-screen-large));
       margin-bottom: calc(-1 * var(--sgbp-region-padding-screen-large));
+      margin-left: calc(-1 * var(--sgbp-region-padding-screen-large));
+    }
+
+    &__unpadHorizontally {
+      margin-right: calc(-1 * var(--sgbp-region-padding-screen-large));
       margin-left: calc(-1 * var(--sgbp-region-padding-screen-large));
     }
   }
@@ -188,10 +212,6 @@ html {
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-  }
-
-  &--rounded {
-    border-radius: 5px;
   }
 
   &--depth {

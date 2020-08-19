@@ -23,13 +23,16 @@ When building websites and apps for public audiences, one should take extra care
 
 ### No Javascript
 
-This UI Pattern Toolkit compiles to CSS only, **no Javascript**. This is a deliberate decision to make the UI Patterns as framework agnostic as possible.
+
+This UI Pattern Toolkit compiles to CSS only, **no Javascript***. This is a deliberate decision to make the UI Patterns as framework agnostic as possible.
 
 Having the visual preview as well as the example markup at hand, it should be quite easy to implement the dynamic parts in the framework of your choosing. Let it be **Angular, React, Ember, Backbone, jQuery or vanilla JS**. Mostly it will be a matter of adding or removing a css class.
 
 In order to make the examples work, we rely on inline javascript event handlers (onclick). Please **replace the inline javascript event handlers** from the examples with something more sophisticated and suitable for your own project.
 
-Or you could add support Javascript, if you want to provide a standalone collection of UI Patterns. Feel free to add a gulp task or npm script to transpile and bundle your Javascript, if you want to. 
+Or you could add support for Javascript, if you want to provide a standalone collection of UI Patterns. Feel free to add a gulp task or npm script to transpile and bundle your Javascript, if you want to. 
+
+***except one tiny helper script to circumvent issues with viewport height units on mobile browsers**
 
 ### Browser Support
 
@@ -56,14 +59,6 @@ npm run dev
 
 Navigate to `http://localhost:8000/`. The UI Patterns Demo page will automatically reload if you change any of the source files.
 
-## Build
-
-```
-npm run build
-```
-
-The transpiled code (css, html and images) is stored in the dist directory. 
-
 ## Deploy to GitHub Pages
 
 ```
@@ -73,14 +68,25 @@ npm run deploy
 Builds your UI Patterns demo page and publishes it to GitHub pages. The page will be available at http://username.github.io/repository (you need to replace username and repository)
 Example: http://faibl.github.com/styleguide-boilerplate
 
-## SCSS Integration
+## Integrate it into your own projects
 
-You can also import the styleguide scss files directly into your project scss files:
+### SCSS Integration
+
+Import the styleguide scss files directly into your project scss files:
 
 ```sass
-$sgbp-public-asset-path: '/assets'; // adjust setting according to your environment
+$sgbp-public-asset-path: '/assets'; // copy/symlink src/assets from styleguide to a publicly available directory and accordingly adjust path setting.
 @import '../styleguide/src/styleguide'; // adjust according to your environment
 ```
+
+### Javascript Integration
+
+Import the styleguide js file (helper scripts) directly in your js files:
+
+```js
+import '../styleguide/src/styleguide.js'; // adjust according to your environment
+```
+
 
 ## CSS Guidelines
 
@@ -91,22 +97,23 @@ As this is your own customized UI Pattern collection, you are free to choose whi
 
 ## SVG Icons
 
-To add an svg icon file, simply store the icon under `src/assets/icons` and give it a descriptive name e.g. "search.svg".
-This name is later used to reference the icon in code, e.g.:
+To add an svg icon file, simply store the icon under `src/icons` and give it a descriptive name e.g. "search.svg".
+
+Then run the following command to update the svg icon sprite file:
+
 ```
-<svg class="kgr-icon kgr-icon--hoverAccent"><use xlink:href="./assets/icons.svg#search"></use></svg>
+npm run build:svg-icons
 ```
 
-In order to make the icon inherit the css font color, make sure to use `currentColor` in your svg files insteaf of hard coding a color value.
-If your icon has two colors, you can specifiy the second color using `fillColor`.
+Afterwards you can reference the icon by its filename (without extension).:
+```
+<svg class="sgbp-icon"><use xlink:href="./assets/icons.svg#search"></use></svg>
+```
+
+In order to make the icon inherit the css font color, make sure to use `currentColor` in your svg files instead of hard coding a color value.
+If your icon has two colors, you can specify the second color using `fillColor`.
 
 Then you might want to add the new icon to the documentation so that other developers can easily discover the new item.
-Add a new line with your icon name in `src/components/_icon.md`.
-
-In order to apply the changes, you have to restart the dev script
-
-```
-npm run dev
-```
+Add a new line with your icon name in `src/components/_icon.stories.js`.
 
 A good resource to search and download new icons is https://material.io/resources/icons/?style=baseline 

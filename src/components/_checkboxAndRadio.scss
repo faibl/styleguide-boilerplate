@@ -1,6 +1,6 @@
 $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
 
-html {
+:root {
   --sgbp-checkboxAndRadio-border-width: var(--sgbp-input-border-width);
   --sgbp-checkboxAndRadio-border-radius: var(--sgbp-input-border-radius);
   --sgbp-checkboxAndRadio-border-color: var(--sgbp-input-border-color);
@@ -25,7 +25,7 @@ html {
   display: block;
   pointer-events: none;
 
-  color-adjust: exact !important; // force checkmark icon background image to be visible in print
+  color-adjust: exact !important;
 
   &--inline {
     display: inline-block;
@@ -37,6 +37,10 @@ html {
   &--standalone {
     margin-bottom: 0;
     margin-right: 0;
+  }
+
+  .sgbp-inputGroup &:first-of-type {
+    margin-top: var(--sgbp-default-margin-small);
   }
 
   &__label {

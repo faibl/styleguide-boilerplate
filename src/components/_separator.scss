@@ -10,7 +10,6 @@
   background-color: var(--sgbp-color-gray-medium);
 
   &--light {
-    height: 1px;
     background-color: var(--sgbp-color-gray-light);
 
     &.sgbp-separator--fade {
@@ -18,8 +17,11 @@
     }
   }
 
+  &--invisible {
+    background-color: var(--sgbp-color-transparent);
+  }
+
   &--white {
-    height: 1px;
     background-color: var(--sgbp-color-white);
 
     &.sgbp-separator--fade {

@@ -1,5 +1,6 @@
-html {
+:root {
   --sgbp-menuToggle-size: 1.75em;
+  --sgbp-menuToggle-line-width: calc(var(--sgbp-menuToggle-size) / 12);
 }
 
 .sgbp-menuTogglePlaceholder {
@@ -16,7 +17,7 @@ html {
   cursor: pointer;
 
   &__line {
-    height: calc(var(--sgbp-menuToggle-size) / 12);
+    height: var(--sgbp-menuToggle-line-width);
     background: currentColor;
     position: absolute;
     left: 0;

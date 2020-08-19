@@ -1,18 +1,32 @@
-html {
+:root {
   --sgbp-loading-indicator-color: white; // sass-lint:disable-line no-color-literals
   --sgbp-loading-indicator-border-color: black; // sass-lint:disable-line no-color-literals
   --sgbp-loading-indicator-border-width: 3px;
+  --sgbp-loading-indicator-size-s: 15px;
+  --sgbp-loading-indicator-size-m: 25px;
+  --sgbp-loading-indicator-size-l: 50px;
 }
 
 .sgbp-loadingIndicator {
-  width: 64px;
-  height: 64px;
   border-radius: 50%;
   border-width: var(--sgbp-loading-indicator-border-width);
   border-style: solid;
   border-color: var(--sgbp-loading-indicator-border-color);
   border-top-color: var(--sgbp-loading-indicator-color);
   animation: sgbp-loading-rotate 1s infinite cubic-bezier(0.185, 0.335, 0.25, 0.96);
+
+  width: var(--sgbp-loading-indicator-size-m);
+  height: var(--sgbp-loading-indicator-size-m);
+
+  &--sizeS {
+    width: var(--sgbp-loading-indicator-size-s);
+    height: var(--sgbp-loading-indicator-size-s);
+  }
+
+  &--sizeL {
+    width: var(--sgbp-loading-indicator-size-l);
+    height: var(--sgbp-loading-indicator-size-l);
+  }
 
   @keyframes sgbp-loading-rotate {
     100% {
