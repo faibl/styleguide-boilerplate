@@ -43,30 +43,6 @@ export const geometry = () => Sections([
         'Rounded',
         `<div class="sgbp-region sgbp-region--gray sgbp-region--rounded">${loremIpsum}</div>`
     ),
-    Section(
-        'Skewed',
-        `<div class="sgbp-region sgbp-region--gray sgbp-region--skewed">${loremIpsum}</div>`
-    ),
-    Section(
-        'Skewed top',
-        `<div class="sgbp-region sgbp-region--gray sgbp-region--skewed sgbp-region--skewedTop">${loremIpsum}</div>`
-    ),
-    Section(
-        'Skewed bottom',
-        `<div class="sgbp-region sgbp-region--gray sgbp-region--skewed sgbp-region--skewedBottom">${loremIpsum}</div>`
-    ),
-    Section(
-        'Skewed with separator top',
-        `<div class="sgbp-region sgbp-region--accent sgbp-region--skewed sgbp-region--skewedSeparatorTop">${loremIpsum}</div>`
-    ),
-    Section(
-        'Skewed with separator bottom',
-        `<div class="sgbp-region sgbp-region--accent sgbp-region--skewed sgbp-region--skewedSeparatorBottom">${loremIpsum}</div>`
-    ),
-    Section(
-        'Skewed, accent color',
-        `<div class="sgbp-region sgbp-region--accent sgbp-region--skewed">${loremIpsum}</div>`
-    ),
 ]);
 geometry.story = {
     decorators: [MaxWidthDecorator('800px')],

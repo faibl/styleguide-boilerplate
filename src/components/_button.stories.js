@@ -38,9 +38,9 @@ export const block = () => `
 `;
 
 export const sizes = () => `
-    <a class="sgbp-button sgbp-button--small">Small</a>
-    <a class="sgbp-button">Default</a>
-    <a class="sgbp-button sgbp-button--big">Big</a>
+    <a class="sgbp-button sgbp-button--small">Small Button</a>
+    <a class="sgbp-button">Default Button</a>
+    <a class="sgbp-button sgbp-button--big">Big Button</a>
 `;
 
 export const textAndIcon = () => `
