@@ -4,7 +4,6 @@
   --sgbp-alert-border-style: solid;
   --sgbp-alert-border-radius: 0;
   --sgbp-alert-padding: var(--sgbp-default-margin);
-  --sgbp-alert-padding-screen-large: var(--sgbp-default-margin-screen-large);
   --sgbp-alert-success-color: var(--sgbp-color-success-inverted);
   --sgbp-alert-success-color-background: var(--sgbp-color-success);
   --sgbp-alert-success-color-border: var(--sgbp-color-transparent);
@@ -27,11 +26,6 @@
   border-style: var(--sgbp-alert-border-style);
   border-radius: var(--sgbp-alert-border-radius);
   border-color: var(--sgbp-alert-border-color);
-
-  @media #{$sgbp-medium-up} {
-    padding: var(--sgbp-alert-padding-screen-large);
-    padding-right: calc(var(--sgbp-alert-padding-screen-large) + 10px); // add extra padding to avoid overlaps with close icon
-  }
 
   &--success {
     color: var(--sgbp-alert-success-color);

@@ -84,13 +84,17 @@
    * Margins:
    */
   --sgbp-default-margin: 16px;
-  --sgbp-default-margin-screen-large: 16px;
   --sgbp-default-margin-tiny: 8px;
-  --sgbp-default-margin-tiny-screen-large: 8px;
   --sgbp-default-margin-small: 12px;
-  --sgbp-default-margin-small-screen-large: 12px;
   --sgbp-default-margin-big: 28px;
-  --sgbp-default-margin-big-screen-large: 28px;
+
+  @media #{$sgbp-large-up} {
+    --sgbp-default-margin: 20px;
+    --sgbp-default-margin-tiny: 10px;
+    --sgbp-default-margin-small: 14px;
+    --sgbp-default-margin-big: 34px;
+  }
+
 
   --sgbp-input-height: 35px;
   --sgbp-input-small-height: 25px;

@@ -41,3 +41,14 @@ force.story = {
         'Force the color to override other colors (e.g. on links) by adding the modifier `sgbp-color--force`.',
     ])]
 };
+
+export const inherit = () => `
+    <div class="sgbp-region sgbp-region--accent">
+        Lorem ipsum text in accent region with <a href="https://faibl.com" class="sgbp-link sgbp-color sgbp-color--inherit sgbp-color--force">hyperlink</a> in text.
+    </div>
+`;
+inherit.story = {
+    decorators: [DescriptionDecorator([
+        'Use the modifier `sgbp-color--inherit` to explicitly inherit the color from a parent element. Combined with the modifier `sgbp-color--force` this can be used e.g. to make a hyperlink\'s text color the same as the surrounding text',
+    ])]
+};

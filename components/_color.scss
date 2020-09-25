@@ -80,6 +80,15 @@
       color: var(--sgbp-color-error) !important;
     }
   }
+
+  &--inherit {
+    color: inherit;
+
+    &.sgbp-color--force,
+    &.sgbp-color--force * {
+      color: inherit !important;
+    }
+  }
 }
 
 .sgbp-backgroundColor {
