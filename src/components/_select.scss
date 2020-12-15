@@ -1,26 +1,79 @@
 .sgbp-select {
   @extend .sgbp-input; // sass-lint:disable-line placeholder-in-extend
 
+  --option-background-color: var(--sgbp-color-transparent);
+  --option-color: var(--sgbp-input-color);
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  &.is-hide-scrollbars {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &::-ms-value {
+    background-color: var(--sgbp-color-accent);
+    color: var(--sgbp-color-accent-inverted);
+  }
+
+  &:focus::-ms-value {
+    background-color: var(--sgbp-color-accent-alternate);
+    color: var(--sgbp-color-accent-inverted);
+  }
+
   &--inline {
     display: inline-flex;
     width: auto;
   }
 
-  &[size] {
-    padding: 0;
+  &[size]:not([size='1']) {
     height: auto;
-  }
+    padding: 0;
+    overflow-y: auto; // default is scroll which displays scrollbars even when they are not needed
 
-  &[size] &__option {
-    appearance: none;
-    display: flex;
-    align-items: center;
-    height: var(--sgbp-input-height);
+    option {
+      appearance: none;
+      display: block;
+      width: 100%;
+
+      z-index: 2;
+      position: relative;
+      padding: 5px 8px;
+
+      color: var(--option-color);
+      background-color: var(--option-background-color);
+
+      &:hover {
+        --option-background-color: var(--sgbp-color-accent-alternate);
+        --option-color: var(--sgbp-color-accent-inverted);
+      }
+
+      &:checked {
+        --option-background-color: var(--sgbp-color-accent);
+        --option-color: var(--sgbp-color-accent-inverted);
+
+        box-shadow: 100vw 0px 0 var(--option-background-color) inset;
+      }
+
+      &:before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        background-color: var(--option-background-color);
+        left: -6px;
+        right: -6px;
+        top: 0;
+      }
+    }
   }
 
   &:not([size]),
   &[size='1'] {
-    appearance: none;
     height: var(--sgbp-input-height);
     padding-right: 2.1rem;
     background-position: right -53px top -16px;
