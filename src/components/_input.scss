@@ -29,14 +29,9 @@
     border-color: var(--sgbp-input-border-color-focus);
   }
 
-  // sass-lint:disable no-vendor-prefixes
-  &::-webkit-input-placeholder,
-  &:-moz-placeholder,
-  &-moz-placeholder,
-  &-ms-input-placeholder {
+  &::placeholder {
     font-size: 0.75em;
   }
-  // sass-lint:enable no-vendor-prefixes
 
   &.is-disabled,
   &[disabled],
