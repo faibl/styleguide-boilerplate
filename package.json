@@ -23,7 +23,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.11.1",
-    "@storybook/html": "^6.0.12",
+    "@storybook/html": "^6.1.21",
     "babel-loader": "^8.1.0",
     "cpx": "^1.5.0",
     "gh-pages": "^3.1.0",
