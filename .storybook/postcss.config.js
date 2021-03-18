@@ -1,6 +1,8 @@
 module.exports = {
-    plugins: {
-        'postcss-custom-properties': {},
-        'autoprefixer': {},
+    postcssOptions: {
+        plugins: [
+            'postcss-custom-properties',
+            'autoprefixer',
+        ]
     }
 };
