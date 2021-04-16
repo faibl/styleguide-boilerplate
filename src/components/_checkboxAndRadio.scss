@@ -147,6 +147,14 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
     }
   }
 
+  &.is-invalid &__label {
+    color: var(--sgbp-color-error);
+
+    &::before {
+      border-color: var(--sgbp-color-error);
+    }
+  }
+
   &--white &__label::before,
   &--white &__control:checked + &__label::before,
   &--white.is-check &__label::before {

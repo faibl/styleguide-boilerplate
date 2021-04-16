@@ -16,7 +16,7 @@ export const withLabelAndText = () => `
 export const invalidState = () => `
     <label class="sgbp-inputGroup is-invalid">
         <span class="sgbp-inputGroup__label">Title</span>
-        <input type="text" class="sgbp-input sgbp-input--stateful is-invalid" value="input value">
+        <input type="text" class="sgbp-input" value="input value">
     </label>
 `;
 
@@ -24,7 +24,7 @@ export const withLabelAndErrorMessage = () => `
     <label class="sgbp-inputGroup is-invalid">
         <span class="sgbp-inputGroup__label">Title</span>
         <div class="sgbp-inputGroup__text sgbp-inputGroup__text--error">This is an error!</div>
-        <input type="text" class="sgbp-input sgbp-input--stateful is-invalid" value="input value">
+        <input type="text" class="sgbp-input" value="input value">
     </label>
 `;
 
