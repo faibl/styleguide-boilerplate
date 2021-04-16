@@ -38,7 +38,7 @@
 
   &--forceWrap {
     white-space: normal;
-    word-break: break-all;
+    overflow-wrap: break-word;
   }
 
   &--noWrap {
