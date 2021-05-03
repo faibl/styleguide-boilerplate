@@ -115,6 +115,13 @@ export const sizes = () => `
     </label>
 `;
 
+export const invalid = () => `
+    <label class="sgbp-checkbox is-invalid sgbp-row">
+        <input type="checkbox" class="sgbp-checkbox__control">
+        <span class="sgbp-checkbox__label">Checkbox with invalid state</span>
+    </label>
+`;
+
 export const labelFirst = () => `
     <label class="sgbp-checkbox sgbp-checkbox--labelFirst sgbp-row sgbp-row--smallMargin">
         <input type="checkbox" class="sgbp-checkbox__control">

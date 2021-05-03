@@ -1,6 +1,5 @@
 :root {
-  --sgbp-input-error-color: var(--sgbp-color-error);
-  --sgbp-input-valid-color: var(--sgbp-color-success);
+  --sgbp-input-error-border-color: var(--sgbp-color-error);
 
   --sgbp-input-type-range-thumb-color: var(--sgbp-color-black);
   --sgbp-input-type-range-thumb-margin: -7px;
@@ -59,7 +58,7 @@
 
   &.is-invalid,
   &:not(.is-ignore-invalid-touched).ng-touched.ng-invalid {
-    border-color: var(--sgbp-color-error) !important; // sass-lint:disable-line no-important
+    border-color: var(--sgbp-input-error-border-color) !important; // sass-lint:disable-line no-important
   }
 
   &--inline {

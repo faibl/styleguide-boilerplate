@@ -90,6 +90,17 @@ export const sizes = () => `
     </label>
 `;
 
+export const Invalid = () => `
+    <label class="sgbp-radio sgbp-row">
+        <input type="radio" name="sgbp-radio-demo" class="sgbp-radio__control">
+        <span class="sgbp-radio__label">Radio Option 1</span>
+    </label>
+    <label class="sgbp-radio is-invalid">
+        <input type="radio" name="sgbp-radio-demo" class="sgbp-radio__control">
+        <span class="sgbp-radio__label">Radio Option 2 (invalid)</span>
+    </label>
+`;
+
 export const labelFirst = () => `
     <label class="sgbp-radio sgbp-radio--labelFirst sgbp-row sgbp-row--smallMargin">
         <input type="radio" name="sgbp-radio-demo" class="sgbp-radio__control">
