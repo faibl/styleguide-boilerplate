@@ -27,7 +27,7 @@
     "babel-loader": "^8.2.3",
     "cpx": "^1.5.0",
     "gh-pages": "^3.2.3",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "postcss-custom-properties": "^11.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^2.4.1",
