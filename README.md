@@ -6,7 +6,7 @@ This boilerplate comes complete with an automatically generated HTML demo page s
 
 The development experience is seamless. Our workflow includes a local webserver with live reload to UI Patterns Demo page whenever you change one of the source files.
 
-The UI Components Demo page is generated automatically using [Styledown](https://github.com/styledown/styledown).
+The UI Components Demo are generated automatically using [Storybook for HTML](https://storybook.js.org/docs/html/get-started/introduction).
 
 
 ## Motivation
