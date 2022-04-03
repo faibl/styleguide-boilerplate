@@ -14,9 +14,7 @@ export const ShortContent = () => `
         </div>
     </div>
 `;
-ShortContent.story = {
-    decorators: [DescriptionDecorator(['Toggle the class `is-open` to open/close the collapsible content'])]
-};
+ShortContent.decorators = [DescriptionDecorator(['Toggle the class `is-open` to open/close the collapsible content'])];
 
 export const longContent = () => `
     <button class="sgbp-button sgbp-button--secondary sgbp-row" onclick="document.getElementById('sgbp-collapsible-demo-2').classList.toggle('is-open')">Toggle</button>
@@ -69,9 +67,9 @@ export const overflowingContent = () => `
         </div>
     </div>
 `;
-overflowingContent.story = {
-    decorators: [DescriptionDecorator([
+overflowingContent.decorators = [
+    DescriptionDecorator([
         'Add the modifier `sgbp-collapsible--withOverflow` if you have content inside the collapsible the should overlow (e.g. a tooltip).',
         'Note: Thethe open/close transition does not work with overflowing content and is automatically turned off.',
-    ])]
-};
+    ])
+];

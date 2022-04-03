@@ -22,6 +22,4 @@ export const Standard = () => `
       </ol>
     </div>
 `;
-Standard.story = {
-    decorators: [DescriptionDecorator(['Apply default styling for common html tags (`h1`, `h2`, `h3`, `b`,`strong`, `i`, `a`, `p`, `ul`, `ol`, )'])]
-};
+Standard.decorators = [DescriptionDecorator(['Apply default styling for common html tags (`h1`, `h2`, `h3`, `b`,`strong`, `i`, `a`, `p`, `ul`, `ol`, )'])];

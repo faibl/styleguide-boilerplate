@@ -109,10 +109,8 @@ export const customAnimation = () => `
     <button class="sgbp-button" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--slideInUp')">slideInUp</button>
     <button class="sgbp-button" onclick="shpModalDemoOpen('test-modal-animation', 'sgbp-modal--bounceInDown')">bounceInDown</button>
 `;
-customAnimation.story = {
-    decorators: [
-        DescriptionDecorator([
-            'You can control the entry animation by adding these modifiers: `sgbp-modal--zoomIn`, `sgbp-modal--fadeIn`, `sgbp-modal--slideInUp`, `sgbp-modal--bounceInDown` (if the animation component is included).',
-        ])
-    ]
-};
+customAnimation.decorators = [
+    DescriptionDecorator([
+        'You can control the entry animation by adding these modifiers: `sgbp-modal--zoomIn`, `sgbp-modal--fadeIn`, `sgbp-modal--slideInUp`, `sgbp-modal--bounceInDown` (if the animation component is included).',
+    ]),
+];

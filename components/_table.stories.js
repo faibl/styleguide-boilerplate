@@ -233,9 +233,7 @@ export const block = () => `
       </table>
     </figure>
 `;
-block.story = {
-    decorators: [DescriptionDecorator(['Add the modifier `sgbp-table--block` to display the table as a full-width block.'])]
-};
+block.decorators = [DescriptionDecorator(['Add the modifier `sgbp-table--block` to display the table as a full-width block.'])];
 
 export const bordered = () => `
     <figure class="sgbp-tableWrapper">
@@ -486,9 +484,7 @@ export const hoverRows = () => `
       </table>
     </figure>
 `;
-hoverRows.story = {
-    decorators: [DescriptionDecorator(['Add `sgbp-table--hover` class to the `table` element to highlight rows on hover.'])]
-};
+hoverRows.decorators = [DescriptionDecorator(['Add `sgbp-table--hover` class to the `table` element to highlight rows on hover.'])];
 
 export const compact = () => `
     <figure class="sgbp-tableWrapper">
@@ -549,6 +545,4 @@ export const compact = () => `
       </table>
     </figure>
 `;
-compact.story = {
-    decorators: [DescriptionDecorator(['Add `sgbp-table--compact` class to render the table more compact'])]
-};
+compact.decorators = [DescriptionDecorator(['Add `sgbp-table--compact` class to render the table more compact'])];

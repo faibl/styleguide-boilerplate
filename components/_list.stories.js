@@ -35,6 +35,6 @@ export const fakeWithoutLiElements = () => `
        <div class="sgbp-list__item">List item 3</div>
     </div>
 `;
-fakeWithoutLiElements.story = {
-    decorators: [DescriptionDecorator(['If you need to force the list style on non-li elements, simply add the class `sgbp-list__item` to the list items.'])]
-}
+fakeWithoutLiElements.decorators = [
+    DescriptionDecorator(['If you need to force the list style on non-li elements, simply add the class `sgbp-list__item` to the list items.']),
+];

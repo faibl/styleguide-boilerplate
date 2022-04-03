@@ -44,18 +44,14 @@ export const geometry = () => Sections([
         `<div class="sgbp-region sgbp-region--gray sgbp-region--rounded">${loremIpsum}</div>`
     ),
 ]);
-geometry.story = {
-    decorators: [MaxWidthDecorator('800px')],
-};
+geometry.decorators = [MaxWidthDecorator('800px')];
 
 export const focusable = () => `
     <div class="sgbp-region sgbp-region--gray sgbp-region--focusable">
         <input type="text" class="sgbp-input" placeholder="Placeholder ...">
     </div>
 `;
-focusable.story = {
-    decorators: [DescriptionDecorator(['Highlight the region if an element inside that region is focused'])],
-};
+focusable.decorators = [DescriptionDecorator(['Highlight the region if an element inside that region is focused'])];
 
 
 export const verticalOnly = () => `<div class="sgbp-region sgbp-region--gray sgbp-region--verticalOnly">${loremIpsum}</div>`;

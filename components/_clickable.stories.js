@@ -9,9 +9,7 @@ export const Standard = () => `
         Clickable
     </div>
 `;
-Standard.story = {
-    decorators: [DescriptionDecorator(['Changes the cursor to "pointer" on hovering'])]
-};
+Standard.decorators = [DescriptionDecorator(['Changes the cursor to "pointer" on hovering'])];
 
 export const touchy = () => `
     <div class="sgbp-clickable sgbp-clickable--touchy">
@@ -19,6 +17,4 @@ export const touchy = () => `
     </div>
 
 `;
-touchy.story = {
-    decorators: [DescriptionDecorator(['Slightly increases the touchable area'])]
-};
+touchy.decorators = [DescriptionDecorator(['Slightly increases the touchable area'])];

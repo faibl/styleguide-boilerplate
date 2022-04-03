@@ -92,13 +92,13 @@ export const wrappingAndTruncation = () => Sections([
         `
     ),
 ]);
-wrappingAndTruncation.story = {
-    decorators: [DescriptionDecorator([
+wrappingAndTruncation.decorators = [
+    DescriptionDecorator([
         'Force Wrap: If long words exceed the maximum horizontal space then they will be forced to wrap anyways.',
         'No Wrap: If the content exceeds the maximum horizontal space then the content will overflow horizontally.',
         'Truncated: If the content exceeds the maximum horizontal space then the line will get truncated',
-    ])],
-};
+    ]),
+];
 
 export const direction = () => Sections([
     Section(
