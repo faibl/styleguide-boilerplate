@@ -108,14 +108,12 @@ export const onlyIfHoverSupported = () => `
       </div>
     </div>
 `;
-onlyIfHoverSupported.story = {
-    decorators: [
-        DescriptionDecorator([
-            'Add the class `sgbp-tooltip--onlyIfHover` if you only want the tooltip to be displayed on devices with hovering capabilities.',
-            'The tooltip will then not be displayed e.g. on regular touch screens (you can still programatically open/cose the tooltip, see below).',
-        ])
-    ]
-};
+onlyIfHoverSupported.decorators = [
+    DescriptionDecorator([
+        'Add the class `sgbp-tooltip--onlyIfHover` if you only want the tooltip to be displayed on devices with hovering capabilities.',
+        'The tooltip will then not be displayed e.g. on regular touch screens (you can still programatically open/cose the tooltip, see below).',
+    ]),
+];
 
 export const programatically = () => `
     <div style="margin-bottom: 280px">
@@ -125,12 +123,10 @@ export const programatically = () => `
       </div>
     </div>
 `;
-programatically.story = {
-    name: 'open manually (no hover)',
-    decorators: [
-        DescriptionDecorator([
-            'Add class `is-open` to force the tooltip to be open regardless of its hover state',
-            'This can be used either in conjunction with `sgbp-tooltip--onlyIfHover` (see above) or with `sgbp-tooltip--noHover` if you do not want the tooltip to automatically appear on hover.',
-        ])
-    ]
-};
+programatically.storyName = 'open manually (no hover)';
+programatically.decorators = [
+    DescriptionDecorator([
+        'Add class `is-open` to force the tooltip to be open regardless of its hover state',
+        'This can be used either in conjunction with `sgbp-tooltip--onlyIfHover` (see above) or with `sgbp-tooltip--noHover` if you do not want the tooltip to automatically appear on hover.',
+    ]),
+];

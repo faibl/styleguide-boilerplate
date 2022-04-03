@@ -37,8 +37,8 @@ export const horizontal = () => `
        <dd class="sgbp-definitionList__definition">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat./dd>
     </dl>
 `;
-horizontal.story = {
-    decorators: [DescriptionDecorator([
+horizontal.decorators = [
+    DescriptionDecorator([
         'You can specifiy the width of the term "column" by applying the modifiers `sgbp-definitionList--50`, `sgbp-definitionList--1000`, ..., `sgbp-definitionList--250`',
-    ])]
-};
+    ]),
+];

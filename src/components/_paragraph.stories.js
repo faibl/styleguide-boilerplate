@@ -29,6 +29,4 @@ export const noMargin = () => `
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
     </div>
 `;
-noMargin.story = {
-    decorators: [DescriptionDecorator(['If only the line height should be applied, the bottom margin can be disabled using the `sgbp-paragraph--noMargin` modifier.'])],
-};
+noMargin.decorators = [DescriptionDecorator(['If only the line height should be applied, the bottom margin can be disabled using the `sgbp-paragraph--noMargin` modifier.'])];

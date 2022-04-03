@@ -34,13 +34,13 @@ export const hidden = () => `
     <input type="text" class="sgbp-input is-hidden" value="input value">
     <input type="text" class="sgbp-input" value="another visible input (after the hidden one)">
 `;
-hidden.story = {
-    decorators: [DescriptionDecorator([
+hidden.decorators = [
+    DescriptionDecorator([
         '<input type="text" class="sgbp-input" value="visible input (press tab to focus next input - the hidden one)">',
         '<input type="text" class="sgbp-input is-hidden" value="input value">',
         '<input type="text" class="sgbp-input" value="another visible input (after the hidden one)">',
-    ])]
-};
+    ]),
+];
 
 export const RangeSlider = () => `
     <input type="range" class="sgbp-input">

@@ -12,11 +12,11 @@ export const equalColumns = () => `
         <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
     </div>
 `;
-equalColumns.story = {
-    decorators: [DescriptionDecorator([
+equalColumns.decorators = [
+    DescriptionDecorator([
         'The grid cells below do not specify any widths, they just naturally space themselves equally and expand to fit the entire row. They’re also equal height by default.',
-    ])]
-};
+    ]),
+];
 
 
 export const gutters = () => Sections([
@@ -64,13 +64,13 @@ export const gutters = () => Sections([
         `
     ),
 ]);
-gutters.story = {
-    decorators: [DescriptionDecorator([
+gutters.decorators = [
+    DescriptionDecorator([
         'By default, grid cells do not have any padding between each other.',
         'This is especially useful for non-textual content like images, video, street maps etc.',
         'However, if you do need padding, you can simply add the class `sgbp-grid--gutters` to your grid container element, as done in most of the examples that follow.',
-    ])]
-};
+    ]),
+];
 
 export const inline = () => `
     <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--inlineBlock">
@@ -116,11 +116,11 @@ export const vertical = () => `
         </div>
     </div>
 `;
-vertical.story = {
-    decorators: [DescriptionDecorator([
+vertical.decorators = [
+    DescriptionDecorator([
         'Stack your grid vertically by adding the `sgbp-grid--vertical` modifier',
-    ])]
-};
+    ]),
+];
 
 export const Unequal = () => `
     <div class="sgbp-grid sgbp-grid--gutters">
@@ -141,11 +141,11 @@ export const responsive = () => `
         <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
     </div>
 `;
-responsive.story = {
-    decorators: [DescriptionDecorator([
+responsive.decorators = [
+    DescriptionDecorator([
         'Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly.',
-    ])]
-};
+    ]),
+];
 
 export const ResponsiveFlowing = () => `
     <div class="sgbp-grid sgbp-grid--tiny-full sgbp-grid--small-1of2 sgbp-grid--medium-1of3 sgbp-grid--large-1of4 sgbp-grid--gutters">
@@ -177,11 +177,11 @@ export const responsiveReordering = () => `
         <div class="sgbp-grid__cell sgbp-grid__cell--medium-orderFirst sgbp-backgroundColor--highlight">Small last, medium first</div>
     </div>
 `;
-responsive.story = {
-    decorators: [DescriptionDecorator([
+responsive.decorators = [
+    DescriptionDecorator([
         'The two cells swap ordering when switching from small to medium.',
-    ])]
-};
+    ]),
+];
 
 export const ResponsiveUnEqual = () => `
     <div class="sgbp-grid sgbp-grid--gutters">

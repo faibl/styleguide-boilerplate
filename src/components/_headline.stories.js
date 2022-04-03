@@ -24,12 +24,12 @@ export const inText = () => `
     <h5 class="sgbp-headline sgbp-headline--h5 sgbp-headline--text">Heading 5 <small class="sgbp-headline__addendum">Addendum</small></h5>
     <h6 class="sgbp-headline sgbp-headline--h6 sgbp-headline--text">Heading 6 <small class="sgbp-headline__addendum">Addendum</small></h6>
 `;
-inText.story = {
-    decorators: [DescriptionDecorator([
+inText.ecorators = [
+    DescriptionDecorator([
         'In a text document we add sensible margins to our sgbp-headlines to visually structure the document outline.',
         'Add the `sgbp-headline--firstInText` modifier if you do not need a top margin.'
-    ])]
-};
+    ]),
+];
 
 export const accent = () => `
     <h1 class="sgbp-headline sgbp-headline--h0 sgbp-headline--accent">Heading 0</h1>

@@ -15,9 +15,7 @@ export const Standard = () => `
         Col 3
     </div>
 `;
-Standard.story = {
-    decorators: [DescriptionDecorator(['Cols have a defined right margin'])]
-};
+Standard.decorators = [DescriptionDecorator(['Cols have a defined right margin'])];
 
 export const withSeparator = () => `
     <div class="sgbp-col sgbp-col--withSeparator">

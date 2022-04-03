@@ -21,9 +21,7 @@ export const standalone = () => `
         <span class="sgbp-radio__label"></span>
     </label>
 `;
-standalone.story = {
-    decorators: [DescriptionDecorator(['You need to provide an empty `sgbp-radio__label` element in order to display standalone radioes without labels'])]
-}
+standalone.decorators = [DescriptionDecorator(['You need to provide an empty `sgbp-radio__label` element in order to display standalone radioes without labels'])];
 
 export const inInputGroup = () => `
 <div class="sgbp-inputGroup">
@@ -38,9 +36,7 @@ export const inInputGroup = () => `
     </label>
 </div>
 `;
-inInputGroup.story = {
-    decorators: [DescriptionDecorator(['If wrapped in a `sgbp-inputGroup` element then an additional top margin is applied to the first radio button'])]
-}
+inInputGroup.decorators = [DescriptionDecorator(['If wrapped in a `sgbp-inputGroup` element then an additional top margin is applied to the first radio button'])];
 
 export const inline = () => `
     <label class="sgbp-radio sgbp-radio--inline">
@@ -122,9 +118,9 @@ export const fake = () => `
         <span class="sgbp-radio__label" onclick="this.parentElement.classList.toggle('is-checked')">Radio 2</span>
     </label>
 `;
-fake.story = {
-    decorators: [DescriptionDecorator([
+fake.decorators = [
+    DescriptionDecorator([
         'You can visually fake radioes without using `<input type="radio">` form elements.',
         'Please make sure to toggle the class `is-checked` on the `sgbp-radio` element.',
-    ])]
-}
+    ]),
+];

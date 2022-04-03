@@ -21,9 +21,7 @@ export const standalone = () => `
         <span class="sgbp-checkbox__label"></span>
     </label>
 `;
-standalone.story = {
-    decorators: [DescriptionDecorator(['You need to provide an empty `sgbp-checkbox__label` element in order to display standalone checkboxes without labels'])]
-}
+standalone.decorators = [DescriptionDecorator(['You need to provide an empty `sgbp-checkbox__label` element in order to display standalone checkboxes without labels'])];
 
 
 export const inInputGroup = () => `
@@ -62,9 +60,7 @@ export const inInputGroup = () => `
     </label>
 </div>
 `;
-inInputGroup.story = {
-    decorators: [DescriptionDecorator(['If wrapped in a `sgbp-inputGroup` element then an additional top margin is applied to the first checkbox'])]
-}
+inInputGroup.decorators = [DescriptionDecorator(['If wrapped in a `sgbp-inputGroup` element then an additional top margin is applied to the first checkbox'])];
 
 
 export const inline = () => `
@@ -143,9 +139,9 @@ export const fake = () => `
         <span class="sgbp-checkbox__label" onclick="this.parentElement.classList.toggle('is-checked')">Checkbox 2</span>
     </label>
 `;
-fake.story = {
-    decorators: [DescriptionDecorator([
+fake.decorators = [
+    DescriptionDecorator([
         'You can visually fake checkboxes without using `<input type="checkbox">` form elements.',
         'Please make sure to toggle the class `is-checked` on the `sgbp-checkbox` element.',
-    ])]
-}
+    ])
+];

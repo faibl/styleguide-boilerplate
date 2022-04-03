@@ -74,8 +74,8 @@ export const EmphasizedKeysVertical = () => `
     </ul>
 `;
 
-horizontalMediumUp.story = {
-    decorators: [DescriptionDecorator(
+horizontalMediumUp.decorators = [
+    DescriptionDecorator(
         ['Use the modifier `sgbp-keyValueList--horizontalMediumUp` or `sgbp-keyValueList--horizontalLargeUp` to make this widget responsive.']
-    )]
-}
+    ),
+];

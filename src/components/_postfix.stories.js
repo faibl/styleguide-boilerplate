@@ -21,9 +21,7 @@ export const prefix = () => `
         <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
     </div>
 `;
-prefix.story = {
-    decorators: [DescriptionDecorator(['By changing the order of the `sgbp-postfix__fixed` and `sgbp-postfix__fluid` elements in the markup, you can use "postfix" as "prefix".'])],
-};
+prefix.decorators = [DescriptionDecorator(['By changing the order of the `sgbp-postfix__fixed` and `sgbp-postfix__fluid` elements in the markup, you can use "postfix" as "prefix".'])];
 
 export const stackedOnTinyScreens = () => `
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--tiny-stacked">
@@ -54,9 +52,7 @@ export const center = () => `
         </svg>
     </div>
 `;
-center.story = {
-    decorators: [DescriptionDecorator(['Vertically centered contents'])],
-};
+center.decorators = [DescriptionDecorator(['Vertically centered contents'])];
 
 export const bottom = () => `
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--bottom">
@@ -66,9 +62,7 @@ export const bottom = () => `
         </svg>
     </div>
 `;
-bottom.story = {
-    decorators: [DescriptionDecorator(['Vertically bottom aligned contents'])],
-};
+bottom.decorators = [DescriptionDecorator(['Vertically bottom aligned contents'])];
 
 export const baseline = () => `
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--baseline">
@@ -78,9 +72,7 @@ export const baseline = () => `
         </svg>
     </div>
 `;
-baseline.story = {
-    decorators: [DescriptionDecorator(['Vertically baseline aligned contents'])],
-};
+baseline.decorators = [DescriptionDecorator(['Vertically baseline aligned contents'])];
 
 export const between = () => `
     <div class="sgbp-postfix sgbp-postfix--between">
@@ -92,6 +84,4 @@ export const between = () => `
         </svg>
     </div>
 `;
-between.story = {
-    decorators: [DescriptionDecorator(['Use maximum spacing between the elements'])],
-};
+between.decorators = [DescriptionDecorator(['Use maximum spacing between the elements'])];

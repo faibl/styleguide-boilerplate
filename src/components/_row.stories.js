@@ -15,9 +15,7 @@ export const Standard = () => `
         Row 3
     </div>
 `;
-Standard.story = {
-    decorators: [DescriptionDecorator(['Rows have a defined bottom margin'])]
-};
+Standard.decorators = [DescriptionDecorator(['Rows have a defined bottom margin'])];
 
 export const withSeparator = () => `
     <div class="sgbp-row sgbp-row--withSeparator">

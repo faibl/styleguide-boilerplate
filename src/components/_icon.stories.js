@@ -123,13 +123,11 @@ export const sizes = () => Sections([
         `<svg class="sgbp-icon" data-size="extra-big"><use xlink:href="./assets/icons.svg#check"></use></svg>`
     ),
 ]);
-sizes.story = {
-    decorators: [
-        DescriptionDecorator([
-            'By default, icons inherit their color from the parent element. However, there are some modifiers to quickly alter the icon color.',
-        ])
-    ]
-};
+sizes.decorators = [
+    DescriptionDecorator([
+        'By default, icons inherit their color from the parent element. However, there are some modifiers to quickly alter the icon color.',
+    ])
+];
 
 export const colors = () => Sections([
     Section(
@@ -160,13 +158,11 @@ export const colors = () => Sections([
         </div>`
     ),
 ]);
-colors.story = {
-    decorators: [
-        DescriptionDecorator([
-            'By default, icons inherit their color from the parent element. However, there are some modifiers to quickly alter the icon color.',
-        ])
-    ]
-};
+colors.decorators = [
+    DescriptionDecorator([
+        'By default, icons inherit their color from the parent element. However, there are some modifiers to quickly alter the icon color.',
+    ]),
+];
 
 export const withCircle = () => `
     <div class="sgbp-region sgbp-region--default">

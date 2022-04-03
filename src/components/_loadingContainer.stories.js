@@ -30,6 +30,4 @@ export const blocking = () => `
     </div>
     <button class="sgbp-button sgbp-button--secondary" onclick="document.getElementById('test-loading-container2').classList.toggle('is-loading');">Toggle loading</button>
 `;
-blocking.story = {
-    decorators: [DescriptionDecorator(['Add class `is-blocking` to show blocking loading indicator'])]
-};
+blocking.decorators = [DescriptionDecorator(['Add class `is-blocking` to show blocking loading indicator'])];

@@ -125,12 +125,10 @@ export const flat = () => `
         </div>
     </div>
 `;
-flat.story = {
-    decorators: [
-        DescriptionDecorator([
-            'Usually the different tree levels are achieved through nesting multiple trees recusrivle inside each other.',
-            'In case this is not feasible, e.g. when placed in multiple table rows, you can add the `sgbp-tree--level-1` ... `sgbp-tree--level-10` modifiers to achieve the same visual hierarchy.',
-            'However, you need to manually make sure that you show/hide the sub trees.',
-        ])
-    ]
-};
+flat.decorators = [
+    DescriptionDecorator([
+        'Usually the different tree levels are achieved through nesting multiple trees recusrivle inside each other.',
+        'In case this is not feasible, e.g. when placed in multiple table rows, you can add the `sgbp-tree--level-1` ... `sgbp-tree--level-10` modifiers to achieve the same visual hierarchy.',
+        'However, you need to manually make sure that you show/hide the sub trees.',
+    ]),
+];
