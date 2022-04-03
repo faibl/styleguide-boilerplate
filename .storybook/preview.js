@@ -1,10 +1,10 @@
-// import '../src/styleguide.scss';
+import '../tmp/styleguide.css';
 
-// const PageWrapperDecorator = (storyFn) => `
-// <div class="sgbp-pageWrapper">
-//     <div class="sgbp-region">${storyFn()}
-// </div>`;
-//
-// export const decorators = [
-//   PageWrapperDecorator
-// ];
+const PageWrapperDecorator = (storyFn) => `
+<div class="sgbp-pageWrapper">
+    ${storyFn()}
+</div>`;
+
+export const decorators = [
+    PageWrapperDecorator
+];
