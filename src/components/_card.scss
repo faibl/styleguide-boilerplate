@@ -57,8 +57,7 @@
     }
 
     &--4to3,
-    &--16to9,
-    &--95to64 {
+    &--16to9 {
       overflow: hidden;
       height: 0;
       width: 100%;
@@ -68,15 +67,11 @@
     }
 
     &--4to3 {
-      padding-top: 3 / 4 * 100%;
+      padding-top: calc(3 / 4 * 100%);
     }
 
     &--16to9 {
-      padding-top: 9 / 16 * 100%;
-    }
-
-    &--95to64 {
-      padding-top: 64 / 95 * 100%;
+      padding-top: calc(9 / 16 * 100%);
     }
 
     &--cover {
