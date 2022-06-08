@@ -6,6 +6,8 @@
   --sgbp-input-type-range-thumb-diameter: 16px;
   --sgbp-input-type-range-track-color: var(--sgbp-color-gray-medium);
   --sgbp-input-type-range-track-height: 2px;
+
+  --sgbp-input-textarea-padding-vertical: 0.5rem;
 }
 
 .sgbp-input {
@@ -78,6 +80,8 @@
 // sass-lint:disable no-qualifying-elements
 textarea.sgbp-input {
   height: auto;
+  padding-top: var(--sgbp-input-textarea-padding-vertical);
+  padding-bottom: var(--sgbp-input-textarea-padding-vertical);
   min-height: 7em;
 }
 // sass-lint:enable no-qualifying-elements
