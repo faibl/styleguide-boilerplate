@@ -38,6 +38,6 @@
     "node-sass": "^7.0.1",
     "prettier": "^2.6.2",
     "sass-lint": "^1.13.1",
-    "svg-sprite": "^1.5.4"
+    "svg-sprite": "^2.0.0"
   }
 }
