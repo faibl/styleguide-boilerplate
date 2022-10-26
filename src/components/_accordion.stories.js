@@ -11,7 +11,7 @@ export const Standard = () => `
             </div>
             <div class="sgbp-accordion__itemHeaderRight">
                 <div class="sgbp-accordion__itemHeaderRight">
-                    <div class="sgbp-badge sgbp-badge--highlight sgbp-col">4/17</div>
+                    <div class="sgbp-badge sgbp-badge--highlight">4/17</div>
                     <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
                 </div>
             </div>

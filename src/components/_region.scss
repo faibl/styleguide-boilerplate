@@ -1,9 +1,9 @@
 :root {
-  --sgbp-region-padding: var(--sgbp-default-margin);
+  --sgbp-region-padding: var(--sgbp-spacing-m);
 
-  --sgbp-region-small-padding: var(--sgbp-default-margin-small);
+  --sgbp-region-small-padding: var(--sgbp-spacing-s);
 
-  --sgbp-region-big-padding: var(--sgbp-default-margin-big);
+  --sgbp-region-big-padding: var(--sgbp-spacing-xl);
 
   --sgbp-region-accent-color: var(--sgbp-color-accent-inverted);
   --sgbp-region-accent-color-background: var(--sgbp-color-accent);
@@ -13,6 +13,8 @@
 
   --sgbp-region-light-gray-color: var(--sgbp-color-black);
   --sgbp-region-light-gray-color-background: var(--sgbp-color-gray-lighter);
+
+  --sgbp-region-rounded-borderRadius: 18px;
 }
 
 .sgbp-region {
@@ -48,10 +50,6 @@
     padding: var(--sgbp-region-small-padding);
   }
 
-  &--focusable:focus-within {
-    box-shadow: var(--sgbp-color-gray) 0 0 3px;
-  }
-
   &--big {
     padding: var(--sgbp-region-big-padding);
   }
@@ -77,7 +75,7 @@
   }
 
   &--rounded {
-    border-radius: 5px;
+    border-radius: var(--sgbp-region-rounded-borderRadius);
   }
 
   &--smallOnly {
@@ -125,9 +123,5 @@
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-  }
-
-  &--depth {
-    box-shadow: 0 0 5px 0 var(--sgbp-color-darken);
   }
 }

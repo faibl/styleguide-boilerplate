@@ -1,4 +1,4 @@
-@mixin kgrDefinitionListWidth($_width) {
+@mixin sgbpDefinitionListWidth($_width) {
   $_minScreenWidthInPx: #{($_width + 100)}px;
   $_widthInPx: #{$_width}px;
 
@@ -9,24 +9,24 @@
       }
 
       .sgbp-definitionList__definition {
-        flex-basis: calc(100% - #{$_widthInPx} - var(--sgbp-default-margin));
+        flex-basis: calc(100% - #{$_widthInPx} - var(--sgbp-spacing-m));
 
         & + .sgbp-definitionList__definition {
-          margin-left: calc(#{$_widthInPx} + var(--sgbp-default-margin));
+          margin-left: calc(#{$_widthInPx} + var(--sgbp-spacing-m));
         }
       }
     }
   }
 }
 
-@include kgrDefinitionListWidth(50);
-@include kgrDefinitionListWidth(75);
-@include kgrDefinitionListWidth(100);
-@include kgrDefinitionListWidth(125);
-@include kgrDefinitionListWidth(150);
-@include kgrDefinitionListWidth(175);
-@include kgrDefinitionListWidth(200);
-@include kgrDefinitionListWidth(250);
+@include sgbpDefinitionListWidth(50);
+@include sgbpDefinitionListWidth(75);
+@include sgbpDefinitionListWidth(100);
+@include sgbpDefinitionListWidth(125);
+@include sgbpDefinitionListWidth(150);
+@include sgbpDefinitionListWidth(175);
+@include sgbpDefinitionListWidth(200);
+@include sgbpDefinitionListWidth(250);
 
 .sgbp-definitionList {
   &__term {
@@ -56,7 +56,7 @@
     .sgbp-definitionList__term {
       @include sgbp-truncateLine;
       flex: 1 0 auto;
-      margin-right: var(--sgbp-default-margin);
+      margin-right: var(--sgbp-spacing-m);
     }
 
     .sgbp-definitionList__definition {

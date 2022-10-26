@@ -9,8 +9,8 @@ export const ShortContent = () => `
     <button class="sgbp-button sgbp-button--secondary sgbp-row" onclick="document.getElementById('sgbp-collapsible-demo-1').classList.toggle('is-open')">Toggle</button>
     <div class="sgbp-collapsible" id="sgbp-collapsible-demo-1">
         <div class="sgbp-collapsible__content">
-           <p class="sgbp-row sgbp-row--extraBigMargin">Collapsible Content</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">Collapsible Content</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
         </div>
     </div>
 `;
@@ -20,34 +20,34 @@ export const longContent = () => `
     <button class="sgbp-button sgbp-button--secondary sgbp-row" onclick="document.getElementById('sgbp-collapsible-demo-2').classList.toggle('is-open')">Toggle</button>
     <div class="sgbp-collapsible" id="sgbp-collapsible-demo-2">
         <div class="sgbp-collapsible__content">
-           <p class="sgbp-row sgbp-row--extraBigMargin">Collapsible Content</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
-           <p class="sgbp-row sgbp-row--extraBigMargin">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">Collapsible Content</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
+           <p class="sgbp-row sgbp-row--xl">&hellip;</p>
         </div>
     </div>
 `;

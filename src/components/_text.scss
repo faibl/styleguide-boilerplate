@@ -12,7 +12,7 @@
   }
 
   &--bold {
-    @include sgbp-bold;
+    font-weight: bold;
   }
 
   &--light {

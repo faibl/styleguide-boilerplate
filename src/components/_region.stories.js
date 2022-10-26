@@ -46,28 +46,20 @@ export const geometry = () => Sections([
 ]);
 geometry.decorators = [MaxWidthDecorator('800px')];
 
-export const focusable = () => `
-    <div class="sgbp-region sgbp-region--gray sgbp-region--focusable">
-        <input type="text" class="sgbp-input" placeholder="Placeholder ...">
-    </div>
-`;
-focusable.decorators = [DescriptionDecorator(['Highlight the region if an element inside that region is focused'])];
-
 
 export const verticalOnly = () => `<div class="sgbp-region sgbp-region--gray sgbp-region--verticalOnly">${loremIpsum}</div>`;
 export const horizontalOnly = () => `<div class="sgbp-region sgbp-region--gray sgbp-region--horizontalOnly">${loremIpsum}</div>`;
 export const noPadding = () => `<div class="sgbp-region sgbp-region--gray sgbp-region--noPadding">${loremIpsum}</div>`;
-export const depth = () => `<div class="sgbp-region sgbp-region--gray sgbp-region--depth">${loremIpsum}</div>`;
 
 export const exampleLayout = () => `
     <div class="sgbp-pageWrapper">
         <div class="sgbp-region sgbp-region--gray">
-            <div class="sgbp-region sgbp-centered sgbp-centered--horizontally sgbp-row sgbp-row--bigMargin">
+            <div class="sgbp-region sgbp-centered sgbp-centered--horizontally sgbp-row sgbp-row--l">
                 [LOGO]
             </div>
                 <h2 class="sgbp-headline sgbp-headline--h3 sgbp-headline--text sgbp-headline--firstInText ">Sie haben Ihr Passwort vergessen?</h2>
-            <div class="sgbp-region sgbp-region--big sgbp-region--accent sgbp-region--focusable">
-                <label class="sgbp-row sgbp-row--extraBigMargin">Geben Sie Ihre E-Mail-Adresse an, um Ihr Passwort zurückzusetzen:
+            <div class="sgbp-region sgbp-region--big sgbp-region--accent sgbp-region--rounded">
+                <label class="sgbp-row sgbp-row--xl">Geben Sie Ihre E-Mail-Adresse an, um Ihr Passwort zurückzusetzen:
                   <input type="text" class="sgbp-input" placeholder="me@mail.com">
                 </label>
             </div>

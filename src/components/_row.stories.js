@@ -1,93 +1,165 @@
-import {DescriptionDecorator} from "../../.storybook/decorators";
+import { Section, Sections } from '../../.storybook/renderers';
+import { DescriptionDecorator, UnpadHorizontally } from '../../.storybook/decorators';
 
 export default {
-    title: 'Components/Layout/Row',
-}
+  title: 'Components/Row',
+  decorators: [DescriptionDecorator(['Rows add defined vertical margins to an element'])],
+};
 
-export const Standard = () => `
-    <div class="sgbp-row">
-        Row 1
-    </div>
-    <div class="sgbp-row">
-        Row 2
-    </div>
-    <div class="sgbp-row">
-        Row 3
-    </div>
-`;
-Standard.decorators = [DescriptionDecorator(['Rows have a defined bottom margin'])];
-
-export const withSeparator = () => `
-    <div class="sgbp-row sgbp-row--withSeparator">
-        Row 1
-    </div>
-    <div class="sgbp-row sgbp-row--withSeparator">
-        Row 2
-    </div>
-    <div class="sgbp-row sgbp-row--withSeparator">
-        Row 3
-    </div>
-`;
-
-export const smallMargin = () => `
-    <div class="sgbp-row sgbp-row--smallMargin">
-        Row 1
-    </div>
-    <div class="sgbp-row sgbp-row--smallMargin">
-        Row 2
-    </div>
-    <div class="sgbp-row sgbp-row--smallMargin">
-        Row 3
-    </div>
-    <div class="sgbp-row sgbp-row--smallMargin sgbp-row--withSeparator">
-        Row 4 (with separator)
-    </div>
-    <div class="sgbp-row sgbp-row--smallMargin sgbp-row--withSeparator">
-        Row 5 (with separator)
-    </div>
-    <div class="sgbp-row sgbp-row--smallMargin sgbp-row--withSeparator">
-        Row 6 (with separator)
-    </div>
-`;
-
-export const bigMargin = () => `
-    <div class="sgbp-row sgbp-row--bigMargin">
-        Row 1
-    </div>
-    <div class="sgbp-row sgbp-row--bigMargin">
-        Row 2
-    </div>
-    <div class="sgbp-row sgbp-row--bigMargin">
-        Row 3
-    </div>
-    <div class="sgbp-row sgbp-row--bigMargin sgbp-row--withSeparator">
-        Row 4 (with separator)
-    </div>
-    <div class="sgbp-row sgbp-row--bigMargin sgbp-row--withSeparator">
-        Row 5 (with separator)
-    </div>
-    <div class="sgbp-row sgbp-row--bigMargin sgbp-row--withSeparator">
-        Row 6 (with separator)
-    </div>
-`;
-
-export const inverse = () => `
-    <div class="sgbp-row sgbp-row--inverse">
-        Row 1
-    </div>
-    <div class="sgbp-row sgbp-row--inverse">
-        Row 2
-    </div>
-    <div class="sgbp-row sgbp-row--inverse">
-        Row 3
-    </div>
-    <div class="sgbp-row sgbp-row--inverse sgbp-row--withSeparator">
-        Row 4 (with separator)
-    </div>
-    <div class="sgbp-row sgbp-row--inverse sgbp-row--withSeparator">
-        Row 5 (with separator)
-    </div>
-    <div class="sgbp-row sgbp-row--inverse sgbp-row--withSeparator">
-        Row 6 (with separator)
-    </div>
-`;
+export const Standard = () =>
+  Sections([
+    Section(
+      'Default (margin bottom, size s)',
+      `
+        <div class="sgbp-row">
+            Row 1
+        </div>
+        <div class="sgbp-row">
+            Row 2
+        </div>
+        <div class="sgbp-row">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      'Inverse (margin top)',
+      `
+        <div class="sgbp-row sgbp-row--inverse">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--inverse">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--inverse">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      'XS',
+      `
+        <div class="sgbp-row sgbp-row--xs">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--xs">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--xs">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      'S (Default)',
+      `
+        <div class="sgbp-row sgbp-row--s">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--s">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--s">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      'M',
+      `
+        <div class="sgbp-row sgbp-row--m">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--m">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--m">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      'L',
+      `
+        <div class="sgbp-row sgbp-row--l">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--l">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--l">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      'XL',
+      `
+        <div class="sgbp-row sgbp-row--xl">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--xl">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--xl">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '[m] none',
+      `
+        <div class="sgbp-row sgbp-row[m]--none">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row[m]--none">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row[m]--none">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '[l] none',
+      `
+        <div class="sgbp-row sgbp-row[l]--none">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row[l]--none">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row[l]--none">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '[xl] none',
+      `
+        <div class="sgbp-row sgbp-row[xl]--none">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row[xl]--none">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row[xl]--none">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+    'xl, [m] none, inverse',
+          `
+        <div class="sgbp-row sgbp-row--xl sgbp-row--inverse sgbp-row[m]--none">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--xl sgbp-row--inverse sgbp-row[m]--none">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--xl sgbp-row--inverse sgbp-row[m]--none">
+            Row 3
+        </div>
+      `
+    ),
+  ]);

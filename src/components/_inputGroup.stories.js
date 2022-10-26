@@ -49,31 +49,3 @@ export const constrainedWidth = () => `
         <input type="text" class="sgbp-input">
     </label>
 `;
-
-export const withAddon = () => `
-    <label class="sgbp-inputGroup sgbp-inputGroup--constrainedWidth">
-        <span class="sgbp-inputGroup__label">Amount</span>
-        <div class="sgbp-inputGroup__text">This is some help text to further clarify the usage of the given form field.</div>
-        <div class="sgbp-inputAddon sgbp-row">
-            <div class="sgbp-inputAddon__addon">$</div>
-            <input type="text" class="sgbp-inputAddon__input sgbp-input">
-        </div>
-    </label>
-`;
-
-export const horizontal = () => `
-    <label class="sgbp-inputGroup sgbp-inputGroup--horizontal">
-        <span class="sgbp-inputGroup__label">Title</span>
-        <div class="sgbp-inputGroup__text">This is some help text to further clarify the usage of the given form field.</div>
-        <input type="text" class="sgbp-input">
-    </label>
-
-    <label class="sgbp-inputGroup sgbp-inputGroup--horizontal">
-        <span class="sgbp-inputGroup__label">Switch</span>
-        <div class="sgbp-inputGroup__text">This is some help text to further clarify the usage of the given form field.</div>
-        <div class="sgbp-checkboxSwitch">
-            <input type="checkbox" class="sgbp-checkboxSwitch__control">
-            <div class="sgbp-checkboxSwitch__switch"></div>
-        </div>
-    </label>
-`;

@@ -1,3 +1,32 @@
 .sgbp-link {
-  @include sgbp-link('modifier');
+  transition: color 0.2s ease-in-out;
+  color: var(--sgbp-link-color);
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:visited,
+  &:active {
+    color: var(--sgbp-link-color);
+    text-decoration: underline; // undo text-decoration:none from CSS reset
+  }
+
+  &:focus {
+    color: var(--sgbp-link-hover-color);
+    text-decoration: underline; // undo text-decoration:none from CSS reset
+  }
+
+  &:hover {
+    text-decoration: underline; // undo text-decoration:none from CSS reset
+  }
+
+  @include sgbp-hover(var(--sgbp-link-hover-color)); // scss-lint:disable DeclarationOrder
+
+  &--unobtrusive {
+    @include sgbp-hover(var(--sgbp-color-accent));
+
+    &,
+    &:visited {
+      color: var(--sgbp-text-color);
+    }
+  }
 }

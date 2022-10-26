@@ -119,7 +119,7 @@ export const invalid = () => `
 `;
 
 export const labelFirst = () => `
-    <label class="sgbp-checkbox sgbp-checkbox--labelFirst sgbp-row sgbp-row--smallMargin">
+    <label class="sgbp-checkbox sgbp-checkbox--labelFirst sgbp-row sgbp-row--s">
         <input type="checkbox" class="sgbp-checkbox__control">
         <span class="sgbp-checkbox__label">Checkbox 1</span>
     </label>

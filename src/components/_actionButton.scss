@@ -21,7 +21,7 @@
     align-items: center;
 
     & + & {
-      margin-left: var(--sgbp-default-margin);
+      margin-left: var(--sgbp-spacing-m);
     }
   }
 
@@ -43,8 +43,8 @@
     margin-right: calc(var(--sgbp-actionButton-size) * -1);
     border-radius: var(--sgbp-actionButton-border-radius);
     box-shadow: 2px 2px 10px 0 var(--sgbp-color-darken);
-    padding-left: var(--sgbp-default-margin-big);
-    padding-right: var(--sgbp-default-margin-big);
+    padding-left: var(--sgbp-spacing-xl);
+    padding-right: var(--sgbp-spacing-xl);
   }
 
   &__flyoutIcons {

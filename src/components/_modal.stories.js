@@ -43,7 +43,7 @@ export const Standard = () => `
                 </div>
            </div>
            <div class="sgbp-modal__footer sgbp-region sgbp-text sgbp-text--rightAligned">
-               <button type="button" class="sgbp-button sgbp-col" onclick="shpModalDemoClose('test-modal-open')">Cancel</button>
+               <button type="button" class="sgbp-button" onclick="shpModalDemoClose('test-modal-open')">Cancel</button>
                <button type="button" class="sgbp-button sgbp-button--accent">Submit</button>
            </div>
        </div>
@@ -56,7 +56,7 @@ export const fullWidth = () => `
        <div class="sgbp-modal__dialog">
            <div class="sgbp-modal__header sgbp-region">
                 <div class="sgbp-modal__headerContent">
-                    <div class="sgbp-row sgbp-row--extraSmallMargin"><h1 class="sgbp-headline sgbp-headline--h4 sgbp-headline--primary">Modal Headline</h1></div>
+                    <div class="sgbp-row sgbp-row--xs"><h1 class="sgbp-headline sgbp-headline--h4 sgbp-headline--primary">Modal Headline</h1></div>
                 </div>
                 <span class="sgbp-modal__headerClose sgbp-clickable sgbp-clickable--touchy" aria-hidden="true" onclick="shpModalDemoClose('test-modal-fullWidth-open')">
                     <svg class="sgbp-icon">
@@ -77,7 +77,7 @@ export const fullHeight = () => `
        <div class="sgbp-modal__dialog">
            <div class="sgbp-modal__header sgbp-region">
                 <div class="sgbp-modal__headerContent">
-                    <div class="sgbp-row sgbp-row--extraSmallMargin"><h1 class="sgbp-headline sgbp-headline--h4 sgbp-headline--primary">Modal Headline</h1></div>
+                    <div class="sgbp-row sgbp-row--xs"><h1 class="sgbp-headline sgbp-headline--h4 sgbp-headline--primary">Modal Headline</h1></div>
                 </div>
                 <span class="sgbp-modal__headerClose sgbp-clickable sgbp-clickable--touchy" aria-hidden="true" onclick="shpModalDemoClose('test-modal-fullHeight-open')">
                     <svg class="sgbp-icon">

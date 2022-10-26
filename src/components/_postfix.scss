@@ -5,21 +5,21 @@
   &.sgbp-postfix--gutters {
     > * + * {
       margin-left: 0;
-      margin-top: var(--sgbp-default-margin);
+      margin-top: var(--sgbp-spacing-m);
     }
   }
 
   &.sgbp-postfix--smallGutters {
     > * + * {
       margin-left: 0;
-      margin-top: var(--sgbp-default-margin-small);
+      margin-top: var(--sgbp-spacing-s);
     }
   }
 
   &.sgbp-postfix--bigGutters {
     > * + * {
       margin-left: 0;
-      margin-top: var(--sgbp-default-margin-big);
+      margin-top: var(--sgbp-spacing-xl);
     }
   }
 }
@@ -45,25 +45,25 @@
 
   &--gutters {
     > * + * {
-      margin-left: var(--sgbp-default-margin);
+      margin-left: var(--sgbp-spacing-m);
     }
   }
 
   &--bigGutters {
     > * + * {
-      margin-left: var(--sgbp-default-margin-big);
+      margin-left: var(--sgbp-spacing-xl);
     }
   }
 
   &--smallGutters {
     > * + * {
-      margin-left: var(--sgbp-default-margin-small);
+      margin-left: var(--sgbp-spacing-s);
     }
   }
 
   &--tinyGutters {
     > * + * {
-      margin-left: var(--sgbp-default-margin-tiny);
+      margin-left: var(--sgbp-spacing-xs);
     }
   }
 

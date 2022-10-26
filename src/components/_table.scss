@@ -178,7 +178,7 @@
   display: inline-block;
 
   & + .sgbp-table__action {
-    margin-left: var(--sgbp-default-margin-tiny);
+    margin-left: var(--sgbp-spacing-xs);
   }
 }
 

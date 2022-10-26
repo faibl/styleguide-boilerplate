@@ -32,7 +32,7 @@
   }
 
   a {
-    @include sgbp-link();
+    @extend .sgbp-link;
   }
 
   ul {
@@ -44,6 +44,6 @@
   }
 
   ul, ol {
-    margin-top: var(--sgbp-default-margin-small);
+    margin-top: var(--sgbp-spacing-s);
   }
 }

@@ -50,7 +50,7 @@
   //** Link hover color set via `darken` function.
   --sgbp-link-hover-color: lighten(var(--sgbp-color-accent), 20);
 
-  --sgbp-page-max-width: 1400px;
+  --sgbp-page-max-width: 1024px;
 
   //== Typography
   //
@@ -84,18 +84,11 @@
   /**
    * Margins:
    */
-  --sgbp-default-margin: 16px;
-  --sgbp-default-margin-tiny: 8px;
-  --sgbp-default-margin-small: 12px;
-  --sgbp-default-margin-big: 28px;
-
-  @media #{$sgbp-large-up} {
-    --sgbp-default-margin: 20px;
-    --sgbp-default-margin-tiny: 10px;
-    --sgbp-default-margin-small: 14px;
-    --sgbp-default-margin-big: 34px;
-  }
-
+  --sgbp-spacing-m: 16px;
+  --sgbp-spacing-xs: 8px;
+  --sgbp-spacing-s: 12px;
+  --sgbp-spacing-l: 24px;
+  --sgbp-spacing-xl: 34px;
 
   --sgbp-input-height: 35px;
   --sgbp-input-small-height: 25px;

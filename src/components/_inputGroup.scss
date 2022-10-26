@@ -31,7 +31,7 @@
   &--inline {
     display: inline-block;
 
-    margin-right: var(--sgbp-default-margin);
+    margin-right: var(--sgbp-spacing-m);
     margin-bottom: var(--sgbp-inputGroup-margin);
 
     & + & {
@@ -69,22 +69,6 @@
     &--error {
       color: var(--sgbp-inputGroup-error-color);
       font-size: var(--sgbp-inputGroup-error-font-size);
-    }
-  }
-
-  &--horizontal {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-
-    .sgbp-inputGroup {
-      &__label {
-        margin-right: var(--sgbp-default-margin);
-      }
-
-      &__text {
-        order: 3;
-      }
     }
   }
 

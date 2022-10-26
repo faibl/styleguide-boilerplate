@@ -9,7 +9,7 @@ export default {
 
 export const Standard = () => `
     <div class="sgbp-tabs">
-        <div class="sgbp-tabs__headers sgbp-row sgbp-row--bigMargin">
+        <div class="sgbp-tabs__headers sgbp-row sgbp-row--l">
             <a class="sgbp-tabs__tab" href="javascript:;">Tab 1</a>
             <a class="sgbp-tabs__tab" href="javascript:;">Tab 2</a>
             <a class="sgbp-tabs__tab is-active" href="javascript:;">3rd Tab</a>

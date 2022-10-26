@@ -98,7 +98,7 @@ export const Invalid = () => `
 `;
 
 export const labelFirst = () => `
-    <label class="sgbp-radio sgbp-radio--labelFirst sgbp-row sgbp-row--smallMargin">
+    <label class="sgbp-radio sgbp-radio--labelFirst sgbp-row sgbp-row--s">
         <input type="radio" name="sgbp-radio-demo" class="sgbp-radio__control">
         <span class="sgbp-radio__label">Radio 1</span>
     </label>
