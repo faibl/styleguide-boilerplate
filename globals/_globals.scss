@@ -1,3 +1,0 @@
-img:not([src]) {
-  opacity: 0; // hide broken image icon for images without src attribute (e.g. lazily loaded or loaded by ajax api call)
-}

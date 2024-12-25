@@ -1,7 +1,0 @@
-:root {
-  --sgbp-vh: 1vh; // gets dynamically recalculated via javascript to circumvent issues with mobile browsers address bars
-}
-
-@function sgbp-vh($quantity) {
-  @return calc(var(--sgbp-vh, 1vh) * #{$quantity});
-}
