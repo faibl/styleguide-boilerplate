@@ -1,6 +1,6 @@
 module.exports = {
   stories: ['../src/**/*.stories.js'],
-  addons: [],
+  addons: ['@storybook/addon-webpack5-compiler-babel', '@chromatic-com/storybook'],
   staticDirs: [
     { from: '../src/assets', to: '/assets' },
   ],
@@ -8,7 +8,5 @@ module.exports = {
     name: '@storybook/html-webpack5',
     options: {},
   },
-  docs: {
-    autodocs: false,
-  },
+  docs: {},
 };
