@@ -1,4 +1,4 @@
-import '../tmp/styleguide.css';
+import '../src/styleguide.scss';
 
 const PageWrapperDecorator = (storyFn, options) => {
     if (options?.args?.disablePageWrapperDecorator) {

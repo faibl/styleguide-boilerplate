@@ -9,26 +9,7 @@ module.exports = async ({ config, mode }) => {
     // Make whatever fine-grained changes you need
     config.module.rules.push({
         test: /\.scss$/,
-        use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader',
-            {
-                loader: 'postcss-loader',
-                options: {
-                    /*
-                      Enable Source Maps
-                     */
-                    sourceMap: true,
-                    /*
-                      Set postcss.config.js config path && ctx
-                     */
-                    config: {
-                        path: './.storybook/',
-                    },
-                },
-            },
-        ],
+        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
         include: path.resolve(__dirname, '../'),
     });
 

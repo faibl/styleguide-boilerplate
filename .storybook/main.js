@@ -1,11 +1,14 @@
 module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
+  stories: ['../src/**/*.stories.js'],
+  addons: [],
+  staticDirs: [
+    { from: '../src/assets', to: '/assets' },
   ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials"
-  ],
-  "framework": "@storybook/html"
-}
+  framework: {
+    name: '@storybook/html-webpack5',
+    options: {},
+  },
+  docs: {
+    autodocs: false,
+  },
+};
