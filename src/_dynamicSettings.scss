@@ -5,40 +5,114 @@
 
 // sass-lint:disable no-color-literals
 :root {
-  //== Colors
+  /**
+   * Accent and highlight colors may change depending on the context in which they are used
+   * (css custom properties sgbp-color-accent* and sgbp-color-highlight* might get overwritten)
+   */
+  --sgbp-color-transparent: rgba(1, 1, 1, 0);
+  --sgbp-color-semiTransparent-1: rgba(255, 255, 255, 0.12);
+  --sgbp-color-semiTransparent-2: rgba(255, 255, 255, 0.2);
+  --sgbp-color-semiTransparent-3: rgba(255, 255, 255, 0.32);
+  --sgbp-color-semiTransparent-5: rgba(255, 255, 255, 0.5);
+  --sgbp-color-semiTransparent-6: rgba(255, 255, 255, 0.6);
+  --sgbp-color-darken: rgba(81, 79, 109, 0.8);
+  --sgbp-color-darken-clear: rgba(0, 0, 0, 0.35);
+  --sgbp-color-darken-light: rgba(81, 79, 109, 0.3);
   --sgbp-color-white: #fff;
-  --sgbp-color-black: hsla(186, 15%, 8%, 1);
-  --sgbp-color-gray-darker: hsl(209, 61%, 16%);
-  --sgbp-color-gray-dark: hsl(209, 28%, 39%);
-  --sgbp-color-gray: hsl(209, 23%, 60%);
-  --sgbp-color-gray-medium: hsl(210, 31%, 80%);
-  --sgbp-color-gray-light: hsl(212, 33%, 89%);
-  --sgbp-color-gray-lighter: hsl(210, 36%, 96%);
-  --sgbp-color-lighten: rgba(255, 255, 255, 0.6);
-  --sgbp-color-darken-light: rgba(0, 0, 0, 0.15);
-  --sgbp-color-darken: rgba(0, 0, 0, 0.6);
-  --sgbp-color-darken-heavy: rgba(0, 0, 0, 0.8);
-  --sgbp-color-transparent: rgba(0, 0, 0, 0);
+  --sgbp-color-white-opacity-60: rgba(255, 255, 255, 0.6);
+  --sgbp-color-black: #252525;
+  --sgbp-color-gray-base: var(--sgbp-color-gray-700); // default text color
+  --sgbp-color-gray-900: #111019;
+  --sgbp-color-gray-800: #252434;
+  --sgbp-color-gray-700: #3b394e;
+  --sgbp-color-gray-600: #514f6d;
+  --sgbp-color-gray-500: #6e6981;
+  --sgbp-color-gray-400: #878397;
+  --sgbp-color-gray-300: #a29eab;
+  --sgbp-color-gray-200: #bcb9c3;
+  --sgbp-color-gray-100: #dad8de;
+  --sgbp-color-gray-50: #eae9ec;
+  --sgbp-color-gray-50-opactiy-60: rgba(234, 233, 236, 0.6);
+  --sgbp-color-gray-25: #f7f7f8;
 
-  --sgbp-color-accent: #58cfe1;
-  --sgbp-color-accent-alternate: #00BDDE;
-  --sgbp-color-accent-inverted: var(--sgbp-color-white);
+  --sgbp-success-color: #12b76a;
+  --sgbp-success-color-background: f6fef9;
+  --sgbp-danger-color: #f04438;
+  --sgbp-danger-color-background: #fffbfa;
 
-  --sgbp-color-highlight: #ffff71;
-  --sgbp-color-highlight-inverted: var(--sgbp-color-black);
+  --sgbp-color-error--400: #f97066;
 
-  --sgbp-color-success: hsl(164, 71%, 34%);
-  --sgbp-color-success-inverted: var(--sgbp-color-white);
-  --sgbp-color-warning: hsl(36, 77%, 49%);
-  --sgbp-color-warning-inverted: var(--sgbp-color-white);
-  --sgbp-color-error: hsl(354, 85%, 44%);
-  --sgbp-color-error-inverted: var(--sgbp-color-white);
+  --sgbp-color-inverted: var(--sgbp-white);
+  --sgbp-color-inverted-alternate: var(--sgbp-color-gray-50);
 
-  //== Scaffolding
-  //
-  //## Settings for some of the most global styles.
+  /**
+   * Accent and highlight colors may change depending on the context in which they are used
+   * (css custom properties sgbp-color-accent* and sgbp-color-highlight* might get overwritten)
+   */
 
-  --sgbp-default-border-radius: 2px;
+  --sgbp-color-accent-25: var(--sgbp-color-turquoise-25);
+  --sgbp-color-accent-50: var(--sgbp-color-turquoise-50);
+  --sgbp-color-accent-100: var(--sgbp-color-turquoise-100);
+  --sgbp-color-accent-200: var(--sgbp-color-turquoise-200);
+  --sgbp-color-accent-300: var(--sgbp-color-turquoise-300);
+  --sgbp-color-accent-400: var(--sgbp-color-turquoise-400);
+  --sgbp-color-accent-500: var(--sgbp-color-turquoise-500);
+  --sgbp-color-accent-600: var(--sgbp-color-turquoise-600);
+  --sgbp-color-accent-700: var(--sgbp-color-turquoise-700);
+  --sgbp-color-accent-800: var(--sgbp-color-turquoise-800);
+  --sgbp-color-accent-900: var(--sgbp-color-turquoise-900);
+  --sgbp-color-accent: var(--sgbp-color-turquoise-500);
+  --sgbp-color-accent-inverted: var(--sgbp-color-turquoise-inverted);
+
+  --sgbp-color-highlight-25: var(--sgbp-color-yellow-25);
+  --sgbp-color-highlight-50: var(--sgbp-color-yellow-50);
+  --sgbp-color-highlight-100: var(--sgbp-color-yellow-100);
+  --sgbp-color-highlight-200: var(--sgbp-color-yellow-200);
+  --sgbp-color-highlight-300: var(--sgbp-color-yellow-300);
+  --sgbp-color-highlight-400: var(--sgbp-color-yellow-400);
+  --sgbp-color-highlight-500: var(--sgbp-color-yellow-500);
+  --sgbp-color-highlight-600: var(--sgbp-color-yellow-600);
+  --sgbp-color-highlight-700: var(--sgbp-color-yellow-700);
+  --sgbp-color-highlight-800: var(--sgbp-color-yellow-800);
+  --sgbp-color-highlight-900: var(--sgbp-color-yellow-900);
+  --sgbp-color-highlight: var(--sgbp-color-yellow-500);
+  --sgbp-color-highlight-inverted: var(--sgbp-color-yellow-inverted);
+  --sgbp-color-highlight-alternate: var(--sgbp-color-yellow-600);
+
+  --sgbp-color-yellow-25: #ffffcc;
+  --sgbp-color-yellow-50: #ffff99;
+  --sgbp-color-yellow-100: #ffff66;
+  --sgbp-color-yellow-200: #ffff33;
+  --sgbp-color-yellow-300: #ffeb00;
+  --sgbp-color-yellow-400: #e6c800;
+  --sgbp-color-yellow-500: #cc9900;
+  --sgbp-color-yellow-600: #b37700;
+  --sgbp-color-yellow-700: #996600;
+  --sgbp-color-yellow-800: #804d00;
+  --sgbp-color-yellow-900: #663300;
+  --sgbp-color-yellow: var(--sgbp-color-yellow-500);
+  --sgbp-color-yellow-inverted: #000;
+
+  --sgbp-color-turquoise-25: #ccffff;
+  --sgbp-color-turquoise-50: #99ffff;
+  --sgbp-color-turquoise-100: #66ffff;
+  --sgbp-color-turquoise-200: #33e6e6;
+  --sgbp-color-turquoise-300: #00cccc;
+  --sgbp-color-turquoise-400: #00b3b3;
+  --sgbp-color-turquoise-500: #009999;
+  --sgbp-color-turquoise-600: #007f7f;
+  --sgbp-color-turquoise-700: #006666;
+  --sgbp-color-turquoise-800: #004c4c;
+  --sgbp-color-turquoise-900: #003333;
+  --sgbp-color-turquoise: var(--sgbp-color-turquoise-500);
+  --sgbp-color-turquoise-inverted: #fff;
+  
+  --sgbp-border-radius-3xs: 6px;
+  --sgbp-border-radius-2xs: 8px;
+  --sgbp-border-radius-xs: 12px;
+  --sgbp-border-radius-s: 16px;
+  --sgbp-border-radius-m: 24px;
+  --sgbp-border-radius-l: 32px;
 
   //** Background color for `<body>`.
   --sgbp-body-bg: var(--sgbp-color-white);
@@ -84,12 +158,20 @@
   /**
    * Margins:
    */
-  --sgbp-spacing-m: 16px;
-  --sgbp-spacing-xs: 8px;
-  --sgbp-spacing-s: 12px;
-  --sgbp-spacing-l: 24px;
-  --sgbp-spacing-xl: 34px;
-
+  --sgbp-spacing-4xs: 4px;
+  --sgbp-spacing-3xs: 6px;
+  --sgbp-spacing-2xs: 8px;
+  --sgbp-spacing-xs: 12px;
+  --sgbp-spacing-s: 16px;
+  --sgbp-spacing-m: 24px;
+  --sgbp-spacing-l: 32px;
+  --sgbp-spacing-xl: 40px;
+  --sgbp-spacing-2xl: 48px;
+  --sgbp-spacing-3xl: 56px;
+  --sgbp-spacing-4xl: 64px;
+  --sgbp-spacing-5xl: 72px;
+  --sgbp-spacing-6xl: 80px;
+  --sgbp-spacing-7xl: 88px;
   --sgbp-input-height: 35px;
   --sgbp-input-small-height: 25px;
   --sgbp-input-big-height: 50px;

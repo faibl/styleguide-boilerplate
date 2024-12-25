@@ -7,7 +7,7 @@
   --sgbp-icon-circle-color: var(--sgbp-color-white);
   --sgbp-icon-circle-backgroundColor: var(--sgbp-color-black);
 
-  @media #{$sgbp-medium-up} {
+  @media #{$sgbp-m-up} {
     --sgbp-icon-font-size: 1.6em;
     --sgbp-icon-font-size-tiny: 1.2em;
     --sgbp-icon-font-size-small: 1.4em;

@@ -1,88 +1,81 @@
-.sgbp-row {
-  margin-bottom: var(--sgbp-spacing-m);
+@mixin sgbp-row-responsive($mediaQuery, $responsiveSelector) {
+  @media #{$mediaQuery} {
+    &#{$responsiveSelector} {
+      &--none {
+        --sgbp-row-spacing: 0;
+      }
 
-  &--xs {
-    margin-bottom: var(--sgbp-spacing-xs);
-  }
+      &--noneIfLastChild:last-child {
+        --sgbp-row-spacing: 0;
+      }
 
-  &--s {
-    margin-bottom: var(--sgbp-spacing-s);
-  }
+      &--3xs {
+        --sgbp-row-spacing: var(--sgbp-spacing-3xs);
+      }
 
-  &--m {
-    // default
-  }
-
-  &--l {
-    margin-bottom: var(--sgbp-spacing-l);
-  }
-
-  &--xl {
-    margin-bottom: var(--sgbp-spacing-xl);
-  }
-
-  &\[m\]--none {
-    @media #{$sgbp-medium-up} {
-      margin-bottom: 0;
-    }
-  }
-
-  &\[l\]--none {
-    @media #{$sgbp-large-up} {
-      margin-bottom: 0;
-    }
-  }
-
-  &\[xl\]--none {
-    @media #{$sgbp-xlarge-up} {
-      margin-bottom: 0;
-    }
-  }
-
-  &--inverse {
-    margin-bottom: 0;
-    margin-top: var(--sgbp-spacing-m);
-
-    &.sgbp-row {
+      &--2xs {
+        --sgbp-row-spacing: var(--sgbp-spacing-2xs);
+      }
 
       &--xs {
-        margin-top: var(--sgbp-spacing-xs);
+        --sgbp-row-spacing: var(--sgbp-spacing-xs);
       }
 
       &--s {
-        margin-top: var(--sgbp-spacing-s);
+        --sgbp-row-spacing: var(--sgbp-spacing-s);
       }
 
       &--m {
-        // default
+        --sgbp-row-spacing: var(--sgbp-spacing-m);
       }
 
       &--l {
-        margin-top: var(--sgbp-spacing-l);
+        --sgbp-row-spacing: var(--sgbp-spacing-l);
       }
 
       &--xl {
-        margin-top: var(--sgbp-spacing-xl);
+        --sgbp-row-spacing: var(--sgbp-spacing-xl);
       }
 
-
-      &\[m\]--none {
-        @media #{$sgbp-medium-up} {
-          margin-top: 0;
-        }
+      &--2xl {
+        --sgbp-row-spacing: var(--sgbp-spacing-2xl);
       }
 
-      &\[l\]--none {
-        @media #{$sgbp-large-up} {
-          margin-top: 0;
-        }
+      &--3xl {
+        --sgbp-row-spacing: var(--sgbp-spacing-3xl);
       }
 
-      &\[xl\]--none {
-        @media #{$sgbp-xlarge-up} {
-          margin-top: 0;
-        }
+      &--4xl {
+        --sgbp-row-spacing: var(--sgbp-spacing-4xl);
+      }
+
+      &--5xl {
+        --sgbp-row-spacing: var(--sgbp-spacing-5xl);
+      }
+
+      &--6xl {
+        --sgbp-row-spacing: var(--sgbp-spacing-6xl);
+      }
+
+      &--7xl {
+        --sgbp-row-spacing: var(--sgbp-spacing-7xl);
       }
     }
   }
+}
+
+.sgbp-row {
+  --sgbp-row-spacing: var(--sgbp-spacing-s);
+  margin-bottom: var(--sgbp-row-spacing);
+
+  &--inverse {
+    margin-bottom: 0;
+    margin-top: var(--sgbp-row-spacing);
+  }
+
+  @include sgbp-row-responsive('all', '');
+  @include sgbp-row-responsive($sgbp-s-up, '\\[s\\]');
+  @include sgbp-row-responsive($sgbp-m-up, '\\[m\\]');
+  @include sgbp-row-responsive($sgbp-l-up, '\\[l\\]');
+  @include sgbp-row-responsive($sgbp-xl-up, '\\[xl\\]');
 }

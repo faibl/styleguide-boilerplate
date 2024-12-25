@@ -14,17 +14,19 @@ $sgbp-screen-medium-max: ($sgbp-screen-large-min - 1px);
 $sgbp-screen-large-max: ($sgbp-screen-xlarge-min - 1px);
 
 // helper classes for most common media query types
-$sgbp-tiny-only: 'only screen and (max-width: #{$sgbp-screen-small-min})';
-$sgbp-tiny-up: 'only screen'; /* tiny-up basically means 'every screen size' */
-$sgbp-small-only: 'only screen and (min-width: #{$sgbp-screen-small-min}) and (max-width: #{$sgbp-screen-small-max})';
-$sgbp-small-up: 'only screen and (min-width: #{$sgbp-screen-small-min})';
-$sgbp-small-down: 'only screen and (max-width: #{$sgbp-screen-small-max})';
-$sgbp-medium-only: 'only screen and (min-width: #{$sgbp-screen-medium-min}) and (max-width: #{$sgbp-screen-medium-max})';
-$sgbp-medium-up: 'only screen and (min-width: #{$sgbp-screen-medium-min})';
-$sgbp-medium-down: 'only screen and (max-width: #{$sgbp-screen-medium-max})';
-$sgbp-large-only: 'only screen and (min-width: #{$sgbp-screen-large-min}) and (max-width: #{$sgbp-screen-large-max})';
-$sgbp-large-up: 'only screen and (min-width: #{$sgbp-screen-large-min})';
-$sgbp-xlarge-only: 'only screen and (min-width: #{$sgbp-screen-xlarge-min})';
-$sgbp-xlarge-up: 'only screen and (min-width: #{$sgbp-screen-xlarge-min})';
+$sgbp-xs-only: 'only screen and (max-width: #{$sgbp-screen-small-min})';
+$sgbp-xs-up: 'only screen'; /* tiny-up basically means 'every screen size' */
+$sgbp-s-only: 'only screen and (min-width: #{$sgbp-screen-small-min}) and (max-width: #{$sgbp-screen-small-max})';
+$sgbp-s-up: 'only screen and (min-width: #{$sgbp-screen-small-min})';
+$sgbp-s-down: 'only screen and (max-width: #{$sgbp-screen-small-max})';
+$sgbp-m-only: 'only screen and (min-width: #{$sgbp-screen-medium-min}) and (max-width: #{$sgbp-screen-medium-max})';
+$sgbp-m-up: 'only screen and (min-width: #{$sgbp-screen-medium-min})';
+$sgbp-m-down: 'only screen and (max-width: #{$sgbp-screen-medium-max})';
+$sgbp-l-only: 'only screen and (min-width: #{$sgbp-screen-large-min}) and (max-width: #{$sgbp-screen-large-max})';
+$sgbp-l-up: 'only screen and (min-width: #{$sgbp-screen-large-min})';
+$sgbp-l-down: 'only screen and (max-width: #{$sgbp-screen-large-max})';
+$sgbp-xl-only: 'only screen and (min-width: #{$sgbp-screen-xlarge-min})';
+$sgbp-xl-up: 'only screen and (min-width: #{$sgbp-screen-xlarge-min})';
+$sgbp-xl-down: 'only screen and (max-width: #{$sgbp-screen-xlarge-min})';
 $sgbp-screen-only: 'only screen';
 $sgbp-print-only: 'only print';

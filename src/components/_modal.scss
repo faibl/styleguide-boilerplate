@@ -45,7 +45,7 @@ html.is-sgbp-modal-open {
     height: calc(100% - var(--sgbp-modal-margin) * 2);
     // sass-lint:enable no-duplicate-properties
 
-    @media #{$sgbp-xlarge-up} {
+    @media #{$sgbp-xl-up} {
       height: calc(100% - var(--sgbp-modal-marginXlargeUp) * 2);
     }
   }
@@ -72,7 +72,7 @@ html.is-sgbp-modal-open {
     border-color: var(--sgbp-modal-dialog-border-color);
     box-shadow: var(--sgbp-modal-dialog-box-shadow);
 
-    @media #{$sgbp-xlarge-up} {
+    @media #{$sgbp-xl-up} {
       margin: var(--sgbp-modal-marginXlargeUp);
       max-height: calc(#{sgbp-vh(100)} - 2 * var(--sgbp-modal-marginXlargeUp));
     }

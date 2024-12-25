@@ -70,20 +70,20 @@
   &--tiny-stacked,
   &--small-stacked,
   &--medium-stacked {
-    @media #{$sgbp-tiny-only} {
+    @media #{$sgbp-xs-only} {
       @include kgrPostfixStacked();
     }
   }
 
   &--small-stacked,
   &--medium-stacked {
-    @media #{$sgbp-small-only} {
+    @media #{$sgbp-s-only} {
       @include kgrPostfixStacked();
     }
   }
 
   &--medium-stacked {
-    @media #{$sgbp-medium-only} {
+    @media #{$sgbp-m-only} {
       @include kgrPostfixStacked();
     }
   }

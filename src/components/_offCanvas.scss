@@ -127,10 +127,10 @@
   }
 
   &--on-medium-up {
-    @include sgbp-offCanvas-forceOn($sgbp-medium-up);
+    @include sgbp-offCanvas-forceOn($sgbp-m-up);
   }
 
   &--on-large-up {
-    @include sgbp-offCanvas-forceOn($sgbp-large-up);
+    @include sgbp-offCanvas-forceOn($sgbp-l-up);
   }
 }

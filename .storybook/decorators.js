@@ -7,6 +7,17 @@ export const DescriptionDecorator = (descriptions) => (storyFn) => {
     `;
 };
 
+/**
+ * Use UnpadHorizontally for examples the should bis displayed without left/right canvas padding
+ */
+export const UnpadHorizontally = function (storyFn) {
+    return `
+        <div class="sgbp-region__unpadHorizontally">
+            ${storyFn()}
+        </div>
+    `;
+};
+
 export const MaxWidthDecorator = (maxWidth) => (storyFn) => {
     return `
         <div style="max-width: ${maxWidth}">

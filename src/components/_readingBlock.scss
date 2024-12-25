@@ -3,7 +3,7 @@
 }
 
 .sgbp-readingBlock {
-  @media #{$sgbp-large-up} {
+  @media #{$sgbp-l-up} {
     max-width: var(--sgbp-readingBlock-maxWidth);
 
     margin-left: auto;

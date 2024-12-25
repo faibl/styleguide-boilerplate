@@ -3,9 +3,10 @@ import { DescriptionDecorator, UnpadHorizontally } from '../../.storybook/decora
 
 export default {
   title: 'Components/Row',
-  decorators: [DescriptionDecorator(['Rows add defined vertical margins to an element'])],
+  decorators: [DescriptionDecorator(['Rows add vertical spacing'])],
 };
 
+//language=HTML
 export const Standard = () =>
   Sections([
     Section(
@@ -32,6 +33,34 @@ export const Standard = () =>
             Row 2
         </div>
         <div class="sgbp-row sgbp-row--inverse">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '3XS',
+      `
+        <div class="sgbp-row sgbp-row--3xs">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--3xs">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--3xs">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '2XS',
+      `
+        <div class="sgbp-row sgbp-row--2xs">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--2xs">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--2xs">
             Row 3
         </div>
       `
@@ -107,6 +136,104 @@ export const Standard = () =>
       `
     ),
     Section(
+      '2XL',
+      `
+        <div class="sgbp-row sgbp-row--2xl">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--2xl">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--2xl">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '3XL',
+      `
+        <div class="sgbp-row sgbp-row--3xl">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--3xl">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--3xl">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '4XL',
+      `
+        <div class="sgbp-row sgbp-row--4xl">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--4xl">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--4xl">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '5XL',
+      `
+        <div class="sgbp-row sgbp-row--5xl">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--5xl">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--5xl">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '6XL',
+      `
+        <div class="sgbp-row sgbp-row--6xl">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--6xl">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--6xl">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '7XL',
+      `
+        <div class="sgbp-row sgbp-row--7xl">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--7xl">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--7xl">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
+      '[s]--s, [m]--xl, [xl]--none',
+      `
+        <div class="sgbp-row sgbp-row--s sgbp-row[m]--xl sgbp-row[xl]--none">
+            Row 1
+        </div>
+        <div class="sgbp-row sgbp-row--s sgbp-row[m]--xl sgbp-row[xl]--none">
+            Row 2
+        </div>
+        <div class="sgbp-row sgbp-row--s sgbp-row[m]--xl sgbp-row[xl]--none">
+            Row 3
+        </div>
+      `
+    ),
+    Section(
       '[m] none',
       `
         <div class="sgbp-row sgbp-row[m]--none">
@@ -149,17 +276,26 @@ export const Standard = () =>
       `
     ),
     Section(
-    'xl, [m] none, inverse',
-          `
-        <div class="sgbp-row sgbp-row--xl sgbp-row--inverse sgbp-row[m]--none">
+      '4xl, [m] none, inverse',
+      `
+        <div class="sgbp-row sgbp-row--4xl sgbp-row--inverse sgbp-row[m]--none">
             Row 1
         </div>
-        <div class="sgbp-row sgbp-row--xl sgbp-row--inverse sgbp-row[m]--none">
+        <div class="sgbp-row sgbp-row--4xl sgbp-row--inverse sgbp-row[m]--none">
             Row 2
         </div>
-        <div class="sgbp-row sgbp-row--xl sgbp-row--inverse sgbp-row[m]--none">
+        <div class="sgbp-row sgbp-row--4xl sgbp-row--inverse sgbp-row[m]--none">
             Row 3
         </div>
       `
     ),
   ]);
+
+//language=HTML
+export const NoneIfLastChild = () => `
+    <div class="sgbp-region sgbp-region--gray">
+        <div class="sgbp-region sgbp-region--white sgbp-row sgbp-row--xl sgbp-row--noneIfLastChild">row 1</div>
+        <div class="sgbp-region sgbp-region--white sgbp-row sgbp-row--xl sgbp-row--noneIfLastChild">row 2</div>
+        <div class="sgbp-region sgbp-region--white sgbp-row sgbp-row--xl sgbp-row--noneIfLastChild">row 3</div>
+    </div>
+`;

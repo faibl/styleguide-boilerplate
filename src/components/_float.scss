@@ -28,7 +28,7 @@
   }
 
   &--smallCenter {
-    @media #{$sgbp-small-down} {
+    @media #{$sgbp-s-down} {
       float: none;
       display: block;
 
@@ -42,7 +42,7 @@
   }
 
   &--tinyCenter {
-    @media #{$sgbp-tiny-only} {
+    @media #{$sgbp-xs-only} {
       float: none;
       display: block;
 

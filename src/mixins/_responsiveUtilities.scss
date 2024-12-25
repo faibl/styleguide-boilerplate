@@ -1,13 +1,13 @@
 // sass-lint:disable no-important
 
 @mixin sgbp-hidden-tiny {
-  @media #{$sgbp-tiny-only} {
+  @media #{$sgbp-xs-only} {
     display: none !important;
   }
 }
 
 @mixin sgbp-hidden-tiny-up {
-  @media #{$sgbp-tiny-up}, print {
+  @media #{$sgbp-xs-up}, print {
     display: none !important;
   }
 }
@@ -17,13 +17,13 @@
 }
 
 @mixin sgbp-hidden-small {
-  @media #{$sgbp-small-only} {
+  @media #{$sgbp-s-only} {
     display: none !important;
   }
 }
 
 @mixin sgbp-hidden-small-up {
-  @media #{$sgbp-small-up}, print {
+  @media #{$sgbp-s-up}, print {
     display: none !important;
   }
 }
@@ -34,13 +34,13 @@
 }
 
 @mixin sgbp-hidden-medium {
-  @media #{$sgbp-medium-only} {
+  @media #{$sgbp-m-only} {
     display: none !important;
   }
 }
 
 @mixin sgbp-hidden-medium-up {
-  @media #{$sgbp-medium-up}, print {
+  @media #{$sgbp-m-up}, print {
     display: none !important;
   }
 }
@@ -51,13 +51,13 @@
 }
 
 @mixin sgbp-hidden-large {
-  @media #{$sgbp-large-only}, print {
+  @media #{$sgbp-l-only}, print {
     display: none !important;
   }
 }
 
 @mixin sgbp-hidden-large-up {
-  @media #{$sgbp-large-up}, print {
+  @media #{$sgbp-l-up}, print {
     display: none !important;
   }
 }
@@ -68,13 +68,13 @@
 }
 
 @mixin sgbp-hidden-xlarge {
-  @media #{$sgbp-xlarge-only} {
+  @media #{$sgbp-xl-only} {
     display: none !important;
   }
 }
 
 @mixin sgbp-hidden-xlarge-up {
-  @media #{$sgbp-xlarge-up} {
+  @media #{$sgbp-xl-up} {
     display: none !important;
   }
 }
