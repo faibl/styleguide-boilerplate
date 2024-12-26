@@ -1,3 +1,5 @@
+@use "../settings";
+
 @mixin kgrPostfixStacked() {
   flex-direction: column;
   align-items: stretch;
@@ -70,20 +72,20 @@
   &--tiny-stacked,
   &--small-stacked,
   &--medium-stacked {
-    @media #{$sgbp-xs-only} {
+    @media #{settings.$sgbp-xs-only} {
       @include kgrPostfixStacked();
     }
   }
 
   &--small-stacked,
   &--medium-stacked {
-    @media #{$sgbp-s-only} {
+    @media #{settings.$sgbp-s-only} {
       @include kgrPostfixStacked();
     }
   }
 
   &--medium-stacked {
-    @media #{$sgbp-m-only} {
+    @media #{settings.$sgbp-m-only} {
       @include kgrPostfixStacked();
     }
   }

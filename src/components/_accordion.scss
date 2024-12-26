@@ -1,3 +1,5 @@
+@use "../mixins/hover";
+
 // sass-lint:disable nesting-depth
 
 :root {
@@ -9,7 +11,7 @@
     margin-bottom: 0.8rem;
 
     &Header {
-      @include sgbp-hover(var(--sgbp-color-accent));
+      @include hover.sgbp-hover(var(--sgbp-color-accent));
       display: flex;
       width: 100%;
       align-items: center;

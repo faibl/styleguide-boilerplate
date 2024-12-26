@@ -1,9 +1,11 @@
+@use "../settings";
+
 :root {
   --sgbp-readingBlock-maxWidth: 50rem;
 }
 
 .sgbp-readingBlock {
-  @media #{$sgbp-l-up} {
+  @media #{settings.$sgbp-l-up} {
     max-width: var(--sgbp-readingBlock-maxWidth);
 
     margin-left: auto;

@@ -1,3 +1,5 @@
+@use "../settings";
+
 :root {
   --sgbp-grid-gutter-width-2xs: calc(var(--sgbp-spacing-2xs));
   --sgbp-grid-gutter-width-xs: calc(var(--sgbp-spacing-xs));
@@ -8,7 +10,7 @@
   --sgbp-grid-borderColor: var(--sgbp-color-gray-50);
   --sgbp-grid-gutter-browser-hack-spacing: 0px;
 
-  @media #{$sgbp-l-up} {
+  @media #{settings.$sgbp-l-up} {
     --sgbp-grid-gutter-width-s: calc(var(--sgbp-spacing-s));
     --sgbp-grid-gutter-width-m: var(--sgbp-spacing-m);
     --sgbp-grid-gutter-width-l: calc(var(--sgbp-spacing-l));
@@ -315,17 +317,17 @@
     }
 
     @include sgbp-grid-cell-responsive('all', '');
-    @include sgbp-grid-cell-responsive($sgbp-s-up, '\\[s\\]');
-    @include sgbp-grid-cell-responsive($sgbp-m-up, '\\[m\\]');
-    @include sgbp-grid-cell-responsive($sgbp-l-up, '\\[l\\]');
-    @include sgbp-grid-cell-responsive($sgbp-xl-up, '\\[xl\\]');
+    @include sgbp-grid-cell-responsive(settings.$sgbp-s-up, '\\[s\\]');
+    @include sgbp-grid-cell-responsive(settings.$sgbp-m-up, '\\[m\\]');
+    @include sgbp-grid-cell-responsive(settings.$sgbp-l-up, '\\[l\\]');
+    @include sgbp-grid-cell-responsive(settings.$sgbp-xl-up, '\\[xl\\]');
   }
 
   @include sgbp-grid-responsive('all', '');
-  @include sgbp-grid-responsive($sgbp-s-up, '\\[s\\]');
-  @include sgbp-grid-responsive($sgbp-m-up, '\\[m\\]');
-  @include sgbp-grid-responsive($sgbp-l-up, '\\[l\\]');
-  @include sgbp-grid-responsive($sgbp-xl-up, '\\[xl\\]');
+  @include sgbp-grid-responsive(settings.$sgbp-s-up, '\\[s\\]');
+  @include sgbp-grid-responsive(settings.$sgbp-m-up, '\\[m\\]');
+  @include sgbp-grid-responsive(settings.$sgbp-l-up, '\\[l\\]');
+  @include sgbp-grid-responsive(settings.$sgbp-xl-up, '\\[xl\\]');
 
   // Disable grid-layout for MS IE, MS Edge and Firefox in print view to avoid
   // printing issues
@@ -334,7 +336,7 @@
   // - https://bugzilla.mozilla.org/show_bug.cgi?id=258397
   //
   // sass-lint:disable no-vendor-prefixes
-  @media #{$sgbp-print-only} {
+  @media #{settings.$sgbp-print-only} {
     // Edge:
     @supports (-ms-ime-align: auto) {
       display: block;

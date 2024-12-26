@@ -1,3 +1,6 @@
+@use "../mixins/hover";
+@use "../settings";
+
 :root {
   --sgbp-icon-font-size: 1.5em;
   --sgbp-icon-font-size-tiny: 1.1em;
@@ -7,7 +10,7 @@
   --sgbp-icon-circle-color: var(--sgbp-color-white);
   --sgbp-icon-circle-backgroundColor: var(--sgbp-color-black);
 
-  @media #{$sgbp-m-up} {
+  @media #{settings.$sgbp-m-up} {
     --sgbp-icon-font-size: 1.6em;
     --sgbp-icon-font-size-tiny: 1.2em;
     --sgbp-icon-font-size-small: 1.4em;
@@ -111,6 +114,6 @@
   }
 
   &--hoverAccent {
-    @include sgbp-hover(var(--sgbp-color-accent));
+    @include hover.sgbp-hover(var(--sgbp-color-accent));
   }
 }

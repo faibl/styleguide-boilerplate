@@ -1,3 +1,5 @@
+@use "../settings";
+
 :root {
   --sgbp-headings-font-family: var(--sgbp-font-family-base);
   --sgbp-headings-font-weight: bold;
@@ -17,7 +19,7 @@
 
   line-height: var(--sgbp-headings-line-height);
 
-  @media #{$sgbp-m-up} {
+  @media #{settings.$sgbp-m-up} {
     line-height: var(--sgbp-headings-line-height);
   }
 

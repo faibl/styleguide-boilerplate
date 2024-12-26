@@ -1,3 +1,6 @@
+@use "../mixins/hover";
+@use "../settings";
+
 :root {
   --sgbp-button-letterSpacing: normal;
 
@@ -8,7 +11,7 @@
   --sgbp-button-font-weight: bold;
   --sgbp-button-border-radius: 10px;
 
-  @media #{$sgbp-xl-up} {
+  @media #{settings.$sgbp-xl-up} {
     // default button style XL on desktop
     --sgbp-button-height: 48px;
     --sgbp-button-padding: 20px;
@@ -64,7 +67,7 @@
   }
 
   &:not([disabled]):not(.is-disabled):not(.sgbp-button--stateless) {
-    @include sgbp-hover(var(--sgbp-button-hoverColor), var(--sgbp-button-hoverBackgroundColor), var(--sgbp-button-hoverBorderColor));
+    @include hover.sgbp-hover(var(--sgbp-button-hoverColor), var(--sgbp-button-hoverBackgroundColor), var(--sgbp-button-hoverBorderColor));
   }
 
   &:not([disabled]):not(:hover):active,
@@ -323,25 +326,25 @@
   }
 
   &\[l-down\]--block {
-    @media #{$sgbp-l-down} {
+    @media #{settings.$sgbp-l-down} {
       width: 100%;
     }
   }
 
   &\[m-down\]--block {
-    @media #{$sgbp-m-down} {
+    @media #{settings.$sgbp-m-down} {
       width: 100%;
     }
   }
 
   &\[s-down\]--block {
-    @media #{$sgbp-s-down} {
+    @media #{settings.$sgbp-s-down} {
       width: 100%;
     }
   }
 
   &\[xs-down\]--block {
-    @media #{$sgbp-xs-only} {
+    @media #{settings.$sgbp-xs-only} {
       width: 100%;
 
       & + & {

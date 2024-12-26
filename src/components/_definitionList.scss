@@ -1,3 +1,5 @@
+@use "../mixins/truncateLine";
+
 @mixin sgbpDefinitionListWidth($_width) {
   $_minScreenWidthInPx: #{($_width + 100)}px;
   $_widthInPx: #{$_width}px;
@@ -52,7 +54,7 @@
     flex-wrap: wrap;
 
     .sgbp-definitionList__term {
-      @include sgbp-truncateLine;
+      @include truncateLine.sgbp-truncateLine;
       flex: 1 0 auto;
       margin-right: var(--sgbp-spacing-m);
     }

@@ -1,3 +1,6 @@
+@use "../functions/vh";
+@use "../settings";
+
 :root {
   --sgbp-modal-transform-origin: center;
   --sgbp-modal-margin: var(--sgbp-spacing-s);
@@ -8,7 +11,7 @@
   --sgbp-modal-headerfooter-padding-inner-vertical: 24px;
   --sgbp-modal-separator-color: var(--sgbp-color-gray-50);
 
-  @media #{$sgbp-xl-up} {
+  @media #{settings.$sgbp-xl-up} {
     --sgbp-modal-margin: var(--sgbp-spacing-m);
     --sgbp-modal-border-radius: 48px;
     --sgbp-modal-padding-horizontal: 80px;
@@ -70,7 +73,7 @@
   }
 
   &--bottomMDownOnly {
-    @media #{$sgbp-m-down} {
+    @media #{settings.$sgbp-m-down} {
       --sgbp-modal-margin: 0;
       --sgbp-modal-border-radius: 16px 16px 0 0;
       align-items: flex-end;
@@ -78,7 +81,7 @@
   }
 
   &--visibleLDownOnly {
-    @media #{$sgbp-xl-up} {
+    @media #{settings.$sgbp-xl-up} {
       display: none !important;
     }
   }
@@ -103,7 +106,7 @@
 
     // sass-lint:disable no-duplicate-properties
     max-height: 100%;
-    max-height: calc(#{sgbp-vh(100)} - 2 * var(--sgbp-modal-margin));
+    max-height: calc(#{vh.sgbp-vh(100)} - 2 * var(--sgbp-modal-margin));
     max-width: 100%;
     max-width: 100vw;
     // sass-lint:enable no-duplicate-properties
@@ -124,7 +127,7 @@
     }
 
     padding-right: 64px;
-    @media #{$sgbp-xl-up} {
+    @media #{settings.$sgbp-xl-up} {
       padding-right: 90px;
     }
   }
@@ -137,7 +140,7 @@
 
     top: 23px;
     right: 24px;
-    @media #{$sgbp-xl-up} {
+    @media #{settings.$sgbp-xl-up} {
       top: 40px;
       right: 40px;
     }
@@ -246,7 +249,7 @@
     transform: translateY(0);
   }
 
-  @media #{$sgbp-m-down} {
+  @media #{settings.$sgbp-m-down} {
     &--bottomMDownOnly &__dialog {
       transform: translateY(100%);
       max-height: 96vh;

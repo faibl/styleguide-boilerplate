@@ -1,3 +1,5 @@
+@use "../settings";
+
 :root {
   --sgbp-offCanvas-backdrop-backgroundColor: var(--sgbp-color-darken-light);
 }
@@ -127,10 +129,10 @@
   }
 
   &--on-medium-up {
-    @include sgbp-offCanvas-forceOn($sgbp-m-up);
+    @include sgbp-offCanvas-forceOn(settings.$sgbp-m-up);
   }
 
   &--on-large-up {
-    @include sgbp-offCanvas-forceOn($sgbp-l-up);
+    @include sgbp-offCanvas-forceOn(settings.$sgbp-l-up);
   }
 }

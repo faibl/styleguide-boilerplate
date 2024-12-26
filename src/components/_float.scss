@@ -1,3 +1,5 @@
+@use "../settings";
+
 .sgbp-float {
   &--clear::after {
     content: '.';
@@ -28,7 +30,7 @@
   }
 
   &--smallCenter {
-    @media #{$sgbp-s-down} {
+    @media #{settings.$sgbp-s-down} {
       float: none;
       display: block;
 
@@ -42,7 +44,7 @@
   }
 
   &--tinyCenter {
-    @media #{$sgbp-xs-only} {
+    @media #{settings.$sgbp-xs-only} {
       float: none;
       display: block;
 

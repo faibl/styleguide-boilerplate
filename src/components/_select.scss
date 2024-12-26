@@ -1,3 +1,6 @@
+@use "../settings";
+@use "input";
+
 :root {
   --sgbp-select-color: var(--sgbp-input-color);
   --sgbp-select-color-disabled: var(--sgbp-color-gray-100);
@@ -105,7 +108,7 @@
     padding-top: 0;
     padding-bottom: 0;
     padding-right: calc(var(--sgbp-input-padding-horizontal) + 30px);
-    background-image: url('#{$sgbp-image-path}/bg_select.svg');
+    background-image: url('#{settings.$sgbp-image-path}/bg_select.svg');
     background-repeat: no-repeat;
     background-position: right var(--sgbp-input-padding-horizontal) top 19px;
     background-size: 15px;
@@ -115,7 +118,7 @@
       border-color: var(--sgbp-color-gray-25);
       color: var(--sgbp-color-gray-200);
       cursor: not-allowed;
-      background-image: url('#{$sgbp-image-path}/bg_select_light.svg');
+      background-image: url('#{settings.$sgbp-image-path}/bg_select_light.svg');
     }
 
     &.sgbp-select--xl {

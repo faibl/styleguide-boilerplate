@@ -1,3 +1,5 @@
+@use "../settings";
+
 :root {
   --sgbp-region-padding: var(--sgbp-spacing-m);
   --sgbp-region-color: invalid;
@@ -10,7 +12,7 @@
 
   --sgbp-region-notch-border-radius: 32px;
 
-  @media #{$sgbp-l-up} {
+  @media #{settings.$sgbp-l-up} {
     --sgbp-region-notchDefault-height: 68px;
     --sgbp-region-notchMedium-height: 58px;
     --sgbp-region-notchSmall-height: 40px;
@@ -421,8 +423,8 @@
   }
 
   @include sgbp-region-responsive('all', '');
-  @include sgbp-region-responsive($sgbp-s-up, '\\[s\\]');
-  @include sgbp-region-responsive($sgbp-m-up, '\\[m\\]');
-  @include sgbp-region-responsive($sgbp-l-up, '\\[l\\]');
-  @include sgbp-region-responsive($sgbp-xl-up, '\\[xl\\]');
+  @include sgbp-region-responsive(settings.$sgbp-s-up, '\\[s\\]');
+  @include sgbp-region-responsive(settings.$sgbp-m-up, '\\[m\\]');
+  @include sgbp-region-responsive(settings.$sgbp-l-up, '\\[l\\]');
+  @include sgbp-region-responsive(settings.$sgbp-xl-up, '\\[xl\\]');
 }

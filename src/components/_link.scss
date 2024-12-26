@@ -1,3 +1,5 @@
+@use "../mixins/hover";
+
 .sgbp-link {
   transition: color 0.2s ease-in-out;
   color: var(--sgbp-link-color);
@@ -19,10 +21,10 @@
     text-decoration: underline; // undo text-decoration:none from CSS reset
   }
 
-  @include sgbp-hover(var(--sgbp-link-hover-color)); // scss-lint:disable DeclarationOrder
+  @include hover.sgbp-hover(var(--sgbp-link-hover-color)); // scss-lint:disable DeclarationOrder
 
   &--unobtrusive {
-    @include sgbp-hover(var(--sgbp-color-accent));
+    @include hover.sgbp-hover(var(--sgbp-color-accent));
 
     &,
     &:visited {

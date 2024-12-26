@@ -1,3 +1,5 @@
+@use "../settings";
+
 @mixin sgbp-row-responsive($mediaQuery, $responsiveSelector) {
   @media #{$mediaQuery} {
     &#{$responsiveSelector} {
@@ -74,8 +76,8 @@
   }
 
   @include sgbp-row-responsive('all', '');
-  @include sgbp-row-responsive($sgbp-s-up, '\\[s\\]');
-  @include sgbp-row-responsive($sgbp-m-up, '\\[m\\]');
-  @include sgbp-row-responsive($sgbp-l-up, '\\[l\\]');
-  @include sgbp-row-responsive($sgbp-xl-up, '\\[xl\\]');
+  @include sgbp-row-responsive(settings.$sgbp-s-up, '\\[s\\]');
+  @include sgbp-row-responsive(settings.$sgbp-m-up, '\\[m\\]');
+  @include sgbp-row-responsive(settings.$sgbp-l-up, '\\[l\\]');
+  @include sgbp-row-responsive(settings.$sgbp-xl-up, '\\[xl\\]');
 }
