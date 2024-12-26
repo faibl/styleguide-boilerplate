@@ -1,184 +1,86 @@
 :root {
-  --sgbp-input-error-border-color: var(--sgbp-color-error);
-
-  --sgbp-input-type-range-thumb-color: var(--sgbp-color-black);
-  --sgbp-input-type-range-thumb-margin: -7px;
-  --sgbp-input-type-range-thumb-diameter: 16px;
-  --sgbp-input-type-range-track-color: var(--sgbp-color-gray-medium);
-  --sgbp-input-type-range-track-height: 2px;
-
-  --sgbp-input-textarea-padding-vertical: 0.5rem;
+  --sgbp-input-color: var(--sgbp-color-gray-500);
+  --sgbp-input-placeholder-color: var(--sgbp-color-gray-300);
+  --sgbp-input-height: 48px;
+  --sgbp-input-small-height: 32px;
+  --sgbp-input-big-height: 56px;
+  --sgbp-input-padding-horizontal: 16px;
+  --sgb-input-padding-vertical: 0;
+  --sgb-input-textarea-padding-vertical: var(--sgbp-spacing-xs);
+  --sgbp-input-background-color: var(--sgbp-color-white);
+  --sgbp-input-error-color: var(--sgbp-danger-color);
+  --sgbp-input-border-radius: 10px;
+  --sgbp-input-border-color: var(--sgbp-color-gray-50);
+  --sgbp-input-border-width: 1.5px;
+  --sgbp-input-font-size: var(--sgbp-font-size-base);
+  --sgbp-input-font-weight: normal;
 }
 
 .sgbp-input {
-  flex: 1 1 0;
   width: 100%;
+  flex: 1 1 auto;
 
   outline: 0;
   padding-right: var(--sgbp-input-padding-horizontal);
   padding-left: var(--sgbp-input-padding-horizontal);
+  padding-top: var(--sgb-input-padding-vertical);
+  padding-bottom: var(--sgb-input-padding-vertical);
   height: var(--sgbp-input-height);
 
+  font-size: var(--sgbp-input-font-size);
+  font-weight: var(--sgbp-input-font-weight);
   background-color: var(--sgbp-input-background-color);
+  color: var(--sgbp-input-color);
+
   border-style: solid;
   border-radius: var(--sgbp-input-border-radius);
   border-width: var(--sgbp-input-border-width);
   border-color: var(--sgbp-input-border-color);
-  color: var(--sgbp-input-color);
-
-  &:focus {
-    border-color: var(--sgbp-input-border-color-focus);
-  }
+  min-width: 4rem;
 
   &::placeholder {
-    font-size: 0.75em;
+    color: var(--sgbp-input-placeholder-color);
   }
 
-  &.is-disabled,
   &[disabled],
-  &.is-readonly,
-  &[readonly] {
-    border-color: var(--sgbp-input-border-color-disabled);
-    color: var(--sgbp-input-color-disabled);
+  &.is-disabled {
+    --sgbp-input-color: var(--sgbp-color-gray-50);
     cursor: not-allowed;
   }
 
-  &.is-hidden {
-    /* Hide input element while still preserving accessibility features (i.e. tab order) and ensuring that its value
-     * gets submitted properly.
-     * CSS properties such as display: none or visibility: hidden will not work out. The reasons are:
-     * - the input value will not be sent to the server on form submit
-     * - the input will be excluded out of tab order.
-     */
-    width: 0.1px; //Setting the property values to zero ends up throwing the element out of tab party in some browsers.
-    height: 0.1px; //Setting the property values to zero ends up throwing the element out of tab party in some browsers.
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-  }
-
-  &.is-invalid,
-  &:not(.is-ignore-invalid-touched).ng-touched.ng-invalid {
-    border-color: var(--sgbp-input-error-border-color) !important; // sass-lint:disable-line no-important
-  }
-
-  &--inline {
-    display: inline-flex;
-    width: auto;
-  }
-
-  &--small {
-    height: var(--sgbp-input-small-height);
-  }
-
-  &--big {
-    height: var(--sgbp-input-big-height);
-  }
-}
-
-// sass-lint:disable no-qualifying-elements
-textarea.sgbp-input {
-  height: auto;
-  padding-top: var(--sgbp-input-textarea-padding-vertical);
-  padding-bottom: var(--sgbp-input-textarea-padding-vertical);
-  min-height: 7em;
-}
-// sass-lint:enable no-qualifying-elements
-
-/********************************************************************************************************************
- * INPUT TYPE RANGE
- *
- * Using mixins is necessary to avoid code repetition as you can't comma-separate the selectors in this case.
- * Browsers will drop the entire selector if they don't understand a part of it.
- ********************************************************************************************************************/
-
-@mixin sgbp-input-range-thumb {
-  appearance: none;
-  height: var(--sgbp-input-type-range-thumb-diameter);
-  width: var(--sgbp-input-type-range-thumb-diameter);
-  border: none;
-  border-radius: 50%;
-  background: var(--sgbp-input-type-range-thumb-color);
-  cursor: pointer;
-}
-
-@mixin sgbp-input-range-track {
-  width: 100%;
-  height: var(--sgbp-input-type-range-track-height);
-  cursor: pointer;
-  background: var(--sgbp-input-type-range-track-color);
-  border: none;
-}
-
-// sass-lint:disable no-vendor-prefixes no-qualifying-elements
-input[type='range'].sgbp-input {
-  appearance: none;
-  padding: 0;
-  width: 100%;
-  border: none;
-  background: none;
-
-  &::-webkit-slider-thumb {
-    @include sgbp-input-range-thumb;
-    margin-top: var(--sgbp-input-type-range-thumb-margin);
-  }
-
-  &::-webkit-slider-runnable-track {
-    @include sgbp-input-range-track;
-    margin-bottom: 0.2rem;
-  }
-
-  &::-ms-thumb {
-    @include sgbp-input-range-thumb;
-
-    @supports (-ms-accelerator: true) or (-ms-ime-align: auto) {
-      // Edge only
-      margin-bottom: var(--sgbp-input-type-range-thumb-margin);
-    }
-  }
-
-  &::-ms-track {
-    @include sgbp-input-range-track;
-    // IE won't let the thumb overflow the track thus we have to hack
-    border-top: var(--sgbp-input-type-range-thumb-diameter) solid transparent;
-    border-bottom: var(--sgbp-input-type-range-thumb-diameter) solid transparent;
-    margin-top: calc((var(--sgbp-input-type-range-thumb-diameter) - var(--sgbp-input-type-range-track-height)) * -1);
-    margin-bottom: calc((var(--sgbp-input-type-range-thumb-diameter) - var(--sgbp-input-type-range-track-height)) * -1);
-    background-color: transparent;
-    color: transparent; // remove default tick marks
-  }
-
-  &::-ms-fill-lower,
-  &::-ms-fill-upper {
-    height: var(--sgbp-input-type-range-track-height);
-    background-color: var(--sgbp-input-type-range-track-color);
-  }
-
-  &::-ms-tooltip {
-    display: none;
-  }
-
-  &::-moz-range-thumb {
-    @include sgbp-input-range-thumb;
-    margin-top: var(--sgbp-input-type-range-thumb-margin); /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  }
-
-  &::-moz-focus-outer {
-    border: 0;
-  }
-
-  &::-moz-range-track {
-    @include sgbp-input-range-track;
-  }
-
-  &::-moz-range-progress {
-    height: var(--sgbp-input-type-range-track-height);
-    background-color: var(--sgbp-input-type-range-track-color);
+  &:hover:not([disabled]):not(.is-disabled):not(.is-invalid) {
+    --sgbp-input-border-color: var(--sgbp-color-gray-100);
+    --sgbp-input-color: var(--sgbp-color-gray-500);
   }
 
   &:focus {
-    outline: none;
+    --sgbp-input-border-color: var(--sgbp-color-gray-100);
+    --sgbp-input-color: var(--sgbp-color-gray-base);
+    box-shadow: 0 0 0 3px var(--sgbp-color-gray-50-opactiy-60);
+  }
+
+  &.is-invalid,
+  &--stateful.is-dirty:invalid {
+    --sgbp-input-color: var(--sgbp-input-error-color);
+    --sgbp-input-border-color: var(--sgbp-input-error-color);
+  }
+
+  &--big {
+    --sgbp-input-font-size: calc(1.1 * var(--sgbp-input-font-size));
+    --sgbp-input-height: var(--sgbp-input-big-height);
+  }
+
+  &--inline {
+    width: auto;
   }
 }
-// sass-lint:enable no-vendor-prefixes no-qualifying-elements
+
+textarea.sgbp-input {
+  --sgb-input-padding-vertical: var(--sgb-input-textarea-padding-vertical);
+}
+
+input[type='text'].sgbp-input,
+input[type='email'].sgbp-input,
+input[type='password'].sgbp-input {
+  appearance: none;
+}

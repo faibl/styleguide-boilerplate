@@ -47,7 +47,7 @@ export const stackedMediumDOwn = () => `
 export const center = () => `
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--center">
         <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--big">
+        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
           <use xlink:href="./assets/icons.svg#check"></use>
         </svg>
     </div>
@@ -57,7 +57,7 @@ center.decorators = [DescriptionDecorator(['Vertically centered contents'])];
 export const bottom = () => `
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--bottom">
         <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--big">
+        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
           <use xlink:href="./assets/icons.svg#more-horizontal"></use>
         </svg>
     </div>
@@ -67,7 +67,7 @@ bottom.decorators = [DescriptionDecorator(['Vertically bottom aligned contents']
 export const baseline = () => `
     <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--baseline">
         <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--big">
+        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
           <use xlink:href="./assets/icons.svg#more-horizontal"></use>
         </svg>
     </div>
@@ -76,10 +76,10 @@ baseline.decorators = [DescriptionDecorator(['Vertically baseline aligned conten
 
 export const between = () => `
     <div class="sgbp-postfix sgbp-postfix--between">
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--big">
+        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
           <use xlink:href="./assets/icons.svg#arrow-left"></use>
         </svg>
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--big">
+        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
           <use xlink:href="./assets/icons.svg#arrow-right"></use>
         </svg>
     </div>

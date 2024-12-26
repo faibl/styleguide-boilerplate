@@ -79,7 +79,7 @@
     background-position: right -53px top -16px;
     background-repeat: no-repeat;
     background-size: 6rem 3.7rem;
-    background-image: url('#{$sgbp-public-asset-path}/images/bg_select.svg');
+    background-image: url('#{$sgbp-image-path}/bg_select.svg');
 
     // sass-lint:disable no-vendor-prefixes
     &::-ms-expand {

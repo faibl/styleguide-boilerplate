@@ -6,7 +6,7 @@ export default {
 }
 
 export const Standard = () => `
-    <div class="sgbp-loadingContainer sgbp-region sgbp-region--lightGray sgbp-row" id="test-loading-container1">
+    <div class="sgbp-loadingContainer sgbp-region sgbp-region--gray100 sgbp-row" id="test-loading-container1">
         <div class="sgbp-loadingContainer__loader">
             <div class="sgbp-loadingContainer__loadingIndicator sgbp-loadingIndicator">Loading</div>
         </div>
@@ -19,7 +19,7 @@ export const Standard = () => `
 `;
 
 export const blocking = () => `
-    <div class="sgbp-loadingContainer sgbp-region sgbp-region--lightGray is-blocking sgbp-row" id="test-loading-container2">
+    <div class="sgbp-loadingContainer sgbp-region sgbp-region--gray100 is-blocking sgbp-row" id="test-loading-container2">
         <div class="sgbp-loadingContainer__loader">
             <div class="sgbp-loadingContainer__loadingIndicator sgbp-loadingIndicator">Loading</div>
         </div>

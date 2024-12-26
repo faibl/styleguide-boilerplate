@@ -88,7 +88,7 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
 
   &.is-checked &__label::before,
   &__control:checked + &__label::before {
-    background-image: url('#{$sgbp-public-asset-path}/images/check_#{$sgbp-checkboxAndRadio-checkmarkIcon-variant}.svg');
+    background-image: url('#{$sgbp-image-path}/check_#{$sgbp-checkboxAndRadio-checkmarkIcon-variant}.svg');
     background-color: var(--sgbp-checkboxAndRadio-background-color-checked);
     background-size: 70%;
     background-repeat: no-repeat;

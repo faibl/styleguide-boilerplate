@@ -46,8 +46,7 @@
     }
 
     &Content {
-      padding-top: 1rem;
-      padding-bottom: 1.75rem;
+      margin-top: var(--sgbp-spacing-s)
     }
 
     &.is-open {

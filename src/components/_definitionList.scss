@@ -30,10 +30,8 @@
 
 .sgbp-definitionList {
   &__term {
-    @include sgbp-uppercase;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
     //font-weight: bold;
-    font-size: calc(var(--sgbp-font-size-text) * 0.9);
     color: var(--sgbp-color-gray);
   }
 

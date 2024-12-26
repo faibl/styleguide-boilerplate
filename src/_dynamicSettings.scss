@@ -21,7 +21,9 @@
   --sgbp-color-white: #fff;
   --sgbp-color-white-opacity-60: rgba(255, 255, 255, 0.6);
   --sgbp-color-black: #252525;
+
   --sgbp-color-gray-base: var(--sgbp-color-gray-700); // default text color
+  --sgbp-color-gray: var(--sgbp-color-gray-500);
   --sgbp-color-gray-900: #111019;
   --sgbp-color-gray-800: #252434;
   --sgbp-color-gray-700: #3b394e;
@@ -61,7 +63,7 @@
   --sgbp-color-accent-700: var(--sgbp-color-turquoise-700);
   --sgbp-color-accent-800: var(--sgbp-color-turquoise-800);
   --sgbp-color-accent-900: var(--sgbp-color-turquoise-900);
-  --sgbp-color-accent: var(--sgbp-color-turquoise-500);
+  --sgbp-color-accent: var(--sgbp-color-turquoise-300);
   --sgbp-color-accent-inverted: var(--sgbp-color-turquoise-inverted);
 
   --sgbp-color-highlight-25: var(--sgbp-color-yellow-25);
@@ -75,7 +77,7 @@
   --sgbp-color-highlight-700: var(--sgbp-color-yellow-700);
   --sgbp-color-highlight-800: var(--sgbp-color-yellow-800);
   --sgbp-color-highlight-900: var(--sgbp-color-yellow-900);
-  --sgbp-color-highlight: var(--sgbp-color-yellow-500);
+  --sgbp-color-highlight: var(--sgbp-color-yellow-200);
   --sgbp-color-highlight-inverted: var(--sgbp-color-yellow-inverted);
   --sgbp-color-highlight-alternate: var(--sgbp-color-yellow-600);
 

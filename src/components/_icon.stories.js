@@ -104,11 +104,11 @@ export const AvailableIcons = () => `
 export const sizes = () => Sections([
     Section(
         'tiny',
-        `<svg class="sgbp-icon" data-size="tiny"><use xlink:href="./assets/icons.svg#check"></use></svg>`
+        `<svg class="sgbp-icon" data-size="xs"><use xlink:href="./assets/icons.svg#check"></use></svg>`
     ),
     Section(
         'small',
-        `<svg class="sgbp-icon" data-size="small"><use xlink:href="./assets/icons.svg#check"></use></svg>`
+        `<svg class="sgbp-icon" data-size="s"><use xlink:href="./assets/icons.svg#check"></use></svg>`
     ),
     Section(
         'default',
@@ -116,11 +116,11 @@ export const sizes = () => Sections([
     ),
     Section(
         'big',
-        `<svg class="sgbp-icon" data-size="big"><use xlink:href="./assets/icons.svg#check"></use></svg>`
+        `<svg class="sgbp-icon" data-size="l"><use xlink:href="./assets/icons.svg#check"></use></svg>`
     ),
     Section(
         'extra-big',
-        `<svg class="sgbp-icon" data-size="extra-big"><use xlink:href="./assets/icons.svg#check"></use></svg>`
+        `<svg class="sgbp-icon" data-size="xl"><use xlink:href="./assets/icons.svg#check"></use></svg>`
     ),
 ]);
 sizes.decorators = [

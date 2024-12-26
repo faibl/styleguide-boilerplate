@@ -1,24 +1,37 @@
-export default {
-    title: 'Components/Forms/Checkox Switch',
-}
+import { Section, Sections } from '../../.storybook/renderers';
 
-export const Standard = () => `
-     <div class="sgbp-inputGroup">
-        <label class="sgbp-checkboxSwitch">
-            <input type="checkbox" class="sgbp-checkboxSwitch__control">
-            <div class="sgbp-checkboxSwitch__switch"></div>
-        </label>
-    </div>
-    <div class="sgbp-inputGroup">
-        <label class="sgbp-checkboxSwitch">
-            <input type="checkbox" class="sgbp-checkboxSwitch__control" checked>
-            <div class="sgbp-checkboxSwitch__switch"></div>
-        </label>
-    </div>
-    <div class="sgbp-inputGroup">
-        <label class="sgbp-checkboxSwitch">
-            <input type="checkbox" class="sgbp-checkboxSwitch__control" disabled>
-            <div class="sgbp-checkboxSwitch__switch"></div>
-        </label>
-    </div>
-`;
+export default {
+  title: 'Components/Forms/Checkbox Switch',
+};
+
+//language=HTML
+export const Standard = () =>
+  Sections([
+    Section(
+      'Default (accent)',
+      `
+    <label class="sgbp-checkboxSwitch">
+      <input type="checkbox" class="sgbp-checkboxSwitch__control" />
+      <div class="sgbp-checkboxSwitch__switch"></div>
+    </label>
+  `
+    ),
+    Section(
+      'Highlight',
+      `
+    <label class="sgbp-checkboxSwitch sgbp-checkboxSwitch--highlight">
+      <input type="checkbox" class="sgbp-checkboxSwitch__control" />
+      <div class="sgbp-checkboxSwitch__switch"></div>
+    </label>
+  `
+    ),
+    Section(
+      'Disabled',
+      `
+    <label class="sgbp-checkboxSwitch sgbp-checkboxSwitch--highlight">
+      <input type="checkbox" disabled class="sgbp-checkboxSwitch__control" />
+      <div class="sgbp-checkboxSwitch__switch"></div>
+    </label>
+  `
+    ),
+  ]);

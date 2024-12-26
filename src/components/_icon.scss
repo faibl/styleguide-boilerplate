@@ -26,23 +26,23 @@
   width: 1em;
   height: 1em;
 
-  &[data-size="tiny"],
-  &--tiny {
+  &[data-size="xs"],
+  &--xs {
     font-size: var(--sgbp-icon-font-size-tiny);
   }
 
-  &[data-size="small"],
-  &--small {
+  &[data-size="s"],
+  &--s {
     font-size: var(--sgbp-icon-font-size-small);
   }
 
-  &[data-size="big"],
-  &--big {
+  &[data-size="l"],
+  &--l {
     font-size: var(--sgbp-icon-font-size-big);
   }
 
-  &[data-size="extra-big"],
-  &--extraBig {
+  &[data-size="xl"],
+  &--xl {
     font-size: var(--sgbp-icon-font-size-extraBig);
   }
 

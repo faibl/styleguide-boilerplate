@@ -75,7 +75,7 @@ Example: http://faibl.github.com/styleguide-boilerplate
 Import the styleguide scss files directly into your project scss files:
 
 ```sass
-$sgbp-public-asset-path: '/assets'; // copy/symlink src/assets from styleguide to a publicly available directory and accordingly adjust path setting.
+$sgbp-asset-path: '/assets'; // copy/symlink src/assets from styleguide to a publicly available directory and accordingly adjust path setting.
 @import '../styleguide/src/styleguide'; // adjust according to your environment
 ```
 

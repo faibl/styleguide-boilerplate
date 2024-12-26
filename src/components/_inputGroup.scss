@@ -1,8 +1,8 @@
 :root {
   --sgbp-inputGroup-label-color: var(--sgbp-color-gray);
-  --sgbp-inputGroup-label-text-transform: uppercase;
-  --sgbp-inputGroup-label-font-size: calc(var(--sgbp-font-size-text) * 0.9);
-  --sgbp-inputGroup-label-font-weight: normal;
+  --sgbp-inputGroup-label-text-transform: none;
+  --sgbp-inputGroup-label-font-size: var(--sgbp-font-size-text);
+  --sgbp-inputGroup-label-font-weight: bold;
 
   --sgbp-inputGroup-text-color: var(--sgbp-inputGroup-label-color);
   --sgbp-inputGroup-text-font-size: calc(var(--sgbp-inputGroup-label-font-size) * 0.9);

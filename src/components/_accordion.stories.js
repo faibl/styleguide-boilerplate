@@ -4,7 +4,7 @@ export default {
 
 export const Standard = () => `
 <div class="sgbp-accordion">
-    <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded">
+    <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--gray50 sgbp-region--roundedSmall">
         <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
             <div class="sgbp-accordion__itemHeaderLeft">
                 <span class="sgbp-accordion__itemHeadline">Accordion Item 1</span>
@@ -22,7 +22,7 @@ export const Standard = () => `
             </div>
         </div>
     </div>
-    <div class="sgbp-accordion__item  sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded is-open">
+    <div class="sgbp-accordion__item  sgbp-accordion__item sgbp-region sgbp-region--gray50 sgbp-region--roundedSmall is-open">
         <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
             <div class="sgbp-accordion__itemHeaderLeft">
                 <span class="sgbp-accordion__itemHeadline">Accordion Item 2</span>
@@ -37,7 +37,7 @@ export const Standard = () => `
             </div>
         </div>
     </div>
-    <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded">
+    <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--gray50 sgbp-region--roundedSmall">
         <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
             <div class="sgbp-accordion__itemHeaderLeft">
                 <span class="sgbp-accordion__itemHeadline">Accordion Item With overflowing content</span>
@@ -59,7 +59,7 @@ export const Standard = () => `
             </div>
         </div>
     </div>
-    <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded">
+    <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--gray50 sgbp-region--roundedSmall">
         <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
             <div class="sgbp-accordion__itemHeaderLeft">
                 <span class="sgbp-accordion__itemHeadline">Long Content</span>
@@ -80,7 +80,7 @@ export const Standard = () => `
             </div>
         </div>
     </div>
-    <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--lightGray sgbp-region--rounded">
+    <div class="sgbp-accordion__item sgbp-accordion__item sgbp-region sgbp-region--gray50 sgbp-region--roundedSmall">
         <button type="button" class="sgbp-accordion__itemHeader" onclick="this.parentElement.classList.toggle('is-open');this.parentElement.querySelector('.sgbp-collapsible').classList.toggle('is-open')">
             <div class="sgbp-accordion__itemHeaderLeft">
                 <span class="sgbp-accordion__itemHeadline">Long Header item name Lorem ipsum dolor sit amet</span>

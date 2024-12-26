@@ -1,261 +1,617 @@
-import {DescriptionDecorator} from "../../.storybook/decorators";
-import {Section, Sections} from "../../.storybook/renderers";
+import { DescriptionDecorator } from '../../.storybook/decorators';
+import { Section, Sections } from '../../.storybook/renderers';
 
 export default {
-    title: 'Components/Layout/Grid',
-}
+    title: 'Components/Grid',
+};
 
-export const equalColumns = () => `
-    <div class="sgbp-grid">
+//language=HTML
+export const EqualColumns = () => `
+    <div class="sgbp-grid sgbp-grid--gutters">
         <div class="sgbp-grid__cell sgbp-grid__example">cell 1</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 2</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
     </div>
 `;
-equalColumns.decorators = [
-    DescriptionDecorator([
-        'The grid cells below do not specify any widths, they just naturally space themselves equally and expand to fit the entire row. They’re also equal height by default.',
-    ]),
-];
 
+EqualColumns.story = {
+    decorators: [DescriptionDecorator(['The grid cells below do not specify any widths, they just naturally space themselves equally and expand to fit the entire row. They’re also equal height by default.'])],
+};
 
-export const gutters = () => Sections([
-    Section(
-        'Row and column gutters (default gutters)',
+//language=HTML
+export const _2Equal1DoubleColumn = () => `
+    <div class="sgbp-grid sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 1 (single)</div>
+        <div class="sgbp-grid__cell sgbp-grid__cell--double sgbp-grid__example">cell 2 (double)</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 3 (single)</div>
+    </div>
+`;
+
+//language=HTML
+export const _2Equal1TripleColumn = () => `
+    <div class="sgbp-grid sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 1 (single)</div>
+        <div class="sgbp-grid__cell sgbp-grid__cell--triple sgbp-grid__example">cell 2 (triple)</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 3 (single)</div>
+    </div>
+`;
+
+//language=HTML
+export const UnequalBasedOn12Columns = () =>
+    Sections([
+        Section(
+            'With gutters',
+            `
+            <div class="sgbp-grid sgbp-grid--gutters">
+                <div class="sgbp-grid__cell sgbp-grid__cell--1of12 sgbp-grid__example">cell 1 (1of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--2of12 sgbp-grid__example">cell 2 (2of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--3of12 sgbp-grid__example">cell 3 (3of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--6of12 sgbp-grid__example">cell 4 (6of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--8of12 sgbp-grid__example">cell 5 (8of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--4of12 sgbp-grid__example">cell 6 (4of12)</div>
+            </div>
         `
-        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--gutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        </div>`
-    ),
-    Section(
-        'Only row gutters',
+        ),
+        Section(
+            'Without gutters',
+            `
+            <div class="sgbp-grid">
+                <div class="sgbp-grid__cell sgbp-grid__cell--1of12 sgbp-grid__example">cell 1 (1of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--2of12 sgbp-grid__example">cell 2 (2of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--3of12 sgbp-grid__example">cell 3 (3of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--6of12 sgbp-grid__example">cell 4 (6of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--8of12 sgbp-grid__example">cell 5 (8of12)</div>
+                <div class="sgbp-grid__cell sgbp-grid__cell--4of12 sgbp-grid__example">cell 6 (4of12)</div>
+            </div>
         `
-        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--rowGutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
+        ),
+    ]);
+
+//language=HTML
+export const _2Shrink_1ExpandingColumn = () => `
+    <div class="sgbp-grid sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__cell--shrink sgbp-grid__example">cell 1 (shrink)</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 2 (auto)</div>
+        <div class="sgbp-grid__cell sgbp-grid__cell--shrink sgbp-grid__example">cell 3 (shrink)</div>
+    </div>
+`;
+
+//language=HTML
+export const _1Shrink_2AutoColums = () => `
+    <div class="sgbp-grid sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 1 (default)</div>
+        <div class="sgbp-grid__cell sgbp-grid__cell--shrink sgbp-grid__example">cell 2 (shrink)</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 3 (auto)</div>
+    </div>
+`;
+
+//language=HTML
+export const UnequalResponsive = () => `
+    <div class="sgbp-grid sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__cell--6of12 sgbp-grid__cell[l]--3of12 sgbp-grid__example">cell 1</div>
+        <div class="sgbp-grid__cell sgbp-grid__cell--6of12 sgbp-grid__cell[l]--9of12 sgbp-grid__example">cell 2</div>
+    </div>
+`;
+
+//language=HTML
+export const Nesting = () => `
+    <div class="sgbp-grid sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 1</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">
+            <div class="sgbp-grid sgbp-grid--gutters">
+                <div class="sgbp-grid__cell sgbp-grid__example">cell 2.a</div>
+                <div class="sgbp-grid__cell sgbp-grid__example">cell 2.b</div>
+            </div>
         </div>
-        `
-    ),
-    Section(
-        'Only column gutters',
-        `
-        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--columnGutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        </div>
-        `
-    ),
-    Section(
-        'Big row and column gutters',
-        `
-        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--gutters sgbp-grid--bigGutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        </div>
-        `
-    ),
-]);
-gutters.decorators = [
-    DescriptionDecorator([
-        'By default, grid cells do not have any padding between each other.',
-        'This is especially useful for non-textual content like images, video, street maps etc.',
-        'However, if you do need padding, you can simply add the class `sgbp-grid--gutters` to your grid container element, as done in most of the examples that follow.',
-    ]),
-];
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
+    </div>
+`;
 
 export const inline = () => `
-    <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--inlineBlock">
+    <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--inline">
         <div class="sgbp-grid__cell sgbp-grid__example">cell 1</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 2 with more content</div>
         <div class="sgbp-grid__cell sgbp-grid__cell--full sgbp-grid__example">cell 4 full width</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 4 with even more content</div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 5</div>
+        <div class="sgbp-grid__cell sgbp-grid__cell--grow sgbp-grid__example">cell 5 (grow)</div>
         <div class="sgbp-grid__cell sgbp-grid__example">cell 6</div>
     </div>
 `;
 
-export const Double = () => `
-    <div class="sgbp-grid sgbp-grid--gutters">
+export const inlineBlock = () => `
+    <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--inlineBlock">
         <div class="sgbp-grid__cell sgbp-grid__example">cell 1</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--double sgbp-grid__example">cell 2 (double)</div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 2 with more content</div>
+        <div class="sgbp-grid__cell sgbp-grid__cell--grow sgbp-grid__example">grow</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">last cell</div>
     </div>
 `;
 
-export const Triple = () => `
-    <div class="sgbp-grid sgbp-grid--gutters">
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 1</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--triple sgbp-grid__example">cell 2 (triple)</div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
-    </div>
-`;
-
-export const Shrink = () => `
-    <div class="sgbp-grid sgbp-grid--gutters">
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 1</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--shrink sgbp-grid__example">cell 2 (shrink)</div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
-    </div>
-`;
-
-export const vertical = () => `
-    <div style="height: 400px;">
-        <div class="sgbp-grid sgbp-grid--vertical sgbp-grid--gutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1</div>
-            <div class="sgbp-grid__cell sgbp-grid__cell--shrink sgbp-grid__example">cell 2 (shrink)</div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
+//language=HTML
+export const Responsive = () => `
+    <div class="sgbp-grid sgbp-grid--full sgbp-grid[l]--fit sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
         </div>
     </div>
 `;
-vertical.decorators = [
-    DescriptionDecorator([
-        'Stack your grid vertically by adding the `sgbp-grid--vertical` modifier',
-    ]),
-];
 
-export const Unequal = () => `
-    <div class="sgbp-grid sgbp-grid--gutters">
-        <div class="sgbp-grid__cell sgbp-grid__cell--1of12 sgbp-grid__example">1of12</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--2of12 sgbp-grid__example">2of12</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--3of12 sgbp-grid__example">3of12</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--6of12 sgbp-grid__example">6of12</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--8of12 sgbp-grid__example">8of12</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--4of12 sgbp-grid__example">4of12</div>
-    </div>
-`;
-
-
-export const responsive = () => `
-    <div class="sgbp-grid sgbp-grid--full sgbp-grid--medium-fit sgbp-grid--gutters">
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-    </div>
-`;
-responsive.decorators = [
-    DescriptionDecorator([
-        'Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly.',
-    ]),
-];
-
+//language=HTML
 export const ResponsiveFlowing = () => `
-    <div class="sgbp-grid sgbp-grid--tiny-full sgbp-grid--small-1of2 sgbp-grid--medium-1of3 sgbp-grid--large-1of4 sgbp-grid--gutters">
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 5 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 6 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 7 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-    </div>
-`;
-
-export const ResponsiveFlowingCenterWidowLine = () => `
-    <div class="sgbp-grid sgbp-grid--tiny-full sgbp-grid--small-1of2 sgbp-grid--medium-1of3 sgbp-grid--large-1of4 sgbp-grid--gutters sgbp-grid--centerWidowLine">
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 5 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 6 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 7 ............................... ............................... ............................... ............................... ............................... ............................... ............................... </div>
-    </div>
-`;
-
-export const responsiveReordering = () => `
-    <div class="sgbp-grid sgbp-grid--gutters">
-        <div class="sgbp-grid__cell sgbp-backgroundColor--accent">Small first, medium last</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--medium-orderFirst sgbp-backgroundColor--highlight">Small last, medium first</div>
-    </div>
-`;
-responsive.decorators = [
-    DescriptionDecorator([
-        'The two cells swap ordering when switching from small to medium.',
-    ]),
-];
-
-export const ResponsiveUnEqual = () => `
-    <div class="sgbp-grid sgbp-grid--gutters">
-        <div class="sgbp-grid__cell sgbp-grid__cell--6of12 sgbp-grid__cell--medium-3of12 sgbp-grid__example">small 6of12; medium 3of12</div>
-        <div class="sgbp-grid__cell sgbp-grid__cell--6of12 sgbp-grid__cell--medium-9of12 sgbp-grid__example">small 6of12; medium 9of12</div>
-    </div>
-`;
-
-export const Alignment = () => Sections([
-    Section(
-        'Stretched (Default)',
-        `
-        <div class="sgbp-grid sgbp-grid--gutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-            <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
-        </div>`
-    ),
-    Section(
-        'Top',
-        `
-        <div class="sgbp-grid sgbp-grid--top sgbp-grid--gutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-            <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
-        </div>`
-    ),
-    Section(
-        'Center',
-        `
-        <div class="sgbp-grid sgbp-grid--center sgbp-grid--gutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-            <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
-        </div>`
-    ),
-    Section(
-        'Bottom',
-        `
-        <div class="sgbp-grid sgbp-grid--bottom sgbp-grid--gutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-            <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
-        </div>`
-    ),
-    Section(
-        'Baseline',
-        `
-        <div class="sgbp-grid sgbp-grid--baseline sgbp-grid--gutters">
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-            <div class="sgbp-grid__cell sgbp-grid__example" style="font-size: 30px;">cell 2 (large font)</div>
-            <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
-        </div>`
-    ),
-    Section(
-        'Mixed',
-        `
-        <div class="sgbp-grid sgbp-grid--gutters" style="height: 300px">
-            <div class="sgbp-grid__cell sgbp-grid__cell--top sgbp-grid__example">.sgbp-grid__cell--top</div>
-            <div class="sgbp-grid__cell sgbp-grid__cell--center sgbp-grid__example">.sgbp-grid__cell--center</div>
-            <div class="sgbp-grid__cell sgbp-grid__cell--bottom sgbp-grid__example">.sgbp-grid__cell--bottom</div>
-        </div>`
-    ),
-]);
-
-export const nesting = () => `
-    <div class="sgbp-grid sgbp-grid--gutters">
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 1</div>
-        <div class="sgbp-grid__cell sgbp-grid__example">
-           <div class="sgbp-grid sgbp-grid--gutters">
-               <div class="sgbp-grid__cell sgbp-grid__example">cell 2.a</div>
-               <div class="sgbp-grid__cell sgbp-grid__example">cell 2.b</div>
-           </div>
+    <div class="sgbp-grid sgbp-grid--full sgbp-grid[s]--1of2 sgbp-grid[l]--1of3 sgbp-grid[xl]--1of4 sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
         </div>
-        <div class="sgbp-grid__cell sgbp-grid__example">cell 3</div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 5 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 6 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 7 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
     </div>
 `;
+
+ResponsiveFlowing.story = {
+    name: 'Responsive, flowing',
+};
+
+//language=HTML
+export const ResponsiveAndFlowingAndCenterWindowLine = () => `
+    <div
+        class="sgbp-grid sgbp-grid--full sgbp-grid[s]--1of2 sgbp-grid[l]--1of3 sgbp-grid[xl]--1of4 sgbp-grid--gutters sgbp-grid--centerWidowLine">
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 5 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 6 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+        <div class="sgbp-grid__cell sgbp-grid__example">cell 7 ............................... ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+        </div>
+    </div>
+`;
+
+ResponsiveAndFlowingAndCenterWindowLine.story = {
+    name: 'Responsive, flowing, center window line',
+};
+
+//language=HTML
+export const ResponsiveReordering = () => `
+    <div class="sgbp-grid sgbp-grid--full sgbp-grid[l]--fit sgbp-grid--gutters">
+        <div class="sgbp-grid__cell sgbp-grid__example">Small first, medium last</div>
+        <div class="sgbp-grid__cell sgbp-grid__example sgbp-grid__cell[l]--orderFirst">Small last, medium first</div>
+    </div>
+`;
+
+ResponsiveReordering.story = {
+    name: 'Responsive, Reordering',
+};
+
+export const Alignment = () =>
+    Sections([
+        Section(
+            'stretched alignment',
+            `
+          <div class="sgbp-grid sgbp-grid--gutters">
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell
+                  1 cell 1 cell 1
+              </div>
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 2 cell 2</div>
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 3 cell 3 cell 3 cell 3 cell 3 cell 3</div>
+          </div>
+      `
+        ),
+        Section(
+            'top alignment',
+            `
+          <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--top">
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell
+                  1 cell 1 cell 1
+              </div>
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 2 cell 2</div>
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 3 cell 3 cell 3 cell 3 cell 3 cell 3</div>
+          </div>
+      `
+        ),
+        Section(
+            'center alignment',
+            `
+          <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--center">
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell
+                  1 cell 1 cell 1
+              </div>
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 2 cell 2</div>
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 3 cell 3 cell 3 cell 3 cell 3 cell 3</div>
+          </div>
+      `
+        ),
+        Section(
+            'bottom alignment',
+            `
+          <div class="sgbp-grid sgbp-grid--gutters sgbp-grid--bottom">
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell 1 cell
+                  1 cell 1 cell 1
+              </div>
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 2 cell 2</div>
+              <div class="sgbp-grid__cell sgbp-grid__example">cell 3 cell 3 cell 3 cell 3 cell 3 cell 3</div>
+          </div>
+      `
+        ),
+        Section(
+            'mixed alignments per cell',
+            `
+        <div class="sgbp-grid sgbp-grid--gutters">
+            <div class="sgbp-grid__cell sgbp-grid__cell--top sgbp-grid__example">cell 1 Top cell 1 Top cell 1 Top cell 1 Top cell 1 Top cell 1 Top cell 1 Top
+                cell 1 Top cell 1 Top cell 1 Top cell 1 Top
+            </div>
+            <div class="sgbp-grid__cell sgbp-grid__cell--bottom sgbp-grid__example">cell 2 Bottom cell 2 Bottom cell 2 Bottom cell 2 Bottom</div>
+            <div class="sgbp-grid__cell sgbp-grid__cell--center sgbp-grid__example">cell 3 Center</div>
+        </div>
+      `
+        ),
+    ]);
+
+//language=HTML
+export const Gutters = () =>
+    Sections([
+        Section(
+            'No gutters',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+        Section(
+            'Gutters XS',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--guttersXS">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+        Section(
+            'Gutters S',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--guttersS">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+        Section(
+            'Gutters M (default)',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--gutters">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+        Section(
+            'Gutters L',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--guttersL">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+        Section(
+            'Gutters XL',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--guttersXL">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+        Section(
+            'Column gutters',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--columnGutters">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+        Section(
+            'Column gutters (XL)',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--columnGutters sgbp-grid--guttersXL">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+        Section(
+            'Row gutters',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--rowGutters">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+        Section(
+            'Row gutters (XS)',
+            `
+        <div class="sgbp-grid sgbp-grid--1of2 sgbp-grid--rowGutters sgbp-grid--guttersXS">
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-grid__example">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-region--white">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+    ]);
+
+//language=HTML
+export const Bordered = () =>
+    Sections([
+        Section(
+            'Borders',
+            `
+        
+        <div class="sgbp-grid sgbp-grid--full sgbp-grid[m]--1of2 sgbp-grid[l]--1of4 sgbp-grid--bordered sgbp-grid--roundedM">
+          <div class="sgbp-grid__cell sgbp-region sgbp-region--white">cell 1 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-region sgbp-region--white">cell 2 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-region sgbp-region--white">cell 3 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-region sgbp-region--white">cell 4 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-region sgbp-region--white">cell 5 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+          <div class="sgbp-grid__cell sgbp-region sgbp-region--white">cell 6 ...............................
+            ...............................
+            ............................... ...............................
+            ............................... ............................... ...............................
+          </div>
+        </div>
+      `
+        ),
+    ]);

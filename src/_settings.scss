@@ -1,4 +1,5 @@
-$sgbp-public-asset-path: '~assets' !default;
+$sgbp-asset-path: '~assets' !default;
+$sgbp-image-path: '#{$sgbp-asset-path}/images' !default;
 
 /**
  * Media Query Breakpoints:
