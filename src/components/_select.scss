@@ -1,19 +1,39 @@
+:root {
+  --sgbp-select-color: var(--sgbp-input-color);
+  --sgbp-select-color-disabled: var(--sgbp-color-gray-100);
+  --sgbp-select-optgroup-color: var(--sgbp-color-gray-700);
+}
+
 .sgbp-select {
   @extend .sgbp-input; // sass-lint:disable-line placeholder-in-extend
 
-  --option-background-color: var(--sgbp-color-transparent);
-  --option-color: var(--sgbp-input-color);
+  &--xl {
+    --sgbp-input-border-radius: var(--sgbp-border-radius-m);
+    --sgbp-input-height: 72px;
+    --sgbp-input-font-weight: bold;
+    --sgbp-input-padding-horizontal: var(--sgbp-spacing-m);
+  }
 
   -webkit-appearance: none;
   appearance: none;
 
-  &.is-hide-scrollbars {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+  position: relative;
 
   &::-ms-expand {
     display: none;
+  }
+
+  &.is-empty:not(:focus) {
+    color: var(--sgbp-input-placeholder-color);
+  }
+
+  &.is-hide-scrollbars {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &::-ms-value {
@@ -22,21 +42,20 @@
   }
 
   &:focus::-ms-value {
-    background-color: var(--sgbp-color-accent-alternate);
+    background-color: var(--sgbp-color-accent);
     color: var(--sgbp-color-accent-inverted);
   }
 
-  &--inline {
-    display: inline-flex;
-    width: auto;
-  }
-
   &[size]:not([size='1']) {
-    height: auto;
     padding: 0;
+    height: auto;
     overflow-y: auto; // default is scroll which displays scrollbars even when they are not needed
 
+    optgroup,
     option {
+      --background-color: var(--sgbp-color-transparent);
+      --sgbp-select-color: var(--sgbp-select-color);
+
       appearance: none;
       display: block;
       width: 100%;
@@ -45,55 +64,76 @@
       position: relative;
       padding: 5px 8px;
 
-      color: var(--option-color);
-      background-color: var(--option-background-color);
+      color: var(--sgbp-select-color);
+      background-color: var(--background-color);
+    }
 
-      &:hover {
-        --option-background-color: var(--sgbp-color-accent-alternate);
-        --option-color: var(--sgbp-color-accent-inverted);
+    option {
+      &:hover:not(:disabled) {
+        --background-color: var(--sgbp-color-accent-700);
+        --sgbp-select-color: var(--sgbp-color-accent-inverted);
       }
 
       &:checked {
-        --option-background-color: var(--sgbp-color-accent);
-        --option-color: var(--sgbp-color-accent-inverted);
+        --background-color: var(--sgbp-color-accent);
+        --sgbp-select-color: var(--sgbp-color-accent-inverted);
 
-        box-shadow: 100vw 0px 0 var(--option-background-color) inset;
+        box-shadow: 100vw 0px 0 var(--background-color) inset;
       }
 
-      &:before {
-        z-index: -1;
-        content: '';
-        position: absolute;
-        background-color: var(--option-background-color);
-        left: -6px;
-        right: -6px;
-        top: 0;
+      &:disabled {
+        color: var(--sgbp-select-color-disabled);
+      }
+    }
+
+    optgroup {
+      //margin-top: 8px;
+      color: var(--sgbp-select-optgroup-color);
+
+      option {
+        color: var(--sgbp-select-color);
+
+        &:first-child {
+          //margin-top: 6px;
+        }
       }
     }
   }
 
   &:not([size]),
   &[size='1'] {
-    height: var(--sgbp-input-height);
-    padding-right: 2.1rem;
-    background-position: right -53px top -16px;
-    background-repeat: no-repeat;
-    background-size: 6rem 3.7rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: calc(var(--sgbp-input-padding-horizontal) + 30px);
     background-image: url('#{$sgbp-image-path}/bg_select.svg');
+    background-repeat: no-repeat;
+    background-position: right var(--sgbp-input-padding-horizontal) top 19px;
+    background-size: 15px;
 
-    // sass-lint:disable no-vendor-prefixes
-    &::-ms-expand {
-      display: none;
+    &.is-disabled,
+    &[disabled] {
+      border-color: var(--sgbp-color-gray-25);
+      color: var(--sgbp-color-gray-200);
+      cursor: not-allowed;
+      background-image: url('#{$sgbp-image-path}/bg_select_light.svg');
     }
-    // sass-lint:enable no-vendor-prefixes
-  }
 
-  @media only screen and (pointer: coarse) {
-    // we assume a mobile device that does not support expanded select lists but instead
-    // displays a single-line select list and provides the options in a native overlay control when clicked
-    // thus we need to undo some custom styling for expanded select lists
-    &[size]:not([size='1']) {
-      height: var(--sgbp-input-height);
+    &.sgbp-select--xl {
+      background-position: right var(--sgbp-input-padding-horizontal) top 32px;
+    }
+
+    optgroup {
+      color: var(--sgbp-select-optgroup-color);
+
+      option {
+        color: var(--sgbp-select-color);
+      }
     }
   }
+}
+
+input[type='text'].sgbp-select,
+input[type='email'].sgbp-select,
+input[type='password'].sgbp-select {
+  appearance: none;
 }

@@ -25,8 +25,7 @@ export const AvailableIcons = () => `
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#certificate"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#chat"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#check"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#clear"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#close"></use></svg>
+    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#cross"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#collections"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#comment"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#credit-card"></use></svg>

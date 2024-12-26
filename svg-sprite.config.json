@@ -9,7 +9,7 @@
   },
   "mode": {
     "symbol": {
-      "dest": "./assets",
+      "dest": ".",
       "sprite": "icons.svg",
       "inline": true
     }
