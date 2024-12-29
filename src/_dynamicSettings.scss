@@ -37,15 +37,9 @@
   --sgbp-color-gray-50-opactiy-60: rgba(234, 233, 236, 0.6);
   --sgbp-color-gray-25: #f7f7f8;
 
-  --sgbp-success-color: #12b76a;
-  --sgbp-success-color-background: f6fef9;
-  --sgbp-danger-color: #f04438;
-  --sgbp-danger-color-background: #fffbfa;
-
-  --sgbp-color-error--400: #f97066;
-
-  --sgbp-color-inverted: var(--sgbp-white);
-  --sgbp-color-inverted-alternate: var(--sgbp-color-gray-50);
+  --sgbp-color-success: #12b76a;
+  --sgbp-color-warning: #f49f01;
+  --sgbp-color-error: #ef1000;
 
   /**
    * Accent and highlight colors may change depending on the context in which they are used

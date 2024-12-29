@@ -7,10 +7,10 @@
   margin-top: var(--sgbp-spacing-m);
   margin-bottom: var(--sgbp-spacing-m);
 
-  background-color: var(--sgbp-color-gray-medium);
+  background-color: var(--sgbp-color-gray-200);
 
   &--light {
-    background-color: var(--sgbp-color-gray-light);
+    background-color: var(--sgbp-color-gray-50);
 
     &.sgbp-separator--fade {
       background: linear-gradient(to right, transparent, var(--sgbp-color-accent), transparent);

@@ -119,24 +119,6 @@
     }
   }
 
-  &--mediumGray {
-    background-color: var(--sgbp-color-gray-medium);
-
-    &.sgbp-backgroundColor--force,
-    &.sgbp-backgroundColor--force * {
-      background-color: var(--sgbp-color-gray-medium) !important;
-    }
-  }
-
-  &--lightGray {
-    background-color: var(--sgbp-color-gray-light);
-
-    &.sgbp-backgroundColor--force,
-    &.sgbp-backgroundColor--force * {
-      background-color: var(--sgbp-color-gray-light) !important;
-    }
-  }
-
   &--white {
     background-color: var(--sgbp-color-white);
 

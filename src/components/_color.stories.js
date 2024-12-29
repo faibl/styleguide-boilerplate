@@ -10,8 +10,7 @@ export const Standard = () => `
     <div class="sgbp-color sgbp-color--white" style="background-color: pink; padding: 0.3rem;">White <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-color sgbp-color--black">Black <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-color sgbp-color--gray">Gray <a href="javascript:;" class="sgbp-link">with link</a></div>
-    <div class="sgbp-color sgbp-color--mediumGray">Medium Gray <a href="javascript:;" class="sgbp-link">with link</a></div>
-    <div class="sgbp-color sgbp-color--succes">Succes <a href="javascript:;" class="sgbp-link">with link</a></div>
+    <div class="sgbp-color sgbp-color--success">Succes <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-color sgbp-color--warning">Warning <a href="javascript:;" class="sgbp-link">with link</a></div>
     <div class="sgbp-color sgbp-color--error">Error <a href="javascript:;" class="sgbp-link">with link</a></div>
 `;
