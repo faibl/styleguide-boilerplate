@@ -311,21 +311,42 @@ export const Padding = () =>
 //language=HTML
 export const geometry = () =>
     Sections([
-        Section('Rounded', `
-            <div class="sgbp-region sgbp-region--gray50 sgbp-region--rounded">${loremIpsum}</div>`),
-        Section('Rounded medium', `
-            <div class="sgbp-region sgbp-region--gray50 sgbp-region--roundedMedium">${loremIpsum}</div>`),
-        Section('Rounded small', `
-            <div class="sgbp-region sgbp-region--gray50 sgbp-region--roundedSmall">${loremIpsum}</div>`),
-        Section('Rounded XS', `
-            <div class="sgbp-region sgbp-region--gray50 sgbp-region--roundedXS">${loremIpsum}</div>`),
-        Section('Rounded 2XS', `
-            <div class="sgbp-region sgbp-region--gray50 sgbp-region--rounded2XS">${loremIpsum}</div>`),
+        Section(
+            'Rounded (default)',
+            `
+                <div class="sgbp-region sgbp-region--gray50 sgbp-region--rounded">${loremIpsum}</div>`
+        ),
+        Section(
+            'Rounded 2XS',
+            `
+                <div class="sgbp-region sgbp-region--gray50 sgbp-region--rounded2XS">${loremIpsum}</div>`
+        ),
+        Section(
+            'Rounded XS',
+            `
+                <div class="sgbp-region sgbp-region--gray50 sgbp-region--roundedXS">${loremIpsum}</div>`
+        ),
+        Section(
+            'Rounded S',
+            `
+                <div class="sgbp-region sgbp-region--gray50 sgbp-region--roundedS">${loremIpsum}</div>`
+        ),
+        Section(
+            'Rounded M',
+            `
+                <div class="sgbp-region sgbp-region--gray50 sgbp-region--roundedM">${loremIpsum}</div>`
+        ),
+        Section(
+            'Rounded L',
+            `
+                <div class="sgbp-region sgbp-region--gray50 sgbp-region--roundedL">${loremIpsum}</div>`
+        ),
         Section('Rounded Top Only', `
             <div class="sgbp-region sgbp-region--gray50 sgbp-region--rounded sgbp-region--roundedTopOnly">${loremIpsum}
             </div>`),
         Section('Rounded Bottom Only', `
-            <div class="sgbp-region sgbp-region--gray50 sgbp-region--rounded sgbp-region--roundedBottomOnly">${loremIpsum}
+            <div class="sgbp-region sgbp-region--gray50 sgbp-region--rounded sgbp-region--roundedBottomOnly">
+                ${loremIpsum}
             </div>`),
         Section('Force rounded', `
             <div class="sgbp-region sgbp-region--gray50 sgbp-region--rounded sgbp-region--forceRounded">${loremIpsum}
@@ -337,7 +358,8 @@ export const geometry = () =>
         Section('Bordered gray50', `
             <div class="sgbp-region sgbp-region--gray50 sgbp-region--bordered">${loremIpsum}</div>`),
         Section('Bordered and rounded gray50', `
-            <div class="sgbp-region sgbp-region--gray50 sgbp-region--bordered sgbp-region--rounded">${loremIpsum}</div>`),
+            <div class="sgbp-region sgbp-region--gray50 sgbp-region--bordered sgbp-region--rounded">${loremIpsum}
+            </div>`),
         Section('Bordered gray 50, black border', `
             <div class="sgbp-region sgbp-region--gray50 sgbp-region--bordered  sgbp-region--borderedBlack sgbp-region--rounded">
                 ${loremIpsum}
@@ -384,31 +406,36 @@ export const clickable = () =>
         Section(
             'Accent 200',
             `
-                <div class="sgbp-region sgbp-region--accent200 sgbp-region--rounded sgbp-region--clickable">${loremIpsum}
+                <div class="sgbp-region sgbp-region--accent200 sgbp-region--rounded sgbp-region--clickable">
+                    ${loremIpsum}
                 </div>`
         ),
         Section(
             'Accent 600',
             `
-                <div class="sgbp-region sgbp-region--accent600 sgbp-region--rounded sgbp-region--clickable">${loremIpsum}
+                <div class="sgbp-region sgbp-region--accent600 sgbp-region--rounded sgbp-region--clickable">
+                    ${loremIpsum}
                 </div>`
         ),
         Section(
             'Accent 700',
             `
-                <div class="sgbp-region sgbp-region--accent700 sgbp-region--rounded sgbp-region--clickable">${loremIpsum}
+                <div class="sgbp-region sgbp-region--accent700 sgbp-region--rounded sgbp-region--clickable">
+                    ${loremIpsum}
                 </div>`
         ),
         Section(
             'Highlight',
             `
-                <div class="sgbp-region sgbp-region--highlight sgbp-region--rounded sgbp-region--clickable">${loremIpsum}
+                <div class="sgbp-region sgbp-region--highlight sgbp-region--rounded sgbp-region--clickable">
+                    ${loremIpsum}
                 </div>`
         ),
         Section(
             'Highlight 300',
             `
-                <div class="sgbp-region sgbp-region--highlight300 sgbp-region--rounded sgbp-region--clickable">${loremIpsum}
+                <div class="sgbp-region sgbp-region--highlight300 sgbp-region--rounded sgbp-region--clickable">
+                    ${loremIpsum}
                 </div>`
         ),
     ]);

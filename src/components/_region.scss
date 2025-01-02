@@ -23,15 +23,7 @@
   @media #{$mediaQuery} {
     &#{$responsiveSelector} {
       &--rounded {
-        --sgbp-region-border-radius: var(--sgbp-border-radius-l);
-      }
-
-      &--roundedMedium {
         --sgbp-region-border-radius: var(--sgbp-border-radius-m);
-      }
-
-      &--roundedSmall {
-        --sgbp-region-border-radius: var(--sgbp-border-radius-s);
       }
 
       &--roundedXS {
@@ -40,6 +32,18 @@
 
       &--rounded2XS {
         --sgbp-region-border-radius: var(--sgbp-border-radius-2xs);
+      }
+
+      &--roundedS {
+        --sgbp-region-border-radius: var(--sgbp-border-radius-s);
+      }
+
+      &--roundedM {
+        --sgbp-region-border-radius: var(--sgbp-border-radius-m);
+      }
+
+      &--roundedL {
+        --sgbp-region-border-radius: var(--sgbp-border-radius-l);
       }
 
       &--roundedTopOnly {
@@ -315,6 +319,17 @@
   &--highlight900 {
     --sgbp-region-background-color: var(--sgbp-color-highlight-900);
     --sgbp-region-color: var(--sgbp-color-highlight-inverted);
+  }
+
+  &--highlight300 {
+    --sgbp-region-background-color: var(--sgbp-color-highlight-300);
+    --sgbp-region-shadow-color: var(--sgbp-color-highlight-700);
+  }
+
+  &--highlight100 {
+    --sgbp-region-background-color: var(--sgbp-color-highlight-100);
+    --sgbp-region-border-color: var(--sgbp-color-highlight-200);
+    --sgbp-region-shadow-color: var(--sgbp-color-highlight-300);
   }
 
   &--gray50 {
