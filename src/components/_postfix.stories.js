@@ -1,87 +1,289 @@
-import {DescriptionDecorator} from "../../.storybook/decorators";
+import { Section, Sections } from '../../.storybook/renderers';
 
 export default {
-    title: 'Components/Layout/Postfix',
-    decorators: [DescriptionDecorator([
-        'Postfixed elements consist of one or more fixed elements plus one ore more fluid elements taking up all the remaining space.',
-        'The modifiers `sgbp-postfix--gutters` or `sgbp-postfix--bigGutters` add spacing between the postfix contents. Just leave them out, if you don\'t need spacing.',
-    ])],
-}
+    title: 'Components/Postfix',
+};
 
-export const Standard = () => `
-    <div class="sgbp-postfix sgbp-postfix--gutters sgbp-row">
-        <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
+//language=HTML
+export const Gutters = () =>
+    Sections([
+        Section(
+            'no gutters',
+            `
+                <div class="sgbp-postfix">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+        Section(
+            'gutters 3XS',
+            `
+                <div class="sgbp-postfix sgbp-postfix--gutters3XS">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+        Section(
+            'gutters 2XS',
+            `
+                <div class="sgbp-postfix sgbp-postfix--gutters2XS">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+        Section(
+            'gutters XS',
+            `
+                <div class="sgbp-postfix sgbp-postfix--guttersXS">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+        Section(
+            'gutters S',
+            `
+                <div class="sgbp-postfix sgbp-postfix--guttersS">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+        Section(
+            'gutters (default = S)',
+            `
+                <div class="sgbp-postfix sgbp-postfix--gutters">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+        Section(
+            'gutters M',
+            `
+                <div class="sgbp-postfix sgbp-postfix--guttersM">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+        Section(
+            'gutters L',
+            `
+                <div class="sgbp-postfix sgbp-postfix--guttersL">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+        Section(
+            'gutters XL',
+            `
+                <div class="sgbp-postfix sgbp-postfix--guttersXL">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+        Section(
+            'gutters 3XL',
+            `
+                <div class="sgbp-postfix sgbp-postfix--gutters3XL">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+
+        Section(
+            'responsive gutters',
+            `
+                <div class="sgbp-postfix sgbp-postfix--gutters3XS sgbp-postfix[m]--guttersS sgbp-postfix[xl]--guttersM">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">fluid</div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">fixed</div>
+                </div>
+            `
+        ),
+    ]);
+
+//language=HTML
+export const ReverseMUp = () => `
+    <div class="sgbp-postfix sgbp-postfix[m]--reverse sgbp-postfix--reverseStacked sgbp-postfix--gutters">
+        <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent">
+            first in html
+        </div>
+        <div class="sgbp-postfix__fluid sgbp-region sgbp-region--highlight">
+            second in html
+        </div>
+        <div class="sgbp-postfix__fixed sgbp-region sgbp-region--orange">
+            third in html
+        </div>
     </div>
 `;
 
-export const prefix = () => `
-    <div class="sgbp-postfix sgbp-postfix--gutters sgbp-row">
-        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
-        <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-    </div>
-`;
-prefix.decorators = [DescriptionDecorator(['By changing the order of the `sgbp-postfix__fixed` and `sgbp-postfix__fluid` elements in the markup, you can use "postfix" as "prefix".'])];
-
-export const stackedOnTinyScreens = () => `
-    <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--tiny-stacked">
-        <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
+//language=HTML
+export const StackedOnTinyScreens = () => `
+    <div class="sgbp-postfix sgbp-postfix[screen-xs]--stacked sgbp-postfix--gutters">
+        <input type="text" class="sgbp-postfix__fluid sgbp-input" placeholder="Search">
+        <button type="submit" class="sgbp-postfix__fixed sgbp-button sgbp-button--primary">
+            Search
+        </button>
     </div>
 `;
 
-export const stackedSmallDown = () => `
-    <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--small-stacked">
-        <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
+//language=HTML
+export const StackedOnSmallAndTinyScreens = () => `
+    <div class="sgbp-postfix sgbp-postfix[screen-s]--stacked sgbp-postfix--gutters">
+        <input type="text" class="sgbp-postfix__fluid sgbp-input" placeholder="Search">
+        <button type="submit" class="sgbp-postfix__fixed sgbp-button sgbp-button--primary">
+            Search
+        </button>
     </div>
 `;
 
-export const stackedMediumDOwn = () => `
-    <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--medium-stacked">
-        <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <button class="sgbp-postfix__fixed sgbp-button" type="submit"><svg class="sgbp-button__icon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg></button>
+//language=HTML
+export const ReverseStackedOnTinyScreens = () => `
+    <div class="sgbp-postfix sgbp-postfix[screen-xs]--stacked sgbp-postfix--reverseStacked sgbp-postfix--between sgbp-postfix--gutters">
+        <button type="submit" class="sgbp-postfix__fixed sgbp-button sgbp-button--accent100 sgbp-button--block">
+            back
+        </button>
+        <button type="submit" class="sgbp-postfix__fixed sgbp-button sgbp-button--primary sgbp-button--block">
+            next
+        </button>
     </div>
 `;
 
-export const center = () => `
-    <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--center">
-        <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
-          <use xlink:href="./assets/icons.svg#check"></use>
-        </svg>
+export const StackedOnLargeScreens = () => `
+    <div class="sgbp-postfix sgbp-postfix[screen-m-up]--stacked sgbp-postfix--between sgbp-postfix--gutters">
+        <button type="submit" class="sgbp-postfix__fixed sgbp-button sgbp-button--accent100 sgbp-button--block">
+            back
+        </button>
+        <button type="submit" class="sgbp-postfix__fixed sgbp-button sgbp-button--primary sgbp-button--block">
+            next
+        </button>
     </div>
 `;
-center.decorators = [DescriptionDecorator(['Vertically centered contents'])];
 
-export const bottom = () => `
-    <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--bottom">
-        <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
-          <use xlink:href="./assets/icons.svg#more-horizontal"></use>
-        </svg>
-    </div>
-`;
-bottom.decorators = [DescriptionDecorator(['Vertically bottom aligned contents'])];
-
-export const baseline = () => `
-    <div class="sgbp-postfix sgbp-postfix--gutters sgbp-postfix--baseline">
-        <div class="sgbp-postfix__fluid">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
-          <use xlink:href="./assets/icons.svg#more-horizontal"></use>
-        </svg>
-    </div>
-`;
-baseline.decorators = [DescriptionDecorator(['Vertically baseline aligned contents'])];
-
-export const between = () => `
-    <div class="sgbp-postfix sgbp-postfix--between">
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
-          <use xlink:href="./assets/icons.svg#arrow-left"></use>
-        </svg>
-        <svg class="sgbp-postfix__fixed sgbp-icon sgbp-icon--accent sgbp-icon--l">
-          <use xlink:href="./assets/icons.svg#arrow-right"></use>
-        </svg>
-    </div>
-`;
-between.decorators = [DescriptionDecorator(['Use maximum spacing between the elements'])];
+//language=HTML
+export const Alignments = () =>
+    Sections([
+        Section(
+            'default',
+            `
+                <div class="sgbp-postfix">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">
+                        <p>
+                            fluid 1
+                        </p>
+                        <p>
+                            fluid 2
+                        </p>
+                        <p>
+                            fluid 3
+                        </p>
+                    </div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                    </div>
+                </div>`
+        ),
+        Section(
+            'top',
+            `
+                <div class="sgbp-postfix sgbp-postfix--top">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">
+                        <p>
+                            fluid 1
+                        </p>
+                        <p>
+                            fluid 2
+                        </p>
+                        <p>
+                            fluid 3
+                        </p>
+                    </div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                    </div>
+                </div>`
+        ),
+        Section(
+            'baseline',
+            `
+                <div class="sgbp-postfix sgbp-postfix--baseline">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">
+                        <p>
+                            fluid 1
+                        </p>
+                        <p>
+                            fluid 2
+                        </p>
+                        <p>
+                            fluid 3
+                        </p>
+                    </div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                    </div>
+                </div>`
+        ),
+        Section(
+            'center',
+            `
+                <div class="sgbp-postfix sgbp-postfix--center">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">
+                        <p>
+                            fluid 1
+                        </p>
+                        <p>
+                            fluid 2
+                        </p>
+                        <p>
+                            fluid 3
+                        </p>
+                    </div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                    </div>
+                </div>`
+        ),
+        Section(
+            'bottom',
+            `
+                <div class="sgbp-postfix sgbp-postfix--bottom">
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent100">fixed</div>
+                    <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent200">
+                        <p>
+                            fluid 1
+                        </p>
+                        <p>
+                            fluid 2
+                        </p>
+                        <p>
+                            fluid 3
+                        </p>
+                    </div>
+                    <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                    </div>
+                </div>`
+        ),
+    ]);

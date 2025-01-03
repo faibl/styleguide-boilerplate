@@ -1,91 +1,131 @@
 @use "../settings";
 
+:root {
+  --sgbp-postfix-gutter-width: var(--sgbp-spacing-s);
+}
+
 @mixin kgrPostfixStacked() {
   flex-direction: column;
   align-items: stretch;
 
-  &.sgbp-postfix--gutters {
-    > * + * {
-      margin-left: 0;
-      margin-top: var(--sgbp-spacing-m);
-    }
-  }
-
-  &.sgbp-postfix--smallGutters {
-    > * + * {
-      margin-left: 0;
-      margin-top: var(--sgbp-spacing-s);
-    }
-  }
-
-  &.sgbp-postfix--bigGutters {
-    > * + * {
-      margin-left: 0;
-      margin-top: var(--sgbp-spacing-xl);
-    }
+  &.sgbp-postfix--reverseStacked {
+    flex-direction: column-reverse;
   }
 }
 
+@mixin sgbp-postfix-responsive($mediaQuery, $responsiveSelector) {
+  @media #{$mediaQuery} {
+    &#{$responsiveSelector} {
+      &--gutters3XS {
+        --sgbp-postfix-gutter-width: var(--sgbp-spacing-3xs);
+      }
+
+      &--gutters2XS {
+        --sgbp-postfix-gutter-width: var(--sgbp-spacing-2xs);
+      }
+
+      &--guttersXS {
+        --sgbp-postfix-gutter-width: var(--sgbp-spacing-xs);
+      }
+
+      &--guttersS {
+        --sgbp-postfix-gutter-width: var(--sgbp-spacing-s);
+      }
+
+      &--guttersM {
+        --sgbp-postfix-gutter-width: var(--sgbp-spacing-m);
+      }
+
+      &--guttersL {
+        --sgbp-postfix-gutter-width: var(--sgbp-spacing-l);
+      }
+
+      &--guttersXL {
+        --sgbp-postfix-gutter-width: var(--sgbp-spacing-xl);
+      }
+
+      &--gutters3XL {
+        --sgbp-postfix-gutter-width: var(--sgbp-spacing-3xl);
+      }
+
+      &--reverse {
+        flex-direction: row-reverse;
+      }
+
+      &--top {
+        align-items: flex-start;
+      }
+
+      &--bottom {
+        align-items: flex-end;
+      }
+
+      &--center {
+        align-items: center;
+      }
+
+      &--baseline {
+        align-items: baseline;
+      }
+
+      &--between {
+        justify-content: space-between;
+      }
+
+    }
+  }
+}
 .sgbp-postfix {
   display: flex;
 
-  &--center {
-    align-items: center;
+  &.sgbp-postfix--inline {
+    display: inline-flex;
   }
 
-  &--bottom {
-    align-items: flex-end;
+  &--gutters,
+  &--gutters3XS,
+  &--gutters2XS,
+  &--guttersXS,
+  &--guttersS,
+  &--guttersM,
+  &--guttersL,
+  &--guttersXL,
+  &--gutters3XL {
+    gap: var(--sgbp-postfix-gutter-width);
   }
 
-  &--baseline {
-    align-items: baseline;
-  }
-
-  &--between {
-    justify-content: space-between;
-  }
-
-  &--gutters {
-    > * + * {
-      margin-left: var(--sgbp-spacing-m);
-    }
-  }
-
-  &--bigGutters {
-    > * + * {
-      margin-left: var(--sgbp-spacing-xl);
-    }
-  }
-
-  &--smallGutters {
-    > * + * {
-      margin-left: var(--sgbp-spacing-s);
-    }
-  }
-
-  &--tinyGutters {
-    > * + * {
-      margin-left: var(--sgbp-spacing-xs);
-    }
-  }
-
-  &--tiny-stacked,
-  &--small-stacked,
-  &--medium-stacked {
+  &\[screen-xs\]--stacked,
+  &\[screen-s\]--stacked,
+  &\[screen-m\]--stacked,
+  &\[screen-l\]--stacked {
     @media #{settings.$sgbp-xs-only} {
       @include kgrPostfixStacked();
     }
   }
 
-  &--small-stacked,
-  &--medium-stacked {
+  &\[screen-s\]--stacked,
+  &\[screen-m\]--stacked,
+  &\[screen-l\]--stacked {
     @media #{settings.$sgbp-s-only} {
       @include kgrPostfixStacked();
     }
   }
 
-  &--medium-stacked {
-    @media #{settings.$sgbp-m-only} {
+  &\[screen-m\]--stacked,
+  &\[screen-l\]--stacked {
+    @media #{settings.$sgbp-m-down} {
+      @include kgrPostfixStacked();
+    }
+  }
+
+  &\[screen-l\]--stacked {
+    @media #{settings.$sgbp-l-only} {
+      @include kgrPostfixStacked();
+    }
+  }
+
+  &\[screen-m-up\]--stacked {
+    @media #{settings.$sgbp-m-up} {
       @include kgrPostfixStacked();
     }
   }
@@ -101,4 +141,23 @@
   &__fluid {
     flex: 1 1 auto;
   }
+
+  &__fixed,
+  &__fluid {
+    &--center {
+      align-self: center;
+    }
+  }
+
+  &__icon {
+    // hack to avoid margin beneath icon that would otherwise be causing vertical alignments to be slightly off
+    display: flex;
+    align-items: center;
+  }
+
+  @include sgbp-postfix-responsive('all', '');
+  @include sgbp-postfix-responsive(settings.$sgbp-s-up, '\\[s\\]');
+  @include sgbp-postfix-responsive(settings.$sgbp-m-up, '\\[m\\]');
+  @include sgbp-postfix-responsive(settings.$sgbp-l-up, '\\[l\\]');
+  @include sgbp-postfix-responsive(settings.$sgbp-xl-up, '\\[xl\\]');
 }
