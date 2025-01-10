@@ -18,7 +18,6 @@ export const AvailableIcons = () => `
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#arrow-up"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#arrow-upward"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#bar-bell"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#block"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#calendar"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#cellphone"></use></svg>
@@ -36,7 +35,6 @@ export const AvailableIcons = () => `
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#email"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#error"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#euro"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#fastfood"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#file"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#file-shared"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#folder"></use></svg>
@@ -67,28 +65,13 @@ export const AvailableIcons = () => `
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#power-switch"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#redo"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#refresh"></use></svg>
+    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#remove"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#save"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#search"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#security"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#settings"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#share"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#short-text"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-baseball"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-basketball"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-cricket"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-esports"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-football"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-golf"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-handball"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-hockey"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-kabaddi"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-mma"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-motorsports"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-rugby"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-soccer"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-tennis"></use></svg>
-    <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#sports-volleyball"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#undo"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#user"></use></svg>
     <svg class="sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#user-female"></use></svg>
