@@ -98,7 +98,7 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
     border-color: var(--sgbp-checkboxAndRadio-border-color-checked);
   }
 
-  &--big &__label {
+  &--l &__label {
     font-size: var(--sgbp-checkboxAndRadio-font-size-big);
 
     &::before {
@@ -108,7 +108,7 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
     }
   }
 
-  &--big &--inline {
+  &--l &--inline {
     margin-right: var(--sgbp-spacing-xl);
   }
 

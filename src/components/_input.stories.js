@@ -20,7 +20,7 @@ Inline.story = {
 
 //language=HTML
 export const Big = () => `
-    <input type="text" class="sgbp-input sgbp-input--big" placeholder="Placeholder ...">
+    <input type="text" class="sgbp-input sgbp-input--l" placeholder="Placeholder ...">
 `;
 
 //language=HTML
@@ -36,6 +36,13 @@ export const Disabled = () => `
 //language=HTML
 export const Invalid = () => `
     <input type="text" class="sgbp-input is-invalid" value="input value">
+`;
+
+//language=HTML
+export const hidden = () => `
+    <input type="text" class="sgbp-input" value="visible input (press tab to focus next input - the hidden one)">
+    <input type="text" class="sgbp-input is-hidden" value="input value">
+    <input type="text" class="sgbp-input" value="another visible input (after the hidden one)">
 `;
 
 //language=HTML

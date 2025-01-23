@@ -80,7 +80,7 @@ export const sizes = () => `
         <span class="sgbp-radio__label">Default</span>
     </label>
     
-    <label class="sgbp-radio sgbp-radio--big">
+    <label class="sgbp-radio sgbp-radio--l">
         <input type="radio" name="sgbp-radio-demo" class="sgbp-radio__control">
         <span class="sgbp-radio__label">Big</span>
     </label>

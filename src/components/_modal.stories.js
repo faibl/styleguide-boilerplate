@@ -106,7 +106,7 @@ export const Inline = () => `
                 <div class="sgbp-modal__header sgbp-modal__hiddenInline">
                     <button aria-hidden="true" onclick="shpModalDemoClose('test-modal-open')"
                             class="sgbp-modal__closeIcon sgbp-clickable sgbp-clickable--touchy">
-                        <svg class="sgbp-icon sgbp-icon--big sgbp-icon--hoverAccent">
+                        <svg class="sgbp-icon sgbp-icon--l sgbp-icon--hoverAccent">
                             <use xlink:href="./assets/icons.svg#cross"></use>
                         </svg>
                     </button>

@@ -14,7 +14,7 @@ export const Colors = () =>
         <button class="sgbp-button sgbp-button--accent">Accent</button>
         <button class="sgbp-button sgbp-button--highlight">Highlight</button>
         <button class="sgbp-button sgbp-button--accentLight">accentLight</button>
-        <button class="sgbp-button sgbp-button--danger">Danger</button>
+        <button class="sgbp-button sgbp-button--warning">Warning</button>
         <button class="sgbp-button sgbp-button--white">white</button>
         <button class="sgbp-button sgbp-button--transparent">transparent</button>
       `
@@ -38,9 +38,11 @@ export const Colors = () =>
 //language=HTML
 export const Sizes = () =>
   Sections([
+    Section('XS', `<a class="sgbp-button sgbp-button--xs sgbp-button--accent">Button text</a>`),
     Section('S', `<a class="sgbp-button sgbp-button--s sgbp-button--accent">Button text</a>`),
+    Section('M', `<a class="sgbp-button sgbp-button--m sgbp-button--accent">Button text</a>`),
+    Section('Default ', `<a class="sgbp-button sgbp-button--accent">Button text</a>`),
     Section('L', `<a class="sgbp-button sgbp-button--l sgbp-button--accent">Button text</a>`),
-    Section('Default (L on mobile, XL on desktop)', `<a class="sgbp-button sgbp-button--accent">Button text</a>`),
     Section('XL', `<a class="sgbp-button sgbp-button--xl sgbp-button--accent">Button text</a>`),
     Section('2XL', `<a class="sgbp-button sgbp-button--2xl sgbp-button--accent">Button text</a>`),
     Section(

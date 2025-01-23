@@ -123,13 +123,13 @@ export const Gutters = () =>
 //language=HTML
 export const ReverseMUp = () => `
     <div class="sgbp-postfix sgbp-postfix[m]--reverse sgbp-postfix--reverseStacked sgbp-postfix--gutters">
-        <div class="sgbp-postfix__fluid sgbp-region sgbp-region--accent">
+        <div class="sgbp-postfix__fluid sgbp-region sgbp-region--highlight300">
             first in html
         </div>
-        <div class="sgbp-postfix__fluid sgbp-region sgbp-region--highlight">
+        <div class="sgbp-postfix__fluid sgbp-region sgbp-region--highlight500">
             second in html
         </div>
-        <div class="sgbp-postfix__fixed sgbp-region sgbp-region--orange">
+        <div class="sgbp-postfix__fixed sgbp-region sgbp-region--highlight700">
             third in html
         </div>
     </div>

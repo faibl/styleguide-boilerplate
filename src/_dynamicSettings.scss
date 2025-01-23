@@ -39,7 +39,9 @@
 
   --sgbp-color-success: #12b76a;
   --sgbp-color-warning: #f49f01;
+  --sgbp-color-warning-inverted: #fff;
   --sgbp-color-error: #ef1000;
+  --sgbp-color-error-inverted: #fff;
 
   /**
    * Accent and highlight colors may change depending on the context in which they are used
@@ -169,8 +171,8 @@
   --sgbp-spacing-6xl: 80px;
   --sgbp-spacing-7xl: 88px;
   --sgbp-input-height: 35px;
-  --sgbp-input-small-height: 25px;
-  --sgbp-input-big-height: 50px;
+  --sgbp-input-s-height: 25px;
+  --sgbp-input-l-height: 50px;
   --sgbp-input-padding-horizontal: 0.35rem;
   --sgbp-input-color: var(--sgbp-color-black);
   --sgbp-input-color-disabled: var(--sgbp-color-gray);

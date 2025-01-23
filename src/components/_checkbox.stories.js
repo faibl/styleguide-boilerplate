@@ -105,7 +105,7 @@ export const sizes = () => `
         <span class="sgbp-checkbox__label">Default</span>
     </label>
     
-    <label class="sgbp-checkbox sgbp-checkbox--big">
+    <label class="sgbp-checkbox sgbp-checkbox--l">
         <input type="checkbox" class="sgbp-checkbox__control">
         <span class="sgbp-checkbox__label">Big</span>
     </label>

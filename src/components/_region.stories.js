@@ -36,6 +36,14 @@ export const Colors = () =>
             `
         ),
         Section(
+            'Warning',
+            `
+                <div class="sgbp-region sgbp-region--warning">
+                    ${loremIpsum}
+                </div>
+            `
+        ),
+        Section(
             'Gray 25',
             `
                 <div class="sgbp-region sgbp-region--white">

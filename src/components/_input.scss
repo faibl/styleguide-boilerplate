@@ -1,9 +1,9 @@
 :root {
   --sgbp-input-color: var(--sgbp-color-gray-500);
   --sgbp-input-placeholder-color: var(--sgbp-color-gray-300);
-  --sgbp-input-height: 48px;
-  --sgbp-input-small-height: 32px;
-  --sgbp-input-big-height: 56px;
+  --sgbp-input-s-height: 32px;
+  --sgbp-input-height: 40px;
+  --sgbp-input-l-height: 48px;
   --sgbp-input-padding-horizontal: 16px;
   --sgb-input-padding-vertical: 0;
   --sgb-input-textarea-padding-vertical: var(--sgbp-spacing-xs);
@@ -65,13 +65,28 @@
     --sgbp-input-border-color: var(--sgbp-input-error-color);
   }
 
-  &--big {
+  &--l {
     --sgbp-input-font-size: calc(1.1 * var(--sgbp-input-font-size));
-    --sgbp-input-height: var(--sgbp-input-big-height);
+    --sgbp-input-height: var(--sgbp-input-l-height);
   }
 
   &--inline {
     width: auto;
+  }
+
+  &.is-hidden {
+    /* Hide input element while still preserving accessibility features (i.e. tab order) and ensuring that its value
+     * gets submitted properly.
+     * CSS properties such as display: none or visibility: hidden will not work out. The reasons are:
+     * - the input value will not be sent to the server on form submit
+     * - the input will be excluded out of tab order.
+     */
+    width: 0.1px; //Setting the property values to zero ends up throwing the element out of tab party in some browsers.
+    height: 0.1px; //Setting the property values to zero ends up throwing the element out of tab party in some browsers.
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
   }
 }
 
