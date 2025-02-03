@@ -112,11 +112,11 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
     margin-right: var(--sgbp-spacing-xl);
   }
 
-  &--small &--inline {
+  &--s &--inline {
     margin-right: var(--sgbp-spacing-s);
   }
 
-  &--small &__label {
+  &--s &__label {
     font-size: var(--sgbp-checkboxAndRadio-font-size-small);
 
     &::before {

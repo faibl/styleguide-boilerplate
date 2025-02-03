@@ -95,9 +95,9 @@ export const white = () => `
 `;
 
 export const sizes = () => `
-    <label class="sgbp-checkbox sgbp-checkbox--small sgbp-row">
+    <label class="sgbp-checkbox sgbp-checkbox--s sgbp-row">
         <input type="checkbox" class="sgbp-checkbox__control">
-        <span class="sgbp-checkbox__label">Small</span>
+        <span class="sgbp-checkbox__label">Size S</span>
     </label>
 
     <label class="sgbp-checkbox sgbp-row">
@@ -107,7 +107,7 @@ export const sizes = () => `
     
     <label class="sgbp-checkbox sgbp-checkbox--l">
         <input type="checkbox" class="sgbp-checkbox__control">
-        <span class="sgbp-checkbox__label">Big</span>
+        <span class="sgbp-checkbox__label">Size L</span>
     </label>
 `;
 

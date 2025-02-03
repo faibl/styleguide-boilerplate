@@ -110,7 +110,7 @@
     padding-right: calc(var(--sgbp-input-padding-horizontal) + 30px);
     background-image: url('#{settings.$sgbp-image-path}/bg_select.svg');
     background-repeat: no-repeat;
-    background-position: right var(--sgbp-input-padding-horizontal) top 19px;
+    background-position: right var(--sgbp-input-padding-horizontal) top 16px;
     background-size: 15px;
 
     &.is-disabled,

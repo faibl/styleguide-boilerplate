@@ -67,6 +67,10 @@
         @include sgbp-grid-cell-flexing(1, 4);
       }
 
+      &--1of5 {
+        @include sgbp-grid-cell-flexing(1, 5);
+      }
+
       &--4of12,
       &--2of6,
       &--1of3 {

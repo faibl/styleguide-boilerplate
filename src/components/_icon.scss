@@ -2,118 +2,156 @@
 @use "../settings";
 
 :root {
-  --sgbp-icon-font-size: 1.5em;
-  --sgbp-icon-font-size-tiny: 1.1em;
-  --sgbp-icon-font-size-small: 1.3em;
-  --sgbp-icon-font-size-big: 2.0em;
-  --sgbp-icon-font-size-extraBig: 2.9em;
-  --sgbp-icon-circle-color: var(--sgbp-color-white);
-  --sgbp-icon-circle-backgroundColor: var(--sgbp-color-black);
-
-  @media #{settings.$sgbp-m-up} {
-    --sgbp-icon-font-size: 1.6em;
-    --sgbp-icon-font-size-tiny: 1.2em;
-    --sgbp-icon-font-size-small: 1.4em;
-    --sgbp-icon-font-size-big: 2.15em;
-    --sgbp-icon-font-size-extraBig: 3.15em;
-  }
+  --sgbp-icon-font-size-xs: 11.8px;
+  --sgbp-icon-font-size-s: 13px;
+  --sgbp-icon-font-size-m: 15px;
+  --sgbp-icon-font-size: 20px;
+  --sgbp-icon-font-size-l: 24px;
+  --sgbp-icon-font-size-xl: 28px;
+  --sgbp-icon-color: inherit;
+  --sgbp-icon-circle-padding: 3px;
+  --sgbp-icon-circle-color: currentColor;
+  --sgbp-icon-circle-borderColor: currentColor;
+  --sgbp-icon-circle-backgroundColor: var(--sgbp-color-transparent);
 }
 
 .sgbp-icon {
+  display: inline-flex;
+  align-items: center;
 
-  --sgbp-icon-color-secondary: currentColor;
-
-  display: inline-block;
-
-  font-size: var(--sgbp-icon-font-size);
   width: 1em;
   height: 1em;
+  font-size: var(--sgbp-icon-font-size);
+  text-align: center;
 
-  &[data-size="xs"],
+  color: var(--sgbp-icon-color);
+  fill: currentColor;
+
+  &[data-size='xs'],
   &--xs {
-    font-size: var(--sgbp-icon-font-size-tiny);
+    --sgbp-icon-font-size: var(--sgbp-icon-font-size-xs);
+    --sgbp-icon-circle-padding: 1px;
   }
 
-  &[data-size="s"],
+  &[data-size='s'],
   &--s {
-    font-size: var(--sgbp-icon-font-size-small);
+    --sgbp-icon-font-size: var(--sgbp-icon-font-size-s);
+    --sgbp-icon-circle-padding: 2px;
   }
 
-  &[data-size="l"],
+  &[data-size='m'],
+  &--m {
+    --sgbp-icon-font-size: var(--sgbp-icon-font-size-m);
+    --sgbp-icon-circle-padding: 3px;
+  }
+
+  &[data-size='l'],
   &--l {
-    font-size: var(--sgbp-icon-font-size-big);
+    --sgbp-icon-font-size: var(--sgbp-icon-font-size-l);
+    --sgbp-icon-circle-padding: 4px;
   }
 
-  &[data-size="xl"],
+  &[data-size='xl'],
   &--xl {
-    font-size: var(--sgbp-icon-font-size-extraBig);
+    --sgbp-icon-font-size: var(--sgbp-icon-font-size-xl);
+    --sgbp-icon-circle-padding: 6px;
   }
 
   &--accent {
-    color: var(--sgbp-color-accent);
-    --sgbp-icon-color-secondary: var(--sgbp-color-accent-inverted);
-  }
-
-  &--highlight {
-    color: var(--sgbp-color-highlight);
-    --sgbp-icon-color-secondary: var(--sgbp-color-highlight-inverted);
-  }
-
-  &--light {
-    color: var(--sgbp-color-gray);
+    --sgbp-icon-color: var(--sgbp-color-accent);
+    &.sgbp-icon--inverted {
+      --sgbp-icon-color: var(--sgbp-color-accent-inverted);
+    }
   }
 
   &--warning {
-    color: var(--sgbp-color-warning);
+    --sgbp-icon-color: var(--sgbp-color-warning);
+    &.sgbp-icon--inverted {
+      --sgbp-icon-color: var(--sgbp-color-warning-inverted);
+    }
   }
 
   &--error {
-    color: var(--sgbp-color-error);
+    --sgbp-icon-color: var(--sgbp-color-error);
+    &.sgbp-icon--inverted {
+      --sgbp-icon-color: var(--sgbp-color-error-inverted);
+    }
   }
 
-  &--inverted {
-    color: var(--sgbp-color-white);
+  &--light {
+    --sgbp-icon-color: var(--sgbp-color-gray-200);
+    --sgbp-icon-circle-color: var(--sgbp-color-gray-200);
+  }
+
+  &--highlight {
+    --sgbp-icon-color: var(--sgbp-color-highlight);
+    &.sgbp-icon--inverted {
+      --sgbp-icon-color: var(--sgbp-color-highlight-inverted);
+    }
+  }
+
+  &--hoverAccent {
+    @include hover.sgbp-hover(var(--sgbp-color-accent));
   }
 
   &--bottom {
     vertical-align: bottom;
   }
 
+  &--sub {
+    vertical-align: sub;
+  }
+
   &--circle {
+    box-sizing: content-box;
     border-radius: 50%;
-    padding: 2px;
+    overflow: visible;
+    padding: var(--sgbp-icon-circle-padding);
+    font-size: calc(var(--sgbp-icon-font-size-xs) - var(--sgbp-icon-circle-padding));
+    border: 2px solid var(--sgbp-icon-circle-borderColor);
+    background-color: var(--sgbp-icon-circle-backgroundColor);
     color: var(--sgbp-icon-circle-color);
-    background: var(--sgbp-icon-circle-backgroundColor);
 
     &.sgbp-icon--inverted {
-      color: var(--sgbp-icon-circle-backgroundColor);
-      background: var(--sgbp-icon-circle-color);
+      --sgbp-icon-circle-backgroundColor: var(--sgbp-color-white);
+      --sgbp-icon-circle-color: var(--sgbp-color-black);
+      --sgbp-icon-circle-borderColor: var(--sgbp-color-white);
     }
 
     &.sgbp-icon--accent {
-      --sgbp-icon-color-secondary: var(--sgbp-color-accent);
-      color: var(--sgbp-color-accent-inverted);
-      background: var(--sgbp-color-accent);
+      --sgbp-icon-circle-color: var(--sgbp-color-accent);
+      --sgbp-icon-circle-backgroundColor: var(--sgbp-color-accent-inverted);
+      --sgbp-icon-circle-borderColor: var(--sgbp-color-accent);
+
+      &.sgbp-icon--inverted {
+        --sgbp-icon-circle-color: var(--sgbp-color-accent-inverted);
+        --sgbp-icon-circle-backgroundColor: var(--sgbp-color-accent);
+        --sgbp-icon-circle-borderColor: var(--sgbp-color-accent);
+      }
     }
 
     &.sgbp-icon--highlight {
-      --sgbp-icon-color-secondary: var(--sgbp-color-highlight);
-      color: var(--sgbp-color-highlight-inverted);
-      background: var(--sgbp-color-highlight);
+      --sgbp-icon-circle-color: var(--sgbp-color-highlight);
+      --sgbp-icon-circle-backgroundColor: var(--sgbp-color-highlight-inverted);
+      --sgbp-icon-circle-borderColor: var(--sgbp-color-highlight);
+
+      &.sgbp-icon--inverted {
+        --sgbp-icon-circle-color: var(--sgbp-color-highlight-inverted);
+        --sgbp-icon-circle-backgroundColor: var(--sgbp-color-highlight);
+        --sgbp-icon-circle-borderColor: var(--sgbp-color-highlight-inverted);
+      }
     }
 
-    &.sgbp-icon--warning {
-      color: var(--sgbp-color-warning-inverted);
-      background: var(--sgbp-color-warning);
-    }
-
-    &.sgbp-icon--error {
-      color: var(--sgbp-color-error-inverted);
-      background: var(--sgbp-color-error);
+    &.sgbp-icon--borderless {
+      --sgbp-icon-circle-borderColor: var(--sgbp-color-transparent);
     }
   }
 
-  &--hoverAccent {
-    @include hover.sgbp-hover(var(--sgbp-color-accent));
+  &--lightGrayCircle {
+    --sgbp-icon-circle-borderColor: var(--sgbp-color-gray-50);
+  }
+
+  &--lightCircle {
+    --sgbp-icon-circle-borderColor: var(--sgbp-color-semiTransparent-3);
   }
 }

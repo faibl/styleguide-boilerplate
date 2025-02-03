@@ -1,4 +1,5 @@
 import { DescriptionDecorator } from '../../.storybook/decorators';
+import {Section, Sections} from "../../.storybook/renderers";
 
 export default {
     title: 'Components/Forms/Input',
@@ -24,19 +25,28 @@ export const Big = () => `
 `;
 
 //language=HTML
-export const Stateful = () => `
-    <input type="email" class="sgbp-input sgbp-input--unobtrusive sgbp-input--stateful" placeholder="Enter valid email ..." data-sgbp-stateful-input>
-`;
-
-//language=HTML
-export const Disabled = () => `
-    <input type="text" class="sgbp-input is-disabled" disabled value="input value">
-`;
-
-//language=HTML
-export const Invalid = () => `
-    <input type="text" class="sgbp-input is-invalid" value="input value">
-`;
+export const States = () => Sections(
+    [
+        Section('Default', `
+            <input type="text" class="sgbp-input" value="input value">
+        `),
+        Section('Disabled', `
+            <input type="text" class="sgbp-input" disabled value="input value">
+        `),
+        Section('Readonly', `
+            <input type="text" class="sgbp-input" readonly value="input value">
+        `),
+        Section('Readonly, invalid', `
+            <input type="text" class="sgbp-input is-invalid" readonly value="input value">
+        `),
+        Section('Invalid', `
+            <input type="text" class="sgbp-input is-invalid" value="input value">
+        `),
+        Section('Stateful', `
+            <input type="email" class="sgbp-input sgbp-input--unobtrusive sgbp-input--stateful" placeholder="Enter valid email ..." data-sgbp-stateful-input>
+        `),
+    ]
+);
 
 //language=HTML
 export const hidden = () => `

@@ -5,10 +5,10 @@
   --sgbp-input-height: 40px;
   --sgbp-input-l-height: 48px;
   --sgbp-input-padding-horizontal: 16px;
-  --sgb-input-padding-vertical: 0;
-  --sgb-input-textarea-padding-vertical: var(--sgbp-spacing-xs);
+  --sgbp-input-padding-vertical: 0;
+  --sgbp-input-textarea-padding-vertical: var(--sgbp-spacing-xs);
   --sgbp-input-background-color: var(--sgbp-color-white);
-  --sgbp-input-error-color: var(--sgbp-danger-color);
+  --sgbp-input-error-color: var(--sgbp-color-error);
   --sgbp-input-border-radius: 10px;
   --sgbp-input-border-color: var(--sgbp-color-gray-50);
   --sgbp-input-border-width: 1.5px;
@@ -23,8 +23,8 @@
   outline: 0;
   padding-right: var(--sgbp-input-padding-horizontal);
   padding-left: var(--sgbp-input-padding-horizontal);
-  padding-top: var(--sgb-input-padding-vertical);
-  padding-bottom: var(--sgb-input-padding-vertical);
+  padding-top: var(--sgbp-input-padding-vertical);
+  padding-bottom: var(--sgbp-input-padding-vertical);
   height: var(--sgbp-input-height);
 
   font-size: var(--sgbp-input-font-size);
@@ -43,12 +43,14 @@
   }
 
   &[disabled],
-  &.is-disabled {
-    --sgbp-input-color: var(--sgbp-color-gray-50);
+  &.is-disabled,
+  &[readonly],
+  &.is-readonly{
+    --sgbp-input-color: var(--sgbp-color-gray-200);
     cursor: not-allowed;
   }
 
-  &:hover:not([disabled]):not(.is-disabled):not(.is-invalid) {
+  &:hover:not([disabled]):not(.is-disabled):not(.is-invalid):not(:invalid):not([readonly]):not(.is-readonly) {
     --sgbp-input-border-color: var(--sgbp-color-gray-100);
     --sgbp-input-color: var(--sgbp-color-gray-500);
   }
@@ -59,6 +61,7 @@
     box-shadow: 0 0 0 3px var(--sgbp-color-gray-50-opactiy-60);
   }
 
+  &:invalid,
   &.is-invalid,
   &--stateful.is-dirty:invalid {
     --sgbp-input-color: var(--sgbp-input-error-color);
@@ -91,7 +94,8 @@
 }
 
 textarea.sgbp-input {
-  --sgb-input-padding-vertical: var(--sgb-input-textarea-padding-vertical);
+  --sgbp-input-padding-vertical: var(--sgbp-input-textarea-padding-vertical);
+  min-height: calc(var(--sgbp-input-height) * 1.75);
 }
 
 input[type='text'].sgbp-input,
