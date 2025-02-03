@@ -42,18 +42,4 @@
       }
     }
   }
-
-  &--tinyCenter {
-    @media #{settings.$sgbp-xs-only} {
-      float: none;
-      display: block;
-
-      &.sgbp-float--inText {
-        text-align: center;
-
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  }
 }

@@ -7,7 +7,12 @@
   margin-top: var(--sgbp-spacing-m);
   margin-bottom: var(--sgbp-spacing-m);
 
-  background-color: var(--sgbp-color-gray-200);
+  background-color: var(--sgbp-color-gray-100);
+
+  &--noSpacing {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   &--light {
     background-color: var(--sgbp-color-gray-50);

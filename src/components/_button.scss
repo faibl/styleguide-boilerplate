@@ -308,14 +308,4 @@
       width: 100%;
     }
   }
-
-  &\[xs-down\]--block {
-    @media #{settings.$sgbp-xs-only} {
-      width: 100%;
-
-      & + & {
-        margin-top: var(--sgbp-spacing-xs);
-      }
-    }
-  }
 }

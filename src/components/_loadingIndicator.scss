@@ -1,7 +1,7 @@
 :root {
   --sgbp-loading-indicator-color: var(--sgbp-color-transparent);
   --sgbp-loading-indicator-border-color: var(--sgbp-color-accent);
-  --sgbp-loading-indicator-border-color2: var(--sgbp-color-accent-alternate);
+  --sgbp-loading-indicator-border-color2: var(--sgbp-color-highlight);
   --sgbp-loading-indicator-borderWidth-size-s: 1px;
   --sgbp-loading-indicator-borderWidth-size-m: 3px;
   --sgbp-loading-indicator-borderWidth-size-l: 4px;
@@ -39,7 +39,6 @@
     content: '';
     position: absolute;
     z-index: -1;
-    background-color: var(--sgbp-color-lighten);
     transform-origin: center center;
     display: block;
     border-radius: 50%;
@@ -56,6 +55,7 @@
     border-top-color: var(--sgbp-loading-indicator-color);
     border-bottom-color: var(--sgbp-loading-indicator-border-color2);
     animation: sgbp-loading-rotate 1s infinite cubic-bezier(0.185, 0.335, 0.25, 0.96);
+    background-color: var(--sgbp-color-lighten);
   }
 
   &::after {

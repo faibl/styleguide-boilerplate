@@ -136,17 +136,7 @@ export const ReverseMUp = () => `
 `;
 
 //language=HTML
-export const StackedOnTinyScreens = () => `
-    <div class="sgbp-postfix sgbp-postfix[screen-xs]--stacked sgbp-postfix--gutters">
-        <input type="text" class="sgbp-postfix__fluid sgbp-input" placeholder="Search">
-        <button type="submit" class="sgbp-postfix__fixed sgbp-button sgbp-button--primary">
-            Search
-        </button>
-    </div>
-`;
-
-//language=HTML
-export const StackedOnSmallAndTinyScreens = () => `
+export const StackedOnSmallScreens = () => `
     <div class="sgbp-postfix sgbp-postfix[screen-s]--stacked sgbp-postfix--gutters">
         <input type="text" class="sgbp-postfix__fluid sgbp-input" placeholder="Search">
         <button type="submit" class="sgbp-postfix__fixed sgbp-button sgbp-button--primary">
@@ -156,8 +146,8 @@ export const StackedOnSmallAndTinyScreens = () => `
 `;
 
 //language=HTML
-export const ReverseStackedOnTinyScreens = () => `
-    <div class="sgbp-postfix sgbp-postfix[screen-xs]--stacked sgbp-postfix--reverseStacked sgbp-postfix--between sgbp-postfix--gutters">
+export const ReverseStackedOnSmallScreens = () => `
+    <div class="sgbp-postfix sgbp-postfix[screen-s]--stacked sgbp-postfix--reverseStacked sgbp-postfix--between sgbp-postfix--gutters">
         <button type="submit" class="sgbp-postfix__fixed sgbp-button sgbp-button--accent100 sgbp-button--block">
             back
         </button>

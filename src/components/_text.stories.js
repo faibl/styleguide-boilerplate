@@ -29,10 +29,6 @@ export const style = () => Sections([
         `<div class="sgbp-text sgbp-text--bold">${loremIpsum}</div>`
     ),
     Section(
-        'Light',
-        `<div class="sgbp-text sgbp-text--light">${loremIpsum}</div>`
-    ),
-    Section(
         'Italic',
         `<div class="sgbp-text sgbp-text--italic">${loremIpsum}</div>`
     ),

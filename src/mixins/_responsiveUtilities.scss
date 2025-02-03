@@ -2,22 +2,6 @@
 
 // sass-lint:disable no-important
 
-@mixin sgbp-hidden-tiny {
-  @media #{settings.$sgbp-xs-only} {
-    display: none !important;
-  }
-}
-
-@mixin sgbp-hidden-tiny-up {
-  @media #{settings.$sgbp-xs-up}, print {
-    display: none !important;
-  }
-}
-
-@mixin sgbp-hidden-tiny-down {
-  @include sgbp-hidden-tiny;
-}
-
 @mixin sgbp-hidden-small {
   @media #{settings.$sgbp-s-only} {
     display: none !important;
@@ -32,7 +16,6 @@
 
 @mixin sgbp-hidden-small-down {
   @include sgbp-hidden-small;
-  @include sgbp-hidden-tiny-down;
 }
 
 @mixin sgbp-hidden-medium {

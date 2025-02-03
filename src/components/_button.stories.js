@@ -1,81 +1,81 @@
 import { Section, Sections } from '../../.storybook/renderers';
 
 export default {
-  title: 'Components/Button',
+    title: 'Components/Button',
 };
 
 //language=HTML
 export const Colors = () =>
-  Sections([
-    Section(
-      'Standard',
-      `
-        <button class="sgbp-button">Default</button>
-        <button class="sgbp-button sgbp-button--accent">Accent</button>
-        <button class="sgbp-button sgbp-button--highlight">Highlight</button>
-        <button class="sgbp-button sgbp-button--accentLight">accentLight</button>
-        <button class="sgbp-button sgbp-button--warning">Warning</button>
-        <button class="sgbp-button sgbp-button--white">white</button>
-        <button class="sgbp-button sgbp-button--transparent">transparent</button>
-      `
-    ),
-    Section(
-      'Transparent',
-      `
-          <div class="sgbp-region sgbp-region--white sgbp-row">
-            <a class="sgbp-button sgbp-button--transparent">Transparent</a>
-          </div>
-          <div class="sgbp-region sgbp-region--accent sgbp-row">
-            <a class="sgbp-button sgbp-button--transparent">Transparent</a>
-          </div>
-          <div class="sgbp-region sgbp-region--highlight">
-              <a class="sgbp-button sgbp-button--transparent">Transparent</a>
-          </div>
-      `
-    ),
-  ]);
+    Sections([
+        Section(
+            'Standard',
+            `
+                <button class="sgbp-button">Default</button>
+                <button class="sgbp-button sgbp-button--accent">Accent</button>
+                <button class="sgbp-button sgbp-button--highlight">Highlight</button>
+                <button class="sgbp-button sgbp-button--accentLight">accentLight</button>
+                <button class="sgbp-button sgbp-button--warning">Warning</button>
+                <button class="sgbp-button sgbp-button--white">white</button>
+                <button class="sgbp-button sgbp-button--transparent">transparent</button>
+            `
+        ),
+        Section(
+            'Transparent',
+            `
+                <div class="sgbp-region sgbp-region--white sgbp-row">
+                    <a class="sgbp-button sgbp-button--transparent">Transparent</a>
+                </div>
+                <div class="sgbp-region sgbp-region--accent sgbp-row">
+                    <a class="sgbp-button sgbp-button--transparent">Transparent</a>
+                </div>
+                <div class="sgbp-region sgbp-region--highlight">
+                    <a class="sgbp-button sgbp-button--transparent">Transparent</a>
+                </div>
+            `
+        ),
+    ]);
 
 //language=HTML
 export const Sizes = () =>
-  Sections([
-    Section('XS', `<a class="sgbp-button sgbp-button--xs sgbp-button--accent">Button text</a>`),
-    Section('S', `<a class="sgbp-button sgbp-button--s sgbp-button--accent">Button text</a>`),
-    Section('M', `<a class="sgbp-button sgbp-button--m sgbp-button--accent">Button text</a>`),
-    Section('Default ', `<a class="sgbp-button sgbp-button--accent">Button text</a>`),
-    Section('L', `<a class="sgbp-button sgbp-button--l sgbp-button--accent">Button text</a>`),
-    Section('XL', `<a class="sgbp-button sgbp-button--xl sgbp-button--accent">Button text</a>`),
-    Section('2XL', `<a class="sgbp-button sgbp-button--2xl sgbp-button--accent">Button text</a>`),
-    Section(
-      'Block',
-      `<a
+    Sections([
+        Section('XS', `<a class="sgbp-button sgbp-button--xs sgbp-button--accent">Button text</a>`),
+        Section('S', `<a class="sgbp-button sgbp-button--s sgbp-button--accent">Button text</a>`),
+        Section('M', `<a class="sgbp-button sgbp-button--m sgbp-button--accent">Button text</a>`),
+        Section('Default ', `<a class="sgbp-button sgbp-button--accent">Button text</a>`),
+        Section('L', `<a class="sgbp-button sgbp-button--l sgbp-button--accent">Button text</a>`),
+        Section('XL', `<a class="sgbp-button sgbp-button--xl sgbp-button--accent">Button text</a>`),
+        Section('2XL', `<a class="sgbp-button sgbp-button--2xl sgbp-button--accent">Button text</a>`),
+        Section(
+            'Block',
+            `<a
         class="sgbp-button sgbp-button--block sgbp-button--accent">Button</a>`
-    ),
-  ]);
+        ),
+    ]);
 
 //language=HTML
 export const States = () =>
-  Sections([
-    Section(
-      'disabled',
-      `
-        <button class="sgbp-button sgbp-button--accent" disabled>Accent</button>
-        <button class="sgbp-button sgbp-button--accentLight" disabled>Accent light</button>
-        <button class="sgbp-button sgbp-button--highlight" disabled>Highlight</button>
-        <button class="sgbp-button sgbp-button--white" disabled>White</button>
-        <button class="sgbp-button sgbp-button--danger" disabled>Danger</button>
-    `
-    ),
-    Section(
-      'focused',
-      `
-        <button class="sgbp-button sgbp-button--accent is-focused">Accent</button>
-        <button class="sgbp-button sgbp-button--accentLight is-focused">Accent light</button>
-        <button class="sgbp-button sgbp-button--highlight is-focused">Highlight</button>
-        <button class="sgbp-button sgbp-button--white is-focused">White</button>
-        <button class="sgbp-button sgbp-button--danger is-focused">Danger</button>
-    `
-    ),
-  ]);
+    Sections([
+        Section(
+            'disabled',
+            `
+                <button class="sgbp-button sgbp-button--accent" disabled>Accent</button>
+                <button class="sgbp-button sgbp-button--accentLight" disabled>Accent light</button>
+                <button class="sgbp-button sgbp-button--highlight" disabled>Highlight</button>
+                <button class="sgbp-button sgbp-button--white" disabled>White</button>
+                <button class="sgbp-button sgbp-button--danger" disabled>Danger</button>
+            `
+        ),
+        Section(
+            'focused',
+            `
+                <button class="sgbp-button sgbp-button--accent is-focused">Accent</button>
+                <button class="sgbp-button sgbp-button--accentLight is-focused">Accent light</button>
+                <button class="sgbp-button sgbp-button--highlight is-focused">Highlight</button>
+                <button class="sgbp-button sgbp-button--white is-focused">White</button>
+                <button class="sgbp-button sgbp-button--danger is-focused">Danger</button>
+            `
+        ),
+    ]);
 
 //language=HTML
 export const Loading = () => `

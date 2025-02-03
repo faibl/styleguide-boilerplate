@@ -30,7 +30,7 @@ export const Standard = () => `
     <div class="sgbp-modal sgbp-modal--withSeparator" id="test-modal-open">
         <div class="sgbp-modal__dialog">
             <div class="sgbp-modal__header">
-                <button aria-hidden="true" onclick="shpModalDemoClose('test-modal-open')"
+                <button title="Close dialog" onclick="shpModalDemoClose('test-modal-open')"
                         class="sgbp-modal__closeButton sgbp-clickable sgbp-clickable--touchy">
                     <svg class="sgbp-modal__closeIcon sgbp-icon sgbp-icon--hoverAccent">
                         <use xlink:href="./assets/icons.svg#cross"></use>

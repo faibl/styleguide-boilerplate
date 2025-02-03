@@ -1,17 +1,5 @@
 @use "../mixins/responsiveUtilities";
 
-.sgbp-hidden-tiny {
-  @include responsiveUtilities.sgbp-hidden-tiny;
-}
-
-.sgbp-hidden-tiny-up {
-  @include responsiveUtilities.sgbp-hidden-tiny-up;
-}
-
-.sgbp-hidden-tiny-down {
-  @include responsiveUtilities.sgbp-hidden-tiny-down;
-}
-
 .sgbp-hidden-small {
   @include responsiveUtilities.sgbp-hidden-small;
 }

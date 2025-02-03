@@ -94,20 +94,12 @@
     gap: var(--sgbp-postfix-gutter-width);
   }
 
+
   @include sgbp-postfix-responsive('all', '');
   @include sgbp-postfix-responsive(settings.$sgbp-s-up, '\\[s\\]');
   @include sgbp-postfix-responsive(settings.$sgbp-m-up, '\\[m\\]');
   @include sgbp-postfix-responsive(settings.$sgbp-l-up, '\\[l\\]');
   @include sgbp-postfix-responsive(settings.$sgbp-xl-up, '\\[xl\\]');
-
-  &\[screen-xs\]--stacked,
-  &\[screen-s\]--stacked,
-  &\[screen-m\]--stacked,
-  &\[screen-l\]--stacked {
-    @media #{settings.$sgbp-xs-only} {
-      @include kgrPostfixStacked();
-    }
-  }
 
   &\[screen-s\]--stacked,
   &\[screen-m\]--stacked,
