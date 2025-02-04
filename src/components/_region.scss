@@ -5,18 +5,6 @@
   --sgbp-region-color: invalid;
   --sgbp-region-border-color: var(--sgbp-color-gray-50);
   --sgbp-region-shadow-color: var(--sgbp-color-gray-100);
-  --sgbp-region-iconNotch-backgroundColor: var(--sgbp-color-accent-300);
-  --sgbp-region-notchDefault-height: 50px;
-  --sgbp-region-notchMedium-height: 44px;
-  --sgbp-region-notchSmall-height: 42px;
-
-  --sgbp-region-notch-border-radius: 32px;
-
-  @media #{settings.$sgbp-l-up} {
-    --sgbp-region-notchDefault-height: 68px;
-    --sgbp-region-notchMedium-height: 58px;
-    --sgbp-region-notchSmall-height: 40px;
-  }
 }
 
 @mixin sgbp-region-responsive($mediaQuery, $responsiveSelector) {
@@ -332,14 +320,14 @@
     --sgbp-region-shadow-color: var(--sgbp-color-highlight-300);
   }
 
+  &--gray25 {
+    --sgbp-region-background-color: var(--sgbp-color-gray-25);
+  }
+
   &--gray50 {
     --sgbp-region-background-color: var(--sgbp-color-gray-50);
     --sgbp-region-border-color: var(--sgbp-color-gray-100);
     --sgbp-region-color: var(--sgbp-text-color);
-  }
-
-  &--gray25 {
-    --sgbp-region-background-color: var(--sgbp-color-gray-25);
   }
 
   &--gray100 {
@@ -412,11 +400,6 @@
     &.sgbp-region--bordered {
       --sgbp-region-border-color: var(--sgbp-region-shadow-color);
     }
-  }
-
-  &--default {
-    --sgbp-region-background-color: var(--sgbp-content-backgroundColor);
-    --sgbp-region-color: var(--sgbp-text-color);
   }
 
   &--forceRounded {

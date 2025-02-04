@@ -4,7 +4,7 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
 
 :root {
   --sgbp-checkboxAndRadio-border-width: var(--sgbp-input-border-width);
-  --sgbp-checkboxAndRadio-border-radius: var(--sgbp-input-border-radius);
+  --sgbp-checkboxAndRadio-checkbox-border-radius: var(--sgbp-border-radius-3xs);
   --sgbp-checkboxAndRadio-border-color: var(--sgbp-input-border-color);
   --sgbp-checkboxAndRadio-border-color-checked: var(--sgbp-checkboxAndRadio-border-color);
   --sgbp-checkboxAndRadio-border-color-focus: var(--sgbp-input-border-color-focus);
@@ -60,12 +60,13 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
       flex: 0 0 auto;
       transition: background-color 300ms;
       display: block;
-      margin-right: var(--sgbp-spacing-s);
+      margin-top: -4px;
+      margin-right: var(--sgbp-spacing-xs);
       width: var(--sgbp-checkboxAndRadio-size);
       height: var(--sgbp-checkboxAndRadio-size);
       background-color: var(--sgbp-checkboxAndRadio-background-color);
       border-style: solid;
-      border-radius: var(--sgbp-checkboxAndRadio-border-radius);
+      border-radius: var(--sgbp-checkboxAndRadio-checkbox-border-radius);
       border-width: var(--sgbp-checkboxAndRadio-border-width);
       border-color: var(--sgbp-checkboxAndRadio-border-color);
       font-size: var(--sgbp-checkboxAndRadio-font-size);

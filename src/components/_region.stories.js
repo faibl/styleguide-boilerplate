@@ -14,7 +14,7 @@ export const Colors = () =>
         Section(
             'Default',
             `
-                <div class="sgbp-region sgbp-region--default">
+                <div class="sgbp-region">
                     ${loremIpsum}
                 </div>
             `
@@ -373,7 +373,7 @@ export const geometry = () =>
                 ${loremIpsum}
             </div>`),
         Section('Depth', `
-            <div class="sgbp-region sgbp-region--default sgbp-region--depth">${loremIpsum}</div>`),
+            <div class="sgbp-region sgbp-region--depth">${loremIpsum}</div>`),
     ]);
 
 //language=HTML
@@ -460,7 +460,7 @@ export const ExampleLayout = () => `
         <div class="sgbp-region sgbp-region--gray50" style="flex-basis: 200px">
             Sidebar (lightGray)
         </div>
-        <div class="sgbp-region sgbp-region--default">
+        <div class="sgbp-region sgbp-region--white">
             Main Content (default)
             <p class="sgbp-row sgbp-row--m">...</p>
             <p class="sgbp-row sgbp-row--m">...</p>

@@ -147,7 +147,7 @@ colors.decorators = [
 ];
 
 export const withCircle = () => `
-    <div class="sgbp-region sgbp-region--default">
+    <div class="sgbp-region sgbp-region--white">
       <svg class="sgbp-icon sgbp-icon--circle"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
       <svg class="sgbp-icon sgbp-icon--circle sgbp-icon--accent"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
       <svg class="sgbp-icon sgbp-icon--circle sgbp-icon--highlight"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
