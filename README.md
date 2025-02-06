@@ -75,18 +75,9 @@ Example: http://faibl.github.com/styleguide-boilerplate
 Import the styleguide scss files directly into your project scss files:
 
 ```sass
-$sgbp-asset-path: '/assets'; // copy/symlink src/assets from styleguide to a publicly available directory and accordingly adjust path setting.
+$aai-asset-path: '/assets'; // copy/symlink src/assets from styleguide to a publicly available directory and accordingly adjust path setting.
 @import '../styleguide/src/styleguide'; // adjust according to your environment
 ```
-
-### Javascript Integration
-
-Import the styleguide js file (helper scripts) directly in your js files:
-
-```js
-import '../styleguide/src/styleguide.js'; // adjust according to your environment
-```
-
 
 ## CSS Guidelines
 
@@ -107,7 +98,7 @@ npm run build:svg-icons
 
 Afterwards you can reference the icon by its filename (without extension).:
 ```
-<svg class="sgbp-icon"><use xlink:href="./assets/icons.svg#search"></use></svg>
+<svg class="aai-icon"><use xlink:href="./assets/icons.svg#search"></use></svg>
 ```
 
 In order to make the icon inherit the css font color, make sure to use `currentColor` in your svg files instead of hard coding a color value.
