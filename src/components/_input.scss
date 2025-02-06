@@ -50,7 +50,7 @@
     cursor: not-allowed;
   }
 
-  &:hover:not([disabled]):not(.is-disabled):not(.is-invalid):not(:invalid):not([readonly]):not(.is-readonly) {
+  &:hover:not([disabled]):not(.is-disabled):not(.is-invalid):not([readonly]):not(.is-readonly) {
     --sgbp-input-border-color: var(--sgbp-color-gray-100);
     --sgbp-input-color: var(--sgbp-color-gray-500);
   }
@@ -61,9 +61,7 @@
     box-shadow: 0 0 0 3px var(--sgbp-color-gray-50-opactiy-60);
   }
 
-  &:invalid,
-  &.is-invalid,
-  &--stateful.is-dirty:invalid {
+  &:invalid {
     --sgbp-input-color: var(--sgbp-input-error-color);
     --sgbp-input-border-color: var(--sgbp-input-error-color);
   }

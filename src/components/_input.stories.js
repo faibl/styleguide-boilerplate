@@ -42,9 +42,6 @@ export const States = () => Sections(
         Section('Invalid', `
             <input type="text" class="sgbp-input is-invalid" value="input value">
         `),
-        Section('Stateful', `
-            <input type="email" class="sgbp-input sgbp-input--unobtrusive sgbp-input--stateful" placeholder="Enter valid email ..." data-sgbp-stateful-input>
-        `),
     ]
 );
 
