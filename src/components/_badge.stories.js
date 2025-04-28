@@ -63,19 +63,19 @@ export const Clickable = () => `
 export const Icon = () => `
     <div class="sgbp-badges">
         <span class="sgbp-badge">
-          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--xs"><use xlink:href="./assets/icons.svg#calendar"></use></svg> with icon
+          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--xs"><use href="./assets/icons.svg#calendar"></use></svg> with icon
         </span>
         <span class="sgbp-badge sgbp-badge--accent">
-          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--xs"><use xlink:href="./assets/icons.svg#calendar"></use></svg> with icon
+          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--xs"><use href="./assets/icons.svg#calendar"></use></svg> with icon
         </span>
         <span class="sgbp-badge sgbp-badge--highlight">
-          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--xs"><use xlink:href="./assets/icons.svg#calendar"></use></svg> with icon
+          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--xs"><use href="./assets/icons.svg#calendar"></use></svg> with icon
         </span>
         <span class="sgbp-badge sgbp-badge--xs">
-          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--xs"><use xlink:href="./assets/icons.svg#calendar"></use></svg> xs with icon
+          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--xs"><use href="./assets/icons.svg#calendar"></use></svg> xs with icon
         </span>
         <span class="sgbp-badge sgbp-badge--info sgbp-badge--xl">
-          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--s"><use xlink:href="./assets/icons.svg#calendar"></use></svg> l with icon
+          <svg class="sgbp-badge__icon sgbp-icon sgbp-icon--s"><use href="./assets/icons.svg#calendar"></use></svg> l with icon
         </span>
     </div>
 `;

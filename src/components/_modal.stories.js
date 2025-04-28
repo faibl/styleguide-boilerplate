@@ -33,7 +33,7 @@ export const Standard = () => `
                 <button title="Close dialog" onclick="shpModalDemoClose('test-modal-open')"
                         class="sgbp-modal__closeButton sgbp-clickable sgbp-clickable--touchy">
                     <svg class="sgbp-modal__closeIcon sgbp-icon sgbp-icon--hoverAccent">
-                        <use xlink:href="./assets/icons.svg#cross"></use>
+                        <use href="./assets/icons.svg#cross"></use>
                     </svg>
                 </button>
                 <div class="sgbp-headline sgbp-headline--h4">Modal Headline</div>
@@ -107,7 +107,7 @@ export const Inline = () => `
                     <button aria-hidden="true" onclick="shpModalDemoClose('test-modal-open')"
                             class="sgbp-modal__closeIcon sgbp-clickable sgbp-clickable--touchy">
                         <svg class="sgbp-icon sgbp-icon--l sgbp-icon--hoverAccent">
-                            <use xlink:href="./assets/icons.svg#cross"></use>
+                            <use href="./assets/icons.svg#cross"></use>
                         </svg>
                     </button>
                     <div class="sgbp-headline sgbp-headline--h4">Modal Headline</div>
@@ -143,7 +143,7 @@ export const Bottom = () => `
                 <button aria-hidden="true" onclick="shpModalDemoClose('test-modal-open')"
                         class="sgbp-modal__closeButton sgbp-clickable sgbp-clickable--touchy">
                     <svg class="sgbp-modal__closeIcon sgbp-icon sgbp-icon--hoverAccent">
-                        <use xlink:href="./assets/icons.svg#cross"></use>
+                        <use href="./assets/icons.svg#cross"></use>
                     </svg>
                 </button>
                 <div class="sgbp-headline sgbp-headline--h4">Modal Headline</div>
@@ -177,7 +177,7 @@ export const BottomMDownOnly = () => `
                 <button aria-hidden="true" onclick="shpModalDemoClose('test-modal-open')"
                         class="sgbp-modal__closeButton sgbp-clickable sgbp-clickable--touchy">
                     <svg class="sgbp-modal__closeIcon sgbp-icon sgbp-icon--hoverAccent">
-                        <use xlink:href="./assets/icons.svg#cross"></use>
+                        <use href="./assets/icons.svg#cross"></use>
                     </svg>
                 </button>
                 <div class="sgbp-headline sgbp-headline--h4">Modal Headline</div>

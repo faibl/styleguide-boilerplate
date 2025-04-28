@@ -1,0 +1,79 @@
+:root {
+  --sgbp-inputAddon-background-color: var(--sgbp-input-background-color);
+}
+
+.sgbp-inputAddon {
+  display: flex;
+  align-items: stretch;
+
+  &__input,
+  input {
+    flex: 1 1 auto;
+  }
+
+  &__addon {
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: var(--sgbp-spacing-2xs);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    min-width: 2em;
+    font-size: 0.9em;
+    background-color: var(--sgbp-inputAddon-background-color);
+    color: var(--sgbp-input-color);
+    border-style: solid;
+    border-radius: var(--sgbp-input-border-radius);
+    border-width: var(--sgbp-input-border-width);
+    border-color: var(--sgbp-input-border-color);
+
+    &:first-child {
+      border-right: none;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child {
+      border-left: none;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+
+  &__addonSection {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex: 1 1 auto;
+
+    & + & {
+      border-left: 1px solid var(--sgbp-input-border-color);
+      padding-left: var(--sgbp-spacing-2xs);
+    }
+  }
+
+  &:has(&__addon:first-child) {
+    .sgbp-inputAddon__input,
+    input {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &:has(&__addon:last-child) {
+    .sgbp-inputAddon__input,
+    input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &__input.is-disabled + &__addon,
+  &__input[disabled] + &__addon,
+  &__input.is-disabled + &__addon,
+  &__input[readonly] + &__addon {
+    border-color: var(--sgbp-input-border-color-disabled);
+  }
+}

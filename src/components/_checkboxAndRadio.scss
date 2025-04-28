@@ -24,10 +24,18 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
 
 .sgbp-radio,
 .sgbp-checkbox {
+  --labelColor: var(--sgbp-checkboxAndRadio-label-color);
+
+  &.is-checked,
+  &:has(:checked) {
+    --labelColor: var(--sgbp-checkboxAndRadio-label-color-checked);
+  }
+
   display: block;
   pointer-events: none;
 
   color-adjust: exact !important;
+
 
   &--inline {
     display: inline-block;
@@ -52,7 +60,7 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
     min-height: 1em;
     vertical-align: middle;
 
-    color: var(--sgbp-checkboxAndRadio-label-color);
+    color: var(--labelColor);
     cursor: pointer;
 
     &::before {
@@ -84,11 +92,6 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
     overflow: hidden;
   }
 
-  &.is-checked &__label,
-  &__control:checked + &__label {
-    color: var(--sgbp-checkboxAndRadio-label-color-checked);
-  }
-
   &.is-checked &__label::before,
   &__control:checked + &__label::before {
     background-image: url('#{settings.$sgbp-image-path}/check_#{$sgbp-checkboxAndRadio-checkmarkIcon-variant}.svg');
@@ -110,7 +113,7 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
   }
 
   &--l &--inline {
-    margin-right: var(--sgbp-spacing-xl);
+    margin-right: var(--sgbp-spacing-l);
   }
 
   &--s &--inline {
@@ -121,7 +124,7 @@ $sgbp-checkboxAndRadio-checkmarkIcon-variant: 'dark' !default;
     font-size: var(--sgbp-checkboxAndRadio-font-size-small);
 
     &::before {
-      margin-right: calc(var(--sgbp-spacing-s) * 0.75);
+      margin-right: var(--sgbp-spacing-2xs);
       width: var(--sgbp-checkboxAndRadio-size-small);
       height: var(--sgbp-checkboxAndRadio-size-small);
     }

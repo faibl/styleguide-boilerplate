@@ -39,6 +39,9 @@
   font-size: var(--sgbp-font-size-base);
 
   &.is-open {
+    @starting-style {
+      opacity: 0;
+    }
     z-index: var(--sgbp-modal-z-index);
     opacity: 1;
     pointer-events: all;
@@ -225,6 +228,9 @@
   }
 
   &.is-open &__dialog {
+    @starting-style {
+      transform: scale(0);
+    }
     transform: scale(1);
   }
 

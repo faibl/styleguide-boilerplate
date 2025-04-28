@@ -98,7 +98,7 @@ npm run build:svg-icons
 
 Afterwards you can reference the icon by its filename (without extension).:
 ```
-<svg class="aai-icon"><use xlink:href="./assets/icons.svg#search"></use></svg>
+<svg class="aai-icon"><use href="./assets/icons.svg#search"></use></svg>
 ```
 
 In order to make the icon inherit the css font color, make sure to use `currentColor` in your svg files instead of hard coding a color value.

@@ -96,12 +96,12 @@ export const Alternate = () => `
 export const IconOnly = () => `
     <a class="sgbp-button sgbp-button--circle sgbp-button--primary">
         <svg class="sgbp-icon">
-            <use xlink:href="./assets/icons.svg#arrow-left"></use>
+            <use href="./assets/icons.svg#arrow-left"></use>
         </svg>
     </a>
     <a class="sgbp-button sgbp-button--circle sgbp-button--transparent">
         <svg class="sgbp-icon">
-            <use xlink:href="./assets/icons.svg#arrow-right"></use>
+            <use href="./assets/icons.svg#arrow-right"></use>
         </svg>
     </a>
 `;
@@ -110,7 +110,7 @@ export const IconOnly = () => `
 export const TextAndIconLeft = () => `
     <a class="sgbp-button sgbp-button--icon sgbp-button--primary">
         <svg class="sgbp-button__icon sgbp-button__icon--left sgbp-icon">
-            <use xlink:href="./assets/icons.svg#arrow-left"></use>
+            <use href="./assets/icons.svg#arrow-left"></use>
         </svg>
         With Icon
     </a>
@@ -126,7 +126,7 @@ export const TextAndIconRight = () => `
         With Icon
             </span>
         <svg class="sgbp-button__icon sgbp-button__icon--right sgbp-icon">
-            <use xlink:href="./assets/icons.svg#arrow-right"></use>
+            <use href="./assets/icons.svg#arrow-right"></use>
         </svg>
     </button>
     <button class="sgbp-button sgbp-button--icon sgbp-button--primary">
@@ -135,7 +135,7 @@ export const TextAndIconRight = () => `
         
             </span>
         <svg class="sgbp-button__icon sgbp-button__icon--right sgbp-icon">
-            <use xlink:href="./assets/icons.svg#arrow-down"></use>
+            <use href="./assets/icons.svg#arrow-down"></use>
         </svg>
     </button>
     <button class="sgbp-button sgbp-button--primary">
@@ -149,7 +149,7 @@ export const LeftAlignedContent = () => `
         <div class="sgbp-row">
             <a class="sgbp-button sgbp-button--leftAlignedContent sgbp-button--block sgbp-button--icon sgbp-button--primary">
                 <svg class="sgbp-button__icon sgbp-button__icon--left sgbp-icon">
-                    <use xlink:href="./assets/icons.svg#arrow-right"></use>
+                    <use href="./assets/icons.svg#arrow-right"></use>
                 </svg>
                 Short Label
             </a>
@@ -157,7 +157,7 @@ export const LeftAlignedContent = () => `
         <div class="sgbp-row">
             <a class="sgbp-button sgbp-button--leftAlignedContent sgbp-button--block sgbp-button--icon sgbp-button--primary">
                 <svg class="sgbp-button__icon sgbp-button__icon--left sgbp-icon">
-                    <use xlink:href="./assets/icons.svg#arrow-right-line"></use>
+                    <use href="./assets/icons.svg#arrow-right-line"></use>
                 </svg>
                 Long label with lots of text
             </a>
@@ -169,7 +169,7 @@ export const LeftAlignedContent = () => `
 export const WithIcon = () => `
     <a class="sgbp-button sgbp-button--icon sgbp-button--primary">
         <svg class="sgbp-icon">
-            <use xlink:href="./assets/icons.svg#arrow-right"></use>
+            <use href="./assets/icons.svg#arrow-right"></use>
         </svg>
     </a>
 `;

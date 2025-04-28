@@ -126,7 +126,7 @@ export const styled = () => `
         <div class="sgbp-postfix__fixed">
             <div class="sgbp-tooltip sgbp-tooltip--styled sgbp-tooltip--bottom sgbp-tooltip--right">
                 <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--icon sgbp-icon">
-                    <use xlink:href="./assets/icons.svg#info-circle"></use>
+                    <use href="./assets/icons.svg#info-circle"></use>
                 </svg>
                 <div class="sgbp-tooltip__content" style="width: 250px">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
@@ -140,7 +140,7 @@ export const styled = () => `
         <div class="sgbp-postfix__fixed">
             <div class="sgbp-tooltip sgbp-tooltip--styled sgbp-tooltip--bottom sgbp-tooltip--left">
                 <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--icon sgbp-icon">
-                    <use xlink:href="./assets/icons.svg#info-circle"></use>
+                    <use href="./assets/icons.svg#info-circle"></use>
                 </svg>
                 <div class="sgbp-tooltip__content" style="width: 250px">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
@@ -155,7 +155,7 @@ export const styled = () => `
 
 export const onlyIfHoverSupported = () => `
     <div class="sgbp-tooltip sgbp-tooltip--styled sgbp-tooltip--bottom sgbp-tooltip--right sgbp-tooltip--onlyIfHover">
-      <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--icon sgbp-icon"><use xlink:href="./assets/icons.svg#info-circle"></use></svg>
+      <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--icon sgbp-icon"><use href="./assets/icons.svg#info-circle"></use></svg>
       <div class="sgbp-tooltip__content" style="width: 250px">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br>
         Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br>
@@ -176,7 +176,7 @@ export const programatically = () => `
              id="sgbp-tooltip-demoNoHover">
             <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--icon sgbp-icon sgbp-clickable"
                  onclick="document.getElementById('sgbp-tooltip-demoNoHover').classList.toggle('is-open')">
-                <use xlink:href="./assets/icons.svg#info-circle"></use>
+                <use href="./assets/icons.svg#info-circle"></use>
             </svg>
             <div class="sgbp-tooltip__content" style="width: 250px">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut

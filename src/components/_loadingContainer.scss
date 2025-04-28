@@ -38,9 +38,10 @@
     }
   }
 
-  &.is-blocking {
+  &.is-blocking.is-loading {
+    pointer-events: none;
+
     > .sgbp-loadingContainer__loader {
-      pointer-events: all;
       background-color: var(--sgbp-loading-container-blocking-background);
     }
   }

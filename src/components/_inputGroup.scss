@@ -1,19 +1,19 @@
 :root {
-  --sgbp-inputGroup-label-color: var(--sgbp-color-gray);
+  --sgbp-inputGroup-label-color: var(--sgbp-color-gray-700);
   --sgbp-inputGroup-label-text-transform: none;
   --sgbp-inputGroup-label-font-size: var(--sgbp-font-size-text);
   --sgbp-inputGroup-label-font-weight: bold;
 
-  --sgbp-inputGroup-text-color: var(--sgbp-inputGroup-label-color);
+  --sgbp-inputGroup-text-color: var(--sgbp-color-gray-500);
   --sgbp-inputGroup-text-font-size: calc(var(--sgbp-inputGroup-label-font-size) * 0.9);
-  --sgbp-inputGroup-text-font-weight: normal;
+  --sgbp-inputGroup-text-font-weight: 300;
 
   --sgbp-inputGroup-error-color: var(--sgbp-color-error);
   --sgbp-inputGroup-error-font-size: var(--sgbp-font-size-text);
 
-  --sgbp-inputGroup--constrained-max-width: 400px;
-  --sgbp-inputGroup-margin: 15px;
-  --sgbp-inputGroup-label-margin: 0;
+  --sgbp-inputGroup--constrained-max-width: 600px;
+  --sgbp-inputGroup-margin: var(--sgbp-spacing-m);
+  --sgbp-inputGroup-label-margin: var(--sgbp-spacing-3xs);
 }
 
 .sgbp-inputGroup {
@@ -23,6 +23,14 @@
   &.has-errors {
     border: 1px solid var(--sgbp-color-error);
   }
+
+  &.is-required &__label::after {
+    content: '*';
+    display: inline-block;
+    margin-left: 0.25em;
+    font-weight: bold;
+  }
+
 
   & + & {
     margin-top: var(--sgbp-inputGroup-margin);
@@ -57,18 +65,26 @@
     color: var(--sgbp-inputGroup-error-color);
   }
 
+  &.is-invalid &:not(.is-invalid) &__label {
+    color: var(--sgbp-inputGroup-label-color);
+  }
+
   &__text {
     display: block;
     width: 100%;
     margin-left: 0.1em;
-    margin-bottom: 0.3em;
     font-size: var(--sgbp-inputGroup-text-font-size);
     font-weight: var(--sgbp-inputGroup-text-font-weight);
     color: var(--sgbp-inputGroup-text-color);
+    margin-bottom: var(--sgbp-spacing-3xs);
 
     &--error {
       color: var(--sgbp-inputGroup-error-color);
       font-size: var(--sgbp-inputGroup-error-font-size);
+    }
+
+    input + {
+      margin-top: var(--sgbp-spacing-3xs);
     }
   }
 
@@ -77,13 +93,32 @@
       border-color: var(--sgbp-input-error-border-color);
     }
 
-    .sgbp-checkbox__label,
-    .sgbp-radio__label{
-      color: var(--sgbp-color-error);
-
-      &::before {
-        border-color: var(--sgbp-color-error);
-      }
+    .sgbp-checkbox,
+    .sgbp-checkbox:checked,
+    .sgbp-checkbox.is-checked,
+    .sgbp-radio,
+    .sgbp-radio:checked,
+    .sgbp-radio.is-checked {
+      --labelColor: var(--sgbp-color-error);
     }
+  }
+
+  &.is-invalid &:not(.is-invalid) {
+    .sgbp-input {
+      border-color: var(--sgbp-input-border-color);
+    }
+
+    .sgbp-checkbox,
+    .sgbp-radio {
+      --labelColor: var(--sgbp-checkboxAndRadio-label-color);
+    }
+
+    .sgbp-checkbox:has(:checked),
+    .sgbp-checkbox.is-checked,
+    .sgbp-radio:has(:checked),
+    .sgbp-radio.is-checked {
+      --labelColor: var(--sgbp-checkboxAndRadio-label-color-checked);
+    }
+
   }
 }

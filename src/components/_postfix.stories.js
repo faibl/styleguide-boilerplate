@@ -188,7 +188,7 @@ export const Alignments = () =>
                         </p>
                     </div>
                     <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
-                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use href="./assets/icons.svg#plus"></use></svg>
                     </div>
                 </div>`
         ),
@@ -209,7 +209,7 @@ export const Alignments = () =>
                         </p>
                     </div>
                     <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
-                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use href="./assets/icons.svg#plus"></use></svg>
                     </div>
                 </div>`
         ),
@@ -230,7 +230,7 @@ export const Alignments = () =>
                         </p>
                     </div>
                     <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
-                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use href="./assets/icons.svg#plus"></use></svg>
                     </div>
                 </div>`
         ),
@@ -251,7 +251,7 @@ export const Alignments = () =>
                         </p>
                     </div>
                     <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
-                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use href="./assets/icons.svg#plus"></use></svg>
                     </div>
                 </div>`
         ),
@@ -272,7 +272,7 @@ export const Alignments = () =>
                         </p>
                     </div>
                     <div class="sgbp-postfix__fixed sgbp-region sgbp-region--accent600">
-                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#plus"></use></svg>
+                        <svg class="sgbp-postfix__icon sgbp-icon sgbp-icon--hoverAccent"><use href="./assets/icons.svg#plus"></use></svg>
                     </div>
                 </div>`
         ),

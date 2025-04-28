@@ -12,7 +12,7 @@ export const Standard = () => `
             <div class="sgbp-accordion__itemHeaderRight">
                 <div class="sgbp-accordion__itemHeaderRight">
                     <div class="sgbp-badge sgbp-badge--highlight">4/17</div>
-                    <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                    <svg class="sgbp-accordion__itemIcon sgbp-icon"><use href="./assets/icons.svg#arrow-right"></use></svg>
                 </div>
             </div>
         </button>
@@ -28,7 +28,7 @@ export const Standard = () => `
                 <span class="sgbp-accordion__itemHeadline">Accordion Item 2</span>
             </div>
             <div class="sgbp-accordion__itemHeaderRight">
-                <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                <svg class="sgbp-accordion__itemIcon sgbp-icon"><use href="./assets/icons.svg#arrow-right"></use></svg>
             </div>
         </button>
         <div class="sgbp-collapsible is-open">
@@ -43,14 +43,14 @@ export const Standard = () => `
                 <span class="sgbp-accordion__itemHeadline">Accordion Item With overflowing content</span>
             </div>
             <div class="sgbp-accordion__itemHeaderRight">
-                <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                <svg class="sgbp-accordion__itemIcon sgbp-icon"><use href="./assets/icons.svg#arrow-right"></use></svg>
             </div>
         </button>
         <div class="sgbp-collapsible sgbp-collapsible--overflow">
             <div class="sgbp-accordion__itemContent sgbp-collapsible__content">
                <p class="sgbp-row">Collapsible Content with overflowing tooltip example (Using the "sgbp-collapsible--overflow" modifier). Open/Close transitions get automativally disabled in favor of overlowing content.</p>
                <div class="sgbp-tooltip sgbp-tooltip--styled sgbp-tooltip--bottom sgbp-tooltip--right">
-                 <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--icon sgbp-icon sgbp-icon--hoverAccent"><use xlink:href="./assets/icons.svg#info-circle"></use></svg>
+                 <svg class="sgbp-tooltip__trigger sgbp-tooltip__trigger--icon sgbp-icon sgbp-icon--hoverAccent"><use href="./assets/icons.svg#info-circle"></use></svg>
                  <div class="sgbp-tooltip__content" style="width: 250px">
                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br>
                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br>
@@ -65,7 +65,7 @@ export const Standard = () => `
                 <span class="sgbp-accordion__itemHeadline">Long Content</span>
             </div>
             <div class="sgbp-accordion__itemHeaderRight">
-                <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                <svg class="sgbp-accordion__itemIcon sgbp-icon"><use href="./assets/icons.svg#arrow-right"></use></svg>
             </div>
         </button>
         <div class="sgbp-collapsible">
@@ -86,7 +86,7 @@ export const Standard = () => `
                 <span class="sgbp-accordion__itemHeadline">Long Header item name Lorem ipsum dolor sit amet</span>
             </div>
             <div class="sgbp-accordion__itemHeaderRight">
-                <svg class="sgbp-accordion__itemIcon sgbp-icon"><use xlink:href="./assets/icons.svg#arrow-right"></use></svg>
+                <svg class="sgbp-accordion__itemIcon sgbp-icon"><use href="./assets/icons.svg#arrow-right"></use></svg>
             </div>
         </button>
         <div class="sgbp-collapsible">
